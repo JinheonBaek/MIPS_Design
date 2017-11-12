@@ -16,7 +16,8 @@ module mips(input         clk, reset,
             output [31:0] memwritedata,
             input  [31:0] memreaddata);
 
-  wire        signext, shiftl16, memtoreg, branch;
+  wire        signext, shiftl16, memtoreg;
+  wire [1:0]  branch;
   wire        pcsrc, zero;
   wire        alusrc, regdst, regwrite, jump;
   wire [2:0]  alucontrol;
@@ -70,7 +71,7 @@ module controller(input  [5:0] op, funct,
                   output [2:0] alucontrol);
 
   wire [1:0] aluop;
-  wire       branch;
+  wire [1:0] branch;
 
   maindec md(
     .op       (op),
@@ -90,7 +91,7 @@ module controller(input  [5:0] op, funct,
     .aluop      (aluop), 
     .alucontrol (alucontrol));
 
-  assign pcsrc = branch & zero;
+assign pcsrc = branch[1] ? (branch[0] ? (branch[0] & zero) : (~branch[0] & ~zero)) : (0);
 
 endmodule
 
@@ -99,28 +100,30 @@ module maindec(input  [5:0] op,
                output       signext,
                output       shiftl16,
                output       memtoreg, memwrite,
-               output       branch, alusrc,
+               output [1:0] branch,
+					output		 alusrc,
                output       regdst, regwrite,
                output       jump,
                output [1:0] aluop);
 
-  reg [10:0] controls;
+  reg [11:0] controls;
 
   assign {signext, shiftl16, regwrite, regdst, alusrc, branch, memwrite,
           memtoreg, jump, aluop} = controls;
 
   always @(*)
     case(op)
-      6'b000000: controls <= #`mydelay 11'b00110000011; // Rtype
-      6'b100011: controls <= #`mydelay 11'b10101001000; // LW
-      6'b101011: controls <= #`mydelay 11'b10001010000; // SW
-      6'b000100: controls <= #`mydelay 11'b10000100001; // BEQ
+      6'b000000: controls <= #`mydelay 12'b001100000011; // Rtype
+      6'b100011: controls <= #`mydelay 12'b101010001000; // LW
+      6'b101011: controls <= #`mydelay 12'b100010010000; // SW
+      6'b000100: controls <= #`mydelay 12'b100001100001; // BEQ
+		6'b000101: controls <= #`mydelay 12'b100001000001; // BNE
       6'b001000, 
-      6'b001001: controls <= #`mydelay 11'b10101000000; // ADDI, ADDIU: only difference is exception
-      6'b001101: controls <= #`mydelay 11'b00101000010; // ORI
-      6'b001111: controls <= #`mydelay 11'b01101000000; // LUI
-      6'b000010: controls <= #`mydelay 11'b00000000100; // J
-      default:   controls <= #`mydelay 11'bxxxxxxxxxxx; // ???
+      6'b001001: controls <= #`mydelay 12'b101010000000; // ADDI, ADDIU: only difference is exception
+      6'b001101: controls <= #`mydelay 12'b001010000010; // ORI
+      6'b001111: controls <= #`mydelay 12'b011010000000; // LUI
+      6'b000010: controls <= #`mydelay 12'b000000000100; // J
+      default:   controls <= #`mydelay 12'bxxxxxxxxxxxx; // ???
     endcase
 
 endmodule
@@ -141,7 +144,8 @@ module aludec(input      [5:0] funct,
           6'b100011: alucontrol <= #`mydelay 3'b110; // SUB, SUBU: only difference is exception
           6'b100100: alucontrol <= #`mydelay 3'b000; // AND
           6'b100101: alucontrol <= #`mydelay 3'b001; // OR
-          6'b101010: alucontrol <= #`mydelay 3'b111; // SLT
+			 6'b100010,
+          6'b101011: alucontrol <= #`mydelay 3'b111; // SLT, SLTU: only difference is exception
           default:   alucontrol <= #`mydelay 3'bxxx; // ???
         endcase
     endcase
