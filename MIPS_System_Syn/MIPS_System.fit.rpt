@@ -1,5 +1,5 @@
 Fitter report for MIPS_System
-Sun Nov 12 12:03:12 2017
+Sun Nov 12 12:40:42 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -71,15 +71,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Nov 12 12:03:12 2017      ;
+; Fitter Status                      ; Successful - Sun Nov 12 12:40:42 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,062 / 15,408 ( 13 % )                    ;
-;     Total combinational functions  ; 2,030 / 15,408 ( 13 % )                    ;
+; Total logic elements               ; 2,082 / 15,408 ( 14 % )                    ;
+;     Total combinational functions  ; 2,050 / 15,408 ( 13 % )                    ;
 ;     Dedicated logic registers      ; 1,299 / 15,408 ( 8 % )                     ;
 ; Total registers                    ; 1299                                       ;
 ; Total pins                         ; 52 / 347 ( 15 % )                          ;
@@ -158,12 +158,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.21        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  18.8%      ;
+;     Processor 2            ;  21.4%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -628,8 +628,8 @@ applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 3479 ) ; 0.00 % ( 0 / 3479 )        ; 0.00 % ( 0 / 3479 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 3479 ) ; 0.00 % ( 0 / 3479 )        ; 0.00 % ( 0 / 3479 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 3499 ) ; 0.00 % ( 0 / 3499 )        ; 0.00 % ( 0 / 3499 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 3499 ) ; 0.00 % ( 0 / 3499 )        ; 0.00 % ( 0 / 3499 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -652,7 +652,7 @@ applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 3465 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 3485 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 14 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -668,26 +668,26 @@ The pin-out file can be found in C:/MIPS_Design/MIPS_System_Syn/MIPS_System.pin.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 2,062 / 15,408 ( 13 % )   ;
-;     -- Combinational with no register       ; 763                       ;
+; Total logic elements                        ; 2,082 / 15,408 ( 14 % )   ;
+;     -- Combinational with no register       ; 783                       ;
 ;     -- Register only                        ; 32                        ;
 ;     -- Combinational with a register        ; 1267                      ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 1599                      ;
-;     -- 3 input functions                    ; 273                       ;
-;     -- <=2 input functions                  ; 158                       ;
+;     -- 4 input functions                    ; 1604                      ;
+;     -- 3 input functions                    ; 299                       ;
+;     -- <=2 input functions                  ; 147                       ;
 ;     -- Register only                        ; 32                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
 ;     -- normal mode                          ; 1967                      ;
-;     -- arithmetic mode                      ; 63                        ;
+;     -- arithmetic mode                      ; 83                        ;
 ;                                             ;                           ;
 ; Total registers*                            ; 1,299 / 17,068 ( 8 % )    ;
 ;     -- Dedicated logic registers            ; 1,299 / 15,408 ( 8 % )    ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )         ;
 ;                                             ;                           ;
-; Total LABs:  partially or completely used   ; 144 / 963 ( 15 % )        ;
+; Total LABs:  partially or completely used   ; 154 / 963 ( 16 % )        ;
 ; Virtual pins                                ; 0                         ;
 ; I/O pins                                    ; 52 / 347 ( 15 % )         ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )            ;
@@ -704,12 +704,12 @@ The pin-out file can be found in C:/MIPS_Design/MIPS_System_Syn/MIPS_System.pin.
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )             ;
-; Average interconnect usage (total/H/V)      ; 7% / 7% / 8%              ;
-; Peak interconnect usage (total/H/V)         ; 38% / 36% / 41%           ;
+; Average interconnect usage (total/H/V)      ; 10% / 9% / 10%            ;
+; Peak interconnect usage (total/H/V)         ; 38% / 37% / 40%           ;
 ; Maximum fan-out                             ; 1299                      ;
 ; Highest non-global fan-out                  ; 249                       ;
-; Total fan-out                               ; 11189                     ;
-; Average fan-out                             ; 3.22                      ;
+; Total fan-out                               ; 11293                     ;
+; Average fan-out                             ; 3.23                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -722,26 +722,26 @@ The pin-out file can be found in C:/MIPS_Design/MIPS_System_Syn/MIPS_System.pin.
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 2062 / 15408 ( 13 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 763                   ; 0                              ;
+; Total logic elements                        ; 2082 / 15408 ( 14 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 783                   ; 0                              ;
 ;     -- Register only                        ; 32                    ; 0                              ;
 ;     -- Combinational with a register        ; 1267                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 1599                  ; 0                              ;
-;     -- 3 input functions                    ; 273                   ; 0                              ;
-;     -- <=2 input functions                  ; 158                   ; 0                              ;
+;     -- 4 input functions                    ; 1604                  ; 0                              ;
+;     -- 3 input functions                    ; 299                   ; 0                              ;
+;     -- <=2 input functions                  ; 147                   ; 0                              ;
 ;     -- Register only                        ; 32                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
 ;     -- normal mode                          ; 1967                  ; 0                              ;
-;     -- arithmetic mode                      ; 63                    ; 0                              ;
+;     -- arithmetic mode                      ; 83                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 1299                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 1299 / 15408 ( 8 % )  ; 0 / 15408 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 144 / 963 ( 15 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 154 / 963 ( 16 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 52                    ; 0                              ;
@@ -759,8 +759,8 @@ The pin-out file can be found in C:/MIPS_Design/MIPS_System_Syn/MIPS_System.pin.
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 11630                 ; 1326                           ;
-;     -- Registered Connections               ; 4025                  ; 0                              ;
+;     -- Total Connections                    ; 11724                 ; 1326                           ;
+;     -- Registered Connections               ; 4037                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 1317                           ;
@@ -1456,12 +1456,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                          ; Library Name ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; |MIPS_System                                   ; 2062 (2)    ; 1299 (1)                  ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 52   ; 0            ; 763 (1)      ; 32 (0)            ; 1267 (1)         ; |MIPS_System                                                                                                 ; work         ;
+; |MIPS_System                                   ; 2082 (2)    ; 1299 (1)                  ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 52   ; 0            ; 783 (1)      ; 32 (0)            ; 1267 (1)         ; |MIPS_System                                                                                                 ; work         ;
 ;    |ALTPLL_clkgen:pll0|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ALTPLL_clkgen:pll0                                                                              ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ALTPLL_clkgen:pll0|altpll:altpll_component                                                      ; work         ;
 ;          |ALTPLL_clkgen_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated                  ; work         ;
-;    |Addr_Decoder:Decoder|                      ; 19 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|Addr_Decoder:Decoder                                                                            ; work         ;
-;    |GPIO:uGPIO|                                ; 257 (77)    ; 230 (50)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 32 (32)           ; 208 (28)         ; |MIPS_System|GPIO:uGPIO                                                                                      ; work         ;
+;    |Addr_Decoder:Decoder|                      ; 15 (15)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|Addr_Decoder:Decoder                                                                            ; work         ;
+;    |GPIO:uGPIO|                                ; 256 (76)    ; 230 (50)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 32 (32)           ; 208 (28)         ; |MIPS_System|GPIO:uGPIO                                                                                      ; work         ;
 ;       |pulse_gen:button1|                      ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |MIPS_System|GPIO:uGPIO|pulse_gen:button1                                                                    ; work         ;
 ;       |pulse_gen:button2|                      ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |MIPS_System|GPIO:uGPIO|pulse_gen:button2                                                                    ; work         ;
 ;       |pulse_gen:sw0|                          ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |MIPS_System|GPIO:uGPIO|pulse_gen:sw0                                                                        ; work         ;
@@ -1475,18 +1475,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |pulse_gen:sw8|                          ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |MIPS_System|GPIO:uGPIO|pulse_gen:sw8                                                                        ; work         ;
 ;       |pulse_gen:sw9|                          ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |MIPS_System|GPIO:uGPIO|pulse_gen:sw9                                                                        ; work         ;
 ;    |TimerCounter:Timer|                        ; 91 (91)     ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 65 (65)          ; |MIPS_System|TimerCounter:Timer                                                                              ; work         ;
-;    |mips:mips_cpu|                             ; 1703 (0)    ; 1003 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 700 (0)      ; 0 (0)             ; 1003 (0)         ; |MIPS_System|mips:mips_cpu                                                                                   ; work         ;
-;       |controller:c|                           ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c                                                                      ; work         ;
-;          |aludec:ad|                           ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c|aludec:ad                                                            ; work         ;
-;          |maindec:md|                          ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c|maindec:md                                                           ; work         ;
-;       |datapath:dp|                            ; 1678 (0)    ; 1003 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 675 (0)      ; 0 (0)             ; 1003 (0)         ; |MIPS_System|mips:mips_cpu|datapath:dp                                                                       ; work         ;
+;    |mips:mips_cpu|                             ; 1728 (0)    ; 1003 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 725 (0)      ; 0 (0)             ; 1003 (0)         ; |MIPS_System|mips:mips_cpu                                                                                   ; work         ;
+;       |controller:c|                           ; 28 (3)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (3)       ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c                                                                      ; work         ;
+;          |aludec:ad|                           ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c|aludec:ad                                                            ; work         ;
+;          |maindec:md|                          ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|controller:c|maindec:md                                                           ; work         ;
+;       |datapath:dp|                            ; 1700 (0)    ; 1003 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 697 (0)      ; 0 (0)             ; 1003 (0)         ; |MIPS_System|mips:mips_cpu|datapath:dp                                                                       ; work         ;
+;          |adder:pcadd1|                        ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|adder:pcadd1                                                          ; work         ;
+;          |adder:pcadd2|                        ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|adder:pcadd2                                                          ; work         ;
 ;          |alu:alu|                             ; 130 (130)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 130 (130)    ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|alu:alu                                                               ; work         ;
 ;          |flopr:pcreg|                         ; 11 (11)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 11 (11)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:pcreg                                                           ; work         ;
-;          |mux2:pcmux|                          ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 11 (11)          ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:pcmux                                                            ; work         ;
-;          |mux2:resmux|                         ; 146 (146)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 114 (114)    ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:resmux                                                           ; work         ;
-;          |mux2:srcbmux|                        ; 56 (56)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (56)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:srcbmux                                                          ; work         ;
+;          |mux2:resmux|                         ; 144 (144)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 112 (112)    ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:resmux                                                           ; work         ;
+;          |mux2:srcbmux|                        ; 55 (55)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 55 (55)      ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:srcbmux                                                          ; work         ;
 ;          |mux2:wrmux|                          ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:wrmux                                                            ; work         ;
-;          |regfile:rf|                          ; 1362 (1362) ; 992 (992)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 370 (370)    ; 0 (0)             ; 992 (992)        ; |MIPS_System|mips:mips_cpu|datapath:dp|regfile:rf                                                            ; work         ;
+;          |regfile:rf|                          ; 1365 (1365) ; 992 (992)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 373 (373)    ; 0 (0)             ; 992 (992)        ; |MIPS_System|mips:mips_cpu|datapath:dp|regfile:rf                                                            ; work         ;
 ;    |ram2port_inst_data:Inst_Data_Mem|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_5ul2:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated ; work         ;
@@ -1540,17 +1541,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BUTTON[0] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; CLOCK_50  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[0]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[2]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[5]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[4]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[3]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[2]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; BUTTON[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[1]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; BUTTON[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[4]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[3]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[7]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[6]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[5]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[9]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[8]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[8]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[7]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1578,22 +1579,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:uGPIO|pulse_gen:sw0|c_state~34     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw0|c_state~35     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw0|c_state~36     ; 0                 ; 6       ;
+; SW[5]                                          ;                   ;         ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~22     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~23     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~24     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~25     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~26     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~27     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~28     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~29     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~30     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~31     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~32     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~33     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~34     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~35     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw5|c_state~36     ; 0                 ; 6       ;
+; SW[4]                                          ;                   ;         ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~22     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~23     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~24     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~25     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~26     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~27     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~28     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~29     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~30     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~31     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~32     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~33     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~34     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~35     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw4|c_state~36     ; 1                 ; 6       ;
+; SW[3]                                          ;                   ;         ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~22     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~23     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~24     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~25     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~26     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~27     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~28     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~29     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~30     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~31     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~32     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~33     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~34     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~35     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw3|c_state~36     ; 1                 ; 6       ;
 ; SW[2]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~22     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~23     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~24     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~25     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~26     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~27     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~28     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~29     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~30     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~31     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~32     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~33     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~34     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~35     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw2|c_state~36     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~22     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~23     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~24     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~25     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~26     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~27     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~28     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~29     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~30     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~31     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~32     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~33     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~34     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~35     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw2|c_state~36     ; 0                 ; 6       ;
 ; BUTTON[2]                                      ;                   ;         ;
 ;      - GPIO:uGPIO|pulse_gen:button2|c_state~22 ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:button2|c_state~23 ; 0                 ; 6       ;
@@ -1642,54 +1691,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:uGPIO|pulse_gen:button1|c_state~34 ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:button1|c_state~35 ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:button1|c_state~36 ; 0                 ; 6       ;
-; SW[4]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~22     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~23     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~24     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~25     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~26     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~27     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~28     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~29     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~30     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~31     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~32     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~33     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~34     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~35     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw4|c_state~36     ; 0                 ; 6       ;
-; SW[3]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~22     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~23     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~24     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~25     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~26     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~27     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~28     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~29     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~30     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~31     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~32     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~33     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~34     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~35     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw3|c_state~36     ; 0                 ; 6       ;
-; SW[7]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~22     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~23     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~24     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~25     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~26     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~27     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~28     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~29     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~30     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~31     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~32     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~33     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~34     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~35     ; 1                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw7|c_state~36     ; 1                 ; 6       ;
 ; SW[6]                                          ;                   ;         ;
 ;      - GPIO:uGPIO|pulse_gen:sw6|c_state~22     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw6|c_state~23     ; 0                 ; 6       ;
@@ -1706,22 +1707,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:uGPIO|pulse_gen:sw6|c_state~34     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw6|c_state~35     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw6|c_state~36     ; 0                 ; 6       ;
-; SW[5]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~22     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~23     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~24     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~25     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~26     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~27     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~28     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~29     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~30     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~31     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~32     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~33     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~34     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~35     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw5|c_state~36     ; 0                 ; 6       ;
 ; SW[9]                                          ;                   ;         ;
 ;      - GPIO:uGPIO|pulse_gen:sw9|c_state~22     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw9|c_state~23     ; 0                 ; 6       ;
@@ -1739,21 +1724,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GPIO:uGPIO|pulse_gen:sw9|c_state~35     ; 0                 ; 6       ;
 ;      - GPIO:uGPIO|pulse_gen:sw9|c_state~36     ; 0                 ; 6       ;
 ; SW[8]                                          ;                   ;         ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~22     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~23     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~24     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~25     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~26     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~27     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~28     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~29     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~30     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~31     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~32     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~33     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~34     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~35     ; 0                 ; 6       ;
-;      - GPIO:uGPIO|pulse_gen:sw8|c_state~36     ; 0                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~22     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~23     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~24     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~25     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~26     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~27     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~28     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~29     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~30     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~31     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~32     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~33     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~34     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~35     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw8|c_state~36     ; 1                 ; 6       ;
+; SW[7]                                          ;                   ;         ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~22     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~23     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~24     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~25     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~26     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~27     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~28     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~29     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~30     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~31     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~32     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~33     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~34     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~35     ; 1                 ; 6       ;
+;      - GPIO:uGPIO|pulse_gen:sw7|c_state~36     ; 1                 ; 6       ;
 +------------------------------------------------+-------------------+---------+
 
 
@@ -1765,48 +1766,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[0] ; PLL_2              ; 1299    ; Clock                     ; yes    ; Global Clock         ; GCLK8            ; --                        ;
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[1] ; PLL_2              ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK9            ; --                        ;
 ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[2] ; PLL_2              ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; Addr_Decoder:Decoder|Equal0~9                                                                   ; LCCOMB_X24_Y12_N30 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Addr_Decoder:Decoder|Equal0~5                                                                   ; LCCOMB_X17_Y21_N4  ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                                                                        ; PIN_G21            ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; GPIO:uGPIO|HEX0_R[6]~0                                                                          ; LCCOMB_X27_Y14_N30 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:uGPIO|HEX1_R[3]~0                                                                          ; LCCOMB_X27_Y14_N2  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:uGPIO|HEX2_R[1]~1                                                                          ; LCCOMB_X27_Y14_N16 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:uGPIO|HEX3_R[3]~3                                                                          ; LCCOMB_X27_Y14_N14 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; GPIO:uGPIO|LEDG_R[0]~1                                                                          ; LCCOMB_X27_Y14_N10 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; TimerCounter:Timer|CompareR[5]~0                                                                ; LCCOMB_X26_Y10_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; TimerCounter:Timer|always2~0                                                                    ; LCCOMB_X27_Y12_N0  ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|controller:c|maindec:md|WideOr10~1                                                ; LCCOMB_X24_Y14_N20 ; 26      ; Write enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~17                                                ; LCCOMB_X28_Y18_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~19                                                ; LCCOMB_X28_Y18_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~21                                                ; LCCOMB_X27_Y18_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~23                                                ; LCCOMB_X28_Y18_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~24                                                ; LCCOMB_X28_Y18_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~25                                                ; LCCOMB_X27_Y18_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~26                                                ; LCCOMB_X28_Y18_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~27                                                ; LCCOMB_X28_Y18_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~28                                                ; LCCOMB_X28_Y18_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~29                                                ; LCCOMB_X28_Y18_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~30                                                ; LCCOMB_X28_Y18_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~32                                                ; LCCOMB_X27_Y18_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~34                                                ; LCCOMB_X22_Y10_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~36                                                ; LCCOMB_X22_Y10_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~37                                                ; LCCOMB_X22_Y10_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~38                                                ; LCCOMB_X22_Y10_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~39                                                ; LCCOMB_X22_Y10_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~41                                                ; LCCOMB_X22_Y10_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~42                                                ; LCCOMB_X22_Y10_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~44                                                ; LCCOMB_X27_Y18_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~45                                                ; LCCOMB_X27_Y18_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~46                                                ; LCCOMB_X27_Y18_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~47                                                ; LCCOMB_X27_Y18_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~48                                                ; LCCOMB_X28_Y18_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~49                                                ; LCCOMB_X28_Y18_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~50                                                ; LCCOMB_X21_Y20_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~51                                                ; LCCOMB_X28_Y18_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~52                                                ; LCCOMB_X22_Y10_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~53                                                ; LCCOMB_X22_Y10_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~54                                                ; LCCOMB_X22_Y10_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~55                                                ; LCCOMB_X22_Y10_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; reset_ff                                                                                        ; FF_X28_Y10_N25     ; 249     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; GPIO:uGPIO|HEX0_R[6]~1                                                                          ; LCCOMB_X15_Y20_N10 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:uGPIO|HEX1_R[4]~0                                                                          ; LCCOMB_X15_Y20_N0  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:uGPIO|HEX2_R[5]~0                                                                          ; LCCOMB_X15_Y20_N30 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:uGPIO|HEX3_R[2]~2                                                                          ; LCCOMB_X15_Y20_N26 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GPIO:uGPIO|LEDG_R[2]~1                                                                          ; LCCOMB_X15_Y20_N12 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; TimerCounter:Timer|CompareR[22]~0                                                               ; LCCOMB_X12_Y21_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; TimerCounter:Timer|always2~0                                                                    ; LCCOMB_X17_Y13_N22 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~6                                                ; LCCOMB_X19_Y19_N14 ; 11      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|controller:c|maindec:md|WideOr10~1                                                ; LCCOMB_X14_Y15_N4  ; 27      ; Write enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~1                                                 ; LCCOMB_X26_Y14_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~10                                                ; LCCOMB_X15_Y16_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~11                                                ; LCCOMB_X15_Y16_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~12                                                ; LCCOMB_X26_Y14_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~13                                                ; LCCOMB_X29_Y20_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~14                                                ; LCCOMB_X26_Y14_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~15                                                ; LCCOMB_X29_Y20_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~16                                                ; LCCOMB_X28_Y20_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~18                                                ; LCCOMB_X24_Y14_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~19                                                ; LCCOMB_X28_Y20_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~20                                                ; LCCOMB_X15_Y16_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~22                                                ; LCCOMB_X29_Y20_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~24                                                ; LCCOMB_X29_Y20_N6  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~25                                                ; LCCOMB_X29_Y20_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~26                                                ; LCCOMB_X29_Y20_N10 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~27                                                ; LCCOMB_X24_Y19_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~28                                                ; LCCOMB_X29_Y20_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~29                                                ; LCCOMB_X29_Y20_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~3                                                 ; LCCOMB_X29_Y20_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~31                                                ; LCCOMB_X24_Y14_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~32                                                ; LCCOMB_X24_Y14_N26 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~33                                                ; LCCOMB_X24_Y14_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~34                                                ; LCCOMB_X24_Y14_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~36                                                ; LCCOMB_X21_Y21_N18 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~37                                                ; LCCOMB_X21_Y21_N28 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~38                                                ; LCCOMB_X21_Y21_N22 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~39                                                ; LCCOMB_X21_Y21_N24 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~4                                                 ; LCCOMB_X26_Y14_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~5                                                 ; LCCOMB_X29_Y20_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~7                                                 ; LCCOMB_X15_Y16_N30 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~9                                                 ; LCCOMB_X15_Y16_N0  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; reset_ff                                                                                        ; FF_X17_Y13_N19     ; 249     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1827,247 +1829,257 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                    ; Fan-Out ;
 +---------------------------------------------------------------------------------------------------------+---------+
 ; reset_ff                                                                                                ; 249     ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[18] ; 197     ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[17] ; 196     ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[18] ; 196     ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[19] ; 196     ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[22] ; 195     ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[16] ; 196     ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[23] ; 195     ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[22] ; 195     ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[24] ; 195     ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[16] ; 195     ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[21] ; 194     ;
-; mips:mips_cpu|controller:c|aludec:ad|Mux2~2                                                             ; 63      ;
-; mips:mips_cpu|controller:c|aludec:ad|Mux1~1                                                             ; 63      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux32~1                                                            ; 48      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux32~0                                                            ; 48      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~1                                                            ; 48      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~0                                                            ; 48      ;
-; mips:mips_cpu|controller:c|maindec:md|WideOr7~3                                                         ; 40      ;
-; mips:mips_cpu|controller:c|maindec:md|Decoder0~2                                                        ; 37      ;
+; mips:mips_cpu|controller:c|aludec:ad|Mux1~3                                                             ; 64      ;
+; mips:mips_cpu|controller:c|aludec:ad|Mux2~3                                                             ; 63      ;
+; mips:mips_cpu|controller:c|maindec:md|WideOr7~3                                                         ; 60      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~1                                                            ; 50      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux63~1                                                            ; 48      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux63~0                                                            ; 48      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~0                                                            ; 47      ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~2                                                        ; 33      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~4                                                            ; 33      ;
 ; ~GND                                                                                                    ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~55                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~54                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~53                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~52                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~51                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~50                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~49                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~48                                                        ; 32      ;
-; mips:mips_cpu|controller:c|aludec:ad|Mux0~4                                                             ; 32      ;
 ; TimerCounter:Timer|always2~0                                                                            ; 32      ;
-; TimerCounter:Timer|CompareR[5]~0                                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~47                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~46                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~45                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~44                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~42                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~41                                                        ; 32      ;
+; TimerCounter:Timer|CompareR[22]~0                                                                       ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~39                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~38                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~37                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~36                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~34                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~33                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~32                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~30                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~31                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~29                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~28                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~27                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~26                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~25                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~24                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~23                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~21                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~22                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~20                                                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~19                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~17                                                        ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux32~4                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux32~3                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux32~2                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~4                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~3                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~2                                                            ; 32      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[0]~152                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[8]~150                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[9]~146                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[10]~142                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[11]~138                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[12]~134                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[13]~130                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[14]~126                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[15]~122                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[16]~118                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[17]~114                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[18]~110                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[19]~106                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~102                                                         ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[21]~98                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[22]~94                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[23]~90                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[24]~86                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[25]~82                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[26]~78                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[27]~74                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[28]~70                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[29]~66                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~62                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[31]~58                                                          ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[5]~52                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[6]~48                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[7]~44                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~40                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[4]~36                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~30                                                           ; 31      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~24                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~18                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~16                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~15                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~14                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~13                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~12                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~11                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~10                                                        ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~9                                                         ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~7                                                         ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~5                                                         ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~4                                                         ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~3                                                         ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~1                                                         ; 32      ;
+; mips:mips_cpu|controller:c|aludec:ad|Mux0~3                                                             ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux63~4                                                            ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux63~3                                                            ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux63~2                                                            ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~3                                                            ; 32      ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~2                                                            ; 32      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[0]~149                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[7]~148                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[8]~144                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[9]~140                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[10]~136                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[11]~132                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[12]~128                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[13]~124                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[14]~120                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[15]~116                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[16]~112                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[17]~108                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[18]~104                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[19]~100                                                         ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~96                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[21]~92                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[22]~88                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[23]~84                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[24]~80                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[25]~76                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[26]~72                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[27]~68                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[28]~64                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[29]~60                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~56                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[31]~52                                                          ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[6]~46                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~42                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~37                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~28                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[4]~24                                                           ; 31      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[5]~20                                                           ; 31      ;
 ; mips:mips_cpu|datapath:dp|mux2:wrmux|y[1]~1                                                             ; 31      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux18~3                                                               ; 29      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux18~1                                                               ; 29      ;
 ; mips:mips_cpu|datapath:dp|mux2:wrmux|y[3]~0                                                             ; 28      ;
+; mips:mips_cpu|controller:c|maindec:md|WideOr10~1                                                        ; 27      ;
 ; Addr_Decoder:Decoder|Equal1~5                                                                           ; 27      ;
-; mips:mips_cpu|controller:c|maindec:md|WideOr10~1                                                        ; 26      ;
 ; Addr_Decoder:Decoder|Equal1~7                                                                           ; 25      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~53                                                          ; 23      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~157                                                         ; 22      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~156                                                         ; 22      ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[20]~54                                                          ; 22      ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[27] ; 22      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux28~3                                                               ; 17      ;
-; Addr_Decoder:Decoder|Equal1~6                                                                           ; 17      ;
-; mips:mips_cpu|controller:c|maindec:md|Decoder0~5                                                        ; 16      ;
-; Addr_Decoder:Decoder|Equal3~0                                                                           ; 16      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~47                                                          ; 23      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~153                                                         ; 22      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~152                                                         ; 22      ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[30]~48                                                          ; 22      ;
+; Addr_Decoder:Decoder|Equal1~6                                                                           ; 18      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux27~1                                                               ; 17      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux28~1                                                               ; 17      ;
+; Addr_Decoder:Decoder|Equal3~0                                                                           ; 17      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[30] ; 16      ;
+; SW[7]~input                                                                                             ; 15      ;
 ; SW[8]~input                                                                                             ; 15      ;
 ; SW[9]~input                                                                                             ; 15      ;
-; SW[5]~input                                                                                             ; 15      ;
 ; SW[6]~input                                                                                             ; 15      ;
-; SW[7]~input                                                                                             ; 15      ;
-; SW[3]~input                                                                                             ; 15      ;
-; SW[4]~input                                                                                             ; 15      ;
 ; BUTTON[1]~input                                                                                         ; 15      ;
 ; SW[1]~input                                                                                             ; 15      ;
 ; BUTTON[2]~input                                                                                         ; 15      ;
 ; SW[2]~input                                                                                             ; 15      ;
+; SW[3]~input                                                                                             ; 15      ;
+; SW[4]~input                                                                                             ; 15      ;
+; SW[5]~input                                                                                             ; 15      ;
 ; SW[0]~input                                                                                             ; 15      ;
 ; mips:mips_cpu|datapath:dp|mux2:wrmux|y[0]~3                                                             ; 15      ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[26]~14                                                         ; 15      ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[30] ; 15      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux23~3                                                               ; 14      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux29~3                                                               ; 14      ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[25]~12                                                         ; 15      ;
 ; mips:mips_cpu|datapath:dp|mux2:wrmux|y[4]~2                                                             ; 14      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux29~1                                                               ; 14      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[27] ; 13      ;
 ; GPIO:uGPIO|Equal0~5                                                                                     ; 12      ;
 ; mips:mips_cpu|controller:c|maindec:md|Decoder0~4                                                        ; 12      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux5~2                                                                ; 12      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux22~3                                                               ; 11      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux23~1                                                               ; 12      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[31] ; 12      ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~6                                                        ; 11      ;
+; mips:mips_cpu|controller:c|pcsrc~2                                                                      ; 11      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux22~1                                                               ; 11      ;
 ; GPIO:uGPIO|DataOut[0]~0                                                                                 ; 11      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux27~3                                                               ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux19~3                                                               ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux20~3                                                               ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux26~3                                                               ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux21~3                                                               ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux24~3                                                               ; 10      ;
-; GPIO:uGPIO|LEDG_R[0]~1                                                                                  ; 10      ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[31] ; 10      ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux25~3                                                               ; 9       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux19~1                                                               ; 11      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux20~1                                                               ; 11      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux24~1                                                               ; 11      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[28] ; 11      ;
+; GPIO:uGPIO|LEDG_R[2]~1                                                                                  ; 10      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux21~1                                                               ; 10      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux25~1                                                               ; 10      ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~0                                                        ; 10      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[29] ; 10      ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[26] ; 10      ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux26~1                                                               ; 9       ;
+; Addr_Decoder:Decoder|Equal0~5                                                                           ; 9       ;
 ; mips:mips_cpu|datapath:dp|mux2:wrmux|y[2]~4                                                             ; 9       ;
 ; mips:mips_cpu|controller:c|maindec:md|WideOr4~1                                                         ; 9       ;
-; GPIO:uGPIO|Equal1~1                                                                                     ; 9       ;
-; mips:mips_cpu|controller:c|maindec:md|Decoder0~3                                                        ; 9       ;
-; mips:mips_cpu|controller:c|maindec:md|Decoder0~0                                                        ; 9       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[29] ; 9       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[28] ; 9       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[12]                                                             ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[11]                                                             ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[10]                                                             ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[9]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[8]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[7]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[6]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[5]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[4]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[3]                                                              ; 8       ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[2]                                                              ; 8       ;
-; Addr_Decoder:Decoder|Equal0~9                                                                           ; 8       ;
-; mips:mips_cpu|controller:c|maindec:md|WideOr7~2                                                         ; 8       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[5]  ; 8       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[26] ; 8       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~155                                                          ; 7       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~33                                                           ; 7       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~31                                                           ; 7       ;
-; GPIO:uGPIO|HEX0_R[6]~0                                                                                  ; 7       ;
-; GPIO:uGPIO|HEX1_R[3]~0                                                                                  ; 7       ;
-; GPIO:uGPIO|HEX2_R[1]~1                                                                                  ; 7       ;
-; GPIO:uGPIO|HEX3_R[3]~3                                                                                  ; 7       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[4]  ; 7       ;
-; GPIO:uGPIO|HEX3_R~9                                                                                     ; 6       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[3]  ; 6       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[1]  ; 6       ;
+; GPIO:uGPIO|Equal1~0                                                                                     ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[12]                                                             ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[11]                                                             ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[10]                                                             ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[9]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[8]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[7]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[6]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[5]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[4]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[3]                                                              ; 9       ;
+; mips:mips_cpu|datapath:dp|flopr:pcreg|q[2]                                                              ; 9       ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~3                                                        ; 8       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[3]~150                                                          ; 7       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[9]~17                                                           ; 7       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[9]~15                                                           ; 7       ;
+; GPIO:uGPIO|HEX0_R[6]~1                                                                                  ; 7       ;
+; GPIO:uGPIO|HEX1_R[4]~0                                                                                  ; 7       ;
+; GPIO:uGPIO|HEX2_R[5]~0                                                                                  ; 7       ;
+; GPIO:uGPIO|HEX3_R[2]~2                                                                                  ; 7       ;
+; mips:mips_cpu|controller:c|maindec:md|WideOr7~2                                                         ; 7       ;
+; GPIO:uGPIO|HEX3_R~8                                                                                     ; 6       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[2]  ; 6       ;
-; TimerCounter:Timer|Equal2~0                                                                             ; 5       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux26~19                                                           ; 5       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux28~19                                                           ; 5       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux27~19                                                           ; 5       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[3]  ; 6       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[4]  ; 6       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[5]  ; 6       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[1]  ; 6       ;
+; mips:mips_cpu|controller:c|maindec:md|Decoder0~5                                                        ; 5       ;
+; TimerCounter:Timer|Equal2~1                                                                             ; 5       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux30~19                                                           ; 5       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux29~19                                                           ; 5       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux28~19                                                           ; 5       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux27~19                                                           ; 5       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux26~19                                                           ; 5       ;
+; mips:mips_cpu|controller:c|maindec:md|aluop[1]~0                                                        ; 5       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux31~19                                                           ; 5       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[0]  ; 5       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~43                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~40                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~33                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~22                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~18                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~16                                                        ; 4       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~13                                                           ; 4       ;
-; GPIO:uGPIO|Equal0~4                                                                                     ; 4       ;
-; GPIO:uGPIO|HEX3_R~8                                                                                     ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~35                                                        ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~30                                                        ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~21                                                        ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~8                                                         ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~2                                                         ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~0                                                         ; 4       ;
 ; GPIO:uGPIO|HEX3_R~7                                                                                     ; 4       ;
 ; GPIO:uGPIO|HEX3_R~6                                                                                     ; 4       ;
 ; GPIO:uGPIO|HEX3_R~5                                                                                     ; 4       ;
 ; GPIO:uGPIO|HEX3_R~4                                                                                     ; 4       ;
-; GPIO:uGPIO|HEX3_R[3]~2                                                                                  ; 4       ;
+; GPIO:uGPIO|HEX3_R~3                                                                                     ; 4       ;
 ; GPIO:uGPIO|Equal0~3                                                                                     ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux25~19                                                           ; 4       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux24~19                                                           ; 4       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux27~2                                                               ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux15~19                                                           ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux13~19                                                           ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux12~19                                                           ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux11~19                                                           ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux9~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux7~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux6~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux5~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux3~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux2~19                                                            ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux1~19                                                            ; 4       ;
 ; mips:mips_cpu|controller:c|maindec:md|WideOr15~2                                                        ; 4       ;
 ; GPIO:uGPIO|HEX3_R~0                                                                                     ; 4       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[15] ; 4       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Add0~10                                                               ; 4       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[6]  ; 4       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[8]  ; 4       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[9]  ; 4       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[10] ; 4       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[7]  ; 4       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux15~3                                                               ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux13~3                                                               ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux12~3                                                               ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux11~3                                                               ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux10~3                                                               ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux9~3                                                                ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux4~3                                                                ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux3~3                                                                ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux1~3                                                                ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux5~4                                                                ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~35                                                        ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~20                                                        ; 3       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[15] ; 4       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[6]  ; 4       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~23                                                        ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Decoder0~6                                                         ; 3       ;
+; GPIO:uGPIO|HEX3_R[2]~1                                                                                  ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux1~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux2~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux3~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux15~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux4~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux14~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux13~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux0~1                                                                ; 3       ;
 ; Addr_Decoder:Decoder|Equal1~1                                                                           ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux12~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux11~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux10~1                                                               ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux9~1                                                                ; 3       ;
 ; Addr_Decoder:Decoder|Equal1~0                                                                           ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux5~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux7~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux8~1                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux6~2                                                                ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux24~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux23~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux22~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux21~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~24                                                           ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux20~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux19~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux18~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~19                                                           ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux17~24                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux16~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux15~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux14~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux13~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux12~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux11~19                                                           ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux10~19                                                           ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux9~19                                                            ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux8~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux7~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux6~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux5~19                                                            ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux4~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux3~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux2~19                                                            ; 3       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux1~19                                                            ; 3       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux0~19                                                            ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux25~23                                                           ; 3       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R3[6]                                                              ; 3       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux6~0                                                                ; 3       ;
 ; mips:mips_cpu|controller:c|aludec:ad|Mux0~2                                                             ; 3       ;
+; TimerCounter:Timer|CounterR[7]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[8]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[9]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[10]                                                                         ; 3       ;
@@ -2092,32 +2104,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TimerCounter:Timer|CounterR[29]                                                                         ; 3       ;
 ; TimerCounter:Timer|CounterR[30]                                                                         ; 3       ;
 ; TimerCounter:Timer|CounterR[31]                                                                         ; 3       ;
-; TimerCounter:Timer|CounterR[5]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[6]                                                                          ; 3       ;
-; TimerCounter:Timer|CounterR[7]                                                                          ; 3       ;
-; TimerCounter:Timer|CounterR[3]                                                                          ; 3       ;
-; TimerCounter:Timer|CounterR[4]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[1]                                                                          ; 3       ;
 ; TimerCounter:Timer|CounterR[2]                                                                          ; 3       ;
+; TimerCounter:Timer|CounterR[3]                                                                          ; 3       ;
+; TimerCounter:Timer|CounterR[4]                                                                          ; 3       ;
+; TimerCounter:Timer|CounterR[5]                                                                          ; 3       ;
 ; TimerCounter:Timer|StatusR[0]                                                                           ; 3       ;
 ; TimerCounter:Timer|CounterR[0]                                                                          ; 3       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Add0~64                                                               ; 3       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[9]  ; 3       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[10] ; 3       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[11] ; 3       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[8]  ; 3       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[12] ; 3       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[13] ; 3       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[14] ; 3       ;
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[12] ; 3       ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[11] ; 3       ;
 ; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|q_a[20] ; 3       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~154                                                          ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux2~3                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux14~3                                                               ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux0~3                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux8~3                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux7~3                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux6~3                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~151                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~151                                                          ; 2       ;
+; GPIO:uGPIO|always0~0                                                                                    ; 2       ;
+; mips:mips_cpu|controller:c|pcsrc~1                                                                      ; 2       ;
+; TimerCounter:Timer|CompareR[7]                                                                          ; 2       ;
 ; TimerCounter:Timer|CompareR[8]                                                                          ; 2       ;
 ; TimerCounter:Timer|CompareR[9]                                                                          ; 2       ;
 ; TimerCounter:Timer|CompareR[10]                                                                         ; 2       ;
@@ -2142,17 +2145,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TimerCounter:Timer|CompareR[29]                                                                         ; 2       ;
 ; TimerCounter:Timer|CompareR[30]                                                                         ; 2       ;
 ; TimerCounter:Timer|CompareR[31]                                                                         ; 2       ;
-; TimerCounter:Timer|CompareR[5]                                                                          ; 2       ;
 ; TimerCounter:Timer|CompareR[6]                                                                          ; 2       ;
-; TimerCounter:Timer|CompareR[7]                                                                          ; 2       ;
+; TimerCounter:Timer|CompareR[1]                                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~36                                                           ; 2       ;
+; TimerCounter:Timer|CompareR[2]                                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~31                                                           ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~29                                                           ; 2       ;
 ; TimerCounter:Timer|CompareR[3]                                                                          ; 2       ;
 ; TimerCounter:Timer|CompareR[4]                                                                          ; 2       ;
-; TimerCounter:Timer|CompareR[1]                                                                          ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~20                                                           ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:resmux|y[1]~18                                                           ; 2       ;
-; TimerCounter:Timer|CompareR[2]                                                                          ; 2       ;
-; TimerCounter:Timer|Equal3~1                                                                             ; 2       ;
+; TimerCounter:Timer|CompareR[5]                                                                          ; 2       ;
+; TimerCounter:Timer|Equal3~0                                                                             ; 2       ;
+; TimerCounter:Timer|Equal2~0                                                                             ; 2       ;
+; GPIO:uGPIO|Equal0~4                                                                                     ; 2       ;
 ; TimerCounter:Timer|CompareR[0]                                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:resmux|y[2]~11                                                           ; 2       ;
 ; GPIO:uGPIO|LEDG_R~9                                                                                     ; 2       ;
 ; GPIO:uGPIO|LEDG_R~8                                                                                     ; 2       ;
 ; GPIO:uGPIO|LEDG_R~7                                                                                     ; 2       ;
@@ -2162,24 +2168,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO:uGPIO|LEDG_R~3                                                                                     ; 2       ;
 ; GPIO:uGPIO|LEDG_R~2                                                                                     ; 2       ;
 ; GPIO:uGPIO|LEDG_R~0                                                                                     ; 2       ;
-; GPIO:uGPIO|Equal1~0                                                                                     ; 2       ;
-; GPIO:uGPIO|HEX2_R[1]~0                                                                                  ; 2       ;
+; GPIO:uGPIO|HEX0_R[6]~0                                                                                  ; 2       ;
 ; Addr_Decoder:Decoder|Equal1~3                                                                           ; 2       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux16~0                                                               ; 2       ;
 ; mips:mips_cpu|datapath:dp|alu:alu|Mux17~1                                                               ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux16~2                                                               ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux2~2                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux14~2                                                               ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux0~2                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux8~2                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux7~2                                                                ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux6~2                                                                ; 2       ;
-; GPIO:uGPIO|Equal0~2                                                                                     ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux30~0                                                               ; 2       ;
+; mips:mips_cpu|datapath:dp|alu:alu|Mux22~0                                                               ; 2       ;
 ; GPIO:uGPIO|Equal0~1                                                                                     ; 2       ;
-; mips:mips_cpu|datapath:dp|alu:alu|Mux25~2                                                               ; 2       ;
-; GPIO:uGPIO|Equal0~0                                                                                     ; 2       ;
 ; mips:mips_cpu|datapath:dp|alu:alu|Mux31~1                                                               ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[8]~52                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[7]~40                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|Mux56~19                                                           ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R15[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R12[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R14[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R13[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R7[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R4[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R6[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R5[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R1[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R3[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R2[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R31[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R19[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R23[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R27[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R28[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R16[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R24[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R20[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R30[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R18[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R22[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R26[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R29[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R17[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R25[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R21[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R11[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R8[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R9[7]                                                              ; 2       ;
+; mips:mips_cpu|datapath:dp|regfile:rf|R10[7]                                                             ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[8]~39                                                          ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux55~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[8]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[8]                                                             ; 2       ;
@@ -2212,7 +2241,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[8]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[8]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[8]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[9]~51                                                          ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[9]~38                                                          ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux54~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[9]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[9]                                                             ; 2       ;
@@ -2245,7 +2274,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[9]                                                              ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[9]                                                              ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[9]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[10]~50                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[10]~37                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux53~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[10]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[10]                                                            ; 2       ;
@@ -2278,7 +2307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[10]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[10]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[10]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[11]~49                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[11]~36                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux52~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[11]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[11]                                                            ; 2       ;
@@ -2311,7 +2340,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[11]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[11]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[11]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[12]~48                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[12]~35                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux51~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[12]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[12]                                                            ; 2       ;
@@ -2344,7 +2373,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[12]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[12]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[12]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[13]~47                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[13]~34                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux50~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[13]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[13]                                                            ; 2       ;
@@ -2377,7 +2406,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[13]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[13]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[13]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[14]~46                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[14]~33                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux49~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[14]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[14]                                                            ; 2       ;
@@ -2410,7 +2439,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[14]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[14]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[14]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[15]~45                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[15]~32                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux48~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[15]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[15]                                                            ; 2       ;
@@ -2443,7 +2472,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[15]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[15]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[15]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[16]~44                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[16]~31                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux47~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[16]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[16]                                                            ; 2       ;
@@ -2476,7 +2505,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[16]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[16]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[16]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[17]~42                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[17]~30                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux46~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[17]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[17]                                                            ; 2       ;
@@ -2509,7 +2538,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[17]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[17]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[17]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[18]~40                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[18]~28                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux45~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[18]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[18]                                                            ; 2       ;
@@ -2542,7 +2571,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[18]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[18]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[18]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[19]~38                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[19]~27                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux44~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[19]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[19]                                                            ; 2       ;
@@ -2575,7 +2604,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[19]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[19]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[19]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[20]~36                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[20]~26                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux43~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[20]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[20]                                                            ; 2       ;
@@ -2608,7 +2637,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[20]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[20]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[20]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[21]~34                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[21]~25                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux42~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[21]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[21]                                                            ; 2       ;
@@ -2641,7 +2670,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[21]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[21]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[21]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[22]~32                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[22]~23                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux41~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[22]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[22]                                                            ; 2       ;
@@ -2674,7 +2703,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[22]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[22]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[22]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[23]~30                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[23]~22                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux40~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[23]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[23]                                                            ; 2       ;
@@ -2707,7 +2736,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[23]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[23]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[23]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[24]~28                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[24]~20                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux39~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[24]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[24]                                                            ; 2       ;
@@ -2740,7 +2769,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R18[24]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R22[24]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R26[24]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[25]~26                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[25]~19                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux38~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[25]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[25]                                                            ; 2       ;
@@ -2773,7 +2802,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R8[25]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R9[25]                                                             ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R10[25]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[26]~24                                                         ; 2       ;
+; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[26]~18                                                         ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|Mux37~19                                                           ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R15[26]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R12[26]                                                            ; 2       ;
@@ -2799,33 +2828,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|regfile:rf|R24[26]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R20[26]                                                            ; 2       ;
 ; mips:mips_cpu|datapath:dp|regfile:rf|R29[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R17[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R25[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R21[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R30[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R18[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R22[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R26[26]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|mux2:srcbmux|y[27]~22                                                         ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|Mux36~19                                                           ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R15[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R12[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R14[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R13[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R7[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R4[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R6[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R5[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R1[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R3[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R2[27]                                                             ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R31[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R19[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R23[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R27[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R28[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R16[27]                                                            ; 2       ;
-; mips:mips_cpu|datapath:dp|regfile:rf|R24[27]                                                            ; 2       ;
 +---------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2834,7 +2836,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
 ; Name                                                                                                       ; Type ; Mode           ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF            ; Location                                                                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs ;
 +------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
-; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 2048         ; 32           ; 2048         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 2048                        ; 32                          ; 2048                        ; 32                          ; 65536               ; 8    ; insts_data.mif ; M9K_X25_Y16_N0, M9K_X25_Y17_N0, M9K_X25_Y14_N0, M9K_X25_Y12_N0, M9K_X25_Y11_N0, M9K_X25_Y10_N0, M9K_X25_Y15_N0, M9K_X25_Y13_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
+; ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 2048         ; 32           ; 2048         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 2048                        ; 32                          ; 2048                        ; 32                          ; 65536               ; 8    ; insts_data.mif ; M9K_X25_Y17_N0, M9K_X13_Y20_N0, M9K_X13_Y21_N0, M9K_X13_Y18_N0, M9K_X25_Y19_N0, M9K_X25_Y18_N0, M9K_X25_Y21_N0, M9K_X13_Y17_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
 +------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -3103,176 +3105,177 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ;2040;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 
 
-+------------------------------------------------+
-; Routing Usage Summary                          ;
-+-----------------------+------------------------+
-; Routing Resource Type ; Usage                  ;
-+-----------------------+------------------------+
-; Block interconnects   ; 3,709 / 47,787 ( 8 % ) ;
-; C16 interconnects     ; 72 / 1,804 ( 4 % )     ;
-; C4 interconnects      ; 2,499 / 31,272 ( 8 % ) ;
-; Direct links          ; 314 / 47,787 ( < 1 % ) ;
-; Global clocks         ; 3 / 20 ( 15 % )        ;
-; Local interconnects   ; 1,333 / 15,408 ( 9 % ) ;
-; R24 interconnects     ; 67 / 1,775 ( 4 % )     ;
-; R4 interconnects      ; 2,940 / 41,310 ( 7 % ) ;
-+-----------------------+------------------------+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 3,844 / 47,787 ( 8 % )  ;
+; C16 interconnects     ; 71 / 1,804 ( 4 % )      ;
+; C4 interconnects      ; 3,152 / 31,272 ( 10 % ) ;
+; Direct links          ; 193 / 47,787 ( < 1 % )  ;
+; Global clocks         ; 3 / 20 ( 15 % )         ;
+; Local interconnects   ; 1,287 / 15,408 ( 8 % )  ;
+; R24 interconnects     ; 119 / 1,775 ( 7 % )     ;
+; R4 interconnects      ; 3,935 / 41,310 ( 10 % ) ;
++-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 14.32) ; Number of LABs  (Total = 144) ;
+; Number of Logic Elements  (Average = 13.52) ; Number of LABs  (Total = 154) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 4                             ;
+; 1                                           ; 10                            ;
 ; 2                                           ; 0                             ;
 ; 3                                           ; 0                             ;
-; 4                                           ; 0                             ;
-; 5                                           ; 0                             ;
-; 6                                           ; 1                             ;
-; 7                                           ; 0                             ;
-; 8                                           ; 1                             ;
-; 9                                           ; 0                             ;
-; 10                                          ; 2                             ;
-; 11                                          ; 4                             ;
-; 12                                          ; 7                             ;
-; 13                                          ; 12                            ;
-; 14                                          ; 16                            ;
-; 15                                          ; 36                            ;
-; 16                                          ; 61                            ;
+; 4                                           ; 1                             ;
+; 5                                           ; 1                             ;
+; 6                                           ; 0                             ;
+; 7                                           ; 2                             ;
+; 8                                           ; 0                             ;
+; 9                                           ; 2                             ;
+; 10                                          ; 1                             ;
+; 11                                          ; 2                             ;
+; 12                                          ; 6                             ;
+; 13                                          ; 16                            ;
+; 14                                          ; 28                            ;
+; 15                                          ; 33                            ;
+; 16                                          ; 52                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.69) ; Number of LABs  (Total = 144) ;
+; LAB-wide Signals  (Average = 1.74) ; Number of LABs  (Total = 154) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 2                             ;
-; 1 Clock                            ; 128                           ;
-; 1 Clock enable                     ; 9                             ;
-; 1 Sync. clear                      ; 4                             ;
-; 2 Clock enables                    ; 101                           ;
+; 1 Async. clear                     ; 3                             ;
+; 1 Clock                            ; 141                           ;
+; 1 Clock enable                     ; 14                            ;
+; 1 Sync. clear                      ; 5                             ;
+; 1 Sync. load                       ; 2                             ;
+; 2 Clock enables                    ; 103                           ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 23.27) ; Number of LABs  (Total = 144) ;
+; Number of Signals Sourced  (Average = 21.87) ; Number of LABs  (Total = 154) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 1                             ;
-; 2                                            ; 3                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 8                             ;
 ; 3                                            ; 0                             ;
 ; 4                                            ; 0                             ;
 ; 5                                            ; 0                             ;
 ; 6                                            ; 0                             ;
-; 7                                            ; 0                             ;
-; 8                                            ; 0                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 2                             ;
 ; 9                                            ; 0                             ;
 ; 10                                           ; 0                             ;
 ; 11                                           ; 0                             ;
-; 12                                           ; 2                             ;
+; 12                                           ; 0                             ;
 ; 13                                           ; 1                             ;
-; 14                                           ; 1                             ;
-; 15                                           ; 7                             ;
-; 16                                           ; 15                            ;
-; 17                                           ; 4                             ;
-; 18                                           ; 7                             ;
-; 19                                           ; 4                             ;
-; 20                                           ; 8                             ;
-; 21                                           ; 6                             ;
+; 14                                           ; 6                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 9                             ;
+; 17                                           ; 6                             ;
+; 18                                           ; 8                             ;
+; 19                                           ; 12                            ;
+; 20                                           ; 11                            ;
+; 21                                           ; 5                             ;
 ; 22                                           ; 9                             ;
-; 23                                           ; 5                             ;
-; 24                                           ; 7                             ;
+; 23                                           ; 4                             ;
+; 24                                           ; 4                             ;
 ; 25                                           ; 6                             ;
 ; 26                                           ; 3                             ;
-; 27                                           ; 2                             ;
+; 27                                           ; 1                             ;
 ; 28                                           ; 7                             ;
-; 29                                           ; 1                             ;
-; 30                                           ; 17                            ;
-; 31                                           ; 2                             ;
-; 32                                           ; 26                            ;
+; 29                                           ; 2                             ;
+; 30                                           ; 22                            ;
+; 31                                           ; 0                             ;
+; 32                                           ; 21                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 11.93) ; Number of LABs  (Total = 144) ;
+; Number of Signals Sourced Out  (Average = 11.68) ; Number of LABs  (Total = 154) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
 ; 1                                                ; 14                            ;
-; 2                                                ; 2                             ;
-; 3                                                ; 0                             ;
+; 2                                                ; 8                             ;
+; 3                                                ; 3                             ;
 ; 4                                                ; 2                             ;
-; 5                                                ; 4                             ;
-; 6                                                ; 6                             ;
-; 7                                                ; 5                             ;
-; 8                                                ; 10                            ;
-; 9                                                ; 9                             ;
-; 10                                               ; 14                            ;
-; 11                                               ; 4                             ;
-; 12                                               ; 6                             ;
-; 13                                               ; 6                             ;
-; 14                                               ; 9                             ;
-; 15                                               ; 5                             ;
-; 16                                               ; 25                            ;
+; 5                                                ; 3                             ;
+; 6                                                ; 7                             ;
+; 7                                                ; 6                             ;
+; 8                                                ; 9                             ;
+; 9                                                ; 10                            ;
+; 10                                               ; 7                             ;
+; 11                                               ; 9                             ;
+; 12                                               ; 3                             ;
+; 13                                               ; 5                             ;
+; 14                                               ; 11                            ;
+; 15                                               ; 4                             ;
+; 16                                               ; 26                            ;
 ; 17                                               ; 2                             ;
-; 18                                               ; 1                             ;
-; 19                                               ; 0                             ;
-; 20                                               ; 7                             ;
-; 21                                               ; 2                             ;
-; 22                                               ; 0                             ;
-; 23                                               ; 2                             ;
-; 24                                               ; 6                             ;
+; 18                                               ; 2                             ;
+; 19                                               ; 4                             ;
+; 20                                               ; 1                             ;
+; 21                                               ; 3                             ;
+; 22                                               ; 2                             ;
+; 23                                               ; 4                             ;
+; 24                                               ; 5                             ;
 ; 25                                               ; 1                             ;
-; 26                                               ; 0                             ;
+; 26                                               ; 2                             ;
 ; 27                                               ; 0                             ;
-; 28                                               ; 2                             ;
+; 28                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 22.97) ; Number of LABs  (Total = 144) ;
+; Number of Distinct Inputs  (Average = 22.41) ; Number of LABs  (Total = 154) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 1                             ;
+; 2                                            ; 2                             ;
 ; 3                                            ; 13                            ;
 ; 4                                            ; 0                             ;
-; 5                                            ; 2                             ;
-; 6                                            ; 3                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 8                             ;
 ; 7                                            ; 0                             ;
 ; 8                                            ; 0                             ;
-; 9                                            ; 1                             ;
+; 9                                            ; 0                             ;
 ; 10                                           ; 1                             ;
-; 11                                           ; 0                             ;
+; 11                                           ; 3                             ;
 ; 12                                           ; 0                             ;
 ; 13                                           ; 1                             ;
 ; 14                                           ; 1                             ;
 ; 15                                           ; 15                            ;
-; 16                                           ; 0                             ;
-; 17                                           ; 1                             ;
-; 18                                           ; 3                             ;
+; 16                                           ; 4                             ;
+; 17                                           ; 2                             ;
+; 18                                           ; 2                             ;
 ; 19                                           ; 1                             ;
 ; 20                                           ; 2                             ;
 ; 21                                           ; 2                             ;
-; 22                                           ; 0                             ;
-; 23                                           ; 1                             ;
-; 24                                           ; 3                             ;
-; 25                                           ; 7                             ;
-; 26                                           ; 7                             ;
-; 27                                           ; 9                             ;
-; 28                                           ; 9                             ;
-; 29                                           ; 18                            ;
-; 30                                           ; 11                            ;
-; 31                                           ; 7                             ;
-; 32                                           ; 13                            ;
-; 33                                           ; 11                            ;
+; 22                                           ; 1                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 3                             ;
+; 26                                           ; 12                            ;
+; 27                                           ; 10                            ;
+; 28                                           ; 1                             ;
+; 29                                           ; 11                            ;
+; 30                                           ; 12                            ;
+; 31                                           ; 15                            ;
+; 32                                           ; 15                            ;
+; 33                                           ; 13                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -3377,17 +3380,17 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; BUTTON[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BUTTON[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BUTTON[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -3678,13 +3681,13 @@ Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 6% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 33% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
+Info (170195): Router estimated average interconnect usage is 8% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 31% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 2.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3695,23 +3698,23 @@ Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-
     Info (169178): Pin BUTTON[0] uses I/O standard 3.3-V LVTTL at H2
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at G21
     Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at J6
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at J7
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at G5
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at G4
     Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at H6
     Info (169178): Pin BUTTON[2] uses I/O standard 3.3-V LVTTL at F1
     Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at H5
     Info (169178): Pin BUTTON[1] uses I/O standard 3.3-V LVTTL at G3
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at G5
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at G4
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at E3
     Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at H7
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at J7
     Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at D2
     Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at E4
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at E3
 Info (144001): Generated suppressed messages file C:/MIPS_Design/MIPS_System_Syn/MIPS_System.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 206 warnings
-    Info: Peak virtual memory: 1113 megabytes
-    Info: Processing ended: Sun Nov 12 12:03:13 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 1076 megabytes
+    Info: Processing ended: Sun Nov 12 12:40:43 2017
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+
