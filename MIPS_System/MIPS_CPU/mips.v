@@ -19,7 +19,7 @@ module mips(input         clk, reset,
   wire        signext, shiftl16, memtoreg;
   wire [1:0]  branch;
   wire        pcsrc, zero;
-  wire        alusrc, regdst, regwrite, jump;
+  wire        alusrc, regdst, regwrite, jump, jr;
   wire [2:0]  alucontrol;
 
   // Instantiate Controller
@@ -36,6 +36,7 @@ module mips(input         clk, reset,
 		.regdst     (regdst),
 		.regwrite   (regwrite),
 		.jump       (jump),
+		.jr			(jr),
 		.alucontrol (alucontrol));
 
   // Instantiate Datapath
@@ -50,6 +51,7 @@ module mips(input         clk, reset,
     .regdst     (regdst),
     .regwrite   (regwrite),
     .jump       (jump),
+	 .jr		    (jr),
     .alucontrol (alucontrol),
     .zero       (zero),
     .pc         (pc),
@@ -68,6 +70,7 @@ module controller(input  [5:0] op, funct,
                   output       pcsrc, alusrc,
                   output       regdst, regwrite,
                   output       jump,
+						output		 jr,
                   output [2:0] alucontrol);
 
   wire [1:0] aluop;
@@ -89,6 +92,7 @@ module controller(input  [5:0] op, funct,
   aludec ad( 
     .funct      (funct),
     .aluop      (aluop), 
+	 .jr		    (jr),
     .alucontrol (alucontrol));
 
 assign pcsrc = branch[1] ? (branch[0] ? (branch[0] & zero) : (~branch[0] & ~zero)) : (0);
@@ -130,8 +134,9 @@ endmodule
 
 module aludec(input      [5:0] funct,
               input      [1:0] aluop,
-              output reg [2:0] alucontrol);
-
+              output reg [2:0] alucontrol,
+				  output reg jr);
+	
   always @(*)
     case(aluop)
       2'b00: alucontrol <= #`mydelay 3'b010;  // add
@@ -146,6 +151,10 @@ module aludec(input      [5:0] funct,
           6'b100101: alucontrol <= #`mydelay 3'b001; // OR
 			 6'b100010,
           6'b101011: alucontrol <= #`mydelay 3'b111; // SLT, SLTU: only difference is exception
+			 6'b001000: begin
+							alucontrol <= #`mydelay 3'b010; 
+							jr <= #`mydelay 1'b1; // JR (ADD rs + 0 result)
+			 end
           default:   alucontrol <= #`mydelay 3'bxxx; // ???
         endcase
     endcase
@@ -157,7 +166,7 @@ module datapath(input         clk, reset,
                 input         shiftl16,
                 input         memtoreg, pcsrc,
                 input         alusrc, regdst,
-                input         regwrite, jump,
+                input         regwrite, jump, jr,
                 input  [2:0]  alucontrol,
                 output        zero,
                 output [31:0] pc,
@@ -199,8 +208,14 @@ module datapath(input         clk, reset,
     .s   (pcsrc),
     .y   (pcnextbr));
 
-  mux2 #(32) pcmux(
+  mux2 #(32) pcjrmux(
     .d0   (pcnextbr),
+    .d1   (result),
+    .s    (jr),
+    .y    (pcnextjr));
+	 
+  mux2 #(32) pcmux(
+    .d0   (pcnextjr),
     .d1   ({pcplus4[31:28], instr[25:0], 2'b00}),
     .s    (jump),
     .y    (pcnext));
