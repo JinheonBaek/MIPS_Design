@@ -19,7 +19,7 @@ module mips(input         clk, reset,
   wire        signext, shiftl16, memtoreg;
   wire [1:0]  branch;
   wire        pcsrc, zero;
-  wire        alusrc, regdst, regwrite, jump;
+  wire        alusrc, regdst, regwrite, jump, jal, jr;
   wire [2:0]  alucontrol;
 
   // Instantiate Controller
@@ -36,6 +36,8 @@ module mips(input         clk, reset,
 		.regdst     (regdst),
 		.regwrite   (regwrite),
 		.jump       (jump),
+		.jal 			(jal),
+		.jr			(jr),
 		.alucontrol (alucontrol));
 
   // Instantiate Datapath
@@ -50,6 +52,8 @@ module mips(input         clk, reset,
     .regdst     (regdst),
     .regwrite   (regwrite),
     .jump       (jump),
+	 .jal			 (jal),
+	 .jr			 (jr),
     .alucontrol (alucontrol),
     .zero       (zero),
     .pc         (pc),
@@ -67,7 +71,7 @@ module controller(input  [5:0] op, funct,
                   output       memtoreg, memwrite,
                   output       pcsrc, alusrc,
                   output       regdst, regwrite,
-                  output       jump,
+                  output       jump, jal, jr,
                   output [2:0] alucontrol);
 
   wire [1:0] aluop;
@@ -75,6 +79,7 @@ module controller(input  [5:0] op, funct,
 
   maindec md(
     .op       (op),
+	 .funct	  (funct),
     .signext  (signext),
     .shiftl16 (shiftl16),
     .memtoreg (memtoreg),
@@ -84,6 +89,8 @@ module controller(input  [5:0] op, funct,
     .regdst   (regdst),
     .regwrite (regwrite),
     .jump     (jump),
+	 .jal		  (jal),
+	 .jr		  (jr),
     .aluop    (aluop));
 
   aludec ad( 
@@ -97,33 +104,38 @@ endmodule
 
 
 module maindec(input  [5:0] op,
+					input  [5:0] funct,
                output       signext,
                output       shiftl16,
                output       memtoreg, memwrite,
                output [1:0] branch,
 					output		 alusrc,
                output       regdst, regwrite,
-               output       jump,
+               output       jump, jal, jr,
                output [1:0] aluop);
 
-  reg [11:0] controls;
+  reg [13:0] controls;
 
   assign {signext, shiftl16, regwrite, regdst, alusrc, branch, memwrite,
-          memtoreg, jump, aluop} = controls;
+          memtoreg, jump, aluop, jal, jr} = controls;
 
   always @(*)
     case(op)
-      6'b000000: controls <= #`mydelay 12'b001100000011; // Rtype
-      6'b100011: controls <= #`mydelay 12'b101010001000; // LW
-      6'b101011: controls <= #`mydelay 12'b100010010000; // SW
-      6'b000100: controls <= #`mydelay 12'b100001100001; // BEQ
-		6'b000101: controls <= #`mydelay 12'b100001000001; // BNE
+      6'b000000: case(funct)	// Rtype
+						6'b001000: controls <= #`mydelay 14'b00000000000001; // JR
+						default:   controls <= #`mydelay 14'b00110000001100; // Rtype default
+					  endcase
+		6'b100011: controls <= #`mydelay 14'b10101000100000; // LW
+      6'b101011: controls <= #`mydelay 14'b10001001000000; // SW
+      6'b000100: controls <= #`mydelay 14'b10000110000100; // BEQ
+		6'b000101: controls <= #`mydelay 14'b10000100000100; // BNE
       6'b001000, 
-      6'b001001: controls <= #`mydelay 12'b101010000000; // ADDI, ADDIU: only difference is exception
-      6'b001101: controls <= #`mydelay 12'b001010000010; // ORI
-      6'b001111: controls <= #`mydelay 12'b011010000000; // LUI
-      6'b000010: controls <= #`mydelay 12'b000000000100; // J
-      default:   controls <= #`mydelay 12'bxxxxxxxxxxxx; // ???
+      6'b001001: controls <= #`mydelay 14'b10101000000000; // ADDI, ADDIU: only difference is exception
+      6'b001101: controls <= #`mydelay 14'b00101000001000; // ORI
+      6'b001111: controls <= #`mydelay 14'b01101000000000; // LUI
+      6'b000010: controls <= #`mydelay 14'b00000000010000; // J
+		6'b000011: controls <= #`mydelay 14'b00100000010010; // JAL
+      default:   controls <= #`mydelay 14'bxxxxxxxxxxxxxx; // ???
     endcase
 
 endmodule
@@ -158,7 +170,7 @@ module datapath(input         clk, reset,
                 input         shiftl16,
                 input         memtoreg, pcsrc,
                 input         alusrc, regdst,
-                input         regwrite, jump,
+                input         regwrite, jump, jal, jr,
                 input  [2:0]  alucontrol,
                 output        zero,
                 output [31:0] pc,
@@ -166,11 +178,11 @@ module datapath(input         clk, reset,
                 output [31:0] aluout, writedata,
                 input  [31:0] readdata);
 
-  wire [4:0]  writereg;
-  wire [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
+  wire [4:0]  writereg, writesubreg;
+  wire [31:0] pcnext, pcnextbr, pcnextj, pcplus4, pcbranch;
   wire [31:0] signimm, signimmsh, shiftedimm;
   wire [31:0] srca, srcb;
-  wire [31:0] result;
+  wire [31:0] subresult, result;
   wire        shift;
 
   // next PC logic
@@ -200,12 +212,18 @@ module datapath(input         clk, reset,
     .s   (pcsrc),
     .y   (pcnextbr));
 	 
-  mux2 #(32) pcmux(
+  mux2 #(32) pcjmux(
     .d0   (pcnextbr),
     .d1   ({pcplus4[31:28], instr[25:0], 2'b00}),
     .s    (jump),
-    .y    (pcnext));
+    .y    (pcnextj));
 
+  mux2 #(32) pcmux(  // for jr instruction (pc <- ra, srca is a rs register result)
+    .d0   (pcnextj),
+    .d1   (srca),
+    .s    (jr),
+    .y    (pcnext));
+	 
   // register file logic
   regfile rf(
     .clk     (clk),
@@ -217,17 +235,29 @@ module datapath(input         clk, reset,
     .rd1     (srca),
     .rd2     (writedata));
 
-  mux2 #(5) wrmux(
+  mux2 #(5) wrsubmux(  // select rt or rd for destination
     .d0  (instr[20:16]),
     .d1  (instr[15:11]),
     .s   (regdst),
+    .y   (writesubreg));
+	 
+  mux2 #(5) wrmux(  // select writesubreg or ra($r31) reg (for jal instruction: ra <- pc + 4)
+    .d0  (writesubreg),
+    .d1  (5'b11111),
+    .s   (jal),
     .y   (writereg));
-
-  mux2 #(32) resmux(
+	 
+  mux2 #(32) resmux( // aluout or memory_data
     .d0 (aluout),
     .d1 (readdata),
     .s  (memtoreg),
-    .y  (result));
+    .y  (subresult));
+
+  mux2 #(32) jalresmux( // subresult or pcplus4(for jal instruction: ra <- pc + 4)
+    .d0 (subresult),
+    .d1 (pcplus4),
+    .s  (jal),
+    .y  (result));	 
 
   sign_zero_ext sze(
     .a       (instr[15:0]),
