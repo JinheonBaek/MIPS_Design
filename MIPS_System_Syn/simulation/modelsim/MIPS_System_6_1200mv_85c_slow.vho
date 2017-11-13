@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/13/2017 01:13:57"
+-- DATE "11/13/2017 19:27:10"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -2671,10 +2671,9 @@ SIGNAL \uGPIO|LEDG_R[2]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[6]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[7]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[8]~feeder_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|jalresmux|y\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX1_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|BUTTON_StatusR\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \uGPIO|HEX0_R\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|jalresmux|y\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \pll0|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \mips_cpu|dp|pcreg|q\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \mips_cpu|dp|rf|R9\ : std_logic_vector(31 DOWNTO 0);
@@ -2717,6 +2716,7 @@ SIGNAL \uGPIO|SW_StatusR\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|LEDG_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX3_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX2_R\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \uGPIO|HEX0_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \mips_cpu|c|md|ALT_INV_WideOr10~1_combout\ : std_logic;
 SIGNAL \ALT_INV_reset_ff~q\ : std_logic;
 

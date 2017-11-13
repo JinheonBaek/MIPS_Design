@@ -1,0 +1,451 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\MIPS_Design\MIPS_System_Syn\simulation\modelsim
+vadder
+IoTdBW9AzR6PB^^jF?YYh=2
+VR4:XbIkd<X908neF9?e9K1
+Z1 dC:\MIPS_Design\MIPS_System_Syn\simulation\modelsim
+Z2 w1510457921
+Z3 8C:/MIPS_Design/MIPS_System/MIPS_CPU/mipsparts.v
+Z4 FC:/MIPS_Design/MIPS_System/MIPS_CPU/mipsparts.v
+L0 219
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1510503407.242000
+Z7 !s107 C:/MIPS_Design/MIPS_System/MIPS_CPU/mipsparts.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/MIPS_CPU|C:/MIPS_Design/MIPS_System/MIPS_CPU/mipsparts.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/MIPS_CPU -O0
+!i10b 1
+!s100 l<e3oQBL`ZA2gkUK;bT=13
+!s85 0
+!s101 -O0
+vAddr_Decoder
+IFi>Z]9<6]gSlM^B7iT6S73
+VYZUiY@2bCD3RmSiD^JG2z0
+R1
+R2
+8C:/MIPS_Design/MIPS_System/Decoder/Addr_Decoder.v
+FC:/MIPS_Design/MIPS_System/Decoder/Addr_Decoder.v
+L0 3
+R5
+r1
+31
+R9
+n@addr_@decoder
+!i10b 1
+!s100 XgKDGkTTOEA0VJD;OhcV`1
+!s85 0
+!s108 1510503407.947000
+!s107 C:/MIPS_Design/MIPS_System/Decoder/Addr_Decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/Decoder|C:/MIPS_Design/MIPS_System/Decoder/Addr_Decoder.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Decoder -O0
+vALTPLL_clkgen
+IE9e[WDAYNQ7jOdn8o74:J3
+VaU<6ME4_agc_khQ?L:nl:2
+R1
+R2
+8C:/MIPS_Design/MIPS_System/Altera_PLL/ALTPLL_clkgen.v
+FC:/MIPS_Design/MIPS_System/Altera_PLL/ALTPLL_clkgen.v
+L0 39
+R5
+r1
+31
+R9
+n@a@l@t@p@l@l_clkgen
+!i10b 1
+!s100 CnOBRmPQF2TkTJB9V;?_60
+!s85 0
+!s108 1510503408.067000
+!s107 C:/MIPS_Design/MIPS_System/Altera_PLL/ALTPLL_clkgen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/Altera_PLL|C:/MIPS_Design/MIPS_System/Altera_PLL/ALTPLL_clkgen.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Altera_PLL -O0
+vALTPLL_clkgen_altpll
+I@9;M]6I5A`m;CJzY9;eWh1
+V@cYEllCA3Bo2<VA=PgzJo2
+R1
+w1510457922
+8C:/MIPS_Design/MIPS_System_Syn/db/altpll_clkgen_altpll.v
+FC:/MIPS_Design/MIPS_System_Syn/db/altpll_clkgen_altpll.v
+L0 29
+R5
+r1
+31
+R9
+n@a@l@t@p@l@l_clkgen_altpll
+!i10b 1
+!s100 dCE@=?cXh[D_]jSmonN?h0
+!s85 0
+!s108 1510503408.189000
+!s107 C:/MIPS_Design/MIPS_System_Syn/db/altpll_clkgen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System_Syn/db|C:/MIPS_Design/MIPS_System_Syn/db/altpll_clkgen_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System_Syn/db -O0
+valu
+IOz[R[:=M:<7RI5hFJDS==1
+VejYX:795jcXa79:=j]]Hk1
+R1
+R2
+R3
+R4
+L0 195
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 2Lg<SbYb_o7ejeo>nEI?i3
+!s85 0
+!s101 -O0
+valudec
+!i10b 1
+!s100 @ImUMGCH`HQij0PPWil8c3
+IEb7`4C9RUFoG_JiKTCYMO2
+VV@U_8;`LNAe8eO3WRWMD]1
+R1
+Z11 w1510503178
+Z12 8C:/MIPS_Design/MIPS_System/MIPS_CPU/mips.v
+Z13 FC:/MIPS_Design/MIPS_System/MIPS_CPU/mips.v
+L0 143
+R5
+r1
+!s85 0
+31
+Z14 !s108 1510503408.297000
+Z15 !s107 C:/MIPS_Design/MIPS_System/MIPS_CPU/mips.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/MIPS_CPU|C:/MIPS_Design/MIPS_System/MIPS_CPU/mips.v|
+!s101 -O0
+R9
+R10
+vcontroller
+!i10b 1
+!s100 WDd:zCS:ZgK>eYVWBmYiP3
+IncF=?C?hSg0m:k4AW?STP1
+VJbDY>4Vb_C7oZhd;SXEGC1
+R1
+R11
+R12
+R13
+L0 67
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!s101 -O0
+R9
+R10
+vdatapath
+!i10b 1
+!s100 `fOed^S3GKo8d2>cQ^U6m1
+I0emCNWC4o;haEn2=HDT?03
+V8<k^FD1ang]V?MFG<G4?a3
+R1
+R11
+R12
+R13
+L0 168
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!s101 -O0
+R9
+R10
+vflopenr
+I1oo3W16a^3LiWRzHFB3aR3
+Vl[@31Ka9Wak9oGo?2I58:3
+R1
+R2
+R3
+R4
+L0 277
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 RS9<;DOH[n9GS`o=m73NY2
+!s85 0
+!s101 -O0
+vflopr
+I6HZPnWP?:8cWeYeDfmGzQ2
+VKfe>keNPnLBlHh<KCg1o52
+R1
+R2
+R3
+R4
+L0 264
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 ZT054VXC6N7Lln?odJzUR3
+!s85 0
+!s101 -O0
+vGPIO
+I084icVA<Ii27J8WJmGc2N2
+VAT1XQY_W6_M^VLzzD2Q3_3
+R1
+R2
+Z17 8C:/MIPS_Design/MIPS_System/GPIO/GPIO.v
+Z18 FC:/MIPS_Design/MIPS_System/GPIO/GPIO.v
+L0 21
+R5
+r1
+31
+Z19 !s108 1510503407.766000
+Z20 !s107 C:/MIPS_Design/MIPS_System/GPIO/GPIO.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/GPIO|C:/MIPS_Design/MIPS_System/GPIO/GPIO.v|
+R9
+Z22 !s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/GPIO -O0
+n@g@p@i@o
+!i10b 1
+!s100 FcQZB3J7_39Jn0Zm62jgV2
+!s85 0
+!s101 -O0
+vmaindec
+!i10b 1
+!s100 oDUaeS[8i_EdbBUbDXn:R1
+I;mmk:T5HDDZ3EP6Fci2AK3
+V@kD=ObfJ?C6[jGZ6WF0l^1
+R1
+R11
+R12
+R13
+L0 106
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!s101 -O0
+R9
+R10
+vmips
+!i10b 1
+!s100 o8^TA2CNKmCKXB`>[o9ED1
+IM13Vo:S1Y_PLdROzU4SzV1
+VPW[Ak9MzbjZ_[1j_DcWOj3
+R1
+R11
+R12
+R13
+L0 11
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!s101 -O0
+R9
+R10
+vMIPS_System
+IG74oc9kg]N8DLl78ac71=0
+VFO?6l3;=3I;;k7]a^0]g42
+R1
+R2
+8C:/MIPS_Design/MIPS_System/MIPS_System.v
+FC:/MIPS_Design/MIPS_System/MIPS_System.v
+L0 21
+R5
+r1
+31
+R9
+n@m@i@p@s_@system
+!i10b 1
+!s100 k8;g0G7J0`T3_zHjDP0]?3
+!s85 0
+!s108 1510503406.956000
+!s107 C:/MIPS_Design/MIPS_System/MIPS_System.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System|C:/MIPS_Design/MIPS_System/MIPS_System.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System -O0
+vmux2
+I20e=F=61LA@A:BZOOe41R2
+VT8RWJBjAIeM]>7U=5kBkT1
+R1
+R2
+R3
+R4
+L0 291
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 Y;a24nLN6Fze=L7jeJ`7I0
+!s85 0
+!s101 -O0
+vpulse_gen
+IY>m=RBP<GDGIbRZh`b]9G0
+Vzj7fbHTOAPGHl]4LN::<01
+R1
+R2
+R17
+R18
+L0 187
+R5
+r1
+31
+R19
+R20
+R21
+R9
+R22
+!i10b 1
+!s100 WEK<Zd<AmaKQVGGOb1_XL0
+!s85 0
+!s101 -O0
+vram2port_inst_data
+Ij`O0N3IPbf9lfAgFBgNm43
+V@nS`@J9bDPP4cX22C`O`Z2
+R1
+R2
+8C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port/ram2port_inst_data.v
+FC:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port/ram2port_inst_data.v
+L0 39
+R5
+r1
+31
+R9
+!i10b 1
+!s100 Y8EkJgQ57e8Dn<SUzaWCQ3
+!s85 0
+!s108 1510503406.855000
+!s107 C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port/ram2port_inst_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port|C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port/ram2port_inst_data.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port -O0
+vregfile
+IH0ld]Q:gl?U`45RiK75[?1
+VoEfJZgI?@czGGfSOSdz_g3
+R1
+R2
+R3
+R4
+L0 13
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 [BiWDkL`I5KcOb[KZ=;No3
+!s85 0
+!s101 -O0
+vshift_left_16
+I8YckbSK;2am^W6@ah11AU0
+V;Rg@l^a_VE_7Odbmd^>212
+R1
+R2
+R3
+R4
+L0 250
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 W3a=k64<0D0DC=[NSIfY_2
+!s85 0
+!s101 -O0
+vsign_zero_ext
+I9Od]nL?5ME2@Y[=e=lEmG2
+V>>JeOTJFFWY8K9NY8L=991
+R1
+R2
+R3
+R4
+L0 236
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 JZIeMj<GKfSU8X76lJI=K3
+!s85 0
+!s101 -O0
+vsl2
+I[V]CEeA?Bb4]jon95mUUE0
+VMHGRbO<8oJM:TjGW_j2PX2
+R1
+R2
+R3
+R4
+L0 227
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 ;MM@fWbCdednoC;IV@oEm0
+!s85 0
+!s101 -O0
+vTimerCounter
+I58nQdW=FCCGFC<AOECk;G3
+V?6SiADLzC[nVUWOhUg7E;3
+R1
+R2
+8C:/MIPS_Design/MIPS_System/Timer/TimerCounter.v
+FC:/MIPS_Design/MIPS_System/Timer/TimerCounter.v
+L0 3
+R5
+r1
+31
+R9
+n@timer@counter
+!i10b 1
+!s100 9ocV]Ag38BGM<[KeoEiG22
+!s85 0
+!s108 1510503407.131000
+!s107 C:/MIPS_Design/MIPS_System/Timer/TimerCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MIPS_Design/MIPS_System/Timer|C:/MIPS_Design/MIPS_System/Timer/TimerCounter.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Timer -O0

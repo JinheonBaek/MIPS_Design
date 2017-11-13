@@ -1,0 +1,112 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do MIPS_System_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port {C:/MIPS_Design/MIPS_System/Altera_Mem_Dual_Port/ram2port_inst_data.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ram2port_inst_data
+# 
+# Top level modules:
+# 	ram2port_inst_data
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System {C:/MIPS_Design/MIPS_System/MIPS_System.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MIPS_System
+# 
+# Top level modules:
+# 	MIPS_System
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Timer {C:/MIPS_Design/MIPS_System/Timer/TimerCounter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TimerCounter
+# 
+# Top level modules:
+# 	TimerCounter
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/MIPS_CPU {C:/MIPS_Design/MIPS_System/MIPS_CPU/mipsparts.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module adder
+# -- Compiling module sl2
+# -- Compiling module sign_zero_ext
+# -- Compiling module shift_left_16
+# -- Compiling module flopr
+# -- Compiling module flopenr
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	regfile
+# 	alu
+# 	adder
+# 	sl2
+# 	sign_zero_ext
+# 	shift_left_16
+# 	flopr
+# 	flopenr
+# 	mux2
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/GPIO {C:/MIPS_Design/MIPS_System/GPIO/GPIO.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module GPIO
+# -- Compiling module pulse_gen
+# 
+# Top level modules:
+# 	GPIO
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Decoder {C:/MIPS_Design/MIPS_System/Decoder/Addr_Decoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Addr_Decoder
+# 
+# Top level modules:
+# 	Addr_Decoder
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/Altera_PLL {C:/MIPS_Design/MIPS_System/Altera_PLL/ALTPLL_clkgen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALTPLL_clkgen
+# 
+# Top level modules:
+# 	ALTPLL_clkgen
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System_Syn/db {C:/MIPS_Design/MIPS_System_Syn/db/altpll_clkgen_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALTPLL_clkgen_altpll
+# 
+# Top level modules:
+# 	ALTPLL_clkgen_altpll
+# vlog -vlog01compat -work work +incdir+C:/MIPS_Design/MIPS_System/MIPS_CPU {C:/MIPS_Design/MIPS_System/MIPS_CPU/mips.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips
+# -- Compiling module controller
+# -- Compiling module maindec
+# -- Compiling module aludec
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	mips
+# 
+t
+# ambiguous command name "t": tabset tb tclLog tell time toggle trace transcribe transcribeImm transcribeNext transcript tssi2mti
+vsim work.mips
+# vsim work.mips 
+# Loading work.mips
+# Loading work.controller
+# Loading work.maindec
+# Loading work.aludec
+# Loading work.datapath
+# Loading work.flopr
+# Loading work.adder
+# Loading work.sl2
+# Loading work.mux2
+# Loading work.regfile
+# Loading work.sign_zero_ext
+# Loading work.shift_left_16
+# Loading work.alu
+add wave -position insertpoint  \
+sim:/mips/clk
+run
+runs 1000ns
+# invalid command name "runs"
+run 100ns
+add wave -r /*
