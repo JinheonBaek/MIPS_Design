@@ -64,6 +64,7 @@ module mips(input         clk, reset,
 
 endmodule
 
+// Decoding stage
 module controller(input  [5:0] op, funct,
                   input        zero,
                   output       signext,
@@ -165,6 +166,7 @@ module aludec(input      [5:0] funct,
     
 endmodule
 
+// Datapath with flip-flop (mostly control this part for pipeline CPU: add flip-flop, etc...)
 module datapath(input         clk, reset,
                 input         signext,
                 input         shiftl16,
