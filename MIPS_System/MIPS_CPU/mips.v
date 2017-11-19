@@ -30,8 +30,7 @@ module mips(input         clk, reset,
 		.signext    (signext),
 		.shiftl16   (shiftl16),
 		.memtoreg   (memtoreg),
-		.memwrite   (memwrite),
-		.pcsrc      (pcsrc),
+		.memwrite   (ID_memwrite),
 		.alusrc     (alusrc),
 		.regdst     (regdst),
 		.regwrite   (regwrite),
@@ -44,23 +43,26 @@ module mips(input         clk, reset,
   datapath dp(
     .clk        (clk),
     .reset      (reset),
-    .signext    (signext),
-    .shiftl16   (shiftl16),
-    .memtoreg   (memtoreg),
+    .ID_signext (signext),
+    .ID_shiftl16(shiftl16),
+    .ID_memtoreg(memtoreg),
     .pcsrc      (pcsrc),
-    .alusrc     (alusrc),
-    .regdst     (regdst),
-    .regwrite   (regwrite),
-    .jump       (jump),
-	 .jal			 (jal),
-	 .jr			 (jr),
-    .alucontrol (alucontrol),
+    .ID_alusrc  (alusrc),
+    .ID_regdst  (regdst),
+    .ID_regwrite(regwrite),
+    .ID_jump    (jump),
+	 .ID_jal     (jal),
+	 .ID_jr	    (jr),
+    .ID_aluop   (alucontrol),
+	 .ID_branch  (branch),
     .zero       (zero),
     .pc         (pc),
-    .instr      (instr),
-    .aluout     (memaddr), 
+    .IF_instr   (instr),
+    .aluout     (memaddr),
+	 .ID_memwrite(ID_memwrite),
+	 .MEM_memwrite(memwrite),
     .writedata  (memwritedata),
-    .readdata   (memreaddata));
+    .MEM_readdata(memreaddata));
 
 endmodule
 
@@ -70,13 +72,13 @@ module controller(input  [5:0] op, funct,
                   output       signext,
                   output       shiftl16,
                   output       memtoreg, memwrite,
-                  output       pcsrc, alusrc,
+                  output       alusrc,
                   output       regdst, regwrite,
                   output       jump, jal, jr,
+						output [1:0] branch,
                   output [2:0] alucontrol);
 
   wire [1:0] aluop;
-  wire [1:0] branch;
 
   maindec md(
     .op       (op),
@@ -98,8 +100,6 @@ module controller(input  [5:0] op, funct,
     .funct      (funct),
     .aluop      (aluop), 
     .alucontrol (alucontrol));
-
-assign pcsrc = branch[1] ? (branch[0] ? (branch[0] & zero) : (~branch[0] & ~zero)) : (0);
 
 endmodule
 
@@ -168,78 +168,168 @@ endmodule
 
 // Datapath with flip-flop (mostly control this part for pipeline CPU: add flip-flop, etc...)
 module datapath(input         clk, reset,
-                input         signext,
-                input         shiftl16,
-                input         memtoreg, pcsrc,
-                input         alusrc, regdst,
-                input         regwrite, jump, jal, jr,
-                input  [2:0]  alucontrol,
+                input         ID_signext,
+                input         ID_shiftl16,
+                input         ID_memtoreg, pcsrc,
+                input         ID_alusrc, ID_regdst,
+                input         ID_regwrite, ID_jump, ID_jal, ID_jr,
+                input  [2:0]  ID_aluop,
+					 input         ID_memwrite,
+					 input  [1:0]  ID_branch,
+					 output  reg   MEM_memwrite,
                 output        zero,
                 output [31:0] pc,
-                input  [31:0] instr,
+                input  [31:0] IF_instr,
                 output [31:0] aluout, writedata,
-                input  [31:0] readdata);
+                input  [31:0] MEM_readdata);
 
   wire [4:0]  writereg, writesubreg;
-  wire [31:0] pcnext, pcnextbr, pcnextj, pcplus4, pcbranch;
-  wire [31:0] signimm, signimmsh, shiftedimm;
+  wire [31:0] pcnextbr, pcnextj;
   wire [31:0] srca, srcb;
   wire [31:0] subresult, result;
   wire        shift;
-
-  // next PC logic
+  
+  // Instruction Fetch Variables
+  wire [31:0] IF_pcplus4;
+  wire [31:0] IF_pcnext;
+  
+  // Instruction Decoding Variables
+  reg  [31:0] ID_instr;
+  reg  [31:0] ID_pcplus4;
+  wire [31:0] ID_srca, ID_writedata;				// Read-data 1, 2
+  wire [31:0] ID_signimm, ID_shiftedimm;
+  reg  [4:0]  ID_instr_20_16, ID_instr_15_11;	// rd or rt
+  
+  // Execution Variables
+  reg  [4:0]  EX_instr_20_16, EX_instr_15_11;
+  reg  [31:0] EX_srca, EX_writedata;
+  reg  [31:0] EX_pcplus4;
+  reg  [31:0] EX_signimm;
+  reg  [31:0] EX_shiftedimm;
+  wire [31:0] EX_signimmsh;
+  wire [31:0] EX_pcbranch;
+  
+  // Execution Control Signals
+  reg  		  EX_regdst, EX_aluop, EX_alusrc;
+  reg			  EX_memwrite;
+  reg  [1:0]  EX_branch;
+  reg			  EX_regwrite, EX_memtoreg;
+  
+  // Memory Access Variables
+  reg  [31:0] MEM_pcbranch;
+  reg  [31:0] MEM_pcplus4;
+  wire        MEM_pcsrc;
+  
+  // Memory Access Control Signals
+  reg  [1:0]  MEM_branch;
+  reg			  MEM_regwrite, MEM_memtoreg;
+  
+  // Write Back Variables
+  
+  // Write Back Control Signals
+  reg			  WB_regwrite, WB_memtoreg;
+  
+  assign EX_pcsrc = EX_branch[1] ? (EX_branch[0] ? (EX_branch[0] & zero) : (~EX_branch[0] & ~zero)) : (0);
+  
+  // Flip Flop between Instruction Fetch and Instruction Decoding
+  always @(posedge clk) begin
+		ID_instr <= IF_instr;
+		ID_pcplus4 <= IF_pcplus4;
+  end
+  
+  // Flip Flop between Instruction Decoding and Execution
+  always @(posedge clk) begin
+		EX_instr_20_16 <= ID_instr_20_16;
+		EX_instr_15_11 <= ID_instr_15_11;
+		EX_srca <= ID_srca;
+		EX_writedata <= ID_writedata;
+		EX_pcplus4 <= ID_pcplus4;
+		EX_signimm <= ID_signimm;
+		EX_shiftedimm <= ID_shiftedimm;
+		
+		// Control Signals
+		EX_regdst <= ID_regdst;
+		EX_aluop <= ID_aluop;
+		EX_alusrc <= ID_alusrc;
+		EX_memwrite <= ID_memwrite;
+		EX_branch <= ID_branch;
+		EX_regwrite <= ID_memwrite;
+		EX_memtoreg <= ID_memtoreg;
+  end
+  
+  // Flip Flop between Execution and Memeory Access
+  always @(posedge clk) begin
+		MEM_pcbranch <= EX_pcbranch;
+		MEM_pcplus4 <= EX_pcplus4;
+		
+		// Control Signals
+		MEM_memwrite <= EX_memwrite;
+		MEM_branch <= EX_branch;
+		MEM_regwrite <= EX_regwrite;
+		MEM_memtoreg <= EX_memtoreg;
+  end
+  
+  // Flip Flop between Memory Access and Write Back
+  always @(posedge clk) begin
+  
+		// Control Signals
+		WB_regwrite <= MEM_regwrite;
+		WB_memtoreg <= MEM_memtoreg;
+  end
+  
+  // next pc logic
   flopr #(32) pcreg(
-    .clk   (clk),
-    .reset (reset),
-    .d     (pcnext),
-    .q     (pc));
+		 .clk   (clk),
+		 .reset (reset),
+		 .d     (IF_pcnext),
+		 .q     (IF_pc));
+		 
+	 adder pcadd1(
+		 .a (IF_pc),
+		 .b (32'b100),
+		 .y (IF_pcplus4));
+		 
+	 sl2 immsh(
+		 .a (EX_signimm),
+		 .y (EX_signimmsh));
+						 
+	 adder pcadd2(
+		 .a (EX_pcplus4),
+		 .b (EX_signimmsh),
+		 .y (EX_pcbranch));
 
-  adder pcadd1(
-    .a (pc),
-    .b (32'b100),
-    .y (pcplus4));
+	 mux2 #(32) pcbrmux(
+		 .d0  (IF_pcplus4),
+		 .d1  (MEM_pcbranch),
+		 .s   (pcsrc),
+		 .y   (pcnextbr));
+		 
+	 mux2 #(32) pcjmux(
+		 .d0   (pcnextbr),
+		 .d1   ({MEM_pcplus4[31:28], IF_instr[25:0], 2'b00}),
+		 .s    (jump),
+		 .y    (pcnextj));
 
-  sl2 immsh(
-    .a (signimm),
-    .y (signimmsh));
-				 
-  adder pcadd2(
-    .a (pcplus4),
-    .b (signimmsh),
-    .y (pcbranch));
-
-  mux2 #(32) pcbrmux(
-    .d0  (pcplus4),
-    .d1  (pcbranch),
-    .s   (pcsrc),
-    .y   (pcnextbr));
-	 
-  mux2 #(32) pcjmux(
-    .d0   (pcnextbr),
-    .d1   ({pcplus4[31:28], instr[25:0], 2'b00}),
-    .s    (jump),
-    .y    (pcnextj));
-
-  mux2 #(32) pcmux(  // for jr instruction (pc <- ra, srca is a rs register result)
-    .d0   (pcnextj),
-    .d1   (srca),
-    .s    (jr),
-    .y    (pcnext));
+	 mux2 #(32) pcmux(  // for jr instruction (pc <- ra, srca is a rs register result)
+		 .d0   (pcnextj),
+		 .d1   (srca),
+		 .s    (jr),
+		 .y    (IF_pcnext));
 	 
   // register file logic
   regfile rf(
     .clk     (clk),
     .we      (regwrite),
-    .ra1     (instr[25:21]),
-    .ra2     (instr[20:16]),
+    .ra1     (ID_instr[25:21]),
+    .ra2     (ID_instr[20:16]),
     .wa      (writereg),
     .wd      (result),
-    .rd1     (srca),
-    .rd2     (writedata));
+    .rd1     (ID_srca),
+    .rd2     (ID_writedata));
 
   mux2 #(5) wrsubmux(  // select rt or rd for destination
-    .d0  (instr[20:16]),
-    .d1  (instr[15:11]),
+    .d0  (IF_instr[20:16]),
+    .d1  (IF_instr[15:11]),
     .s   (regdst),
     .y   (writesubreg));
 	 
@@ -262,20 +352,20 @@ module datapath(input         clk, reset,
     .y  (result));	 
 
   sign_zero_ext sze(
-    .a       (instr[15:0]),
-    .signext (signext),
-    .y       (signimm[31:0]));
+    .a       (ID_instr[15:0]),
+    .signext (ID_signext),
+    .y       (ID_signimm[31:0]));
 
   shift_left_16 sl16(
-    .a         (signimm[31:0]),
-    .shiftl16  (shiftl16),
-    .y         (shiftedimm[31:0]));
+    .a         (ID_signimm[31:0]),
+    .shiftl16  (ID_shiftl16),
+    .y         (ID_shiftedimm[31:0]));
 
   // ALU logic
   mux2 #(32) srcbmux(
-    .d0 (writedata),
-    .d1 (shiftedimm[31:0]),
-    .s  (alusrc),
+    .d0 (EX_writedata),
+    .d1 (EX_shiftedimm[31:0]),
+    .s  (EX_alusrc),
     .y  (srcb));
 
   alu alu(
