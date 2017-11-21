@@ -78,12 +78,12 @@ module MIPS_System(
   mips mips_cpu (
 		.clk           (clk0), 
 		.reset         (~reset_ff),
-		.pc         (inst_addr),
-		.instr     (inst),
-		.memwrite  (data_we),  // data_we: active high
-		.memaddr   (data_addr), 
-		.memwritedata	(write_data),
-		.memreaddata	(read_data));
+		.pc            (inst_addr),
+		.instr         (inst),
+		.memwrite      (data_we),  // data_we: active high
+		.memaddr       (data_addr), 
+		.memwritedata  (write_data),
+		.memreaddata   (read_data));
 
 	assign data_re = ~data_we;
 

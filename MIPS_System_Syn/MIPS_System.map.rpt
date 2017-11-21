@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_System
-Tue Nov 21 20:54:19 2017
+Wed Nov 22 00:07:06 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -89,10 +89,9 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  81. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrmux"
  82. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|adder:pcadd1"
  83. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:pcjmux"
- 84. Port Connectivity Checks: "mips:mips_cpu|controller:c"
- 85. Port Connectivity Checks: "mips:mips_cpu"
- 86. Elapsed Time Per Partition
- 87. Analysis & Synthesis Messages
+ 84. Port Connectivity Checks: "mips:mips_cpu"
+ 85. Elapsed Time Per Partition
+ 86. Analysis & Synthesis Messages
 
 
 
@@ -118,7 +117,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 21 20:54:19 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:07:06 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -1258,7 +1257,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                         ;
 +----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 9     ; Signed Integer                                               ;
+; WIDTH          ; 8     ; Signed Integer                                               ;
 +----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2048,15 +2047,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_cpu|controller:c"                                                                ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; MEM_memread ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mips:mips_cpu"                                                                            ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2072,7 +2062,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -2082,7 +2072,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Nov 21 20:54:11 2017
+    Info: Processing started: Wed Nov 22 00:06:59 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_System -c MIPS_System
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_mem_dual_port/ram2port_inst_data.v
@@ -2106,11 +2096,12 @@ Info (12021): Found 12 design units, including 12 entities, in source file /mips
     Info (12023): Found entity 10: flopenr
     Info (12023): Found entity 11: mux2
     Info (12023): Found entity 12: mux3
-Info (12021): Found 4 design units, including 4 entities, in source file /mips_design/mips_system/mips_cpu/mips.v
+Info (12021): Found 5 design units, including 5 entities, in source file /mips_design/mips_system/mips_cpu/mips.v
     Info (12023): Found entity 1: mips
     Info (12023): Found entity 2: controller
     Info (12023): Found entity 3: datapath
     Info (12023): Found entity 4: Forwarding
+    Info (12023): Found entity 5: HazardDetection
 Warning (12019): Can't analyze file -- file ../MIPS_System/MIPS_CPU/delay.v is missing
 Info (12021): Found 2 design units, including 2 entities, in source file /mips_design/mips_system/gpio/gpio.v
     Info (12023): Found entity 1: GPIO
@@ -2193,7 +2184,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "ALTPLL_clkgen_altpll" for hierarchy "ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated"
 Info (12128): Elaborating entity "mips" for hierarchy "mips:mips_cpu"
 Info (12128): Elaborating entity "controller" for hierarchy "mips:mips_cpu|controller:c"
-Warning (10230): Verilog HDL assignment warning at mips.v(136): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at mips.v(137): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "maindec" for hierarchy "mips:mips_cpu|controller:c|maindec:md"
 Info (12128): Elaborating entity "aludec" for hierarchy "mips:mips_cpu|controller:c|aludec:ad"
 Warning (10272): Verilog HDL Case Statement warning at mipsparts.v(249): case item expression covers a value already covered by a previous case item
@@ -2264,9 +2255,9 @@ Info (21057): Implemented 3744 device resources after synthesis - the final reso
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 551 megabytes
-    Info: Processing ended: Tue Nov 21 20:54:19 2017
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 555 megabytes
+    Info: Processing ended: Wed Nov 22 00:07:06 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

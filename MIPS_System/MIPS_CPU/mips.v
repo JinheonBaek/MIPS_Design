@@ -16,7 +16,7 @@ module mips(input         clk, reset,
             output [31:0] memwritedata,
             input  [31:0] memreaddata);
 
-  wire        ID_signext, ID_shiftl16, WB_memtoreg, MEM_memread;
+  wire        ID_signext, ID_shiftl16, WB_memtoreg, EX_memread;
   wire [1:0]  branch;
   wire        MEM_pcsrc, MEM_zero;
   wire        EX_alusrc, EX_regdst, WB_regwrite, MEM_jump, EX_jal, WB_jal, MEM_jr;
@@ -34,7 +34,7 @@ module mips(input         clk, reset,
 		.ID_signext    (ID_signext),
 		.ID_shiftl16   (ID_shiftl16),
 		.WB_memtoreg   (WB_memtoreg),
-		.MEM_memread   (MEM_memread),
+		.EX_memread    (EX_memread),
 		.MEM_memwrite  (memwrite),
 		.MEM_pcsrc     (MEM_pcsrc),
 		.EX_alusrc     (EX_alusrc),
@@ -57,6 +57,7 @@ module mips(input         clk, reset,
     .MEM_pcsrc     (MEM_pcsrc),
     .EX_alusrc     (EX_alusrc),
     .EX_regdst     (EX_regdst),
+	 .EX_memread    (EX_memread),
     .WB_regwrite   (WB_regwrite),
 	 .MEM_regwrite  (MEM_regwrite),
     .MEM_jump      (MEM_jump),
@@ -81,7 +82,7 @@ module controller(input        clk, reset,
 						input        MEM_zero,
 						output       ID_signext,
                   output       ID_shiftl16,
-                  output       WB_memtoreg, MEM_memwrite, MEM_memread,
+                  output       WB_memtoreg, MEM_memwrite, EX_memread,
                   output       MEM_pcsrc, EX_alusrc,
                   output       EX_regdst, MEM_regwrite, WB_regwrite,
                   output       MEM_jump, EX_jal, WB_jal, MEM_jr,
@@ -92,7 +93,7 @@ module controller(input        clk, reset,
   wire       EX_jump, EX_jr, MEM_jal;
   wire [1:0] ID_branch, EX_branch, MEM_branch;
   wire       EX_memtoreg, MEM_memtoreg;
-  wire       EX_memwrite, EX_memread;
+  wire       EX_memwrite;
   wire		 EX_regwrite;
   wire [2:0] ID_alucontrol;
 
@@ -124,9 +125,9 @@ module controller(input        clk, reset,
                     {EX_memtoreg, EX_memwrite, EX_memread, EX_branch, EX_alusrc, EX_regdst, EX_regwrite, EX_jump, EX_jr, EX_jal, EX_alucontrol});
 						  
   // Flip-flop between Execution and Memory Access
-  flopr #(9) MEM_reg(clk, reset,
-                    {EX_memtoreg, EX_memwrite, EX_memread, EX_branch, EX_regwrite, EX_jump, EX_jr, EX_jal},
-                    {MEM_memtoreg, MEM_memwrite, MEM_memread, MEM_branch, MEM_regwrite, MEM_jump, MEM_jr, MEM_jal});
+  flopr #(8) MEM_reg(clk, reset,
+                    {EX_memtoreg, EX_memwrite, EX_branch, EX_regwrite, EX_jump, EX_jr, EX_jal},
+                    {MEM_memtoreg, MEM_memwrite, MEM_branch, MEM_regwrite, MEM_jump, MEM_jr, MEM_jal});
 						  
   // Flip-flop between Memory Access and Write Back
   flopr #(3) WB_reg(clk, reset,
@@ -144,7 +145,7 @@ module datapath(input         clk, reset,
                 input         ID_signext,
                 input         ID_shiftl16,
                 input         WB_memtoreg, MEM_pcsrc,
-                input         EX_alusrc, EX_regdst,
+                input         EX_alusrc, EX_regdst, EX_memread,
                 input         MEM_regwrite, WB_regwrite, MEM_jump, EX_jal, WB_jal, MEM_jr,
                 input  [2:0]  EX_alucontrol,
 					 output [5:0]  ID_op, ID_funct,
@@ -358,6 +359,5 @@ endmodule
 module HazardDetection();
 
 endmodule
-
 
 

@@ -10,6 +10,7 @@ entity datapath is
         MEM_pcsrc       : in     vl_logic;
         EX_alusrc       : in     vl_logic;
         EX_regdst       : in     vl_logic;
+        EX_memread      : in     vl_logic;
         MEM_regwrite    : in     vl_logic;
         WB_regwrite     : in     vl_logic;
         MEM_jump        : in     vl_logic;
