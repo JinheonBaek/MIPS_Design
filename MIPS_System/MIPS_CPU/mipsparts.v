@@ -192,6 +192,69 @@ endmodule
 `endif
 
 
+module maindec(input  [5:0] op,
+					input  [5:0] funct,
+               output       signext,
+               output       shiftl16,
+               output       memtoreg, memwrite, memread,
+               output [1:0] branch,
+					output		 alusrc,
+               output       regdst, regwrite,
+               output       jump, jal, jr,
+               output [1:0] aluop);
+
+  reg [14:0] controls;
+
+  assign {signext, shiftl16, regwrite, regdst, alusrc, branch, memwrite, memread,
+          memtoreg, jump, aluop, jal, jr} = controls;
+
+  always @(*)
+    case(op)
+      6'b000000: case(funct)	// Rtype
+						6'b001000: controls <= #`mydelay 15'b000000000000001; // JR
+						default:   controls <= #`mydelay 15'b001100000001100; // Rtype default
+					  endcase
+		6'b100011: controls <= #`mydelay 15'b101010000100000; // LW
+      6'b101011: controls <= #`mydelay 15'b100010010000000; // SW
+      6'b000100: controls <= #`mydelay 15'b100001100000100; // BEQ
+		6'b000101: controls <= #`mydelay 15'b100001000000100; // BNE
+      6'b001000, 
+      6'b001001: controls <= #`mydelay 15'b101010000000000; // ADDI, ADDIU: only difference is exception
+      6'b001101: controls <= #`mydelay 15'b001010000001000; // ORI
+      6'b001111: controls <= #`mydelay 15'b011010000000000; // LUI
+      6'b000010: controls <= #`mydelay 15'b000000000010000; // J
+		6'b000011: controls <= #`mydelay 15'b001000000010010; // JAL
+      default:   controls <= #`mydelay 15'bxxxxxxxxxxxxxxx; // ???
+    endcase
+
+endmodule
+
+module aludec(input      [5:0] funct,
+              input      [1:0] aluop,
+              output reg [2:0] alucontrol
+				  );
+	
+  always @(*)
+    case(aluop)
+      2'b00: alucontrol <= #`mydelay 3'b010;  // add
+      2'b01: alucontrol <= #`mydelay 3'b110;  // sub
+      2'b10: alucontrol <= #`mydelay 3'b001;  // or
+      default: case(funct)          // RTYPE
+          6'b100000,
+          6'b100001: alucontrol <= #`mydelay 3'b010; // ADD, ADDU: only difference is exception
+          6'b100010,
+          6'b100011: alucontrol <= #`mydelay 3'b110; // SUB, SUBU: only difference is exception
+          6'b100100: alucontrol <= #`mydelay 3'b000; // AND
+          6'b100101: alucontrol <= #`mydelay 3'b001; // OR
+			 6'b100010,
+          6'b101011: alucontrol <= #`mydelay 3'b111; // SLT, SLTU: only difference is exception
+          default:   alucontrol <= #`mydelay 3'bxxx; // ???
+        endcase
+    endcase
+    
+endmodule
+
+
 module alu(input      [31:0] a, b, 
            input      [2:0]  alucont, 
            output reg [31:0] result,

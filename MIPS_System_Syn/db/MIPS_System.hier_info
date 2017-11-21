@@ -133,8 +133,8 @@ locked <= pll1.LOCKED
 
 
 |MIPS_System|mips:mips_cpu
-clk => clk.IN1
-reset => reset.IN1
+clk => clk.IN2
+reset => reset.IN2
 pc[0] <= datapath:dp.pc
 pc[1] <= datapath:dp.pc
 pc[2] <= datapath:dp.pc
@@ -299,6 +299,8 @@ memreaddata[31] => memreaddata[31].IN1
 
 
 |MIPS_System|mips:mips_cpu|controller:c
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
 op[0] => op[0].IN1
 op[1] => op[1].IN1
 op[2] => op[2].IN1
@@ -317,6 +319,7 @@ signext <= maindec:md.signext
 shiftl16 <= maindec:md.shiftl16
 memtoreg <= maindec:md.memtoreg
 memwrite <= maindec:md.memwrite
+memread <= maindec:md.memread
 pcsrc <= pcsrc.DB_MAX_OUTPUT_PORT_TYPE
 alusrc <= maindec:md.alusrc
 regdst <= maindec:md.regdst
@@ -346,6 +349,7 @@ signext <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 shiftl16 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 memtoreg <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 memwrite <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+memread <= <GND>
 branch[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 branch[1] <= controls.DB_MAX_OUTPUT_PORT_TYPE
 alusrc <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
@@ -353,9 +357,9 @@ regdst <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
 regwrite <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
 jump <= controls.DB_MAX_OUTPUT_PORT_TYPE
 jal <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-jr <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
-aluop[0] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
-aluop[1] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
+jr <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+aluop[0] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
+aluop[1] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_System|mips:mips_cpu|controller:c|aludec:ad

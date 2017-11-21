@@ -1,251 +1,340 @@
 `timescale 1ns/1ps
-`define mydelay 1
 
-//--------------------------------------------------------------
-// mips.v
-// David_Harris@hmc.edu and Sarah_Harris@hmc.edu 23 October 2005
-// Single-cycle MIPS processor
-//--------------------------------------------------------------
-
-// single-cycle MIPS processor
 module mips(input         clk, reset,
-            output [31:0] pc,
-            input  [31:0] instr,
-            output        memwrite,
-            output [31:0] memaddr,
-            output [31:0] memwritedata,
-            input  [31:0] memreaddata);
+            output [31:0] pcF,
+            input  [31:0] instrF,
+            output        memwriteM,
+            output [31:0] aluoutM, writedataM,
+            input  [31:0] readdataM);
 
-  wire        signext, shiftl16, memtoreg, branch;
-  wire        pcsrc, zero;
-  wire        alusrc, regdst, regwrite, jump;
-  wire [2:0]  alucontrol;
+  wire [5:0]  opD, functD;
+  wire        regdstE, alusrcE,
+              pcsrcD,
+              memtoregE, memtoregM, memtoregW, regwriteE, regwriteM, regwriteW;
+  wire [2:0]  alucontrolE;
+  wire        flushE, equalD, branchD, jumpD;
 
-  // Instantiate Controller
-  controller c(
-    .op         (instr[31:26]), 
-		.funct      (instr[5:0]), 
-		.zero       (zero),
-		.signext    (signext),
-		.shiftl16   (shiftl16),
-		.memtoreg   (memtoreg),
-		.memwrite   (memwrite),
-		.pcsrc      (pcsrc),
-		.alusrc     (alusrc),
-		.regdst     (regdst),
-		.regwrite   (regwrite),
-		.jump       (jump),
-		.alucontrol (alucontrol));
-
-  // Instantiate Datapath
-  datapath dp(
-    .clk        (clk),
-    .reset      (reset),
-    .signext    (signext),
-    .shiftl16   (shiftl16),
-    .memtoreg   (memtoreg),
-    .pcsrc      (pcsrc),
-    .alusrc     (alusrc),
-    .regdst     (regdst),
-    .regwrite   (regwrite),
-    .jump       (jump),
-    .alucontrol (alucontrol),
-    .zero       (zero),
-    .pc         (pc),
-    .instr      (instr),
-    .aluout     (memaddr), 
-    .writedata  (memwritedata),
-    .readdata   (memreaddata));
-
+  controller c(clk, reset, opD, functD, flushE, equalD,
+               memtoregE, memtoregM, memtoregW, memwriteM, pcsrcD, branchD,
+               alusrcE, regdstE, regwriteE, regwriteM, regwriteW, jumpD,
+               alucontrolE);
+  datapath dp(clk, reset, memtoregE, memtoregM, memtoregW, pcsrcD, branchD,
+              alusrcE, regdstE, regwriteE, regwriteM, regwriteW, jumpD,
+              alucontrolE,
+              equalD, pcF, instrF,
+              aluoutM, writedataM, readdataM,
+              opD, functD, flushE);
 endmodule
 
-module controller(input  [5:0] op, funct,
-                  input        zero,
-                  output       signext,
-                  output       shiftl16,
-                  output       memtoreg, memwrite,
-                  output       pcsrc, alusrc,
-                  output       regdst, regwrite,
-                  output       jump,
-                  output [2:0] alucontrol);
+module controller(input        clk, reset,
+                  input  [5:0] opD, functD,
+                  input        flushE, equalD,
+                  output       memtoregE, memtoregM, memtoregW, memwriteM,
+                  output       pcsrcD, branchD, alusrcE,
+                  output       regdstE, regwriteE, regwriteM, regwriteW,
+                  output       jumpD,
+                  output [2:0] alucontrolE);
 
-  wire [1:0] aluop;
-  wire       branch;
+  wire [1:0] aluopD;
 
-  maindec md(
-    .op       (op),
-    .signext  (signext),
-    .shiftl16 (shiftl16),
-    .memtoreg (memtoreg),
-    .memwrite (memwrite),
-    .branch   (branch),
-    .alusrc   (alusrc),
-    .regdst   (regdst),
-    .regwrite (regwrite),
-    .jump     (jump),
-    .aluop    (aluop));
+  wire       memtoregD, memwriteD, alusrcD,
+             regdstD, regwriteD;
+  wire [2:0] alucontrolD;
+  wire       memwriteE;
 
-  aludec ad( 
-    .funct      (funct),
-    .aluop      (aluop), 
-    .alucontrol (alucontrol));
+  maindec md(opD, memtoregD, memwriteD, branchD,
+             alusrcD, regdstD, regwriteD, jumpD,
+             aluopD);
+  aludec  ad(functD, aluopD, alucontrolD);
 
-  assign pcsrc = branch & zero;
+  assign pcsrcD = branchD & equalD;
 
+  // pipeline registers
+  floprc #(8) regE(clk, reset, flushE,
+                  {memtoregD, memwriteD, alusrcD, regdstD, regwriteD, alucontrolD},
+                  {memtoregE, memwriteE, alusrcE, regdstE, regwriteE,  alucontrolE});
+  flopr #(3) regM(clk, reset,
+                  {memtoregE, memwriteE, regwriteE},
+                  {memtoregM, memwriteM, regwriteM});
+  flopr #(2) regW(clk, reset,
+                  {memtoregM, regwriteM},
+                  {memtoregW, regwriteW});
 endmodule
 
-
+`timescale 1ns/1ps
 module maindec(input  [5:0] op,
-               output       signext,
-               output       shiftl16,
                output       memtoreg, memwrite,
                output       branch, alusrc,
                output       regdst, regwrite,
                output       jump,
                output [1:0] aluop);
 
-  reg [10:0] controls;
+  reg [9:0] controls;
 
-  assign {signext, shiftl16, regwrite, regdst, alusrc, branch, memwrite,
+  assign {regwrite, regdst, alusrc,
+          branch, memwrite,
           memtoreg, jump, aluop} = controls;
 
   always @(*)
     case(op)
-      6'b000000: controls <= #`mydelay 11'b00110000011; // Rtype
-      6'b100011: controls <= #`mydelay 11'b10101001000; // LW
-      6'b101011: controls <= #`mydelay 11'b10001010000; // SW
-      6'b000100: controls <= #`mydelay 11'b10000100001; // BEQ
-      6'b001000, 
-      6'b001001: controls <= #`mydelay 11'b10101000000; // ADDI, ADDIU: only difference is exception
-      6'b001101: controls <= #`mydelay 11'b00101000010; // ORI
-      6'b001111: controls <= #`mydelay 11'b01101000000; // LUI
-      6'b000010: controls <= #`mydelay 11'b00000000100; // J
-      default:   controls <= #`mydelay 11'bxxxxxxxxxxx; // ???
+      6'b000000: controls = 9'b110000010; //Rtyp
+      6'b100011: controls = 9'b101001000; //LW
+      6'b101011: controls = 9'b001010000; //SW
+      6'b000100: controls = 9'b000100001; //BEQ
+      6'b001000: controls = 9'b101000000; //ADDI
+      6'b000010: controls = 9'b000000100; //J
+      default:   controls = 9'bxxxxxxxxx; //???
     endcase
-
 endmodule
 
+`timescale 1ns/1ps
 module aludec(input      [5:0] funct,
               input      [1:0] aluop,
               output reg [2:0] alucontrol);
 
   always @(*)
     case(aluop)
-      2'b00: alucontrol <= #`mydelay 3'b010;  // add
-      2'b01: alucontrol <= #`mydelay 3'b110;  // sub
-      2'b10: alucontrol <= #`mydelay 3'b001;  // or
-      default: case(funct)          // RTYPE
-          6'b100000,
-          6'b100001: alucontrol <= #`mydelay 3'b010; // ADD, ADDU: only difference is exception
-          6'b100010,
-          6'b100011: alucontrol <= #`mydelay 3'b110; // SUB, SUBU: only difference is exception
-          6'b100100: alucontrol <= #`mydelay 3'b000; // AND
-          6'b100101: alucontrol <= #`mydelay 3'b001; // OR
-          6'b101010: alucontrol <= #`mydelay 3'b111; // SLT
-          default:   alucontrol <= #`mydelay 3'bxxx; // ???
+      2'b00: alucontrol = 3'b010;  // add
+      2'b01: alucontrol = 3'b110;  // sub
+      default: case(funct)         // RTYPE
+     //     6'b000000: // sll - shift left logical
+//          6'b000010: // srl - shift right logical
+//          6'b000011: // sra - shift right arithmetic
+//          6'b000100: // sllv
+//          6'b000110: // srlv
+//          6'b000111: // srav
+//          6'b001000: // jr
+//          6'b001001: // jalr
+//          6'b001100: // syscall
+//          6'b001101: // break
+          6'b100000: alucontrol = 3'b010; // ADD
+         // 6'b100001: // ADDU
+          6'b100010: alucontrol = 3'b110; // SUB
+          //6'b100011: // SUBU
+          6'b100100: alucontrol = 3'b000; // AND
+          6'b100101: alucontrol = 3'b001; // OR
+          //6'b100110: // XOR
+          6'b101010: alucontrol = 3'b111; // SLT
+          //6'b101011: // SLTU
+          default:   alucontrol = 3'bxxx; // ???
         endcase
     endcase
-    
 endmodule
 
 module datapath(input         clk, reset,
-                input         signext,
-                input         shiftl16,
-                input         memtoreg, pcsrc,
-                input         alusrc, regdst,
-                input         regwrite, jump,
-                input  [2:0]  alucontrol,
-                output        zero,
-                output [31:0] pc,
-                input  [31:0] instr,
-                output [31:0] aluout, writedata,
-                input  [31:0] readdata);
+                input         memtoregE, memtoregM, memtoregW,
+                input         pcsrcD, branchD,
+                input         alusrcE, regdstE,
+                input         regwriteE, regwriteM, regwriteW,
+                input         jumpD,
+                input  [2:0]  alucontrolE,
+                output        equalD,
+                output [31:0] pcF,
+                input  [31:0] instrF,
+                output [31:0] aluoutM, writedataM,
+                input  [31:0] readdataM,
+                output [5:0]  opD, functD,
+                output        flushE);
 
-  wire [4:0]  writereg;
-  wire [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
-  wire [31:0] signimm, signimmsh, shiftedimm;
-  wire [31:0] srca, srcb;
-  wire [31:0] result;
-  wire        shift;
+  wire        forwardaD, forwardbD;
+  wire [1:0]  forwardaE, forwardbE;
+  wire        stallF,stallD;
+  wire [4:0]  rsD, rtD, rdD, rsE, rtE, rdE;
+  wire [4:0]  writeregE, writeregM, writeregW;
+  wire        flushD;
+  wire [31:0] pcnextFD, pcnextbrFD, pcplus4F, pcbranchD;
+  wire [31:0] signimmD, signimmE, signimmshD;
+  wire [31:0] srcaD, srca2D, srcaE, srca2E;
+  wire [31:0] srcbD, srcb2D, srcbE, srcb2E, srcb3E;
+  wire [31:0] pcplus4D, instrD;
+  wire [31:0] aluoutE, aluoutW;
+  wire [31:0] readdataW, resultW;
 
-  // next PC logic
-  flopr #(32) pcreg(
-    .clk   (clk),
-    .reset (reset),
-    .d     (pcnext),
-    .q     (pc));
+  // hazard detection
+  hazard    h(rsD, rtD, rsE, rtE, writeregE, writeregM, writeregW,
+              regwriteE, regwriteM, regwriteW,
+              memtoregE, memtoregM, branchD,
+              forwardaD, forwardbD, forwardaE, forwardbE,
+              stallF, stallD, flushE);
 
-  adder pcadd1(
-    .a (pc),
-    .b (32'b100),
-    .y (pcplus4));
+  // next PC logic (operates in fetch and decode)
+  mux2 #(32)  pcbrmux(pcplus4F, pcbranchD, pcsrcD, pcnextbrFD);
+  mux2 #(32)  pcmux(pcnextbrFD,{pcplus4D[31:28], instrD[25:0], 2'b00},
+                    jumpD, pcnextFD);
 
-  sl2 immsh(
-    .a (signimm),
-    .y (signimmsh));
-				 
-  adder pcadd2(
-    .a (pcplus4),
-    .b (signimmsh),
-    .y (pcbranch));
+  // register file (operates in decode and writeback)
+  regfile     rf(clk, regwriteW, rsD, rtD, writeregW,
+                 resultW, srcaD, srcbD);
 
-  mux2 #(32) pcbrmux(
-    .d0  (pcplus4),
-    .d1  (pcbranch),
-    .s   (pcsrc),
-    .y   (pcnextbr));
+  // Fetch stage logic
+  flopenr #(32) pcreg(clk, reset, ~stallF, pcnextFD, pcF);
+  adder       pcadd1(pcF, 32'b100, pcplus4F);
 
-  mux2 #(32) pcmux(
-    .d0   (pcnextbr),
-    .d1   ({pcplus4[31:28], instr[25:0], 2'b00}),
-    .s    (jump),
-    .y    (pcnext));
+  // Decode stage
+  flopenr #(32) r1D(clk, reset, ~stallD, pcplus4F, pcplus4D);
+  flopenrc #(32) r2D(clk, reset, ~stallD, flushD, instrF, instrD);
+  signext     se(instrD[15:0], signimmD);
+  sl2         immsh(signimmD, signimmshD);
+  adder       pcadd2(pcplus4D, signimmshD, pcbranchD);
+  mux2 #(32)  forwardadmux(srcaD, aluoutM, forwardaD, srca2D);
+  mux2 #(32)  forwardbdmux(srcbD, aluoutM, forwardbD, srcb2D);
+  eqcmp       comp(srca2D, srcb2D, equalD);
 
-  // register file logic
-  regfile rf(
-    .clk     (clk),
-    .we      (regwrite),
-    .ra1     (instr[25:21]),
-    .ra2     (instr[20:16]),
-    .wa      (writereg),
-    .wd      (result),
-    .rd1     (srca),
-    .rd2     (writedata));
+  assign opD = instrD[31:26];
+  assign functD = instrD[5:0];
+  assign rsD = instrD[25:21];
+  assign rtD = instrD[20:16];
+  assign rdD = instrD[15:11];
 
-  mux2 #(5) wrmux(
-    .d0  (instr[20:16]),
-    .d1  (instr[15:11]),
-    .s   (regdst),
-    .y   (writereg));
+  assign flushD = pcsrcD | jumpD;
 
-  mux2 #(32) resmux(
-    .d0 (aluout),
-    .d1 (readdata),
-    .s  (memtoreg),
-    .y  (result));
+  // Execute stage
+  floprc #(32) r1E(clk, reset, flushE, srcaD, srcaE);
+  floprc #(32) r2E(clk, reset, flushE, srcbD, srcbE);
+  floprc #(32) r3E(clk, reset, flushE, signimmD, signimmE);
+  floprc #(5)  r4E(clk, reset, flushE, rsD, rsE);
+  floprc #(5)  r5E(clk, reset, flushE, rtD, rtE);
+  floprc #(5)  r6E(clk, reset, flushE, rdD, rdE);
+  mux3 #(32)  forwardaemux(srcaE, resultW, aluoutM, forwardaE, srca2E);
+  mux3 #(32)  forwardbemux(srcbE, resultW, aluoutM, forwardbE, srcb2E);
+  mux2 #(32)  srcbmux(srcb2E, signimmE, alusrcE, srcb3E);
+  alu         alu(srca2E, srcb3E, alucontrolE, aluoutE);
+  mux2 #(5)   wrmux(rtE, rdE, regdstE, writeregE);
 
-  sign_zero_ext sze(
-    .a       (instr[15:0]),
-    .signext (signext),
-    .y       (signimm[31:0]));
+  // Memory stage
+  flopr #(32) r1M(clk, reset, srcb2E, writedataM);
+  flopr #(32) r2M(clk, reset, aluoutE, aluoutM);
+  flopr #(5)  r3M(clk, reset, writeregE, writeregM);
 
-  shift_left_16 sl16(
-    .a         (signimm[31:0]),
-    .shiftl16  (shiftl16),
-    .y         (shiftedimm[31:0]));
+  // Writeback stage
+  flopr #(32) r1W(clk, reset, aluoutM, aluoutW);
+  flopr #(32) r2W(clk, reset, readdataM, readdataW);
+  flopr #(5)  r3W(clk, reset, writeregM, writeregW);
+  mux2 #(32)  resmux(aluoutW, readdataW, memtoregW, resultW);
 
-  // ALU logic
-  mux2 #(32) srcbmux(
-    .d0 (writedata),
-    .d1 (shiftedimm[31:0]),
-    .s  (alusrc),
-    .y  (srcb));
+endmodule
 
-  alu alu(
-    .a       (srca),
-    .b       (srcb),
-    .alucont (alucontrol),
-    .result  (aluout),
-    .zero    (zero));
-    
+module hazard(input  [4:0] rsD, rtD, rsE, rtE,
+              input  [4:0] writeregE, writeregM, writeregW,
+              input        regwriteE, regwriteM, regwriteW,
+              input        memtoregE, memtoregM, branchD,
+              output           forwardaD, forwardbD,
+              output reg [1:0] forwardaE, forwardbE,
+              output       stallF, stallD, flushE);
+
+  wire lwstallD, branchstallD;
+
+  // forwarding sources to D stage (branch equality)
+  assign forwardaD = (rsD !=0 & rsD == writeregM & regwriteM);
+  assign forwardbD = (rtD !=0 & rtD == writeregM & regwriteM);
+
+  // forwarding sources to E stage (ALU)
+  always @(*)
+    begin
+      forwardaE = 2'b00; forwardbE = 2'b00;
+      if (rsE != 0)
+        if (rsE == writeregM & regwriteM) forwardaE = 2'b10;
+        else if (rsE == writeregW & regwriteW) forwardaE = 2'b01;
+      if (rtE != 0)
+        if (rtE == writeregM & regwriteM) forwardbE = 2'b10;
+        else if (rtE == writeregW & regwriteW) forwardbE = 2'b01;
+    end
+
+  // stalls
+  assign #1 lwstallD = memtoregE & (rtE == rsD | rtE == rtD);
+  assign #1 branchstallD = branchD &
+             (regwriteE & (writeregE == rsD | writeregE == rtD) |
+              memtoregM & (writeregM == rsD | writeregM == rtD));
+
+  assign #1 stallD = lwstallD | branchstallD;
+  assign #1 stallF = stallD; // stalling D stalls all previous stages
+  assign #1 flushE = stallD; // stalling D flushes next stage
+
+  // *** not necessary to stall D stage on store if source comes from load;
+  // *** instead, another bypass network could be added from W to M
+endmodule
+
+module adder(input  [31:0] a, b,
+             output [31:0] y);
+
+  assign #1 y = a + b;
+endmodule
+
+module eqcmp(input [31:0] a, b,
+             output        eq);
+
+  assign #1 eq = (a == b);
+endmodule
+
+module sl2(input  [31:0] a,
+           output [31:0] y);
+
+  // shift left by 2
+  assign #1 y = {a[29:0], 2'b00};
+endmodule
+
+module signext(input  [15:0] a,
+               output [31:0] y);
+
+  assign #1 y = {{16{a[15]}}, a};
+endmodule
+
+module flopr #(parameter WIDTH = 8)
+              (input                  clk, reset,
+               input      [WIDTH-1:0] d,
+               output reg [WIDTH-1:0] q);
+
+  always @(posedge clk, posedge reset)
+    if (reset) q <= #1 0;
+    else       q <= #1 d;
+endmodule
+
+module floprc #(parameter WIDTH = 8)
+              (input                  clk, reset, clear,
+               input      [WIDTH-1:0] d,
+               output reg [WIDTH-1:0] q);
+
+  always @(posedge clk, posedge reset)
+    if (reset)      q <= #1 0;
+    else if (clear) q <= #1 0;
+    else            q <= #1 d;
+endmodule
+
+module flopenr #(parameter WIDTH = 8)
+                (input                  clk, reset,
+                 input                  en,
+                 input      [WIDTH-1:0] d,
+                 output reg [WIDTH-1:0] q);
+
+  always @(posedge clk, posedge reset)
+    if      (reset) q <= #1 0;
+    else if (en)    q <= #1 d;
+endmodule
+
+module flopenrc #(parameter WIDTH = 8)
+                 (input                  clk, reset,
+                  input                  en, clear,
+                  input      [WIDTH-1:0] d,
+                  output reg [WIDTH-1:0] q);
+
+  always @(posedge clk, posedge reset)
+    if      (reset) q <= #1 0;
+    else if (clear) q <= #1 0;
+    else if (en)    q <= #1 d;
+endmodule
+
+module mux2 #(parameter WIDTH = 8)
+             (input  [WIDTH-1:0] d0, d1,
+              input              s,
+              output [WIDTH-1:0] y);
+
+  assign #1 y = s ? d1 : d0;
+endmodule
+
+module mux3 #(parameter WIDTH = 8)
+             (input  [WIDTH-1:0] d0, d1, d2,
+              input  [1:0]       s,
+              output [WIDTH-1:0] y);
+
+  assign #1 y = s[1] ? d2 : (s[0] ? d1 : d0);
 endmodule

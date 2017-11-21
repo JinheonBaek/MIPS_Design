@@ -16,7 +16,7 @@ module mips(input         clk, reset,
             output [31:0] memwritedata,
             input  [31:0] memreaddata);
 
-  wire        signext, shiftl16, memtoreg;
+  wire        signext, shiftl16, memtoreg, memread;
   wire [1:0]  branch;
   wire        pcsrc, zero;
   wire        alusrc, regdst, regwrite, jump, jal, jr;
@@ -24,12 +24,15 @@ module mips(input         clk, reset,
 
   // Instantiate Controller
   controller c(
-    .op         (instr[31:26]), 
+      .clk        (clk),
+		.reset      (reset),
+      .op         (instr[31:26]), 
 		.funct      (instr[5:0]), 
 		.zero       (zero),
 		.signext    (signext),
 		.shiftl16   (shiftl16),
 		.memtoreg   (memtoreg),
+		.memread    (memread),
 		.memwrite   (memwrite),
 		.pcsrc      (pcsrc),
 		.alusrc     (alusrc),
@@ -65,11 +68,12 @@ module mips(input         clk, reset,
 endmodule
 
 // Decoding stage
-module controller(input  [5:0] op, funct,
+module controller(input        clk, reset,
+					   input  [5:0] op, funct,
                   input        zero,
                   output       signext,
                   output       shiftl16,
-                  output       memtoreg, memwrite,
+                  output       memtoreg, memwrite, memread,
                   output       pcsrc, alusrc,
                   output       regdst, regwrite,
                   output       jump, jal, jr,
@@ -84,6 +88,7 @@ module controller(input  [5:0] op, funct,
     .signext  (signext),
     .shiftl16 (shiftl16),
     .memtoreg (memtoreg),
+	 .memread  (memread),
     .memwrite (memwrite),
     .branch   (branch),
     .alusrc   (alusrc),
@@ -101,69 +106,6 @@ module controller(input  [5:0] op, funct,
 
 assign pcsrc = branch[1] ? (branch[0] ? (branch[0] & zero) : (~branch[0] & ~zero)) : (0);
 
-endmodule
-
-
-module maindec(input  [5:0] op,
-					input  [5:0] funct,
-               output       signext,
-               output       shiftl16,
-               output       memtoreg, memwrite,
-               output [1:0] branch,
-					output		 alusrc,
-               output       regdst, regwrite,
-               output       jump, jal, jr,
-               output [1:0] aluop);
-
-  reg [13:0] controls;
-
-  assign {signext, shiftl16, regwrite, regdst, alusrc, branch, memwrite,
-          memtoreg, jump, aluop, jal, jr} = controls;
-
-  always @(*)
-    case(op)
-      6'b000000: case(funct)	// Rtype
-						6'b001000: controls <= #`mydelay 14'b00000000000001; // JR
-						default:   controls <= #`mydelay 14'b00110000001100; // Rtype default
-					  endcase
-		6'b100011: controls <= #`mydelay 14'b10101000100000; // LW
-      6'b101011: controls <= #`mydelay 14'b10001001000000; // SW
-      6'b000100: controls <= #`mydelay 14'b10000110000100; // BEQ
-		6'b000101: controls <= #`mydelay 14'b10000100000100; // BNE
-      6'b001000, 
-      6'b001001: controls <= #`mydelay 14'b10101000000000; // ADDI, ADDIU: only difference is exception
-      6'b001101: controls <= #`mydelay 14'b00101000001000; // ORI
-      6'b001111: controls <= #`mydelay 14'b01101000000000; // LUI
-      6'b000010: controls <= #`mydelay 14'b00000000010000; // J
-		6'b000011: controls <= #`mydelay 14'b00100000010010; // JAL
-      default:   controls <= #`mydelay 14'bxxxxxxxxxxxxxx; // ???
-    endcase
-
-endmodule
-
-module aludec(input      [5:0] funct,
-              input      [1:0] aluop,
-              output reg [2:0] alucontrol
-				  );
-	
-  always @(*)
-    case(aluop)
-      2'b00: alucontrol <= #`mydelay 3'b010;  // add
-      2'b01: alucontrol <= #`mydelay 3'b110;  // sub
-      2'b10: alucontrol <= #`mydelay 3'b001;  // or
-      default: case(funct)          // RTYPE
-          6'b100000,
-          6'b100001: alucontrol <= #`mydelay 3'b010; // ADD, ADDU: only difference is exception
-          6'b100010,
-          6'b100011: alucontrol <= #`mydelay 3'b110; // SUB, SUBU: only difference is exception
-          6'b100100: alucontrol <= #`mydelay 3'b000; // AND
-          6'b100101: alucontrol <= #`mydelay 3'b001; // OR
-			 6'b100010,
-          6'b101011: alucontrol <= #`mydelay 3'b111; // SLT, SLTU: only difference is exception
-          default:   alucontrol <= #`mydelay 3'bxxx; // ???
-        endcase
-    endcase
-    
 endmodule
 
 // Datapath with flip-flop (mostly control this part for pipeline CPU: add flip-flop, etc...)

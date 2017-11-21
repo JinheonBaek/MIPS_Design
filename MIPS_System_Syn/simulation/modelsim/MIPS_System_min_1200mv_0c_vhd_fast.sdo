@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "MIPS_System")
-  (DATE "11/20/2017 16:59:51")
+  (DATE "11/21/2017 16:57:00")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -792,7 +792,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|c\|md\|Selector11\~0\\)
+    (INSTANCE \\mips_cpu\|c\|md\|Selector12\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (921:921:921) (1060:1060:1060))
@@ -2476,7 +2476,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|c\|md\|Selector10\~0\\)
+    (INSTANCE \\mips_cpu\|c\|md\|Selector11\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (507:507:507) (606:606:606))
@@ -12421,7 +12421,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|c\|md\|Selector13\~0\\)
+    (INSTANCE \\mips_cpu\|c\|md\|Selector14\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (647:647:647) (761:761:761))
@@ -54177,7 +54177,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|c\|md\|Selector10\~1\\)
+    (INSTANCE \\mips_cpu\|c\|md\|Selector11\~1\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (507:507:507) (606:606:606))
