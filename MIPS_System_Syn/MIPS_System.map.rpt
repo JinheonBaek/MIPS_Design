@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_System
-Wed Nov 22 00:36:04 2017
+Wed Nov 22 00:52:57 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -33,21 +33,21 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  25. Multiplexer Restructuring Statistics (Restructuring Performed)
  26. Source assignments for ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated
  27. Parameter Settings for User Entity Instance: ALTPLL_clkgen:pll0|altpll:altpll_component
- 28. Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|flopr:EX_reg
+ 28. Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|floprc:EX_reg
  29. Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|flopr:MEM_reg
  30. Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|flopr:WB_reg
  31. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:pcbrmux
  32. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:pcjmux
  33. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:pcmux
- 34. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:pcreg
- 35. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ID_r1
- 36. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ID_r2
- 37. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r1
- 38. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r2
- 39. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r3
- 40. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r4
- 41. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r5
- 42. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r6
+ 34. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:pcreg
+ 35. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:ID_r1
+ 36. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:ID_r2
+ 37. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r1
+ 38. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r2
+ 39. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r3
+ 40. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r4
+ 41. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r5
+ 42. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r6
  43. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:wrsubmux
  44. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:wrmux
  45. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:srcbmux
@@ -89,10 +89,9 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  81. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrmux"
  82. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|adder:pcadd1"
  83. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:pcjmux"
- 84. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:h"
- 85. Port Connectivity Checks: "mips:mips_cpu"
- 86. Elapsed Time Per Partition
- 87. Analysis & Synthesis Messages
+ 84. Port Connectivity Checks: "mips:mips_cpu"
+ 85. Elapsed Time Per Partition
+ 86. Analysis & Synthesis Messages
 
 
 
@@ -118,13 +117,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:36:04 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:52:56 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 3,552                                      ;
-;     Total combinational functions  ; 2,302                                      ;
+; Total logic elements               ; 3,562                                      ;
+;     Total combinational functions  ; 2,369                                      ;
 ;     Dedicated logic registers      ; 1,817                                      ;
 ; Total registers                    ; 1817                                       ;
 ; Total pins                         ; 52                                         ;
@@ -277,16 +276,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                           ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3,552                                                                                           ;
+; Estimated Total logic elements              ; 3,562                                                                                           ;
 ;                                             ;                                                                                                 ;
-; Total combinational functions               ; 2302                                                                                            ;
+; Total combinational functions               ; 2369                                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 1709                                                                                            ;
-;     -- 3 input functions                    ; 415                                                                                             ;
-;     -- <=2 input functions                  ; 178                                                                                             ;
+;     -- 4 input functions                    ; 1636                                                                                            ;
+;     -- 3 input functions                    ; 434                                                                                             ;
+;     -- <=2 input functions                  ; 299                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 2181                                                                                            ;
+;     -- normal mode                          ; 2248                                                                                            ;
 ;     -- arithmetic mode                      ; 121                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Total registers                             ; 1817                                                                                            ;
@@ -301,8 +300,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                                 ;
 ; Maximum fan-out node                        ; ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 1851                                                                                            ;
-; Total fan-out                               ; 14820                                                                                           ;
-; Average fan-out                             ; 3.48                                                                                            ;
+; Total fan-out                               ; 14948                                                                                           ;
+; Average fan-out                             ; 3.46                                                                                            ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -311,7 +310,7 @@ applicable agreement for further details.
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; |MIPS_System                                   ; 2302 (31)         ; 1817 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |MIPS_System                                                                                                 ; work         ;
+; |MIPS_System                                   ; 2369 (31)         ; 1817 (1)     ; 65536       ; 0            ; 0       ; 0         ; 52   ; 0            ; |MIPS_System                                                                                                 ; work         ;
 ;    |ALTPLL_clkgen:pll0|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ALTPLL_clkgen:pll0                                                                              ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ALTPLL_clkgen:pll0|altpll:altpll_component                                                      ; work         ;
 ;          |ALTPLL_clkgen_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated                  ; work         ;
@@ -330,25 +329,21 @@ applicable agreement for further details.
 ;       |pulse_gen:sw8|                          ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|GPIO:uGPIO|pulse_gen:sw8                                                                        ; work         ;
 ;       |pulse_gen:sw9|                          ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|GPIO:uGPIO|pulse_gen:sw9                                                                        ; work         ;
 ;    |TimerCounter:Timer|                        ; 84 (84)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|TimerCounter:Timer                                                                              ; work         ;
-;    |mips:mips_cpu|                             ; 1951 (0)          ; 1521 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu                                                                                   ; work         ;
-;       |controller:c|                           ; 34 (1)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c                                                                      ; work         ;
-;          |aludec:ad|                           ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|aludec:ad                                                            ; work         ;
-;          |flopr:EX_reg|                        ; 0 (0)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|flopr:EX_reg                                                         ; work         ;
+;    |mips:mips_cpu|                             ; 2018 (0)          ; 1521 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu                                                                                   ; work         ;
+;       |controller:c|                           ; 35 (1)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c                                                                      ; work         ;
+;          |aludec:ad|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|aludec:ad                                                            ; work         ;
 ;          |flopr:MEM_reg|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|flopr:MEM_reg                                                        ; work         ;
 ;          |flopr:WB_reg|                        ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|flopr:WB_reg                                                         ; work         ;
-;          |maindec:md|                          ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|maindec:md                                                           ; work         ;
-;       |datapath:dp|                            ; 1917 (0)          ; 1497 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp                                                                       ; work         ;
+;          |floprc:EX_reg|                       ; 7 (7)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|floprc:EX_reg                                                        ; work         ;
+;          |maindec:md|                          ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|controller:c|maindec:md                                                           ; work         ;
+;       |datapath:dp|                            ; 1983 (0)          ; 1497 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp                                                                       ; work         ;
 ;          |Forwarding:f|                        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|Forwarding:f                                                          ; work         ;
+;          |HazardDetection:h|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|HazardDetection:h                                                     ; work         ;
 ;          |adder:pcadd1|                        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|adder:pcadd1                                                          ; work         ;
-;          |alu:alu|                             ; 145 (145)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|alu:alu                                                               ; work         ;
-;          |flopr:EX_r1|                         ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r1                                                           ; work         ;
-;          |flopr:EX_r2|                         ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r2                                                           ; work         ;
-;          |flopr:EX_r3|                         ; 0 (0)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r3                                                           ; work         ;
-;          |flopr:EX_r4|                         ; 5 (5)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r4                                                           ; work         ;
-;          |flopr:EX_r5|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r5                                                           ; work         ;
-;          |flopr:EX_r6|                         ; 5 (5)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r6                                                           ; work         ;
-;          |flopr:ID_r1|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ID_r1                                                           ; work         ;
-;          |flopr:ID_r2|                         ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ID_r2                                                           ; work         ;
+;          |alu:alu|                             ; 144 (144)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|alu:alu                                                               ; work         ;
+;          |flopenr:ID_r1|                       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:ID_r1                                                         ; work         ;
+;          |flopenr:ID_r2|                       ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:ID_r2                                                         ; work         ;
+;          |flopenr:pcreg|                       ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:pcreg                                                         ; work         ;
 ;          |flopr:MEM_r1|                        ; 0 (0)             ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:MEM_r1                                                          ; work         ;
 ;          |flopr:MEM_r2|                        ; 0 (0)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:MEM_r2                                                          ; work         ;
 ;          |flopr:MEM_r3|                        ; 30 (30)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:MEM_r3                                                          ; work         ;
@@ -360,16 +355,19 @@ applicable agreement for further details.
 ;          |flopr:WB_r2|                         ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2                                                           ; work         ;
 ;          |flopr:WB_r3|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r3                                                           ; work         ;
 ;          |flopr:WB_r4|                         ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r4                                                           ; work         ;
-;          |flopr:pcreg|                         ; 0 (0)             ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:pcreg                                                           ; work         ;
+;          |floprc:EX_r1|                        ; 26 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r1                                                          ; work         ;
+;          |floprc:EX_r2|                        ; 31 (31)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r2                                                          ; work         ;
+;          |floprc:EX_r3|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r3                                                          ; work         ;
+;          |floprc:EX_r4|                        ; 678 (678)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r4                                                          ; work         ;
+;          |floprc:EX_r5|                        ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r5                                                          ; work         ;
+;          |floprc:EX_r6|                        ; 678 (678)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r6                                                          ; work         ;
 ;          |mux2:jalresmux|                      ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:jalresmux                                                        ; work         ;
 ;          |mux2:pcbrmux|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:pcbrmux                                                          ; work         ;
 ;          |mux2:pcmux|                          ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:pcmux                                                            ; work         ;
 ;          |mux2:wrmux|                          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:wrmux                                                            ; work         ;
 ;          |mux3:forwardamux|                    ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardamux                                                      ; work         ;
 ;          |mux3:forwardbmux|                    ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardbmux                                                      ; work         ;
-;          |regfile:rf|                          ; 1385 (1385)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|regfile:rf                                                            ; work         ;
-;          |shift_left_16:sl16|                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|shift_left_16:sl16                                                    ; work         ;
-;          |sign_zero_ext:sze|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|sign_zero_ext:sze                                                     ; work         ;
+;          |regfile:rf|                          ; 41 (41)           ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|regfile:rf                                                            ; work         ;
 ;    |ram2port_inst_data:Inst_Data_Mem|          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|        ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_5ul2:auto_generated|      ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated ; work         ;
@@ -696,106 +694,107 @@ Encoding Type:  One-Hot
 +-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                        ;
-+-------------------------------------------------+---------------------------------------------------------+
-; Register name                                   ; Reason for Removal                                      ;
-+-------------------------------------------------+---------------------------------------------------------+
-; TimerCounter:Timer|StatusR[1..31]               ; Stuck at GND due to stuck port data_in                  ;
-; GPIO:uGPIO|BUTTON_StatusR[3..9,13..31]          ; Merged with GPIO:uGPIO|BUTTON_StatusR[0]                ;
-; GPIO:uGPIO|BUTTON_StatusR[10,11]                ; Merged with GPIO:uGPIO|BUTTON_StatusR[12]               ;
-; GPIO:uGPIO|SW_StatusR[10..24,27,29,30]          ; Merged with GPIO:uGPIO|SW_StatusR[31]                   ;
-; GPIO:uGPIO|SW_StatusR[25,26]                    ; Merged with GPIO:uGPIO|SW_StatusR[28]                   ;
-; mips:mips_cpu|datapath:dp|flopr:MEM_r2|q[1]     ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[1] ;
-; mips:mips_cpu|datapath:dp|flopr:MEM_r2|q[0]     ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[0] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[15]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[15] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[14]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[14] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[13]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[13] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[12]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[12] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[11]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[11] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[10]     ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[10] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[9]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[9]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[8]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[8]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[7]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[7]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[6]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[6]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[5]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[5]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[4]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[4]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[3]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[3]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[2]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[2]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[1]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r1|q[0]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[0]  ;
-; GPIO:uGPIO|BUTTON_StatusR[12]                   ; Merged with GPIO:uGPIO|BUTTON_StatusR[0]                ;
-; GPIO:uGPIO|SW_StatusR[28]                       ; Merged with GPIO:uGPIO|SW_StatusR[31]                   ;
-; mips:mips_cpu|datapath:dp|flopr:WB_r4|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:WB_r4|q[0]  ;
-; mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[1]     ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[0] ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r2|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r2|q[0]  ;
-; mips:mips_cpu|datapath:dp|flopr:pcreg|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:pcreg|q[0]  ;
-; mips:mips_cpu|datapath:dp|flopr:ID_r2|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:ID_r2|q[0]  ;
-; mips:mips_cpu|datapath:dp|flopr:EX_r3|q[17..29] ; Merged with mips:mips_cpu|datapath:dp|flopr:EX_r3|q[16] ;
-; GPIO:uGPIO|BUTTON_StatusR[0]                    ; Stuck at GND due to stuck port data_in                  ;
-; GPIO:uGPIO|SW_StatusR[31]                       ; Stuck at GND due to stuck port data_in                  ;
-; GPIO:uGPIO|pulse_gen:sw9|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw9|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw9|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw9|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw8|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw8|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw8|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw8|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw7|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw7|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw7|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw7|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw6|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw6|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw6|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw6|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw5|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw5|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw5|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw5|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw4|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw4|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw4|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw4|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw3|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw3|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw3|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw3|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw2|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw2|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw2|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw2|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw1|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw1|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw1|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw1|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw0|c_state~2              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw0|c_state~3              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw0|c_state~4              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw0|c_state~5              ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button2|c_state~2          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button2|c_state~3          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button2|c_state~4          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button2|c_state~5          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button1|c_state~2          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button1|c_state~3          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button1|c_state~4          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button1|c_state~5          ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw9|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw8|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw7|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw6|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw5|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw4|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw3|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw2|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw1|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:sw0|c_state.S15            ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button2|c_state.S15        ; Lost fanout                                             ;
-; GPIO:uGPIO|pulse_gen:button1|c_state.S15        ; Lost fanout                                             ;
-; Total Number of Removed Registers = 179         ;                                                         ;
-+-------------------------------------------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++--------------------------------------------------+------------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                         ;
++--------------------------------------------------+------------------------------------------------------------+
+; TimerCounter:Timer|StatusR[1..31]                ; Stuck at GND due to stuck port data_in                     ;
+; GPIO:uGPIO|BUTTON_StatusR[3..9,13..17,19..31]    ; Merged with GPIO:uGPIO|BUTTON_StatusR[0]                   ;
+; GPIO:uGPIO|BUTTON_StatusR[10..12]                ; Merged with GPIO:uGPIO|BUTTON_StatusR[18]                  ;
+; GPIO:uGPIO|SW_StatusR[10..24,27,29,30]           ; Merged with GPIO:uGPIO|SW_StatusR[31]                      ;
+; GPIO:uGPIO|SW_StatusR[25,26]                     ; Merged with GPIO:uGPIO|SW_StatusR[28]                      ;
+; mips:mips_cpu|datapath:dp|flopr:MEM_r2|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[1]    ;
+; mips:mips_cpu|datapath:dp|flopr:MEM_r2|q[0]      ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[0]    ;
+; GPIO:uGPIO|BUTTON_StatusR[18]                    ; Merged with GPIO:uGPIO|BUTTON_StatusR[0]                   ;
+; GPIO:uGPIO|SW_StatusR[28]                        ; Merged with GPIO:uGPIO|SW_StatusR[31]                      ;
+; mips:mips_cpu|datapath:dp|flopr:WB_r4|q[1]       ; Merged with mips:mips_cpu|datapath:dp|flopr:WB_r4|q[0]     ;
+; mips:mips_cpu|controller:c|floprc:EX_reg|q[13]   ; Merged with mips:mips_cpu|controller:c|floprc:EX_reg|q[11] ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[15]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[15]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[14]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[14]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[13]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[13]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[12]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[12]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[11]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[11]   ;
+; mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[1]      ; Merged with mips:mips_cpu|datapath:dp|flopr:MEM_r3|q[0]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r2|q[1]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r2|q[0]    ;
+; mips:mips_cpu|datapath:dp|flopenr:pcreg|q[1]     ; Merged with mips:mips_cpu|datapath:dp|flopenr:pcreg|q[0]   ;
+; mips:mips_cpu|datapath:dp|flopenr:ID_r2|q[1]     ; Merged with mips:mips_cpu|datapath:dp|flopenr:ID_r2|q[0]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[17..29] ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r3|q[16]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[10]     ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[10]   ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[9]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[9]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[8]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[8]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[7]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[7]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[6]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[6]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[5]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[5]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[4]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[4]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[3]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[3]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[2]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[2]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[1]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[1]    ;
+; mips:mips_cpu|datapath:dp|floprc:EX_r3|q[0]      ; Merged with mips:mips_cpu|datapath:dp|floprc:EX_r1|q[0]    ;
+; GPIO:uGPIO|BUTTON_StatusR[0]                     ; Stuck at GND due to stuck port data_in                     ;
+; GPIO:uGPIO|SW_StatusR[31]                        ; Stuck at GND due to stuck port data_in                     ;
+; GPIO:uGPIO|pulse_gen:sw9|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw9|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw9|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw9|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw8|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw8|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw8|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw8|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw7|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw7|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw7|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw7|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw6|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw6|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw6|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw6|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw5|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw5|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw5|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw5|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw4|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw4|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw4|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw4|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw3|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw3|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw3|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw3|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw2|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw2|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw2|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw2|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw1|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw1|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw1|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw1|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw0|c_state~2               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw0|c_state~3               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw0|c_state~4               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw0|c_state~5               ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button2|c_state~2           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button2|c_state~3           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button2|c_state~4           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button2|c_state~5           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button1|c_state~2           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button1|c_state~3           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button1|c_state~4           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button1|c_state~5           ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw9|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw8|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw7|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw6|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw5|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw4|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw3|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw2|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw1|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:sw0|c_state.S15             ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button2|c_state.S15         ; Lost fanout                                                ;
+; GPIO:uGPIO|pulse_gen:button1|c_state.S15         ; Lost fanout                                                ;
+; Total Number of Removed Registers = 180          ;                                                            ;
++--------------------------------------------------+------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -824,11 +823,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 1817  ;
-; Number of registers using Synchronous Clear  ; 98    ;
+; Number of registers using Synchronous Clear  ; 125   ;
 ; Number of registers using Synchronous Load   ; 54    ;
 ; Number of registers using Asynchronous Clear ; 529   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1062  ;
+; Number of registers using Clock Enable       ; 1156  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -838,24 +837,26 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:MEM_r4|q[4]      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MIPS_System|TimerCounter:Timer|CompareR[25]                  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|controller:c|flopr:EX_reg|q[2]     ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|LEDG_R[9]                             ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:pcreg|q[29]      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:MEM_r4|q[1]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r5|q[11]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r5|q[20]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MIPS_System|TimerCounter:Timer|CompareR[4]                   ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|LEDG_R[0]                             ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:pcreg|q[25]    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|controller:c|floprc:EX_reg|q[0]    ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX0_R[1]                             ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX1_R[0]                             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r4|q[3]       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:EX_r6|q[7]       ;
-; 6:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2|q[15]      ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX2_R[5]                             ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 7 LEs                ; 28 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX3_R[2]                             ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX1_R[6]                             ;
+; 6:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2|q[10]      ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX2_R[4]                             ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r4|q[28]     ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|floprc:EX_r6|q[23]     ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 7 LEs                ; 28 LEs                 ; Yes        ; |MIPS_System|GPIO:uGPIO|HEX3_R[0]                             ;
 ; 9:1                ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2|q[9]       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2|q[1]       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:jalresmux|y[17]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardamux|y[27] ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|alu:alu|Mux24          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardbmux|y[11] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:WB_r2|q[2]       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux2:jalresmux|y[15]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardamux|y[29] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|alu:alu|Mux20          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|datapath:dp|mux3:forwardbmux|y[30] ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |MIPS_System|mips:mips_cpu|controller:c|maindec:md|Selector11 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
@@ -1243,13 +1244,13 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|flopr:EX_reg ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; WIDTH          ; 14    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|controller:c|floprc:EX_reg ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 14    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1303,93 +1304,93 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:pcreg ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:pcreg ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ID_r1 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:ID_r1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ID_r2 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopenr:ID_r2 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r1 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r2 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r2 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r3 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r3 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r4 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r4 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r5 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r5 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:EX_r6 ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|floprc:EX_r6 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2048,17 +2049,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:h"                                            ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; IF_stall ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ID_stall ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; EX_flush ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mips:mips_cpu"                                                                            ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2074,7 +2064,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -2084,7 +2074,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 22 00:35:56 2017
+    Info: Processing started: Wed Nov 22 00:52:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_System -c MIPS_System
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_mem_dual_port/ram2port_inst_data.v
@@ -2197,11 +2187,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "ALTPLL_clkgen_altpll" for hierarchy "ALTPLL_clkgen:pll0|altpll:altpll_component|ALTPLL_clkgen_altpll:auto_generated"
 Info (12128): Elaborating entity "mips" for hierarchy "mips:mips_cpu"
 Info (12128): Elaborating entity "controller" for hierarchy "mips:mips_cpu|controller:c"
-Warning (10230): Verilog HDL assignment warning at mips.v(137): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at mips.v(140): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "maindec" for hierarchy "mips:mips_cpu|controller:c|maindec:md"
 Info (12128): Elaborating entity "aludec" for hierarchy "mips:mips_cpu|controller:c|aludec:ad"
 Warning (10272): Verilog HDL Case Statement warning at mipsparts.v(249): case item expression covers a value already covered by a previous case item
-Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|controller:c|flopr:EX_reg"
+Info (12128): Elaborating entity "floprc" for hierarchy "mips:mips_cpu|controller:c|floprc:EX_reg"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|controller:c|flopr:MEM_reg"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|controller:c|flopr:WB_reg"
 Info (12128): Elaborating entity "datapath" for hierarchy "mips:mips_cpu|datapath:dp"
@@ -2209,14 +2199,16 @@ Info (12128): Elaborating entity "Forwarding" for hierarchy "mips:mips_cpu|datap
 Info (12128): Elaborating entity "HazardDetection" for hierarchy "mips:mips_cpu|datapath:dp|HazardDetection:h"
 Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips_cpu|datapath:dp|mux2:pcbrmux"
 Info (12128): Elaborating entity "regfile" for hierarchy "mips:mips_cpu|datapath:dp|regfile:rf"
-Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:pcreg"
+Info (12128): Elaborating entity "flopenr" for hierarchy "mips:mips_cpu|datapath:dp|flopenr:pcreg"
 Info (12128): Elaborating entity "adder" for hierarchy "mips:mips_cpu|datapath:dp|adder:pcadd1"
 Info (12128): Elaborating entity "sign_zero_ext" for hierarchy "mips:mips_cpu|datapath:dp|sign_zero_ext:sze"
 Info (12128): Elaborating entity "shift_left_16" for hierarchy "mips:mips_cpu|datapath:dp|shift_left_16:sl16"
+Info (12128): Elaborating entity "floprc" for hierarchy "mips:mips_cpu|datapath:dp|floprc:EX_r1"
 Info (12128): Elaborating entity "sl2" for hierarchy "mips:mips_cpu|datapath:dp|sl2:immsh"
 Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips_cpu|datapath:dp|mux2:wrsubmux"
 Info (12128): Elaborating entity "mux3" for hierarchy "mips:mips_cpu|datapath:dp|mux3:forwardamux"
 Info (12128): Elaborating entity "alu" for hierarchy "mips:mips_cpu|datapath:dp|alu:alu"
+Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:MEM_r1"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:MEM_r4"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:MEM_r5"
 Info (12128): Elaborating entity "ram2port_inst_data" for hierarchy "ram2port_inst_data:Inst_Data_Mem"
@@ -2262,16 +2254,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 60 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3744 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3755 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 3659 logic cells
+    Info (21061): Implemented 3670 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 555 megabytes
-    Info: Processing ended: Wed Nov 22 00:36:04 2017
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 559 megabytes
+    Info: Processing ended: Wed Nov 22 00:52:57 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

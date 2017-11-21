@@ -21,6 +21,7 @@ module mips(input         clk, reset,
   wire        MEM_pcsrc, MEM_zero;
   wire        EX_alusrc, EX_regdst, WB_regwrite, MEM_jump, EX_jal, WB_jal, MEM_jr;
   wire [2:0]  EX_alucontrol;
+  wire		  EX_flush;
 
   wire [5:0] ID_op, ID_funct;
   
@@ -42,6 +43,7 @@ module mips(input         clk, reset,
 		.MEM_regwrite  (MEM_regwrite),
 		.WB_regwrite   (WB_regwrite),
 		.MEM_jump      (MEM_jump),
+		.EX_flush      (EX_flush),
 		.EX_jal 			(EX_jal),
 		.WB_jal 	  	   (WB_jal),
 		.MEM_jr		   (MEM_jr),
@@ -62,6 +64,7 @@ module mips(input         clk, reset,
 	 .MEM_regwrite  (MEM_regwrite),
     .MEM_jump      (MEM_jump),
 	 .EX_jal			 (EX_jal),
+	 .EX_flush 		 (EX_flush),
 	 .WB_jal			 (WB_jal),
 	 .MEM_jr			 (MEM_jr),
     .EX_alucontrol (EX_alucontrol),
@@ -79,7 +82,7 @@ endmodule
 // Decoding stage
 module controller(input        clk, reset,
 					   input  [5:0] ID_op, ID_funct,
-						input        MEM_zero,
+						input        MEM_zero, EX_flush,
 						output       ID_signext,
                   output       ID_shiftl16,
                   output       WB_memtoreg, MEM_memwrite, EX_memread,
@@ -120,19 +123,19 @@ module controller(input        clk, reset,
     .alucontrol (ID_alucontrol));
 	 
   // Flip-flop between Instruction Decoding and Execution
-  flopr #(14) EX_reg(clk, reset,
-                    {ID_memtoreg, ID_memwrite, ID_memread, ID_branch, ID_alusrc, ID_regdst, ID_regwrite, ID_jump, ID_jr, ID_jal, ID_alucontrol},
-                    {EX_memtoreg, EX_memwrite, EX_memread, EX_branch, EX_alusrc, EX_regdst, EX_regwrite, EX_jump, EX_jr, EX_jal, EX_alucontrol});
+  floprc #(14) EX_reg(clk, reset, EX_flush,
+                     {ID_memtoreg, ID_memwrite, ID_memread, ID_branch, ID_alusrc, ID_regdst, ID_regwrite, ID_jump, ID_jr, ID_jal, ID_alucontrol},
+                     {EX_memtoreg, EX_memwrite, EX_memread, EX_branch, EX_alusrc, EX_regdst, EX_regwrite, EX_jump, EX_jr, EX_jal, EX_alucontrol});
 						  
   // Flip-flop between Execution and Memory Access
-  flopr #(8) MEM_reg(clk, reset,
-                    {EX_memtoreg, EX_memwrite, EX_branch, EX_regwrite, EX_jump, EX_jr, EX_jal},
-                    {MEM_memtoreg, MEM_memwrite, MEM_branch, MEM_regwrite, MEM_jump, MEM_jr, MEM_jal});
+  flopr  #(8) MEM_reg(clk, reset,
+                     {EX_memtoreg, EX_memwrite, EX_branch, EX_regwrite, EX_jump, EX_jr, EX_jal},
+                     {MEM_memtoreg, MEM_memwrite, MEM_branch, MEM_regwrite, MEM_jump, MEM_jr, MEM_jal});
 						  
   // Flip-flop between Memory Access and Write Back
-  flopr #(3) WB_reg(clk, reset,
-                    {MEM_memtoreg, MEM_regwrite, MEM_jal},
-                    {WB_memtoreg, WB_regwrite, WB_jal});
+  flopr  #(3) WB_reg(clk, reset,
+                     {MEM_memtoreg, MEM_regwrite, MEM_jal},
+                     {WB_memtoreg, WB_regwrite, WB_jal});
 
   assign MEM_pcsrc = MEM_branch[1] ? (MEM_branch[0] ? (MEM_branch[0] & MEM_zero) : (~MEM_branch[0] & ~MEM_zero)) : (0);
 
@@ -150,13 +153,14 @@ module datapath(input         clk, reset,
                 input  [2:0]  EX_alucontrol,
 					 output [5:0]  ID_op, ID_funct,
                 output        MEM_zero,
+					 output			EX_flush,
                 output [31:0] IF_pc,
                 input  [31:0] IF_instr,
                 output [31:0] MEM_aluout, MEM_writedata,
                 input  [31:0] MEM_readdata);
 
   wire [1:0]  EX_forwarda, EX_forwardb;
-  wire		  IF_stall, ID_stall, EX_flush;
+  wire		  IF_stall, ID_stall;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
   wire [31:0] ID_signimm, ID_shiftedimm, EX_signimm, EX_shiftedimm, EX_signimmsh;
   
@@ -232,9 +236,10 @@ module datapath(input         clk, reset,
     .rd2     (ID_writedata));
   
   // Fetch stage
-  flopr #(32) pcreg(
+  flopenr #(32) pcreg(
     .clk   (clk),
     .reset (reset),
+	 .en    (~IF_stall),
     .d     (IF_pcnext),
     .q     (IF_pc));
 	 
@@ -245,8 +250,8 @@ module datapath(input         clk, reset,
 
 	 
   // Decoding stage - Flip-flop between Instruction Fetch and Instruction Decoding
-  flopr #(32) ID_r1 (clk, reset, IF_instr, ID_instr);
-  flopr #(32) ID_r2 (clk, reset, IF_pcplus4, ID_pcplus4);
+  flopenr #(32) ID_r1 (clk, reset, ~ID_stall, IF_instr, ID_instr);
+  flopenr #(32) ID_r2 (clk, reset, ~ID_stall, IF_pcplus4, ID_pcplus4);
 
   // Decoding stage - Logic
   sign_zero_ext sze(
@@ -264,12 +269,12 @@ module datapath(input         clk, reset,
   
   
   // Execution stage - Flip-flop between Instruction Decoding and Execution
-  flopr #(32) EX_r1 (clk, reset, ID_instr, EX_instr);
-  flopr #(32) EX_r2 (clk, reset, ID_pcplus4, EX_pcplus4);
-  flopr #(32) EX_r3 (clk, reset, ID_signimm, EX_signimm);
-  flopr #(32) EX_r4 (clk, reset, ID_writedata, EX_writedata);
-  flopr #(32) EX_r5 (clk, reset, ID_shiftedimm, EX_shiftedimm);
-  flopr #(32) EX_r6 (clk, reset, ID_srca, EX_srca);
+  floprc #(32) EX_r1 (clk, reset, EX_flush, ID_instr, EX_instr);
+  floprc #(32) EX_r2 (clk, reset, EX_flush, ID_pcplus4, EX_pcplus4);
+  floprc #(32) EX_r3 (clk, reset, EX_flush, ID_signimm, EX_signimm);
+  floprc #(32) EX_r4 (clk, reset, EX_flush, ID_writedata, EX_writedata);
+  floprc #(32) EX_r5 (clk, reset, EX_flush, ID_shiftedimm, EX_shiftedimm);
+  floprc #(32) EX_r6 (clk, reset, EX_flush, ID_srca, EX_srca);
   
   // Execution stage - Logic
   sl2 immsh(

@@ -21,6 +21,7 @@ entity datapath is
         ID_op           : out    vl_logic_vector(5 downto 0);
         ID_funct        : out    vl_logic_vector(5 downto 0);
         MEM_zero        : out    vl_logic;
+        EX_flush        : out    vl_logic;
         IF_pc           : out    vl_logic_vector(31 downto 0);
         IF_instr        : in     vl_logic_vector(31 downto 0);
         MEM_aluout      : out    vl_logic_vector(31 downto 0);

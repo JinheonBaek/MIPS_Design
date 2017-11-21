@@ -7,6 +7,7 @@ entity controller is
         ID_op           : in     vl_logic_vector(5 downto 0);
         ID_funct        : in     vl_logic_vector(5 downto 0);
         MEM_zero        : in     vl_logic;
+        EX_flush        : in     vl_logic;
         ID_signext      : out    vl_logic;
         ID_shiftl16     : out    vl_logic;
         WB_memtoreg     : out    vl_logic;
