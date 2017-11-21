@@ -18,7 +18,7 @@ entity controller is
         EX_regdst       : out    vl_logic;
         MEM_regwrite    : out    vl_logic;
         WB_regwrite     : out    vl_logic;
-        MEM_jump        : out    vl_logic;
+        ID_jump         : out    vl_logic;
         EX_jal          : out    vl_logic;
         WB_jal          : out    vl_logic;
         MEM_jr          : out    vl_logic;

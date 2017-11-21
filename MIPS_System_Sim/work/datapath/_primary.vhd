@@ -13,7 +13,7 @@ entity datapath is
         EX_memread      : in     vl_logic;
         MEM_regwrite    : in     vl_logic;
         WB_regwrite     : in     vl_logic;
-        MEM_jump        : in     vl_logic;
+        ID_jump         : in     vl_logic;
         EX_jal          : in     vl_logic;
         WB_jal          : in     vl_logic;
         MEM_jr          : in     vl_logic;
