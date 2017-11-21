@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MIPS_System
-Wed Nov 22 00:07:33 2017
+Wed Nov 22 00:14:32 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -139,12 +139,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.67        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
+;     Processor 2            ;  66.7%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -546,6 +546,9 @@ HTML report is unavailable in plain text report export.
 +-------+-----------------------------------------------+----------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                                     ; To Node                                      ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------------+----------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 0.359 ; GPIO:uGPIO|SW_StatusR[3]                      ; GPIO:uGPIO|SW_StatusR[3]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; TimerCounter:Timer|StatusR[0]                 ; TimerCounter:Timer|StatusR[0]                ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; GPIO:uGPIO|SW_StatusR[7]                      ; GPIO:uGPIO|SW_StatusR[7]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.359 ; GPIO:uGPIO|SW_StatusR[0]                      ; GPIO:uGPIO|SW_StatusR[0]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.359 ; GPIO:uGPIO|SW_StatusR[5]                      ; GPIO:uGPIO|SW_StatusR[5]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.359 ; GPIO:uGPIO|SW_StatusR[2]                      ; GPIO:uGPIO|SW_StatusR[2]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
@@ -557,9 +560,6 @@ HTML report is unavailable in plain text report export.
 ; 0.359 ; GPIO:uGPIO|BUTTON_StatusR[2]                  ; GPIO:uGPIO|BUTTON_StatusR[2]                 ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.359 ; GPIO:uGPIO|BUTTON_StatusR[1]                  ; GPIO:uGPIO|BUTTON_StatusR[1]                 ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.359 ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[0]    ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[0]   ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
-; 0.359 ; GPIO:uGPIO|SW_StatusR[3]                      ; GPIO:uGPIO|SW_StatusR[3]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
-; 0.359 ; TimerCounter:Timer|StatusR[0]                 ; TimerCounter:Timer|StatusR[0]                ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
-; 0.359 ; GPIO:uGPIO|SW_StatusR[7]                      ; GPIO:uGPIO|SW_StatusR[7]                     ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.577      ;
 ; 0.371 ; GPIO:uGPIO|pulse_gen:sw3|c_state.S0           ; GPIO:uGPIO|pulse_gen:sw3|c_state.S1          ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.589      ;
 ; 0.372 ; mips:mips_cpu|datapath:dp|flopr:WB_r4|q[31]   ; mips:mips_cpu|datapath:dp|regfile:rf|R15[31] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.590      ;
 ; 0.372 ; GPIO:uGPIO|pulse_gen:sw4|c_state.S0           ; GPIO:uGPIO|pulse_gen:sw4|c_state.S1          ; pll0|altpll_component|auto_generated|pll1|clk[0] ; pll0|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.061      ; 0.590      ;
@@ -4661,7 +4661,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 22 00:07:29 2017
+    Info: Processing started: Wed Nov 22 00:14:27 2017
 Info: Command: quartus_sta MIPS_System -c MIPS_System
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
@@ -4771,9 +4771,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.425
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 584 megabytes
-    Info: Processing ended: Wed Nov 22 00:07:33 2017
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Wed Nov 22 00:14:32 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

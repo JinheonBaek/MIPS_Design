@@ -335,7 +335,17 @@ module flopr #(parameter WIDTH = 8)
 
 endmodule
 
+module floprc #(parameter WIDTH = 8)
+              (input                  clk, reset, clear,
+               input      [WIDTH-1:0] d,
+               output reg [WIDTH-1:0] q);
 
+  always @(posedge clk, posedge reset)
+    if (reset)      q <= #1 0;
+    else if (clear) q <= #1 0;
+    else            q <= #1 d;
+
+endmodule
 
 module flopenr #(parameter WIDTH = 8)
                 (input                  clk, reset,
@@ -349,7 +359,18 @@ module flopenr #(parameter WIDTH = 8)
 
 endmodule
 
+module flopenrc #(parameter WIDTH = 8)
+                 (input                  clk, reset,
+                  input                  en, clear,
+                  input      [WIDTH-1:0] d,
+                  output reg [WIDTH-1:0] q);
 
+  always @(posedge clk, posedge reset)
+    if      (reset) q <= #1 0;
+    else if (clear) q <= #1 0;
+    else if (en)    q <= #1 d;
+	 
+endmodule
 
 module mux2 #(parameter WIDTH = 8)
              (input  [WIDTH-1:0] d0, d1, 

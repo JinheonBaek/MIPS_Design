@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_System
-Wed Nov 22 00:07:06 2017
+Wed Nov 22 00:14:03 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -117,7 +117,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:07:06 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:14:03 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -2072,7 +2072,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 22 00:06:59 2017
+    Info: Processing started: Wed Nov 22 00:13:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_System -c MIPS_System
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_mem_dual_port/ram2port_inst_data.v
@@ -2083,7 +2083,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /mips_d
     Info (12023): Found entity 1: MIPS_System
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/timer/timercounter.v
     Info (12023): Found entity 1: TimerCounter
-Info (12021): Found 12 design units, including 12 entities, in source file /mips_design/mips_system/mips_cpu/mipsparts.v
+Info (12021): Found 14 design units, including 14 entities, in source file /mips_design/mips_system/mips_cpu/mipsparts.v
     Info (12023): Found entity 1: regfile
     Info (12023): Found entity 2: maindec
     Info (12023): Found entity 3: aludec
@@ -2093,9 +2093,11 @@ Info (12021): Found 12 design units, including 12 entities, in source file /mips
     Info (12023): Found entity 7: sign_zero_ext
     Info (12023): Found entity 8: shift_left_16
     Info (12023): Found entity 9: flopr
-    Info (12023): Found entity 10: flopenr
-    Info (12023): Found entity 11: mux2
-    Info (12023): Found entity 12: mux3
+    Info (12023): Found entity 10: floprc
+    Info (12023): Found entity 11: flopenr
+    Info (12023): Found entity 12: flopenrc
+    Info (12023): Found entity 13: mux2
+    Info (12023): Found entity 14: mux3
 Info (12021): Found 5 design units, including 5 entities, in source file /mips_design/mips_system/mips_cpu/mips.v
     Info (12023): Found entity 1: mips
     Info (12023): Found entity 2: controller
@@ -2256,7 +2258,7 @@ Info (21057): Implemented 3744 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 555 megabytes
-    Info: Processing ended: Wed Nov 22 00:07:06 2017
+    Info: Processing ended: Wed Nov 22 00:14:03 2017
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
