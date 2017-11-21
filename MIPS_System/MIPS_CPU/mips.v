@@ -159,6 +159,7 @@ module datapath(input         clk, reset,
                 output [31:0] MEM_aluout, MEM_writedata,
                 input  [31:0] MEM_readdata);
 
+  wire  		  ID_forward;
   wire [1:0]  EX_forwarda, EX_forwardb;
   wire		  IF_stall, ID_stall;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
@@ -183,16 +184,18 @@ module datapath(input         clk, reset,
   
   wire [31:0] ID_srca, EX_srca, MEM_srca; 
   wire [31:0] EX_srcb;
-  wire [31:0] ID_writedata, EX_writedata;
+  wire [31:0] ID_subwritedata, ID_writedata, EX_writedata;
   
   // Hazard Detection
   Forwarding f(
+   .ID_rt   (ID_instr[20:16]),
    .EX_rs	(EX_instr[25:21]),
 	.EX_rt	(EX_instr[20:16]),
 	.MEM_rd	(MEM_writereg),
 	.WB_rd	(WB_writereg),
 	.MEM_regwrite (MEM_regwrite),
 	.WB_regwrite  (WB_regwrite),
+	.ID_forward   (ID_forward),
    .EX_forwarda  (EX_forwarda),
 	.EX_forwardb  (EX_forwardb));
 	
@@ -234,7 +237,13 @@ module datapath(input         clk, reset,
     .wa      (WB_writereg),
     .wd      (WB_result),
     .rd1     (ID_srca),
-    .rd2     (ID_writedata));
+    .rd2     (ID_subwritedata));
+	 
+  mux2 #(5) rfsubmux( 
+    .d0  (ID_subwritedata),
+    .d1  (WB_result),
+    .s   (ID_forward),
+    .y   (ID_writedata));
   
   // Fetch stage
   flopenr #(32) pcreg(
@@ -300,14 +309,14 @@ module datapath(input         clk, reset,
     .y   (EX_writereg));
   
   // ALU logic (In Execution Stage)
+  mux3 #(32) forwardamux(EX_srca, WB_result, MEM_aluout, EX_forwarda, EX_alua);
+  mux3 #(32) forwardbmux(EX_writedata, WB_result, MEM_aluout, EX_forwardb, EX_srcb);
+  
   mux2 #(32) srcbmux(
-    .d0 (EX_writedata),
+    .d0 (EX_srcb),
     .d1 (EX_shiftedimm[31:0]),
     .s  (EX_alusrc),
-    .y  (EX_srcb));
-  
-  mux3 #(32) forwardamux(EX_srca, WB_result, MEM_aluout, EX_forwarda, EX_alua);
-  mux3 #(32) forwardbmux(EX_srcb, WB_result, MEM_aluout, EX_forwardb, EX_alub);
+    .y  (EX_alub));
   
   alu alu(
     .a       (EX_alua),
@@ -352,14 +361,18 @@ module datapath(input         clk, reset,
 endmodule
 
 // Forwarding Detection
-module Forwarding(input  [4:0]     EX_rs, EX_rt, MEM_rd, WB_rd,
+module Forwarding(input  [4:0]     ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
 				      input 	 	     MEM_regwrite, WB_regwrite,
+						output reg		  ID_forward,
 				      output reg [1:0] EX_forwarda, EX_forwardb);
 				  
   always @(*)
   begin
+		ID_forward <= 1'b0;
 		EX_forwarda <= 2'b00;
 		EX_forwardb <= 2'b00;
+		if (ID_rt != 0)
+			if (ID_rt == WB_rd & WB_regwrite) ID_forward <= 1'b1;
 		if (EX_rs != 0)
 			if (EX_rs == MEM_rd & MEM_regwrite) EX_forwarda <= 2'b10;
 			else if (EX_rs == WB_rd & WB_regwrite) EX_forwarda <= 2'b01;
