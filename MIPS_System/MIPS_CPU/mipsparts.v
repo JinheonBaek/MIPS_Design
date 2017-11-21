@@ -214,7 +214,7 @@ module maindec(input  [5:0] op,
 						6'b001000: controls <= #`mydelay 15'b000000000000001; // JR
 						default:   controls <= #`mydelay 15'b001100000001100; // Rtype default
 					  endcase
-		6'b100011: controls <= #`mydelay 15'b101010000100000; // LW
+		6'b100011: controls <= #`mydelay 15'b101010001100000; // LW
       6'b101011: controls <= #`mydelay 15'b100010010000000; // SW
       6'b000100: controls <= #`mydelay 15'b100001100000100; // BEQ
 		6'b000101: controls <= #`mydelay 15'b100001000000100; // BNE

@@ -16,7 +16,7 @@ module mips(input         clk, reset,
             output [31:0] memwritedata,
             input  [31:0] memreaddata);
 
-  wire        ID_signext, ID_shiftl16, WB_memtoreg, EX_memread;
+  wire        ID_signext, ID_shiftl16, WB_memtoreg, MEM_regwrite, EX_memread;
   wire [1:0]  branch;
   wire        MEM_pcsrc, MEM_zero;
   wire        EX_alusrc, EX_regdst, WB_regwrite, MEM_jump, EX_jal, WB_jal, MEM_jr;
@@ -155,8 +155,8 @@ module datapath(input         clk, reset,
                 output [31:0] MEM_aluout, MEM_writedata,
                 input  [31:0] MEM_readdata);
 
-					 
   wire [1:0]  EX_forwarda, EX_forwardb;
+  wire		  IF_stall, ID_stall, EX_flush;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
   wire [31:0] ID_signimm, ID_shiftedimm, EX_signimm, EX_shiftedimm, EX_signimmsh;
   
@@ -191,6 +191,15 @@ module datapath(input         clk, reset,
 	.WB_regwrite  (WB_regwrite),
    .EX_forwarda  (EX_forwarda),
 	.EX_forwardb  (EX_forwardb));
+	
+	HazardDetection h(
+	.ID_rs (ID_instr[25:21]),
+	.ID_rt (ID_instr[20:16]),
+	.EX_rt (EX_instr[20:16]),
+	.EX_memread (EX_memread),
+	.IF_stall (IF_stall),
+	.ID_stall (ID_stall),
+	.EX_flush (EX_flush));
   
   // Next PC Logic	 
   mux2 #(32) pcbrmux(
@@ -356,7 +365,13 @@ module Forwarding(input  [4:0]     EX_rs, EX_rt, MEM_rd, WB_rd,
 endmodule
 
 // Hazard Detection
-module HazardDetection();
+module HazardDetection(input [4:0] ID_rs, ID_rt, EX_rt,
+							  input		  EX_memread,
+							  output      IF_stall, ID_stall, EX_flush);
+
+  assign IF_stall = EX_memread & (EX_rt == ID_rs | EX_rt == ID_rt);
+  assign ID_stall = IF_stall;
+  assign EX_flush = ID_stall;
 
 endmodule
 

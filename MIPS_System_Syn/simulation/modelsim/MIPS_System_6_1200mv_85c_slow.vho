@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/22/2017 00:14:34"
+-- DATE "11/22/2017 00:36:34"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -2950,23 +2950,6 @@ SIGNAL \uGPIO|LEDG_R[5]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[6]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[7]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R[9]~feeder_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|ID_r1|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|ID_r2|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r1|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r2|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r3|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r4|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r5|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|EX_r6|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|MEM_r1|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|MEM_r2|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|MEM_r3|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|MEM_r6|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|MEM_r7|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|WB_r1|q\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \mips_cpu|dp|WB_r2|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|WB_r3|q\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \mips_cpu|dp|WB_r4|q\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \pll0|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \mips_cpu|c|EX_reg|q\ : std_logic_vector(13 DOWNTO 0);
 SIGNAL \mips_cpu|c|MEM_reg|q\ : std_logic_vector(7 DOWNTO 0);
@@ -3017,6 +3000,23 @@ SIGNAL \uGPIO|HEX2_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX1_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX0_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|BUTTON_StatusR\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|ID_r1|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|ID_r2|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r1|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r2|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r3|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r4|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r5|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|EX_r6|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|MEM_r1|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|MEM_r2|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|MEM_r3|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|MEM_r6|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|MEM_r7|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|WB_r1|q\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \mips_cpu|dp|WB_r2|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|WB_r3|q\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \mips_cpu|dp|WB_r4|q\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \Decoder|ALT_INV_Equal1~6_combout\ : std_logic;
 SIGNAL \ALT_INV_reset_ff~q\ : std_logic;
 

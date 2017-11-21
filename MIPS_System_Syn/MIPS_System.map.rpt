@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_System
-Wed Nov 22 00:14:03 2017
+Wed Nov 22 00:36:04 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -89,9 +89,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  81. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrmux"
  82. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|adder:pcadd1"
  83. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:pcjmux"
- 84. Port Connectivity Checks: "mips:mips_cpu"
- 85. Elapsed Time Per Partition
- 86. Analysis & Synthesis Messages
+ 84. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:h"
+ 85. Port Connectivity Checks: "mips:mips_cpu"
+ 86. Elapsed Time Per Partition
+ 87. Analysis & Synthesis Messages
 
 
 
@@ -117,7 +118,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:14:03 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 22 00:36:04 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -2047,6 +2048,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:h"                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; IF_stall ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ID_stall ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; EX_flush ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mips:mips_cpu"                                                                            ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2072,7 +2084,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 22 00:13:56 2017
+    Info: Processing started: Wed Nov 22 00:35:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_System -c MIPS_System
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_mem_dual_port/ram2port_inst_data.v
@@ -2112,7 +2124,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file /mips_d
     Info (12023): Found entity 1: Addr_Decoder
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_pll/altpll_clkgen.v
     Info (12023): Found entity 1: ALTPLL_clkgen
-Warning (10236): Verilog HDL Implicit Net warning at mips.v(42): created implicit net for "MEM_regwrite"
 Info (12127): Elaborating entity "MIPS_System" for the top level hierarchy
 Info (12128): Elaborating entity "ALTPLL_clkgen" for hierarchy "ALTPLL_clkgen:pll0"
 Info (12128): Elaborating entity "altpll" for hierarchy "ALTPLL_clkgen:pll0|altpll:altpll_component"
@@ -2195,6 +2206,7 @@ Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|controller
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|controller:c|flopr:WB_reg"
 Info (12128): Elaborating entity "datapath" for hierarchy "mips:mips_cpu|datapath:dp"
 Info (12128): Elaborating entity "Forwarding" for hierarchy "mips:mips_cpu|datapath:dp|Forwarding:f"
+Info (12128): Elaborating entity "HazardDetection" for hierarchy "mips:mips_cpu|datapath:dp|HazardDetection:h"
 Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips_cpu|datapath:dp|mux2:pcbrmux"
 Info (12128): Elaborating entity "regfile" for hierarchy "mips:mips_cpu|datapath:dp|regfile:rf"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:pcreg"
@@ -2256,10 +2268,10 @@ Info (21057): Implemented 3744 device resources after synthesis - the final reso
     Info (21061): Implemented 3659 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 555 megabytes
-    Info: Processing ended: Wed Nov 22 00:14:03 2017
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Wed Nov 22 00:36:04 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
