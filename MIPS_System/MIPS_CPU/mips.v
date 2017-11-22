@@ -17,7 +17,6 @@ module mips(input         clk, reset,
             input  [31:0] memreaddata);
 
   wire        ID_signext, ID_shiftl16, WB_memtoreg, MEM_regwrite, EX_memread;
-  wire [1:0]  branch;
   wire        MEM_pcsrc, MEM_zero;
   wire        EX_alusrc, EX_regdst, WB_regwrite, ID_jump, EX_jal, WB_jal, MEM_jr;
   wire [2:0]  EX_alucontrol;
@@ -93,7 +92,7 @@ module controller(input        clk, reset,
 
   wire [1:0] ID_aluop;
   wire		 ID_memtoreg, ID_memread, ID_memwrite, ID_alusrc, ID_regdst, ID_regwrite, ID_jal, ID_jr;
-  wire       EX_jump, EX_jr, MEM_jal;
+  wire       EX_jr, MEM_jal;
   wire [1:0] ID_branch, EX_branch, MEM_branch;
   wire       EX_memtoreg, MEM_memtoreg;
   wire       EX_memwrite;
@@ -159,7 +158,7 @@ module datapath(input         clk, reset,
                 output [31:0] MEM_aluout, MEM_writedata,
                 input  [31:0] MEM_readdata);
 
-  wire  		  ID_forward;
+  wire  		  ID_forwarda, ID_forwardb;
   wire [1:0]  EX_forwarda, EX_forwardb;
   wire		  IF_stall, ID_stall;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
@@ -182,12 +181,13 @@ module datapath(input         clk, reset,
   wire [31:0] EX_pcbranch, MEM_pcbranch;
   wire [31:0] MEM_pcnextbr, ID_pcnextj;
   
-  wire [31:0] ID_srca, EX_srca, MEM_srca; 
+  wire [31:0] ID_srca, ID_subsrca, EX_srca, MEM_srca; 
   wire [31:0] EX_srcb;
   wire [31:0] ID_subwritedata, ID_writedata, EX_writedata;
   
   // Hazard Detection
   Forwarding f(
+   .ID_rs	(ID_instr[25:21]),
    .ID_rt   (ID_instr[20:16]),
    .EX_rs	(EX_instr[25:21]),
 	.EX_rt	(EX_instr[20:16]),
@@ -195,7 +195,8 @@ module datapath(input         clk, reset,
 	.WB_rd	(WB_writereg),
 	.MEM_regwrite (MEM_regwrite),
 	.WB_regwrite  (WB_regwrite),
-	.ID_forward   (ID_forward),
+	.ID_forwarda  (ID_forwarda),
+	.ID_forwardb  (ID_forwardb),
    .EX_forwarda  (EX_forwarda),
 	.EX_forwardb  (EX_forwardb));
 	
@@ -236,14 +237,8 @@ module datapath(input         clk, reset,
     .ra2     (ID_instr[20:16]),
     .wa      (WB_writereg),
     .wd      (WB_result),
-    .rd1     (ID_srca),
+    .rd1     (ID_subsrca),
     .rd2     (ID_subwritedata));
-	 
-  mux2 #(5) rfsubmux( 
-    .d0  (ID_subwritedata),
-    .d1  (WB_result),
-    .s   (ID_forward),
-    .y   (ID_writedata));
   
   // Fetch stage
   flopenr #(32) pcreg(
@@ -273,6 +268,18 @@ module datapath(input         clk, reset,
     .a         (ID_signimm[31:0]),
     .shiftl16  (ID_shiftl16),
     .y         (ID_shiftedimm[31:0]));
+  
+  mux2 #(32) forwardadmux( 
+    .d0  (ID_subsrca),
+    .d1  (WB_result),
+    .s   (ID_forwarda),
+    .y   (ID_srca));
+	 
+  mux2 #(32) forwardbdmux( 
+    .d0  (ID_subwritedata),
+    .d1  (WB_result),
+    .s   (ID_forwardb),
+    .y   (ID_writedata));
   
   assign ID_op = ID_instr[31:26];
   assign ID_funct = ID_instr[5:0];
@@ -333,6 +340,7 @@ module datapath(input         clk, reset,
   flopr #(1)  MEM_r5 (clk, reset, EX_zero, MEM_zero);
   flopr #(32) MEM_r6 (clk, reset, EX_aluout, MEM_aluout);
   flopr #(32) MEM_r7 (clk, reset, EX_writedata, MEM_writedata);
+  flopr #(32) MEM_r8 (clk, reset, EX_srca, MEM_srca);
   
   // Memory Access stage - Logic
   
@@ -361,18 +369,21 @@ module datapath(input         clk, reset,
 endmodule
 
 // Forwarding Detection
-module Forwarding(input  [4:0]     ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
+module Forwarding(input  [4:0]     ID_rs, ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
 				      input 	 	     MEM_regwrite, WB_regwrite,
-						output reg		  ID_forward,
+						output reg		  ID_forwarda, ID_forwardb,
 				      output reg [1:0] EX_forwarda, EX_forwardb);
 				  
   always @(*)
   begin
-		ID_forward <= 1'b0;
+		ID_forwarda <= 1'b0;
+		ID_forwardb <= 1'b0;
 		EX_forwarda <= 2'b00;
 		EX_forwardb <= 2'b00;
+		if (ID_rs != 0)
+			if (ID_rs == WB_rd & WB_regwrite) ID_forwarda <= 1'b1;
 		if (ID_rt != 0)
-			if (ID_rt == WB_rd & WB_regwrite) ID_forward <= 1'b1;
+			if (ID_rt == WB_rd & WB_regwrite) ID_forwardb <= 1'b1;
 		if (EX_rs != 0)
 			if (EX_rs == MEM_rd & MEM_regwrite) EX_forwarda <= 2'b10;
 			else if (EX_rs == WB_rd & WB_regwrite) EX_forwarda <= 2'b01;
