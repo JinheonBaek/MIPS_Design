@@ -3,11 +3,12 @@
 
 //--------------------------------------------------------------
 // mips.v
-// David_Harris@hmc.edu and Sarah_Harris@hmc.edu 23 October 2005
-// Single-cycle MIPS processor
+// Jinheon.Baek@outlook.kr (Korea University)
+// Pipelined MIPS processor
 //--------------------------------------------------------------
 
-// single-cycle MIPS processor
+// Pipelined MIPS processor
+// ()_name => () indicates each domain in 5-stages
 module mips(input         clk, reset,
             output [31:0] pc,
             input  [31:0] instr,
@@ -20,9 +21,14 @@ module mips(input         clk, reset,
   wire        MEM_pcsrc, MEM_zero;
   wire        EX_alusrc, EX_regdst, WB_regwrite, ID_jump, EX_jal, WB_jal, MEM_jr;
   wire [2:0]  EX_alucontrol;
+  
+  // ##### Jinheon Baek: Start #####
+  
+  // EX_flush indicates that if that signal is 1, clear control signals to all zero (nop)
   wire		  EX_flush;
-
-  wire [5:0] ID_op, ID_funct;
+  wire [5:0]  ID_op, ID_funct;
+  
+  // ##### Jinheon Baek: End #####
   
   // Instantiate Controller
   controller c(
@@ -120,7 +126,11 @@ module controller(input        clk, reset,
     .funct      (ID_funct),
     .aluop      (ID_aluop), 
     .alucontrol (ID_alucontrol));
-	 
+	
+  // ##### Jinheon Baek: Start #####
+  
+  // Add Flip-flops that run on the controller (If datapath needs control signals, it send out that signals to datapath)
+  
   // Flip-flop between Instruction Decoding and Execution
   floprc #(13) EX_reg(clk, reset, EX_flush,
                      {ID_memtoreg, ID_memwrite, ID_memread, ID_branch, ID_alusrc, ID_regdst, ID_regwrite, ID_jr, ID_jal, ID_alucontrol},
@@ -135,12 +145,14 @@ module controller(input        clk, reset,
   flopr  #(3) WB_reg(clk, reset,
                      {MEM_memtoreg, MEM_regwrite, MEM_jal},
                      {WB_memtoreg, WB_regwrite, WB_jal});
+							
+  // ##### Jinheon Baek: End #####
 
   assign MEM_pcsrc = MEM_branch[1] ? (MEM_branch[0] ? (MEM_branch[0] & MEM_zero) : (~MEM_branch[0] & ~MEM_zero)) : (0);
 
 endmodule
 
-
+// Move maindec and aludec in mips.v file to mipsparts.v file
 
 // Datapath
 module datapath(input         clk, reset,
@@ -163,31 +175,27 @@ module datapath(input         clk, reset,
   wire		  IF_stall, ID_stall;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
   wire [31:0] ID_signimm, ID_shiftedimm, EX_signimm, EX_shiftedimm, EX_signimmsh;
-  
   wire [4:0]  EX_writesubreg;
   wire [4:0]  EX_writereg, MEM_writereg, WB_writereg;
   wire [31:0] WB_result;
-  
   wire 	     EX_zero;
   wire [31:0] EX_aluout, WB_aluout;
-  
   wire [31:0] EX_alua, EX_alub;
-  
   wire [31:0] WB_readdata;
   wire [31:0] WB_subresult;
-  
-  // Next PC Logic
   wire [31:0] IF_pcnext, IF_pcplus4, ID_pcplus4, EX_pcplus4, MEM_pcplus4, WB_pcplus4;
   wire [31:0] EX_pcbranch, MEM_pcbranch;
   wire [31:0] MEM_pcnextbr, ID_pcnextj;
-  
   wire [31:0] ID_srca, ID_subsrca, EX_srca, MEM_srca; 
   wire [31:0] EX_srcb;
   wire [31:0] ID_subwritedata, ID_writedata, EX_writedata;
+  wire [31:0] EX_subwritedata;
+ 
+  // ##### Jinheon Baek: Start #####
   
-  wire [31:0] EX_realwritedata;
-  
-  // Hazard Detection
+  // Forwarding
+  // ID_forward : Write Back Stage to Instruction Decoding Stage
+  // EX_forward : Write Back and Memory Access stages to Execution Stage
   Forwarding f(
    .ID_rs	(ID_instr[25:21]),
    .ID_rt   (ID_instr[20:16]),
@@ -202,6 +210,10 @@ module datapath(input         clk, reset,
    .EX_forwarda  (EX_forwarda),
 	.EX_forwardb  (EX_forwardb));
 	
+	// Haward Detection
+	// IF_stall : stall Instruction Fetch
+	// ID_stall : stall Instruction Decoding
+	// EX_flush : flush Execution Stage : signals to all zero (nop)
 	HazardDetection h(
 	.ID_rs (ID_instr[25:21]),
 	.ID_rt (ID_instr[20:16]),
@@ -211,6 +223,8 @@ module datapath(input         clk, reset,
 	.IF_stall (IF_stall),
 	.ID_stall (ID_stall),
 	.EX_flush (EX_flush));
+  
+  // ##### Jinheon Baek: End #####
   
   // Next PC Logic	 
   mux2 #(32) pcbrmux(
@@ -242,7 +256,7 @@ module datapath(input         clk, reset,
     .rd1     (ID_subsrca),
     .rd2     (ID_subwritedata));
   
-  // Fetch stage
+  // Fetch stage (flopenr for stall)
   flopenr #(32) pcreg(
     .clk   (clk),
     .reset (reset),
@@ -255,10 +269,13 @@ module datapath(input         clk, reset,
     .b (32'b100),
     .y (IF_pcplus4));
 
-	 
+  // ##### Jinheon Baek: Start #####
+  
   // Decoding stage - Flip-flop between Instruction Fetch and Instruction Decoding
   flopenr #(32) ID_r1 (clk, reset, ~ID_stall, IF_instr, ID_instr);
   flopenr #(32) ID_r2 (clk, reset, ~ID_stall, IF_pcplus4, ID_pcplus4);
+  
+  // ##### Jinheon Baek: End #####
 
   // Decoding stage - Logic
   sign_zero_ext sze(
@@ -270,30 +287,40 @@ module datapath(input         clk, reset,
     .a         (ID_signimm[31:0]),
     .shiftl16  (ID_shiftl16),
     .y         (ID_shiftedimm[31:0]));
+
+  // ##### Jinheon Baek: Start #####
   
+  // forwardadmux : forward a in decoding
   mux2 #(32) forwardadmux( 
     .d0  (ID_subsrca),
     .d1  (WB_result),
     .s   (ID_forwarda),
     .y   (ID_srca));
-	 
+  // forwardbmux : forward b in decoding
   mux2 #(32) forwardbdmux( 
     .d0  (ID_subwritedata),
     .d1  (WB_result),
     .s   (ID_forwardb),
     .y   (ID_writedata));
   
+  // Make ID_op and funct for controller input
   assign ID_op = ID_instr[31:26];
   assign ID_funct = ID_instr[5:0];
   
+  // ##### Jinheon Baek: End #####
+
   
-  // Execution stage - Flip-flop between Instruction Decoding and Execution
+  // ##### Jinheon Baek: Start #####
+  
+  // Execution stage - Flip-flop between Instruction Decoding and Execution (floprc for flush = clear)
   floprc #(32) EX_r1 (clk, reset, EX_flush, ID_instr, EX_instr);
   floprc #(32) EX_r2 (clk, reset, EX_flush, ID_pcplus4, EX_pcplus4);
   floprc #(32) EX_r3 (clk, reset, EX_flush, ID_signimm, EX_signimm);
-  floprc #(32) EX_r4 (clk, reset, EX_flush, ID_writedata, EX_writedata);
+  floprc #(32) EX_r4 (clk, reset, EX_flush, ID_writedata, EX_subwritedata);
   floprc #(32) EX_r5 (clk, reset, EX_flush, ID_shiftedimm, EX_shiftedimm);
   floprc #(32) EX_r6 (clk, reset, EX_flush, ID_srca, EX_srca);
+  
+  // ##### Jinheon Baek: End #####
   
   // Execution stage - Logic
   sl2 immsh(
@@ -317,10 +344,18 @@ module datapath(input         clk, reset,
     .s   (EX_jal),
     .y   (EX_writereg));
   
+  // ##### Jinheon Baek: Start #####
   
   // ALU logic (In Execution Stage)
-  mux3 #(32) forwardamux(EX_srca, WB_result, MEM_aluout, EX_forwarda, EX_alua);
-  mux3 #(32) forwardbmux(EX_writedata, WB_result, MEM_aluout, EX_forwardb, EX_srcb);
+  // forwardlwemux : forward lw output (=WB_readdata) in execution (that occurs in sw after lw)
+  // forwardlwemux : Wrtie Back read data -> Execution write data
+  mux2 #(32) forwardlwemux (EX_subwritedata, WB_readdata, EX_forwardb[0], EX_writedata);
+  // forwardaemux : forward a in execution
+  mux3 #(32) forwardaemux(EX_srca, WB_result, MEM_aluout, EX_forwarda, EX_alua);
+  // forwardbemux : forward b in execution
+  mux3 #(32) forwardbemux(EX_writedata, WB_result, MEM_aluout, EX_forwardb, EX_srcb);
+ 
+  // ##### Jinheon Baek: end #####
   
   mux2 #(32) srcbmux(
     .d0 (EX_srcb),
@@ -334,9 +369,8 @@ module datapath(input         clk, reset,
     .alucont (EX_alucontrol),
     .result  (EX_aluout),
     .zero    (EX_zero));
-	 
-  // Wrtie Back read data -> Execution write data
-  mux2 #(32) forwardlwmux(EX_writedata, WB_readdata, EX_forwardb[0], EX_realwritedata);
+  
+  // ##### Jinheon Baek: Start #####
   
   // Memory Access stage - Flip-flop between Execution and Memory Access
   flopr #(32) MEM_r1 (clk, reset, EX_instr, MEM_instr);
@@ -345,11 +379,8 @@ module datapath(input         clk, reset,
   flopr #(5)  MEM_r4 (clk, reset, EX_writereg, MEM_writereg);
   flopr #(1)  MEM_r5 (clk, reset, EX_zero, MEM_zero);
   flopr #(32) MEM_r6 (clk, reset, EX_aluout, MEM_aluout);
-  flopr #(32) MEM_r7 (clk, reset, EX_realwritedata, MEM_writedata);
+  flopr #(32) MEM_r7 (clk, reset, EX_writedata, MEM_writedata);
   flopr #(32) MEM_r8 (clk, reset, EX_srca, MEM_srca);
-  
-  // Memory Access stage - Logic
-  
   
   // Write Back stage - Flip-flop between Memory Access and Write Back  
   flopr #(5)  WB_r1 (clk, reset, MEM_writereg, WB_writereg);
@@ -357,7 +388,7 @@ module datapath(input         clk, reset,
   flopr #(32) WB_r3 (clk, reset, MEM_aluout, WB_aluout);
   flopr #(32) WB_r4 (clk, reset, MEM_pcplus4, WB_pcplus4);
   
-  // Write Back stage - Logic
+  // ##### Jinheon Baek: End #####
   
   mux2 #(32) resmux( // aluout or memory_data
     .d0 (WB_aluout),
@@ -373,6 +404,8 @@ module datapath(input         clk, reset,
 
 
 endmodule
+
+// ##### Jinheon Baek: Start #####
 
 // Forwarding Detection
 module Forwarding(input  [4:0]     ID_rs, ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
@@ -411,4 +444,5 @@ module HazardDetection(input [4:0] ID_rs, ID_rt, EX_rt,
 
 endmodule
 
-
+// ##### Jinheon Baek: End #####
+  

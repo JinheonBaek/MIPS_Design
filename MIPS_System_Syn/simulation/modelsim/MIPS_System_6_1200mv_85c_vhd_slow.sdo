@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "MIPS_System")
-  (DATE "11/23/2017 02:09:04")
+  (DATE "11/23/2017 03:15:08")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -2220,7 +2220,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[11\]\~10\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[11\]\~10\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1345:1345:1345) (1403:1403:1403))
@@ -2294,7 +2294,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[12\]\~63\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[12\]\~63\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1114:1114:1114) (1176:1176:1176))
@@ -2310,7 +2310,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[12\]\~64\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[12\]\~64\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (400:400:400) (477:477:477))
@@ -4607,7 +4607,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[23\]\~41\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[23\]\~41\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1402:1402:1402) (1473:1473:1473))
@@ -4623,7 +4623,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[23\]\~42\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[23\]\~42\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (938:938:938) (961:961:961))
@@ -6540,7 +6540,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[7\]\~7\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[7\]\~7\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1533:1533:1533) (1585:1585:1585))
@@ -8277,7 +8277,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[6\]\~6\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[6\]\~6\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1410:1410:1410) (1468:1468:1468))
@@ -9225,7 +9225,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[21\]\~45\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[21\]\~45\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (919:919:919) (952:952:952))
@@ -9241,7 +9241,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[21\]\~46\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[21\]\~46\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (920:920:920) (952:952:952))
@@ -10234,7 +10234,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[19\]\~49\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[19\]\~49\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (963:963:963) (1017:1017:1017))
@@ -10250,7 +10250,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[19\]\~50\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[19\]\~50\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (201:201:201) (245:245:245))
@@ -12926,7 +12926,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[3\]\~3\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[3\]\~3\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1533:1533:1533) (1586:1586:1586))
@@ -14354,7 +14354,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[2\]\~2\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[2\]\~2\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (253:253:253) (342:342:342))
@@ -16309,7 +16309,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[1\]\~1\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[1\]\~1\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1228:1228:1228) (1288:1288:1288))
@@ -18151,7 +18151,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[17\]\~26\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[17\]\~26\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2044:2044:2044) (2073:2073:2073))
@@ -19359,7 +19359,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[19\]\~24\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[19\]\~24\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1453:1453:1453) (1556:1556:1556))
@@ -19413,7 +19413,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[18\]\~25\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[18\]\~25\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1518:1518:1518) (1581:1581:1581))
@@ -19467,7 +19467,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[17\]\~53\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[17\]\~53\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1993:1993:1993) (2101:2101:2101))
@@ -19483,7 +19483,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[17\]\~54\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[17\]\~54\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (920:920:920) (938:938:938))
@@ -20855,7 +20855,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[15\]\~57\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[15\]\~57\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1458:1458:1458) (1531:1531:1531))
@@ -20871,7 +20871,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[15\]\~58\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[15\]\~58\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (686:686:686) (757:757:757))
@@ -23013,7 +23013,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[10\]\~11\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[10\]\~11\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1892:1892:1892) (1910:1910:1910))
@@ -25270,7 +25270,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[13\]\~61\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[13\]\~61\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (920:920:920) (976:976:976))
@@ -25286,7 +25286,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[13\]\~62\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[13\]\~62\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1261:1261:1261) (1334:1334:1334))
@@ -25383,7 +25383,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[14\]\~59\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[14\]\~59\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1105:1105:1105) (1148:1148:1148))
@@ -25399,7 +25399,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[14\]\~60\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[14\]\~60\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1228:1228:1228) (1280:1280:1280))
@@ -25856,7 +25856,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[15\]\~28\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[15\]\~28\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1691:1691:1691) (1809:1809:1809))
@@ -25910,7 +25910,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[14\]\~29\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[14\]\~29\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1147:1147:1147) (1255:1255:1255))
@@ -26384,7 +26384,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[13\]\~30\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[13\]\~30\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (254:254:254) (344:344:344))
@@ -28191,7 +28191,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[16\]\~55\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[16\]\~55\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2353:2353:2353) (2416:2416:2416))
@@ -28207,7 +28207,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[16\]\~56\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[16\]\~56\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (726:726:726) (781:781:781))
@@ -29421,7 +29421,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[18\]\~51\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[18\]\~51\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1391:1391:1391) (1413:1413:1413))
@@ -29437,7 +29437,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[18\]\~52\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[18\]\~52\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (725:725:725) (782:782:782))
@@ -30852,7 +30852,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[20\]\~47\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[20\]\~47\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1139:1139:1139) (1207:1207:1207))
@@ -30868,7 +30868,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[20\]\~48\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[20\]\~48\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (883:883:883) (917:917:917))
@@ -32166,7 +32166,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[22\]\~43\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[22\]\~43\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1146:1146:1146) (1209:1209:1209))
@@ -32182,7 +32182,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[22\]\~44\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[22\]\~44\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1146:1146:1146) (1211:1211:1211))
@@ -32855,7 +32855,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[23\]\~20\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[23\]\~20\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1719:1719:1719) (1800:1800:1800))
@@ -32909,7 +32909,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[22\]\~21\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[22\]\~21\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1490:1490:1490) (1544:1544:1544))
@@ -32963,7 +32963,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[21\]\~22\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[21\]\~22\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (925:925:925) (1016:1016:1016))
@@ -33178,7 +33178,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[1\]\~2\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[1\]\~2\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (687:687:687) (739:739:739))
@@ -33194,7 +33194,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[1\]\~3\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[1\]\~3\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (682:682:682) (723:723:723))
@@ -33210,7 +33210,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[1\]\~4\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[1\]\~4\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1223:1223:1223) (1286:1286:1286))
@@ -34328,7 +34328,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[0\]\~5\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[0\]\~5\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1250:1250:1250) (1338:1338:1338))
@@ -34344,7 +34344,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[0\]\~6\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[0\]\~6\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (199:199:199) (241:241:241))
@@ -36590,7 +36590,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[27\]\~33\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[27\]\~33\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1869:1869:1869) (1940:1940:1940))
@@ -36606,7 +36606,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[27\]\~34\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[27\]\~34\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1326:1326:1326) (1371:1371:1371))
@@ -37625,7 +37625,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[26\]\~35\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[26\]\~35\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1871:1871:1871) (1942:1942:1942))
@@ -37641,7 +37641,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[26\]\~36\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[26\]\~36\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1323:1323:1323) (1371:1371:1371))
@@ -38488,7 +38488,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[25\]\~37\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[25\]\~37\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1868:1868:1868) (1943:1943:1943))
@@ -38504,7 +38504,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[25\]\~38\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[25\]\~38\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1324:1324:1324) (1368:1368:1368))
@@ -40089,7 +40089,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[24\]\~39\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[24\]\~39\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1222:1222:1222) (1286:1286:1286))
@@ -40105,7 +40105,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[24\]\~40\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[24\]\~40\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (882:882:882) (917:917:917))
@@ -41679,7 +41679,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[27\]\~16\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[27\]\~16\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (872:872:872) (932:932:932))
@@ -42149,7 +42149,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[26\]\~17\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[26\]\~17\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1754:1754:1754) (1812:1812:1812))
@@ -42203,7 +42203,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[25\]\~18\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[25\]\~18\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2471:2471:2471) (2560:2560:2560))
@@ -43090,7 +43090,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[11\]\~9\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[11\]\~9\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1153:1153:1153) (1195:1195:1195))
@@ -43106,7 +43106,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[11\]\~10\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[11\]\~10\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1222:1222:1222) (1281:1281:1281))
@@ -44187,7 +44187,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[8\]\~15\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[8\]\~15\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (967:967:967) (1028:1028:1028))
@@ -44203,7 +44203,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[8\]\~16\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[8\]\~16\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (272:272:272) (358:358:358))
@@ -44628,7 +44628,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[6\]\~19\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[6\]\~19\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1205:1205:1205) (1306:1306:1306))
@@ -44644,7 +44644,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[6\]\~20\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[6\]\~20\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1384:1384:1384) (1512:1512:1512))
@@ -45649,7 +45649,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[4\]\~23\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[4\]\~23\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1068:1068:1068) (1118:1118:1118))
@@ -45665,7 +45665,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[4\]\~24\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[4\]\~24\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (198:198:198) (237:237:237))
@@ -46016,7 +46016,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[3\]\~7\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[3\]\~7\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (221:221:221) (264:264:264))
@@ -46032,7 +46032,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[3\]\~8\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[3\]\~8\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (685:685:685) (753:753:753))
@@ -46926,7 +46926,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[20\]\~23\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[20\]\~23\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (903:903:903) (960:960:960))
@@ -47376,7 +47376,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[10\]\~11\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[10\]\~11\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1604:1604:1604) (1669:1669:1669))
@@ -47392,7 +47392,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[10\]\~12\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[10\]\~12\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (1461:1461:1461) (1479:1479:1479))
@@ -48221,7 +48221,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[9\]\~9\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[9\]\~9\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2471:2471:2471) (2564:2564:2564))
@@ -49160,7 +49160,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[9\]\~13\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[9\]\~13\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2564:2564:2564) (2629:2629:2629))
@@ -49176,7 +49176,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[9\]\~14\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[9\]\~14\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (271:271:271) (356:356:356))
@@ -50145,7 +50145,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[7\]\~17\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[7\]\~17\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1398:1398:1398) (1425:1425:1425))
@@ -50161,7 +50161,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[7\]\~18\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[7\]\~18\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1212:1212:1212) (1267:1267:1267))
@@ -51384,7 +51384,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[5\]\~5\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[5\]\~5\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1437:1437:1437) (1462:1462:1462))
@@ -52355,7 +52355,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[5\]\~21\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[5\]\~21\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (905:905:905) (966:966:966))
@@ -52371,7 +52371,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[5\]\~22\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[5\]\~22\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (621:621:621) (685:685:685))
@@ -52949,7 +52949,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[8\]\~8\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[8\]\~8\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (256:256:256) (348:348:348))
@@ -53928,7 +53928,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[31\]\~12\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[31\]\~12\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (2441:2441:2441) (2531:2531:2531))
@@ -54304,7 +54304,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[30\]\~13\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[30\]\~13\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1394:1394:1394) (1487:1487:1487))
@@ -55269,7 +55269,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[29\]\~29\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[29\]\~29\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1401:1401:1401) (1471:1471:1471))
@@ -55285,7 +55285,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[29\]\~30\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[29\]\~30\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (938:938:938) (963:963:963))
@@ -56934,7 +56934,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[28\]\~31\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[28\]\~31\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1332:1332:1332) (1403:1403:1403))
@@ -56950,7 +56950,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[28\]\~32\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[28\]\~32\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (199:199:199) (242:242:242))
@@ -57603,7 +57603,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[29\]\~14\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[29\]\~14\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1518:1518:1518) (1585:1585:1585))
@@ -59345,7 +59345,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[31\]\~25\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[31\]\~25\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (945:945:945) (1018:1018:1018))
@@ -59361,7 +59361,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[31\]\~26\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[31\]\~26\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (200:200:200) (244:244:244))
@@ -59463,7 +59463,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[30\]\~27\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[30\]\~27\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1868:1868:1868) (1941:1941:1941))
@@ -59479,7 +59479,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[30\]\~28\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[30\]\~28\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (199:199:199) (238:238:238))
@@ -60579,7 +60579,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[4\]\~4\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[4\]\~4\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1892:1892:1892) (1955:1955:1955))
@@ -60865,7 +60865,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[2\]\~0\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[2\]\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1224:1224:1224) (1282:1282:1282))
@@ -60881,7 +60881,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardamux\|y\[2\]\~1\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardaemux\|y\[2\]\~1\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (262:262:262) (343:343:343))
@@ -61793,7 +61793,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[12\]\~31\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[12\]\~31\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1166:1166:1166) (1236:1236:1236))
@@ -63389,7 +63389,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[16\]\~27\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[16\]\~27\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (952:952:952) (1057:1057:1057))
@@ -63722,7 +63722,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[24\]\~19\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[24\]\~19\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (634:634:634) (686:686:686))
@@ -63929,7 +63929,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[28\]\~15\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[28\]\~15\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1166:1166:1166) (1234:1234:1234))
@@ -67928,7 +67928,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|forwardlwmux\|y\[0\]\~0\\)
+    (INSTANCE \\mips_cpu\|dp\|forwardlwemux\|y\[0\]\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1993:1993:1993) (2070:2070:2070))

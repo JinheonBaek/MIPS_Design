@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/23/2017 02:09:02"
+-- DATE "11/23/2017 03:15:06"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -265,11 +265,11 @@ SIGNAL \mips_cpu|c|md|Decoder0~0_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Decoder0~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[11]~feeder_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[11]~10_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[11]~10_combout\ : std_logic;
 SIGNAL \Timer|CompareR~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[11]~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[12]~63_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[12]~64_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[12]~63_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[12]~64_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~31_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[12]~68_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[12]~69_combout\ : std_logic;
@@ -352,8 +352,8 @@ SIGNAL \mips_cpu|dp|f|ID_forwarda~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|ID_forwarda~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[11]~55_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[11]~56_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[23]~41_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[23]~42_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[23]~41_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[23]~42_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|WideOr1~0_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|WideOr1~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~20_combout\ : std_logic;
@@ -407,7 +407,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~185_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~190_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~193_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~194_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[7]~7_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[7]~7_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[6]~53_combout\ : std_logic;
 SIGNAL \uGPIO|HEX3_R~9_combout\ : std_logic;
 SIGNAL \uGPIO|HEX3_R[2]~1_combout\ : std_logic;
@@ -471,7 +471,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~196_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~204_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~214_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~215_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[6]~6_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[6]~6_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[21]~50_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~468_combout\ : std_logic;
@@ -496,8 +496,8 @@ SIGNAL \mips_cpu|dp|EX_r4|q~484_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~487_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~488_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[21]~51_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[21]~45_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[21]~46_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[21]~45_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[21]~46_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux10~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[21]~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~23_combout\ : std_logic;
@@ -525,8 +525,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~517_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r8|q[20]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcmux|y[20]~46_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[19]~feeder_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[19]~49_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[19]~50_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[19]~49_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[19]~50_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[1]~49_combout\ : std_logic;
 SIGNAL \uGPIO|always3~0_combout\ : std_logic;
@@ -656,7 +656,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~69_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~70_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~88_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~89_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[3]~3_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[3]~3_combout\ : std_logic;
 SIGNAL \read_data[2]~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[1]~50_combout\ : std_logic;
 SIGNAL \SW[2]~input_o\ : std_logic;
@@ -715,7 +715,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~28_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~36_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~46_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~47_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[2]~2_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[2]~2_combout\ : std_logic;
 SIGNAL \read_data[1]~4_combout\ : std_logic;
 SIGNAL \read_data[1]~5_combout\ : std_logic;
 SIGNAL \SW[1]~input_o\ : std_logic;
@@ -802,7 +802,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~63_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~64_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~67_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~68_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[1]~1_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[1]~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~24_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[19]~54_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~522_combout\ : std_logic;
@@ -851,7 +851,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~563_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~568_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~571_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~572_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[17]~26_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[17]~26_combout\ : std_logic;
 SIGNAL \Timer|CompareR~17_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[17]~17_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~548_combout\ : std_logic;
@@ -879,10 +879,10 @@ SIGNAL \Timer|CompareR~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[18]~16_combout\ : std_logic;
 SIGNAL \Timer|CompareR~15_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[19]~15_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[19]~24_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[18]~25_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[17]~53_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[17]~54_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[19]~24_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[18]~25_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[17]~53_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[17]~54_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~26_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[17]~58_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[17]~59_combout\ : std_logic;
@@ -919,8 +919,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~606_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~609_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~614_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~617_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[15]~57_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[15]~58_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[15]~57_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[15]~58_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux16~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[15]~28_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcmux|y[14]~58_combout\ : std_logic;
@@ -974,7 +974,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~117_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~120_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~130_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~131_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[10]~11_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[10]~11_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r3|q~10_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcadd1|y[8]~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r2|q~7_combout\ : std_logic;
@@ -1062,14 +1062,14 @@ SIGNAL \mips_cpu|dp|srcbmux|y[14]~65_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux17~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[14]~29_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[13]~30_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[13]~61_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[13]~62_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[13]~61_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[13]~62_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~27\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~29\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~30_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux17~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[14]~59_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[14]~60_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[14]~59_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[14]~60_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~31\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~32_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux16~1_combout\ : std_logic;
@@ -1096,8 +1096,8 @@ SIGNAL \mips_cpu|dp|EX_r4|q~600_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~603_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~613_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~614_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[15]~28_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[14]~29_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[15]~28_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[14]~29_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[13]~30_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[13]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[13]~29_combout\ : std_logic;
@@ -1122,7 +1122,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~647_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~652_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~655_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~656_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[13]~30_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[13]~30_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|ID_r1|q[13]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcmux|y[15]~56_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~13_combout\ : std_logic;
@@ -1192,8 +1192,8 @@ SIGNAL \mips_cpu|dp|alu|Add0~34_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux15~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[16]~27_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[16]~26_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[16]~55_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[16]~56_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[16]~55_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[16]~56_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~35\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~36_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux14~0_combout\ : std_logic;
@@ -1259,8 +1259,8 @@ SIGNAL \mips_cpu|dp|pcadd1|y[17]~31\ : std_logic;
 SIGNAL \mips_cpu|dp|pcadd1|y[18]~32_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r2|q~25_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[18]~feeder_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[18]~51_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[18]~52_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[18]~51_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[18]~52_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~37\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~38_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux13~0_combout\ : std_logic;
@@ -1340,8 +1340,8 @@ SIGNAL \mips_cpu|dp|alu|b2[20]~23_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~41\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~42_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux11~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[20]~47_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[20]~48_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[20]~47_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[20]~48_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~43\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~44_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux10~1_combout\ : std_logic;
@@ -1413,8 +1413,8 @@ SIGNAL \mips_cpu|dp|alu|Mux9~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux9~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[22]~21_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[22]~20_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[22]~43_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[22]~44_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[22]~43_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[22]~44_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~47\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~48_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux8~0_combout\ : std_logic;
@@ -1451,9 +1451,9 @@ SIGNAL \mips_cpu|dp|EX_r4|q~432_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~435_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~445_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~446_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[23]~20_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[22]~21_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[21]~22_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[23]~20_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[22]~21_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[21]~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~8_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|Equal4~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~7_combout\ : std_logic;
@@ -1463,9 +1463,9 @@ SIGNAL \mips_cpu|dp|f|always0~5_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|always0~7_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwarda[0]~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwarda[0]~4_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[1]~2_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[1]~3_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[1]~4_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[1]~2_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[1]~3_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[1]~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[1]~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[1]~5_combout\ : std_logic;
@@ -1499,8 +1499,8 @@ SIGNAL \mips_cpu|dp|pcmux|y[0]~23_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|ID_r2|q[0]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r2|q~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r3|q[0]~feeder_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[0]~5_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[0]~6_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[0]~5_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[0]~6_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~1_cout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux31~0_combout\ : std_logic;
@@ -1606,8 +1606,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~359_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~375_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~376_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~377_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[27]~33_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[27]~34_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[27]~33_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[27]~34_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[27]~38_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[27]~39_combout\ : std_logic;
@@ -1638,8 +1638,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~378_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~379_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~387_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~397_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[26]~35_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[26]~36_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[26]~35_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[26]~36_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[25]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~398_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~399_combout\ : std_logic;
@@ -1661,8 +1661,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~414_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~415_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~416_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~417_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[25]~37_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[25]~38_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[25]~37_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[25]~38_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[24]~19_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[24]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~418_combout\ : std_logic;
@@ -1724,8 +1724,8 @@ SIGNAL \mips_cpu|dp|alu|Add0~49\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~50_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux7~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux7~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[24]~39_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[24]~40_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[24]~39_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[24]~40_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~51\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~52_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux6~0_combout\ : std_logic;
@@ -1809,7 +1809,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~343_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~351_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~361_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~362_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[27]~16_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[27]~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[26]~17_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[26]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r4|q[26]~feeder_combout\ : std_logic;
@@ -1835,8 +1835,8 @@ SIGNAL \mips_cpu|dp|EX_r4|q~378_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~379_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~382_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~383_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[26]~17_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[25]~18_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[26]~17_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[25]~18_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[11]~44_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~128_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~129_combout\ : std_logic;
@@ -1858,8 +1858,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~118_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~119_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~127_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~137_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[11]~9_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[11]~10_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[11]~9_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[11]~10_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~5_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[10]~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[10]~17_combout\ : std_logic;
@@ -1892,8 +1892,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~179_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~195_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~196_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~197_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[8]~15_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[8]~16_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[8]~15_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[8]~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~8_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[7]~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[7]~23_combout\ : std_logic;
@@ -1919,8 +1919,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~232_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~233_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~234_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~237_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[6]~19_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[6]~20_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[6]~19_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[6]~20_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~10_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[5]~26_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[5]~27_combout\ : std_logic;
@@ -1949,8 +1949,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~274_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~258_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~259_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~277_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[4]~23_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[4]~24_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[4]~23_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[4]~24_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[3]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~115_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~116_combout\ : std_logic;
@@ -1972,8 +1972,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~101_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~104_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~107_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~117_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[3]~7_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[3]~8_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[3]~7_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[3]~8_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[3]~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[3]~13_combout\ : std_logic;
@@ -2025,7 +2025,7 @@ SIGNAL \mips_cpu|dp|alu|b2[11]~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~24_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux20~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux20~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[20]~23_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[20]~23_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~5_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwarda[0]~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwarda[0]~5_combout\ : std_logic;
@@ -2050,8 +2050,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~154_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~155_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~156_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~157_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[10]~11_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[10]~12_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[10]~11_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[10]~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux21~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux21~1_combout\ : std_logic;
@@ -2075,7 +2075,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~132_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~133_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~151_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~152_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[9]~9_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[9]~9_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R~9_combout\ : std_logic;
 SIGNAL \SW[9]~input_o\ : std_logic;
 SIGNAL \uGPIO|sw9|c_state~36_combout\ : std_logic;
@@ -2135,8 +2135,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~174_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~175_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~176_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~177_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[9]~13_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[9]~14_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[9]~13_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[9]~14_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~20_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux22~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux22~1_combout\ : std_logic;
@@ -2199,8 +2199,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~208_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~209_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~214_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~217_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[7]~17_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[7]~18_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[7]~17_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[7]~18_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux24~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~16_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux24~1_combout\ : std_logic;
@@ -2239,7 +2239,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~227_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~232_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~235_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~236_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[5]~5_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[5]~5_combout\ : std_logic;
 SIGNAL \uGPIO|LEDG_R~6_combout\ : std_logic;
 SIGNAL \SW[5]~input_o\ : std_logic;
 SIGNAL \uGPIO|sw5|c_state~36_combout\ : std_logic;
@@ -2299,8 +2299,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~245_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~246_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~247_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~257_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[5]~21_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[5]~22_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[5]~21_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[5]~22_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux26~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux26~1_combout\ : std_logic;
@@ -2339,7 +2339,7 @@ SIGNAL \uGPIO|SW_StatusR~5_combout\ : std_logic;
 SIGNAL \read_data[8]~14_combout\ : std_logic;
 SIGNAL \read_data[8]~15_combout\ : std_logic;
 SIGNAL \read_data[8]~16_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[8]~8_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[8]~8_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~11_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|wrmux|y[0]~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|rf|Decoder0~52_combout\ : std_logic;
@@ -2364,14 +2364,14 @@ SIGNAL \mips_cpu|dp|EX_r4|q~275_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~276_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~277_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~278_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[31]~12_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[31]~12_combout\ : std_logic;
 SIGNAL \Timer|CompareR~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[31]~3_combout\ : std_logic;
 SIGNAL \Timer|CompareR~5_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[29]~5_combout\ : std_logic;
 SIGNAL \Timer|CompareR~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[30]~4_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[30]~13_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[30]~13_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~14_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[29]~34_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[29]~35_combout\ : std_logic;
@@ -2397,8 +2397,8 @@ SIGNAL \mips_cpu|dp|EX_r6|q~336_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~318_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~319_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~337_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[29]~29_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[29]~30_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[29]~29_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[29]~30_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~321_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~322_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~323_combout\ : std_logic;
@@ -2462,8 +2462,8 @@ SIGNAL \mips_cpu|dp|pcadd1|y[28]~52_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r2|q~15_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|MEM_r2|q[28]~feeder_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q[28]~14_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[28]~31_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[28]~32_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[28]~31_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[28]~32_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~59\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~60_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux2~0_combout\ : std_logic;
@@ -2498,7 +2498,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~301_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~309_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~319_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~320_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[29]~14_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[29]~14_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|jalresmux|y[31]~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcmux|y[31]~24_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|pcmux|y[30]~26_combout\ : std_logic;
@@ -2564,15 +2564,15 @@ SIGNAL \mips_cpu|dp|EX_r6|q~294_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~295_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~296_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r6|q~297_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[31]~25_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[31]~26_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[31]~25_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[31]~26_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[31]~30_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[31]~31_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[31]~12_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|b2[30]~13_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[30]~27_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[30]~28_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[30]~27_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[30]~28_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~61\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~63\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~64_combout\ : std_logic;
@@ -2643,7 +2643,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~238_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~246_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~256_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~257_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[4]~4_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[4]~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r5|q~11_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[4]~28_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|srcbmux|y[4]~29_combout\ : std_logic;
@@ -2655,8 +2655,8 @@ SIGNAL \mips_cpu|dp|EX_r1|q~10_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|wrmux|y[1]~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|always0~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwarda[1]~6_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[2]~0_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardamux|y[2]~1_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[2]~0_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardaemux|y[2]~1_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux29~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Add0~6_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|alu|Mux29~1_combout\ : std_logic;
@@ -2681,7 +2681,7 @@ SIGNAL \mips_cpu|dp|EX_r4|q~674_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~675_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~676_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r4|q~677_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[12]~31_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[12]~31_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~14_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|wrmux|y[4]~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|ID_forwardb~0_combout\ : std_logic;
@@ -2774,7 +2774,7 @@ SIGNAL \Timer|CounterR[15]~62_combout\ : std_logic;
 SIGNAL \Timer|CounterR[15]~63\ : std_logic;
 SIGNAL \Timer|CounterR[16]~64_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[16]~18_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[16]~27_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[16]~27_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|EX_r1|q~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|always0~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|always0~1_combout\ : std_logic;
@@ -2789,7 +2789,7 @@ SIGNAL \mips_cpu|dp|alu|Mux18~1_combout\ : std_logic;
 SIGNAL \Decoder|Equal1~6_combout\ : std_logic;
 SIGNAL \Timer|CompareR[17]~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|WB_r2|q[24]~10_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[24]~19_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[24]~19_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Selector3~2_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Equal0~0_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Selector3~3_combout\ : std_logic;
@@ -2797,7 +2797,7 @@ SIGNAL \mips_cpu|dp|wrmux|y[2]~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwardb[0]~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwardb[0]~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwardb[0]~4_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[28]~15_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[28]~15_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Selector12~1_combout\ : std_logic;
 SIGNAL \mips_cpu|c|md|Selector12~0_combout\ : std_logic;
 SIGNAL \mips_cpu|c|EX_reg|q~1_combout\ : std_logic;
@@ -2983,7 +2983,7 @@ SIGNAL \mips_cpu|dp|EX_r1|q~4_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|always0~2_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwardb[0]~0_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|EX_forwardb[0]~1_combout\ : std_logic;
-SIGNAL \mips_cpu|dp|forwardlwmux|y[0]~0_combout\ : std_logic;
+SIGNAL \mips_cpu|dp|forwardlwemux|y[0]~0_combout\ : std_logic;
 SIGNAL \uGPIO|HEX3_R~0_combout\ : std_logic;
 SIGNAL \uGPIO|HEX3_R[0]~feeder_combout\ : std_logic;
 SIGNAL \uGPIO|HEX3_R[2]~2_combout\ : std_logic;
@@ -5819,9 +5819,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r4|q\(11));
 
 -- Location: LCCOMB_X24_Y17_N0
-\mips_cpu|dp|forwardlwmux|y[11]~10\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[11]~10\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[11]~10_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(11))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(11)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[11]~10_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(11))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(11)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(11)))))
 
 -- pragma translate_off
@@ -5834,7 +5834,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(11),
-	combout => \mips_cpu|dp|forwardlwmux|y[11]~10_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[11]~10_combout\);
 
 -- Location: FF_X24_Y17_N1
 \mips_cpu|dp|MEM_r7|q[11]\ : dffeas
@@ -5845,7 +5845,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[11]~10_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[11]~10_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5898,9 +5898,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|WB_r2|q[11]~1_combout\);
 
 -- Location: LCCOMB_X17_Y13_N2
-\mips_cpu|dp|forwardamux|y[12]~63\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[12]~63\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[12]~63_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[12]~30_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(12))))))
+-- \mips_cpu|dp|forwardaemux|y[12]~63_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[12]~30_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(12))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5912,12 +5912,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(12),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[12]~63_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[12]~63_combout\);
 
 -- Location: LCCOMB_X17_Y13_N4
-\mips_cpu|dp|forwardamux|y[12]~64\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[12]~64\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[12]~64_combout\ = (\mips_cpu|dp|forwardamux|y[12]~63_combout\) # ((\mips_cpu|dp|MEM_r6|q\(12) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[12]~64_combout\ = (\mips_cpu|dp|forwardaemux|y[12]~63_combout\) # ((\mips_cpu|dp|MEM_r6|q\(12) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5926,9 +5926,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|MEM_r6|q\(12),
-	datab => \mips_cpu|dp|forwardamux|y[12]~63_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[12]~63_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[12]~64_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[12]~64_combout\);
 
 -- Location: LCCOMB_X17_Y13_N26
 \mips_cpu|dp|EX_r5|q~31\ : cycloneiii_lcell_comb
@@ -8097,9 +8097,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(23));
 
 -- Location: LCCOMB_X20_Y18_N14
-\mips_cpu|dp|forwardamux|y[23]~41\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[23]~41\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[23]~41_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[23]~19_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(23)))))
+-- \mips_cpu|dp|forwardaemux|y[23]~41_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[23]~19_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8111,12 +8111,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(23),
 	datac => \mips_cpu|dp|EX_r6|q[23]~19_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[23]~41_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[23]~41_combout\);
 
 -- Location: LCCOMB_X20_Y18_N8
-\mips_cpu|dp|forwardamux|y[23]~42\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[23]~42\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[23]~42_combout\ = (\mips_cpu|dp|forwardamux|y[23]~41_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(23)))
+-- \mips_cpu|dp|forwardaemux|y[23]~42_combout\ = (\mips_cpu|dp|forwardaemux|y[23]~41_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(23)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8125,9 +8125,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[23]~41_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[23]~41_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(23),
-	combout => \mips_cpu|dp|forwardamux|y[23]~42_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[23]~42_combout\);
 
 -- Location: LCCOMB_X12_Y17_N20
 \mips_cpu|c|md|WideOr1~0\ : cycloneiii_lcell_comb
@@ -10144,9 +10144,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(7));
 
 -- Location: LCCOMB_X16_Y20_N20
-\mips_cpu|dp|forwardlwmux|y[7]~7\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[7]~7\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[7]~7_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(7))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(7)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[7]~7_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(7))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(7)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(7)))))
 
 -- pragma translate_off
@@ -10159,7 +10159,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(7),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(7),
-	combout => \mips_cpu|dp|forwardlwmux|y[7]~7_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[7]~7_combout\);
 
 -- Location: FF_X16_Y20_N21
 \mips_cpu|dp|MEM_r7|q[7]\ : dffeas
@@ -10170,7 +10170,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[7]~7_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[7]~7_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -11849,9 +11849,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(6));
 
 -- Location: LCCOMB_X21_Y20_N18
-\mips_cpu|dp|forwardlwmux|y[6]~6\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[6]~6\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[6]~6_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(6))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(6)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[6]~6_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(6))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(6)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(6)))))
 
 -- pragma translate_off
@@ -11864,7 +11864,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(6),
 	datad => \mips_cpu|dp|EX_r4|q\(6),
-	combout => \mips_cpu|dp|forwardlwmux|y[6]~6_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[6]~6_combout\);
 
 -- Location: FF_X21_Y20_N19
 \mips_cpu|dp|MEM_r7|q[6]\ : dffeas
@@ -11875,7 +11875,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[6]~6_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[6]~6_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -12842,9 +12842,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|srcbmux|y[21]~51_combout\);
 
 -- Location: LCCOMB_X19_Y15_N12
-\mips_cpu|dp|forwardamux|y[21]~45\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[21]~45\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[21]~45_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[21]~21_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(21)))))
+-- \mips_cpu|dp|forwardaemux|y[21]~45_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[21]~21_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12856,12 +12856,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(21),
 	datad => \mips_cpu|dp|EX_r6|q[21]~21_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[21]~45_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[21]~45_combout\);
 
 -- Location: LCCOMB_X19_Y15_N14
-\mips_cpu|dp|forwardamux|y[21]~46\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[21]~46\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[21]~46_combout\ = (\mips_cpu|dp|forwardamux|y[21]~45_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(21)))
+-- \mips_cpu|dp|forwardaemux|y[21]~46_combout\ = (\mips_cpu|dp|forwardaemux|y[21]~45_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(21)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12871,14 +12871,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(21),
-	datad => \mips_cpu|dp|forwardamux|y[21]~45_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[21]~46_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[21]~45_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[21]~46_combout\);
 
 -- Location: LCCOMB_X15_Y14_N28
 \mips_cpu|dp|alu|Mux10~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux10~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[21]~51_combout\) # (\mips_cpu|dp|forwardamux|y[21]~46_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[21]~51_combout\ 
--- & \mips_cpu|dp|forwardamux|y[21]~46_combout\))))
+-- \mips_cpu|dp|alu|Mux10~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[21]~51_combout\) # (\mips_cpu|dp|forwardaemux|y[21]~46_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|srcbmux|y[21]~51_combout\ & \mips_cpu|dp|forwardaemux|y[21]~46_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12889,7 +12889,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|dp|srcbmux|y[21]~51_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[21]~46_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[21]~46_combout\,
 	combout => \mips_cpu|dp|alu|Mux10~0_combout\);
 
 -- Location: LCCOMB_X19_Y15_N2
@@ -13909,9 +13909,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r4|q\(19));
 
 -- Location: LCCOMB_X15_Y15_N12
-\mips_cpu|dp|forwardamux|y[19]~49\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[19]~49\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[19]~49_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[19]~23_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(19))))))
+-- \mips_cpu|dp|forwardaemux|y[19]~49_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[19]~23_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(19))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13923,12 +13923,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[19]~23_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(19),
-	combout => \mips_cpu|dp|forwardamux|y[19]~49_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[19]~49_combout\);
 
 -- Location: LCCOMB_X15_Y15_N30
-\mips_cpu|dp|forwardamux|y[19]~50\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[19]~50\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[19]~50_combout\ = (\mips_cpu|dp|forwardamux|y[19]~49_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(19)))
+-- \mips_cpu|dp|forwardaemux|y[19]~50_combout\ = (\mips_cpu|dp|forwardaemux|y[19]~49_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(19)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13936,10 +13936,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[19]~49_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[19]~49_combout\,
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(19),
-	combout => \mips_cpu|dp|forwardamux|y[19]~50_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[19]~50_combout\);
 
 -- Location: LCCOMB_X11_Y20_N18
 \uGPIO|LEDG_R~2\ : cycloneiii_lcell_comb
@@ -16645,9 +16645,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(3));
 
 -- Location: LCCOMB_X16_Y20_N14
-\mips_cpu|dp|forwardlwmux|y[3]~3\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[3]~3\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[3]~3_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(3)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(3))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[3]~3_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(3)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(3))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(3)))
 
 -- pragma translate_off
@@ -16660,7 +16660,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r4|q\(3),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|WB_r2|q\(3),
-	combout => \mips_cpu|dp|forwardlwmux|y[3]~3_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[3]~3_combout\);
 
 -- Location: FF_X16_Y20_N15
 \mips_cpu|dp|MEM_r7|q[3]\ : dffeas
@@ -16671,7 +16671,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[3]~3_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[3]~3_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -18161,9 +18161,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(2));
 
 -- Location: LCCOMB_X15_Y17_N6
-\mips_cpu|dp|forwardlwmux|y[2]~2\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[2]~2\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[2]~2_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(2))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(2)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[2]~2_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(2))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(2)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(2)))))
 
 -- pragma translate_off
@@ -18176,7 +18176,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(2),
-	combout => \mips_cpu|dp|forwardlwmux|y[2]~2_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[2]~2_combout\);
 
 -- Location: FF_X15_Y17_N7
 \mips_cpu|dp|MEM_r7|q[2]\ : dffeas
@@ -18187,7 +18187,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[2]~2_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[2]~2_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -20262,9 +20262,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(1));
 
 -- Location: LCCOMB_X15_Y17_N4
-\mips_cpu|dp|forwardlwmux|y[1]~1\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[1]~1\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[1]~1_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(1))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(1)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[1]~1_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(1))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(1)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(1)))))
 
 -- pragma translate_off
@@ -20277,7 +20277,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(1),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(1),
-	combout => \mips_cpu|dp|forwardlwmux|y[1]~1_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[1]~1_combout\);
 
 -- Location: FF_X15_Y17_N5
 \mips_cpu|dp|MEM_r7|q[1]\ : dffeas
@@ -20288,7 +20288,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[1]~1_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[1]~1_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -21261,8 +21261,8 @@ PORT MAP (
 -- Location: LCCOMB_X15_Y15_N26
 \mips_cpu|dp|alu|Mux12~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux12~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[19]~50_combout\) # (\mips_cpu|dp|srcbmux|y[19]~55_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[19]~50_combout\ & \mips_cpu|dp|srcbmux|y[19]~55_combout\))))
+-- \mips_cpu|dp|alu|Mux12~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[19]~50_combout\) # (\mips_cpu|dp|srcbmux|y[19]~55_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[19]~50_combout\ & \mips_cpu|dp|srcbmux|y[19]~55_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21272,7 +21272,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|c|EX_reg|q\(0),
-	datac => \mips_cpu|dp|forwardamux|y[19]~50_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[19]~50_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[19]~55_combout\,
 	combout => \mips_cpu|dp|alu|Mux12~0_combout\);
 
@@ -22204,9 +22204,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(17));
 
 -- Location: LCCOMB_X19_Y18_N26
-\mips_cpu|dp|forwardlwmux|y[17]~26\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[17]~26\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[17]~26_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(17)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(17))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[17]~26_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(17)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(17))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(17)))
 
 -- pragma translate_off
@@ -22219,7 +22219,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r4|q\(17),
 	datac => \mips_cpu|dp|WB_r2|q\(17),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[17]~26_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[17]~26_combout\);
 
 -- Location: FF_X19_Y18_N27
 \mips_cpu|dp|MEM_r7|q[17]\ : dffeas
@@ -22230,7 +22230,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[17]~26_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[17]~26_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -23334,9 +23334,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(19));
 
 -- Location: LCCOMB_X16_Y19_N28
-\mips_cpu|dp|forwardlwmux|y[19]~24\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[19]~24\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[19]~24_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(19)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(19))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[19]~24_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(19)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(19))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(19)))
 
 -- pragma translate_off
@@ -23349,7 +23349,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(19),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[19]~24_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[19]~24_combout\);
 
 -- Location: FF_X16_Y19_N29
 \mips_cpu|dp|MEM_r7|q[19]\ : dffeas
@@ -23360,7 +23360,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[19]~24_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[19]~24_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -23385,9 +23385,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(18));
 
 -- Location: LCCOMB_X16_Y19_N22
-\mips_cpu|dp|forwardlwmux|y[18]~25\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[18]~25\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[18]~25_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(18)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(18))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[18]~25_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(18)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(18))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(18)))))
 
 -- pragma translate_off
@@ -23400,7 +23400,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|EX_r4|q\(18),
 	datad => \mips_cpu|dp|WB_r2|q\(18),
-	combout => \mips_cpu|dp|forwardlwmux|y[18]~25_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[18]~25_combout\);
 
 -- Location: FF_X16_Y19_N23
 \mips_cpu|dp|MEM_r7|q[18]\ : dffeas
@@ -23411,7 +23411,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[18]~25_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[18]~25_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -23436,9 +23436,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(17));
 
 -- Location: LCCOMB_X19_Y18_N28
-\mips_cpu|dp|forwardamux|y[17]~53\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[17]~53\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[17]~53_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[17]~25_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(17))))))
+-- \mips_cpu|dp|forwardaemux|y[17]~53_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[17]~25_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(17))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23450,12 +23450,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[17]~25_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(17),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[17]~53_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[17]~53_combout\);
 
 -- Location: LCCOMB_X19_Y18_N22
-\mips_cpu|dp|forwardamux|y[17]~54\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[17]~54\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[17]~54_combout\ = (\mips_cpu|dp|forwardamux|y[17]~53_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(17)))
+-- \mips_cpu|dp|forwardaemux|y[17]~54_combout\ = (\mips_cpu|dp|forwardaemux|y[17]~53_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(17)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23465,8 +23465,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(17),
-	datad => \mips_cpu|dp|forwardamux|y[17]~53_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[17]~54_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[17]~53_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[17]~54_combout\);
 
 -- Location: LCCOMB_X17_Y15_N6
 \mips_cpu|dp|EX_r5|q~26\ : cycloneiii_lcell_comb
@@ -24764,9 +24764,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(15));
 
 -- Location: LCCOMB_X16_Y13_N16
-\mips_cpu|dp|forwardamux|y[15]~57\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[15]~57\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[15]~57_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[15]~27_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(15)))))
+-- \mips_cpu|dp|forwardaemux|y[15]~57_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[15]~27_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(15)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24778,12 +24778,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[15]~27_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[15]~57_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[15]~57_combout\);
 
 -- Location: LCCOMB_X16_Y13_N10
-\mips_cpu|dp|forwardamux|y[15]~58\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[15]~58\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[15]~58_combout\ = (\mips_cpu|dp|forwardamux|y[15]~57_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(15)))
+-- \mips_cpu|dp|forwardaemux|y[15]~58_combout\ = (\mips_cpu|dp|forwardaemux|y[15]~57_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(15)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24792,15 +24792,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[15]~57_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[15]~57_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(15),
-	combout => \mips_cpu|dp|forwardamux|y[15]~58_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[15]~58_combout\);
 
 -- Location: LCCOMB_X16_Y13_N30
 \mips_cpu|dp|alu|Mux16~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux16~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[15]~63_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[15]~58_combout\))) # (!\mips_cpu|dp|srcbmux|y[15]~63_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[15]~58_combout\))))
+-- \mips_cpu|dp|alu|Mux16~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[15]~63_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[15]~58_combout\))) # (!\mips_cpu|dp|srcbmux|y[15]~63_combout\ & 
+-- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|forwardaemux|y[15]~58_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24811,7 +24811,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|dp|srcbmux|y[15]~63_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
-	datad => \mips_cpu|dp|forwardamux|y[15]~58_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[15]~58_combout\,
 	combout => \mips_cpu|dp|alu|Mux16~0_combout\);
 
 -- Location: LCCOMB_X16_Y13_N22
@@ -26900,9 +26900,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(10));
 
 -- Location: LCCOMB_X20_Y17_N18
-\mips_cpu|dp|forwardlwmux|y[10]~11\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[10]~11\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[10]~11_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(10))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(10)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[10]~11_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(10))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(10)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(10)))))
 
 -- pragma translate_off
@@ -26915,7 +26915,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(10),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(10),
-	combout => \mips_cpu|dp|forwardlwmux|y[10]~11_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[10]~11_combout\);
 
 -- Location: FF_X20_Y17_N19
 \mips_cpu|dp|MEM_r7|q[10]\ : dffeas
@@ -26926,7 +26926,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[10]~11_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[10]~11_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -29250,7 +29250,7 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y13_N0
 \mips_cpu|dp|alu|Mux17~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux17~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[14]~60_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[14]~65_combout\))) # (!\mips_cpu|dp|forwardamux|y[14]~60_combout\ & 
+-- \mips_cpu|dp|alu|Mux17~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[14]~65_combout\))) # (!\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & 
 -- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|srcbmux|y[14]~65_combout\))))
 
 -- pragma translate_off
@@ -29260,7 +29260,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
-	datab => \mips_cpu|dp|forwardamux|y[14]~60_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[14]~60_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
 	datad => \mips_cpu|dp|srcbmux|y[14]~65_combout\,
 	combout => \mips_cpu|dp|alu|Mux17~0_combout\);
@@ -29296,9 +29296,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|alu|b2[13]~30_combout\);
 
 -- Location: LCCOMB_X19_Y17_N12
-\mips_cpu|dp|forwardamux|y[13]~61\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[13]~61\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[13]~61_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[13]~29_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(13)))))
+-- \mips_cpu|dp|forwardaemux|y[13]~61_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[13]~29_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(13)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29310,12 +29310,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[13]~29_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[13]~61_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[13]~61_combout\);
 
 -- Location: LCCOMB_X19_Y17_N6
-\mips_cpu|dp|forwardamux|y[13]~62\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[13]~62\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[13]~62_combout\ = (\mips_cpu|dp|forwardamux|y[13]~61_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(13)))
+-- \mips_cpu|dp|forwardaemux|y[13]~62_combout\ = (\mips_cpu|dp|forwardaemux|y[13]~61_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(13)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29325,15 +29325,15 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(13),
-	datad => \mips_cpu|dp|forwardamux|y[13]~61_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[13]~62_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[13]~61_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[13]~62_combout\);
 
 -- Location: LCCOMB_X16_Y15_N10
 \mips_cpu|dp|alu|Add0~26\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~26_combout\ = (\mips_cpu|dp|forwardamux|y[12]~64_combout\ & ((\mips_cpu|dp|alu|b2[12]~31_combout\ & (\mips_cpu|dp|alu|Add0~25\ & VCC)) # (!\mips_cpu|dp|alu|b2[12]~31_combout\ & (!\mips_cpu|dp|alu|Add0~25\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[12]~64_combout\ & ((\mips_cpu|dp|alu|b2[12]~31_combout\ & (!\mips_cpu|dp|alu|Add0~25\)) # (!\mips_cpu|dp|alu|b2[12]~31_combout\ & ((\mips_cpu|dp|alu|Add0~25\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~27\ = CARRY((\mips_cpu|dp|forwardamux|y[12]~64_combout\ & (!\mips_cpu|dp|alu|b2[12]~31_combout\ & !\mips_cpu|dp|alu|Add0~25\)) # (!\mips_cpu|dp|forwardamux|y[12]~64_combout\ & ((!\mips_cpu|dp|alu|Add0~25\) # 
+-- \mips_cpu|dp|alu|Add0~26_combout\ = (\mips_cpu|dp|forwardaemux|y[12]~64_combout\ & ((\mips_cpu|dp|alu|b2[12]~31_combout\ & (\mips_cpu|dp|alu|Add0~25\ & VCC)) # (!\mips_cpu|dp|alu|b2[12]~31_combout\ & (!\mips_cpu|dp|alu|Add0~25\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[12]~64_combout\ & ((\mips_cpu|dp|alu|b2[12]~31_combout\ & (!\mips_cpu|dp|alu|Add0~25\)) # (!\mips_cpu|dp|alu|b2[12]~31_combout\ & ((\mips_cpu|dp|alu|Add0~25\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~27\ = CARRY((\mips_cpu|dp|forwardaemux|y[12]~64_combout\ & (!\mips_cpu|dp|alu|b2[12]~31_combout\ & !\mips_cpu|dp|alu|Add0~25\)) # (!\mips_cpu|dp|forwardaemux|y[12]~64_combout\ & ((!\mips_cpu|dp|alu|Add0~25\) # 
 -- (!\mips_cpu|dp|alu|b2[12]~31_combout\))))
 
 -- pragma translate_off
@@ -29342,7 +29342,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[12]~64_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[12]~64_combout\,
 	datab => \mips_cpu|dp|alu|b2[12]~31_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~25\,
@@ -29352,8 +29352,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N12
 \mips_cpu|dp|alu|Add0~28\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~28_combout\ = ((\mips_cpu|dp|alu|b2[13]~30_combout\ $ (\mips_cpu|dp|forwardamux|y[13]~62_combout\ $ (!\mips_cpu|dp|alu|Add0~27\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~29\ = CARRY((\mips_cpu|dp|alu|b2[13]~30_combout\ & ((\mips_cpu|dp|forwardamux|y[13]~62_combout\) # (!\mips_cpu|dp|alu|Add0~27\))) # (!\mips_cpu|dp|alu|b2[13]~30_combout\ & (\mips_cpu|dp|forwardamux|y[13]~62_combout\ & 
+-- \mips_cpu|dp|alu|Add0~28_combout\ = ((\mips_cpu|dp|alu|b2[13]~30_combout\ $ (\mips_cpu|dp|forwardaemux|y[13]~62_combout\ $ (!\mips_cpu|dp|alu|Add0~27\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~29\ = CARRY((\mips_cpu|dp|alu|b2[13]~30_combout\ & ((\mips_cpu|dp|forwardaemux|y[13]~62_combout\) # (!\mips_cpu|dp|alu|Add0~27\))) # (!\mips_cpu|dp|alu|b2[13]~30_combout\ & (\mips_cpu|dp|forwardaemux|y[13]~62_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~27\)))
 
 -- pragma translate_off
@@ -29363,7 +29363,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[13]~30_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[13]~62_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[13]~62_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~27\,
 	combout => \mips_cpu|dp|alu|Add0~28_combout\,
@@ -29372,9 +29372,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N14
 \mips_cpu|dp|alu|Add0~30\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~30_combout\ = (\mips_cpu|dp|forwardamux|y[14]~60_combout\ & ((\mips_cpu|dp|alu|b2[14]~29_combout\ & (\mips_cpu|dp|alu|Add0~29\ & VCC)) # (!\mips_cpu|dp|alu|b2[14]~29_combout\ & (!\mips_cpu|dp|alu|Add0~29\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[14]~60_combout\ & ((\mips_cpu|dp|alu|b2[14]~29_combout\ & (!\mips_cpu|dp|alu|Add0~29\)) # (!\mips_cpu|dp|alu|b2[14]~29_combout\ & ((\mips_cpu|dp|alu|Add0~29\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~31\ = CARRY((\mips_cpu|dp|forwardamux|y[14]~60_combout\ & (!\mips_cpu|dp|alu|b2[14]~29_combout\ & !\mips_cpu|dp|alu|Add0~29\)) # (!\mips_cpu|dp|forwardamux|y[14]~60_combout\ & ((!\mips_cpu|dp|alu|Add0~29\) # 
+-- \mips_cpu|dp|alu|Add0~30_combout\ = (\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & ((\mips_cpu|dp|alu|b2[14]~29_combout\ & (\mips_cpu|dp|alu|Add0~29\ & VCC)) # (!\mips_cpu|dp|alu|b2[14]~29_combout\ & (!\mips_cpu|dp|alu|Add0~29\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & ((\mips_cpu|dp|alu|b2[14]~29_combout\ & (!\mips_cpu|dp|alu|Add0~29\)) # (!\mips_cpu|dp|alu|b2[14]~29_combout\ & ((\mips_cpu|dp|alu|Add0~29\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~31\ = CARRY((\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & (!\mips_cpu|dp|alu|b2[14]~29_combout\ & !\mips_cpu|dp|alu|Add0~29\)) # (!\mips_cpu|dp|forwardaemux|y[14]~60_combout\ & ((!\mips_cpu|dp|alu|Add0~29\) # 
 -- (!\mips_cpu|dp|alu|b2[14]~29_combout\))))
 
 -- pragma translate_off
@@ -29383,7 +29383,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[14]~60_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[14]~60_combout\,
 	datab => \mips_cpu|dp|alu|b2[14]~29_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~29\,
@@ -29423,9 +29423,9 @@ PORT MAP (
 	q => \mips_cpu|dp|MEM_r6|q\(14));
 
 -- Location: LCCOMB_X19_Y13_N6
-\mips_cpu|dp|forwardamux|y[14]~59\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[14]~59\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[14]~59_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[14]~28_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(14))))))
+-- \mips_cpu|dp|forwardaemux|y[14]~59_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[14]~28_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(14))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29437,12 +29437,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(14),
 	datac => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[14]~59_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[14]~59_combout\);
 
 -- Location: LCCOMB_X19_Y13_N24
-\mips_cpu|dp|forwardamux|y[14]~60\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[14]~60\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[14]~60_combout\ = (\mips_cpu|dp|forwardamux|y[14]~59_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(14)))
+-- \mips_cpu|dp|forwardaemux|y[14]~60_combout\ = (\mips_cpu|dp|forwardaemux|y[14]~59_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(14)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29452,14 +29452,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(14),
-	datad => \mips_cpu|dp|forwardamux|y[14]~59_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[14]~60_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[14]~59_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[14]~60_combout\);
 
 -- Location: LCCOMB_X16_Y15_N16
 \mips_cpu|dp|alu|Add0~32\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~32_combout\ = ((\mips_cpu|dp|forwardamux|y[15]~58_combout\ $ (\mips_cpu|dp|alu|b2[15]~28_combout\ $ (!\mips_cpu|dp|alu|Add0~31\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~33\ = CARRY((\mips_cpu|dp|forwardamux|y[15]~58_combout\ & ((\mips_cpu|dp|alu|b2[15]~28_combout\) # (!\mips_cpu|dp|alu|Add0~31\))) # (!\mips_cpu|dp|forwardamux|y[15]~58_combout\ & (\mips_cpu|dp|alu|b2[15]~28_combout\ & 
+-- \mips_cpu|dp|alu|Add0~32_combout\ = ((\mips_cpu|dp|forwardaemux|y[15]~58_combout\ $ (\mips_cpu|dp|alu|b2[15]~28_combout\ $ (!\mips_cpu|dp|alu|Add0~31\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~33\ = CARRY((\mips_cpu|dp|forwardaemux|y[15]~58_combout\ & ((\mips_cpu|dp|alu|b2[15]~28_combout\) # (!\mips_cpu|dp|alu|Add0~31\))) # (!\mips_cpu|dp|forwardaemux|y[15]~58_combout\ & (\mips_cpu|dp|alu|b2[15]~28_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~31\)))
 
 -- pragma translate_off
@@ -29468,7 +29468,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[15]~58_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[15]~58_combout\,
 	datab => \mips_cpu|dp|alu|b2[15]~28_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~31\,
@@ -29955,9 +29955,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(15));
 
 -- Location: LCCOMB_X23_Y17_N30
-\mips_cpu|dp|forwardlwmux|y[15]~28\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[15]~28\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[15]~28_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(15))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(15)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[15]~28_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(15))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(15)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(15)))))
 
 -- pragma translate_off
@@ -29970,7 +29970,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|EX_r4|q\(15),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[15]~28_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[15]~28_combout\);
 
 -- Location: FF_X23_Y17_N31
 \mips_cpu|dp|MEM_r7|q[15]\ : dffeas
@@ -29981,7 +29981,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[15]~28_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[15]~28_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -30006,9 +30006,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(14));
 
 -- Location: LCCOMB_X19_Y13_N18
-\mips_cpu|dp|forwardlwmux|y[14]~29\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[14]~29\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[14]~29_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(14))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(14)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[14]~29_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(14))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(14)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(14)))))
 
 -- pragma translate_off
@@ -30021,7 +30021,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|EX_r4|q\(14),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[14]~29_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[14]~29_combout\);
 
 -- Location: FF_X19_Y13_N19
 \mips_cpu|dp|MEM_r7|q[14]\ : dffeas
@@ -30032,7 +30032,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[14]~29_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[14]~29_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -30533,9 +30533,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(13));
 
 -- Location: LCCOMB_X19_Y17_N22
-\mips_cpu|dp|forwardlwmux|y[13]~30\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[13]~30\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[13]~30_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(13)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(13))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[13]~30_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(13)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(13))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(13)))
 
 -- pragma translate_off
@@ -30548,7 +30548,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(13),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[13]~30_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[13]~30_combout\);
 
 -- Location: FF_X19_Y17_N23
 \mips_cpu|dp|MEM_r7|q[13]\ : dffeas
@@ -30559,7 +30559,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[13]~30_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[13]~30_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -32337,8 +32337,8 @@ PORT MAP (
 -- Location: LCCOMB_X15_Y15_N8
 \mips_cpu|dp|alu|Mux15~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux15~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[16]~61_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[16]~56_combout\))) # (!\mips_cpu|dp|srcbmux|y[16]~61_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[16]~56_combout\))))
+-- \mips_cpu|dp|alu|Mux15~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[16]~61_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[16]~56_combout\))) # (!\mips_cpu|dp|srcbmux|y[16]~61_combout\ & 
+-- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|forwardaemux|y[16]~56_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32348,7 +32348,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|srcbmux|y[16]~61_combout\,
 	datab => \mips_cpu|c|EX_reg|q\(0),
-	datac => \mips_cpu|dp|forwardamux|y[16]~56_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[16]~56_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(1),
 	combout => \mips_cpu|dp|alu|Mux15~0_combout\);
 
@@ -32370,9 +32370,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N18
 \mips_cpu|dp|alu|Add0~34\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~34_combout\ = (\mips_cpu|dp|forwardamux|y[16]~56_combout\ & ((\mips_cpu|dp|alu|b2[16]~27_combout\ & (\mips_cpu|dp|alu|Add0~33\ & VCC)) # (!\mips_cpu|dp|alu|b2[16]~27_combout\ & (!\mips_cpu|dp|alu|Add0~33\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[16]~56_combout\ & ((\mips_cpu|dp|alu|b2[16]~27_combout\ & (!\mips_cpu|dp|alu|Add0~33\)) # (!\mips_cpu|dp|alu|b2[16]~27_combout\ & ((\mips_cpu|dp|alu|Add0~33\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~35\ = CARRY((\mips_cpu|dp|forwardamux|y[16]~56_combout\ & (!\mips_cpu|dp|alu|b2[16]~27_combout\ & !\mips_cpu|dp|alu|Add0~33\)) # (!\mips_cpu|dp|forwardamux|y[16]~56_combout\ & ((!\mips_cpu|dp|alu|Add0~33\) # 
+-- \mips_cpu|dp|alu|Add0~34_combout\ = (\mips_cpu|dp|forwardaemux|y[16]~56_combout\ & ((\mips_cpu|dp|alu|b2[16]~27_combout\ & (\mips_cpu|dp|alu|Add0~33\ & VCC)) # (!\mips_cpu|dp|alu|b2[16]~27_combout\ & (!\mips_cpu|dp|alu|Add0~33\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[16]~56_combout\ & ((\mips_cpu|dp|alu|b2[16]~27_combout\ & (!\mips_cpu|dp|alu|Add0~33\)) # (!\mips_cpu|dp|alu|b2[16]~27_combout\ & ((\mips_cpu|dp|alu|Add0~33\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~35\ = CARRY((\mips_cpu|dp|forwardaemux|y[16]~56_combout\ & (!\mips_cpu|dp|alu|b2[16]~27_combout\ & !\mips_cpu|dp|alu|Add0~33\)) # (!\mips_cpu|dp|forwardaemux|y[16]~56_combout\ & ((!\mips_cpu|dp|alu|Add0~33\) # 
 -- (!\mips_cpu|dp|alu|b2[16]~27_combout\))))
 
 -- pragma translate_off
@@ -32381,7 +32381,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[16]~56_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[16]~56_combout\,
 	datab => \mips_cpu|dp|alu|b2[16]~27_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~33\,
@@ -32469,9 +32469,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|EX_r6|q[16]~26_combout\);
 
 -- Location: LCCOMB_X15_Y15_N4
-\mips_cpu|dp|forwardamux|y[16]~55\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[16]~55\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[16]~55_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[16]~26_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(16))))))
+-- \mips_cpu|dp|forwardaemux|y[16]~55_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[16]~26_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(16))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32483,12 +32483,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(16),
-	combout => \mips_cpu|dp|forwardamux|y[16]~55_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[16]~55_combout\);
 
 -- Location: LCCOMB_X15_Y15_N14
-\mips_cpu|dp|forwardamux|y[16]~56\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[16]~56\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[16]~56_combout\ = (\mips_cpu|dp|forwardamux|y[16]~55_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(16)))
+-- \mips_cpu|dp|forwardaemux|y[16]~56_combout\ = (\mips_cpu|dp|forwardaemux|y[16]~55_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(16)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32497,15 +32497,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[16]~55_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[16]~55_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(16),
-	combout => \mips_cpu|dp|forwardamux|y[16]~56_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[16]~56_combout\);
 
 -- Location: LCCOMB_X16_Y15_N20
 \mips_cpu|dp|alu|Add0~36\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~36_combout\ = ((\mips_cpu|dp|forwardamux|y[17]~54_combout\ $ (\mips_cpu|dp|alu|b2[17]~26_combout\ $ (!\mips_cpu|dp|alu|Add0~35\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~37\ = CARRY((\mips_cpu|dp|forwardamux|y[17]~54_combout\ & ((\mips_cpu|dp|alu|b2[17]~26_combout\) # (!\mips_cpu|dp|alu|Add0~35\))) # (!\mips_cpu|dp|forwardamux|y[17]~54_combout\ & (\mips_cpu|dp|alu|b2[17]~26_combout\ & 
+-- \mips_cpu|dp|alu|Add0~36_combout\ = ((\mips_cpu|dp|forwardaemux|y[17]~54_combout\ $ (\mips_cpu|dp|alu|b2[17]~26_combout\ $ (!\mips_cpu|dp|alu|Add0~35\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~37\ = CARRY((\mips_cpu|dp|forwardaemux|y[17]~54_combout\ & ((\mips_cpu|dp|alu|b2[17]~26_combout\) # (!\mips_cpu|dp|alu|Add0~35\))) # (!\mips_cpu|dp|forwardaemux|y[17]~54_combout\ & (\mips_cpu|dp|alu|b2[17]~26_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~35\)))
 
 -- pragma translate_off
@@ -32514,7 +32514,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[17]~54_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[17]~54_combout\,
 	datab => \mips_cpu|dp|alu|b2[17]~26_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~35\,
@@ -32524,8 +32524,8 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y18_N16
 \mips_cpu|dp|alu|Mux14~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux14~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[17]~54_combout\) # (\mips_cpu|dp|srcbmux|y[17]~59_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[17]~54_combout\ & \mips_cpu|dp|srcbmux|y[17]~59_combout\))))
+-- \mips_cpu|dp|alu|Mux14~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[17]~54_combout\) # (\mips_cpu|dp|srcbmux|y[17]~59_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[17]~54_combout\ & \mips_cpu|dp|srcbmux|y[17]~59_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32535,7 +32535,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[17]~54_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[17]~54_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[17]~59_combout\,
 	combout => \mips_cpu|dp|alu|Mux14~0_combout\);
 
@@ -33821,9 +33821,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r4|q\(18));
 
 -- Location: LCCOMB_X15_Y15_N0
-\mips_cpu|dp|forwardamux|y[18]~51\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[18]~51\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[18]~51_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[18]~24_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(18))))))
+-- \mips_cpu|dp|forwardaemux|y[18]~51_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[18]~24_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(18))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -33835,12 +33835,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(18),
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[18]~51_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[18]~51_combout\);
 
 -- Location: LCCOMB_X15_Y15_N18
-\mips_cpu|dp|forwardamux|y[18]~52\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[18]~52\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[18]~52_combout\ = (\mips_cpu|dp|forwardamux|y[18]~51_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(18)))
+-- \mips_cpu|dp|forwardaemux|y[18]~52_combout\ = (\mips_cpu|dp|forwardaemux|y[18]~51_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(18)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -33849,17 +33849,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[18]~51_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[18]~51_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(18),
-	combout => \mips_cpu|dp|forwardamux|y[18]~52_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[18]~52_combout\);
 
 -- Location: LCCOMB_X16_Y15_N22
 \mips_cpu|dp|alu|Add0~38\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~38_combout\ = (\mips_cpu|dp|alu|b2[18]~25_combout\ & ((\mips_cpu|dp|forwardamux|y[18]~52_combout\ & (\mips_cpu|dp|alu|Add0~37\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[18]~52_combout\ & (!\mips_cpu|dp|alu|Add0~37\)))) # 
--- (!\mips_cpu|dp|alu|b2[18]~25_combout\ & ((\mips_cpu|dp|forwardamux|y[18]~52_combout\ & (!\mips_cpu|dp|alu|Add0~37\)) # (!\mips_cpu|dp|forwardamux|y[18]~52_combout\ & ((\mips_cpu|dp|alu|Add0~37\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~39\ = CARRY((\mips_cpu|dp|alu|b2[18]~25_combout\ & (!\mips_cpu|dp|forwardamux|y[18]~52_combout\ & !\mips_cpu|dp|alu|Add0~37\)) # (!\mips_cpu|dp|alu|b2[18]~25_combout\ & ((!\mips_cpu|dp|alu|Add0~37\) # 
--- (!\mips_cpu|dp|forwardamux|y[18]~52_combout\))))
+-- \mips_cpu|dp|alu|Add0~38_combout\ = (\mips_cpu|dp|alu|b2[18]~25_combout\ & ((\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & (\mips_cpu|dp|alu|Add0~37\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & (!\mips_cpu|dp|alu|Add0~37\)))) # 
+-- (!\mips_cpu|dp|alu|b2[18]~25_combout\ & ((\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & (!\mips_cpu|dp|alu|Add0~37\)) # (!\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & ((\mips_cpu|dp|alu|Add0~37\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~39\ = CARRY((\mips_cpu|dp|alu|b2[18]~25_combout\ & (!\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & !\mips_cpu|dp|alu|Add0~37\)) # (!\mips_cpu|dp|alu|b2[18]~25_combout\ & ((!\mips_cpu|dp|alu|Add0~37\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[18]~52_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -33868,7 +33868,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[18]~25_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[18]~52_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[18]~52_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~37\,
 	combout => \mips_cpu|dp|alu|Add0~38_combout\,
@@ -33877,7 +33877,7 @@ PORT MAP (
 -- Location: LCCOMB_X15_Y15_N20
 \mips_cpu|dp|alu|Mux13~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux13~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[18]~52_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[18]~57_combout\))) # (!\mips_cpu|dp|forwardamux|y[18]~52_combout\ & 
+-- \mips_cpu|dp|alu|Mux13~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[18]~57_combout\))) # (!\mips_cpu|dp|forwardaemux|y[18]~52_combout\ & 
 -- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|srcbmux|y[18]~57_combout\))))
 
 -- pragma translate_off
@@ -33887,7 +33887,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
-	datab => \mips_cpu|dp|forwardamux|y[18]~52_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[18]~52_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
 	datad => \mips_cpu|dp|srcbmux|y[18]~57_combout\,
 	combout => \mips_cpu|dp|alu|Mux13~0_combout\);
@@ -34026,8 +34026,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N24
 \mips_cpu|dp|alu|Add0~40\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~40_combout\ = ((\mips_cpu|dp|alu|b2[19]~24_combout\ $ (\mips_cpu|dp|forwardamux|y[19]~50_combout\ $ (!\mips_cpu|dp|alu|Add0~39\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~41\ = CARRY((\mips_cpu|dp|alu|b2[19]~24_combout\ & ((\mips_cpu|dp|forwardamux|y[19]~50_combout\) # (!\mips_cpu|dp|alu|Add0~39\))) # (!\mips_cpu|dp|alu|b2[19]~24_combout\ & (\mips_cpu|dp|forwardamux|y[19]~50_combout\ & 
+-- \mips_cpu|dp|alu|Add0~40_combout\ = ((\mips_cpu|dp|alu|b2[19]~24_combout\ $ (\mips_cpu|dp|forwardaemux|y[19]~50_combout\ $ (!\mips_cpu|dp|alu|Add0~39\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~41\ = CARRY((\mips_cpu|dp|alu|b2[19]~24_combout\ & ((\mips_cpu|dp|forwardaemux|y[19]~50_combout\) # (!\mips_cpu|dp|alu|Add0~39\))) # (!\mips_cpu|dp|alu|b2[19]~24_combout\ & (\mips_cpu|dp|forwardaemux|y[19]~50_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~39\)))
 
 -- pragma translate_off
@@ -34037,7 +34037,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[19]~24_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[19]~50_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[19]~50_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~39\,
 	combout => \mips_cpu|dp|alu|Add0~40_combout\,
@@ -35319,7 +35319,7 @@ PORT MAP (
 -- Location: LCCOMB_X15_Y14_N14
 \mips_cpu|dp|alu|Mux11~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux11~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[20]~48_combout\ & ((\mips_cpu|dp|srcbmux|y[20]~53_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardamux|y[20]~48_combout\ & 
+-- \mips_cpu|dp|alu|Mux11~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & ((\mips_cpu|dp|srcbmux|y[20]~53_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & 
 -- (\mips_cpu|dp|srcbmux|y[20]~53_combout\ & \mips_cpu|c|EX_reg|q\(0)))))
 
 -- pragma translate_off
@@ -35328,7 +35328,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[20]~48_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[20]~48_combout\,
 	datab => \mips_cpu|dp|srcbmux|y[20]~53_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(1),
 	datad => \mips_cpu|c|EX_reg|q\(0),
@@ -35352,9 +35352,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N26
 \mips_cpu|dp|alu|Add0~42\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~42_combout\ = (\mips_cpu|dp|forwardamux|y[20]~48_combout\ & ((\mips_cpu|dp|alu|b2[20]~23_combout\ & (\mips_cpu|dp|alu|Add0~41\ & VCC)) # (!\mips_cpu|dp|alu|b2[20]~23_combout\ & (!\mips_cpu|dp|alu|Add0~41\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[20]~48_combout\ & ((\mips_cpu|dp|alu|b2[20]~23_combout\ & (!\mips_cpu|dp|alu|Add0~41\)) # (!\mips_cpu|dp|alu|b2[20]~23_combout\ & ((\mips_cpu|dp|alu|Add0~41\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~43\ = CARRY((\mips_cpu|dp|forwardamux|y[20]~48_combout\ & (!\mips_cpu|dp|alu|b2[20]~23_combout\ & !\mips_cpu|dp|alu|Add0~41\)) # (!\mips_cpu|dp|forwardamux|y[20]~48_combout\ & ((!\mips_cpu|dp|alu|Add0~41\) # 
+-- \mips_cpu|dp|alu|Add0~42_combout\ = (\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & ((\mips_cpu|dp|alu|b2[20]~23_combout\ & (\mips_cpu|dp|alu|Add0~41\ & VCC)) # (!\mips_cpu|dp|alu|b2[20]~23_combout\ & (!\mips_cpu|dp|alu|Add0~41\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & ((\mips_cpu|dp|alu|b2[20]~23_combout\ & (!\mips_cpu|dp|alu|Add0~41\)) # (!\mips_cpu|dp|alu|b2[20]~23_combout\ & ((\mips_cpu|dp|alu|Add0~41\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~43\ = CARRY((\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & (!\mips_cpu|dp|alu|b2[20]~23_combout\ & !\mips_cpu|dp|alu|Add0~41\)) # (!\mips_cpu|dp|forwardaemux|y[20]~48_combout\ & ((!\mips_cpu|dp|alu|Add0~41\) # 
 -- (!\mips_cpu|dp|alu|b2[20]~23_combout\))))
 
 -- pragma translate_off
@@ -35363,7 +35363,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[20]~48_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[20]~48_combout\,
 	datab => \mips_cpu|dp|alu|b2[20]~23_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~41\,
@@ -35403,9 +35403,9 @@ PORT MAP (
 	q => \mips_cpu|dp|MEM_r6|q\(20));
 
 -- Location: LCCOMB_X17_Y18_N20
-\mips_cpu|dp|forwardamux|y[20]~47\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[20]~47\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[20]~47_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[20]~22_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(20))))))
+-- \mips_cpu|dp|forwardaemux|y[20]~47_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[20]~22_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(20))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -35417,12 +35417,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[20]~22_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(20),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[20]~47_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[20]~47_combout\);
 
 -- Location: LCCOMB_X17_Y18_N22
-\mips_cpu|dp|forwardamux|y[20]~48\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[20]~48\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[20]~48_combout\ = (\mips_cpu|dp|forwardamux|y[20]~47_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(20)))
+-- \mips_cpu|dp|forwardaemux|y[20]~48_combout\ = (\mips_cpu|dp|forwardaemux|y[20]~47_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(20)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -35432,14 +35432,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datab => \mips_cpu|dp|MEM_r6|q\(20),
-	datad => \mips_cpu|dp|forwardamux|y[20]~47_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[20]~48_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[20]~47_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[20]~48_combout\);
 
 -- Location: LCCOMB_X16_Y15_N28
 \mips_cpu|dp|alu|Add0~44\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~44_combout\ = ((\mips_cpu|dp|forwardamux|y[21]~46_combout\ $ (\mips_cpu|dp|alu|b2[21]~22_combout\ $ (!\mips_cpu|dp|alu|Add0~43\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~45\ = CARRY((\mips_cpu|dp|forwardamux|y[21]~46_combout\ & ((\mips_cpu|dp|alu|b2[21]~22_combout\) # (!\mips_cpu|dp|alu|Add0~43\))) # (!\mips_cpu|dp|forwardamux|y[21]~46_combout\ & (\mips_cpu|dp|alu|b2[21]~22_combout\ & 
+-- \mips_cpu|dp|alu|Add0~44_combout\ = ((\mips_cpu|dp|forwardaemux|y[21]~46_combout\ $ (\mips_cpu|dp|alu|b2[21]~22_combout\ $ (!\mips_cpu|dp|alu|Add0~43\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~45\ = CARRY((\mips_cpu|dp|forwardaemux|y[21]~46_combout\ & ((\mips_cpu|dp|alu|b2[21]~22_combout\) # (!\mips_cpu|dp|alu|Add0~43\))) # (!\mips_cpu|dp|forwardaemux|y[21]~46_combout\ & (\mips_cpu|dp|alu|b2[21]~22_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~43\)))
 
 -- pragma translate_off
@@ -35448,7 +35448,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[21]~46_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[21]~46_combout\,
 	datab => \mips_cpu|dp|alu|b2[21]~22_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~43\,
@@ -36732,9 +36732,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N30
 \mips_cpu|dp|alu|Add0~46\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~46_combout\ = (\mips_cpu|dp|forwardamux|y[22]~44_combout\ & ((\mips_cpu|dp|alu|b2[22]~21_combout\ & (\mips_cpu|dp|alu|Add0~45\ & VCC)) # (!\mips_cpu|dp|alu|b2[22]~21_combout\ & (!\mips_cpu|dp|alu|Add0~45\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[22]~44_combout\ & ((\mips_cpu|dp|alu|b2[22]~21_combout\ & (!\mips_cpu|dp|alu|Add0~45\)) # (!\mips_cpu|dp|alu|b2[22]~21_combout\ & ((\mips_cpu|dp|alu|Add0~45\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~47\ = CARRY((\mips_cpu|dp|forwardamux|y[22]~44_combout\ & (!\mips_cpu|dp|alu|b2[22]~21_combout\ & !\mips_cpu|dp|alu|Add0~45\)) # (!\mips_cpu|dp|forwardamux|y[22]~44_combout\ & ((!\mips_cpu|dp|alu|Add0~45\) # 
+-- \mips_cpu|dp|alu|Add0~46_combout\ = (\mips_cpu|dp|forwardaemux|y[22]~44_combout\ & ((\mips_cpu|dp|alu|b2[22]~21_combout\ & (\mips_cpu|dp|alu|Add0~45\ & VCC)) # (!\mips_cpu|dp|alu|b2[22]~21_combout\ & (!\mips_cpu|dp|alu|Add0~45\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[22]~44_combout\ & ((\mips_cpu|dp|alu|b2[22]~21_combout\ & (!\mips_cpu|dp|alu|Add0~45\)) # (!\mips_cpu|dp|alu|b2[22]~21_combout\ & ((\mips_cpu|dp|alu|Add0~45\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~47\ = CARRY((\mips_cpu|dp|forwardaemux|y[22]~44_combout\ & (!\mips_cpu|dp|alu|b2[22]~21_combout\ & !\mips_cpu|dp|alu|Add0~45\)) # (!\mips_cpu|dp|forwardaemux|y[22]~44_combout\ & ((!\mips_cpu|dp|alu|Add0~45\) # 
 -- (!\mips_cpu|dp|alu|b2[22]~21_combout\))))
 
 -- pragma translate_off
@@ -36743,7 +36743,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[22]~44_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[22]~44_combout\,
 	datab => \mips_cpu|dp|alu|b2[22]~21_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~45\,
@@ -36753,8 +36753,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y17_N2
 \mips_cpu|dp|alu|Mux9~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux9~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[22]~49_combout\) # (\mips_cpu|dp|forwardamux|y[22]~44_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[22]~49_combout\ 
--- & \mips_cpu|dp|forwardamux|y[22]~44_combout\))))
+-- \mips_cpu|dp|alu|Mux9~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[22]~49_combout\) # (\mips_cpu|dp|forwardaemux|y[22]~44_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[22]~49_combout\ 
+-- & \mips_cpu|dp|forwardaemux|y[22]~44_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -36765,7 +36765,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|dp|srcbmux|y[22]~49_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[22]~44_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[22]~44_combout\,
 	combout => \mips_cpu|dp|alu|Mux9~0_combout\);
 
 -- Location: LCCOMB_X15_Y14_N30
@@ -36849,9 +36849,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|EX_r6|q[22]~20_combout\);
 
 -- Location: LCCOMB_X17_Y17_N30
-\mips_cpu|dp|forwardamux|y[22]~43\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[22]~43\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[22]~43_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[22]~20_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(22))))))
+-- \mips_cpu|dp|forwardaemux|y[22]~43_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[22]~20_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(22))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -36863,12 +36863,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[22]~20_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(22),
-	combout => \mips_cpu|dp|forwardamux|y[22]~43_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[22]~43_combout\);
 
 -- Location: LCCOMB_X17_Y17_N16
-\mips_cpu|dp|forwardamux|y[22]~44\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[22]~44\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[22]~44_combout\ = (\mips_cpu|dp|forwardamux|y[22]~43_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(22)))
+-- \mips_cpu|dp|forwardaemux|y[22]~44_combout\ = (\mips_cpu|dp|forwardaemux|y[22]~43_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(22)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -36877,15 +36877,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[22]~43_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[22]~43_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(22),
-	combout => \mips_cpu|dp|forwardamux|y[22]~44_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[22]~44_combout\);
 
 -- Location: LCCOMB_X16_Y14_N0
 \mips_cpu|dp|alu|Add0~48\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~48_combout\ = ((\mips_cpu|dp|forwardamux|y[23]~42_combout\ $ (\mips_cpu|dp|alu|b2[23]~20_combout\ $ (!\mips_cpu|dp|alu|Add0~47\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~49\ = CARRY((\mips_cpu|dp|forwardamux|y[23]~42_combout\ & ((\mips_cpu|dp|alu|b2[23]~20_combout\) # (!\mips_cpu|dp|alu|Add0~47\))) # (!\mips_cpu|dp|forwardamux|y[23]~42_combout\ & (\mips_cpu|dp|alu|b2[23]~20_combout\ & 
+-- \mips_cpu|dp|alu|Add0~48_combout\ = ((\mips_cpu|dp|forwardaemux|y[23]~42_combout\ $ (\mips_cpu|dp|alu|b2[23]~20_combout\ $ (!\mips_cpu|dp|alu|Add0~47\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~49\ = CARRY((\mips_cpu|dp|forwardaemux|y[23]~42_combout\ & ((\mips_cpu|dp|alu|b2[23]~20_combout\) # (!\mips_cpu|dp|alu|Add0~47\))) # (!\mips_cpu|dp|forwardaemux|y[23]~42_combout\ & (\mips_cpu|dp|alu|b2[23]~20_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~47\)))
 
 -- pragma translate_off
@@ -36894,7 +36894,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[23]~42_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[23]~42_combout\,
 	datab => \mips_cpu|dp|alu|b2[23]~20_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~47\,
@@ -36904,8 +36904,8 @@ PORT MAP (
 -- Location: LCCOMB_X20_Y18_N10
 \mips_cpu|dp|alu|Mux8~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux8~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[23]~42_combout\) # (\mips_cpu|dp|srcbmux|y[23]~47_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[23]~42_combout\ & \mips_cpu|dp|srcbmux|y[23]~47_combout\))))
+-- \mips_cpu|dp|alu|Mux8~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[23]~42_combout\) # (\mips_cpu|dp|srcbmux|y[23]~47_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[23]~42_combout\ & \mips_cpu|dp|srcbmux|y[23]~47_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -36915,7 +36915,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[23]~42_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[23]~42_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[23]~47_combout\,
 	combout => \mips_cpu|dp|alu|Mux8~0_combout\);
 
@@ -37608,9 +37608,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(23));
 
 -- Location: LCCOMB_X20_Y18_N24
-\mips_cpu|dp|forwardlwmux|y[23]~20\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[23]~20\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[23]~20_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(23))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(23)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[23]~20_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(23))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(23)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(23)))))
 
 -- pragma translate_off
@@ -37623,7 +37623,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(23),
 	datad => \mips_cpu|dp|EX_r4|q\(23),
-	combout => \mips_cpu|dp|forwardlwmux|y[23]~20_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[23]~20_combout\);
 
 -- Location: FF_X20_Y18_N25
 \mips_cpu|dp|MEM_r7|q[23]\ : dffeas
@@ -37634,7 +37634,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[23]~20_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[23]~20_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -37659,9 +37659,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(22));
 
 -- Location: LCCOMB_X17_Y17_N22
-\mips_cpu|dp|forwardlwmux|y[22]~21\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[22]~21\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[22]~21_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(22))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(22)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[22]~21_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(22))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(22)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(22)))))
 
 -- pragma translate_off
@@ -37674,7 +37674,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(22),
-	combout => \mips_cpu|dp|forwardlwmux|y[22]~21_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[22]~21_combout\);
 
 -- Location: FF_X17_Y17_N23
 \mips_cpu|dp|MEM_r7|q[22]\ : dffeas
@@ -37685,7 +37685,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[22]~21_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[22]~21_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -37710,9 +37710,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(21));
 
 -- Location: LCCOMB_X19_Y15_N26
-\mips_cpu|dp|forwardlwmux|y[21]~22\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[21]~22\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[21]~22_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(21))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(21)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[21]~22_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(21))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(21)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(21)))))
 
 -- pragma translate_off
@@ -37725,7 +37725,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(21),
-	combout => \mips_cpu|dp|forwardlwmux|y[21]~22_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[21]~22_combout\);
 
 -- Location: FF_X19_Y15_N27
 \mips_cpu|dp|MEM_r7|q[21]\ : dffeas
@@ -37736,7 +37736,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[21]~22_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[21]~22_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -37941,9 +37941,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|f|EX_forwarda[0]~4_combout\);
 
 -- Location: LCCOMB_X15_Y16_N4
-\mips_cpu|dp|forwardamux|y[1]~2\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[1]~2\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[1]~2_combout\ = (\mips_cpu|dp|f|EX_forwarda[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~2_combout\ & ((\mips_cpu|dp|EX_r6|q[1]~10_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~2_combout\ & (\mips_cpu|dp|EX_r6|q\(1))))) # 
+-- \mips_cpu|dp|forwardaemux|y[1]~2_combout\ = (\mips_cpu|dp|f|EX_forwarda[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~2_combout\ & ((\mips_cpu|dp|EX_r6|q[1]~10_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~2_combout\ & (\mips_cpu|dp|EX_r6|q\(1))))) # 
 -- (!\mips_cpu|dp|f|EX_forwarda[0]~4_combout\ & (\mips_cpu|dp|EX_r6|q\(1)))
 
 -- pragma translate_off
@@ -37956,13 +37956,13 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(1),
 	datac => \mips_cpu|dp|EX_r6|q[1]~10_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~2_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[1]~2_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[1]~2_combout\);
 
 -- Location: LCCOMB_X15_Y16_N14
-\mips_cpu|dp|forwardamux|y[1]~3\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[1]~3\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[1]~3_combout\ = (\mips_cpu|dp|f|Equal4~1_combout\ & (((\mips_cpu|dp|EX_r6|q\(1))))) # (!\mips_cpu|dp|f|Equal4~1_combout\ & ((\mips_cpu|dp|f|always0~7_combout\ & ((\mips_cpu|dp|EX_r6|q\(1)))) # (!\mips_cpu|dp|f|always0~7_combout\ 
--- & (\mips_cpu|dp|forwardamux|y[1]~2_combout\))))
+-- \mips_cpu|dp|forwardaemux|y[1]~3_combout\ = (\mips_cpu|dp|f|Equal4~1_combout\ & (((\mips_cpu|dp|EX_r6|q\(1))))) # (!\mips_cpu|dp|f|Equal4~1_combout\ & ((\mips_cpu|dp|f|always0~7_combout\ & ((\mips_cpu|dp|EX_r6|q\(1)))) # 
+-- (!\mips_cpu|dp|f|always0~7_combout\ & (\mips_cpu|dp|forwardaemux|y[1]~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -37972,14 +37972,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|Equal4~1_combout\,
 	datab => \mips_cpu|dp|f|always0~7_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[1]~2_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[1]~2_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(1),
-	combout => \mips_cpu|dp|forwardamux|y[1]~3_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[1]~3_combout\);
 
 -- Location: LCCOMB_X16_Y17_N20
-\mips_cpu|dp|forwardamux|y[1]~4\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[1]~4\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[1]~4_combout\ = (\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & (\mips_cpu|dp|MEM_r6|q\(1))) # (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|forwardamux|y[1]~3_combout\)))
+-- \mips_cpu|dp|forwardaemux|y[1]~4_combout\ = (\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & (\mips_cpu|dp|MEM_r6|q\(1))) # (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|forwardaemux|y[1]~3_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -37989,8 +37989,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[1]~3_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[1]~4_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[1]~3_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[1]~4_combout\);
 
 -- Location: LCCOMB_X14_Y16_N0
 \mips_cpu|dp|EX_r5|q~1\ : cycloneiii_lcell_comb
@@ -39163,9 +39163,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r4|q\(0));
 
 -- Location: LCCOMB_X19_Y14_N12
-\mips_cpu|dp|forwardamux|y[0]~5\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[0]~5\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[0]~5_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r4|q[0]~0_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(0)))))
+-- \mips_cpu|dp|forwardaemux|y[0]~5_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r4|q[0]~0_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39177,12 +39177,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r4|q[0]~0_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[0]~5_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[0]~5_combout\);
 
 -- Location: LCCOMB_X19_Y14_N6
-\mips_cpu|dp|forwardamux|y[0]~6\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[0]~6\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[0]~6_combout\ = (\mips_cpu|dp|forwardamux|y[0]~5_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(0)))
+-- \mips_cpu|dp|forwardaemux|y[0]~6_combout\ = (\mips_cpu|dp|forwardaemux|y[0]~5_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39190,10 +39190,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[0]~5_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[0]~5_combout\,
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(0),
-	combout => \mips_cpu|dp|forwardamux|y[0]~6_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[0]~6_combout\);
 
 -- Location: LCCOMB_X16_Y16_N16
 \mips_cpu|dp|alu|Add0~1\ : cycloneiii_lcell_comb
@@ -39213,10 +39213,10 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N18
 \mips_cpu|dp|alu|Add0~2\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~2_combout\ = (\mips_cpu|dp|alu|b2[0]~2_combout\ & ((\mips_cpu|dp|forwardamux|y[0]~6_combout\ & (\mips_cpu|dp|alu|Add0~1_cout\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[0]~6_combout\ & (!\mips_cpu|dp|alu|Add0~1_cout\)))) # 
--- (!\mips_cpu|dp|alu|b2[0]~2_combout\ & ((\mips_cpu|dp|forwardamux|y[0]~6_combout\ & (!\mips_cpu|dp|alu|Add0~1_cout\)) # (!\mips_cpu|dp|forwardamux|y[0]~6_combout\ & ((\mips_cpu|dp|alu|Add0~1_cout\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~3\ = CARRY((\mips_cpu|dp|alu|b2[0]~2_combout\ & (!\mips_cpu|dp|forwardamux|y[0]~6_combout\ & !\mips_cpu|dp|alu|Add0~1_cout\)) # (!\mips_cpu|dp|alu|b2[0]~2_combout\ & ((!\mips_cpu|dp|alu|Add0~1_cout\) # 
--- (!\mips_cpu|dp|forwardamux|y[0]~6_combout\))))
+-- \mips_cpu|dp|alu|Add0~2_combout\ = (\mips_cpu|dp|alu|b2[0]~2_combout\ & ((\mips_cpu|dp|forwardaemux|y[0]~6_combout\ & (\mips_cpu|dp|alu|Add0~1_cout\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[0]~6_combout\ & (!\mips_cpu|dp|alu|Add0~1_cout\)))) # 
+-- (!\mips_cpu|dp|alu|b2[0]~2_combout\ & ((\mips_cpu|dp|forwardaemux|y[0]~6_combout\ & (!\mips_cpu|dp|alu|Add0~1_cout\)) # (!\mips_cpu|dp|forwardaemux|y[0]~6_combout\ & ((\mips_cpu|dp|alu|Add0~1_cout\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~3\ = CARRY((\mips_cpu|dp|alu|b2[0]~2_combout\ & (!\mips_cpu|dp|forwardaemux|y[0]~6_combout\ & !\mips_cpu|dp|alu|Add0~1_cout\)) # (!\mips_cpu|dp|alu|b2[0]~2_combout\ & ((!\mips_cpu|dp|alu|Add0~1_cout\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[0]~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39225,7 +39225,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[0]~2_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[0]~6_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[0]~6_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~1_cout\,
 	combout => \mips_cpu|dp|alu|Add0~2_combout\,
@@ -39234,8 +39234,8 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y14_N0
 \mips_cpu|dp|alu|Mux31~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux31~0_combout\ = (\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[0]~11_combout\) # ((\mips_cpu|c|EX_reg|q\(1)) # (\mips_cpu|dp|forwardamux|y[0]~6_combout\)))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[0]~11_combout\ & 
--- (!\mips_cpu|c|EX_reg|q\(1) & \mips_cpu|dp|forwardamux|y[0]~6_combout\)))
+-- \mips_cpu|dp|alu|Mux31~0_combout\ = (\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[0]~11_combout\) # ((\mips_cpu|c|EX_reg|q\(1)) # (\mips_cpu|dp|forwardaemux|y[0]~6_combout\)))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[0]~11_combout\ & 
+-- (!\mips_cpu|c|EX_reg|q\(1) & \mips_cpu|dp|forwardaemux|y[0]~6_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39246,7 +39246,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|dp|srcbmux|y[0]~11_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[0]~6_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[0]~6_combout\,
 	combout => \mips_cpu|dp|alu|Mux31~0_combout\);
 
 -- Location: LCCOMB_X19_Y14_N20
@@ -40546,8 +40546,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N20
 \mips_cpu|dp|alu|Add0~4\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~4_combout\ = ((\mips_cpu|dp|forwardamux|y[1]~4_combout\ $ (\mips_cpu|dp|alu|b2[1]~1_combout\ $ (!\mips_cpu|dp|alu|Add0~3\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~5\ = CARRY((\mips_cpu|dp|forwardamux|y[1]~4_combout\ & ((\mips_cpu|dp|alu|b2[1]~1_combout\) # (!\mips_cpu|dp|alu|Add0~3\))) # (!\mips_cpu|dp|forwardamux|y[1]~4_combout\ & (\mips_cpu|dp|alu|b2[1]~1_combout\ & 
+-- \mips_cpu|dp|alu|Add0~4_combout\ = ((\mips_cpu|dp|forwardaemux|y[1]~4_combout\ $ (\mips_cpu|dp|alu|b2[1]~1_combout\ $ (!\mips_cpu|dp|alu|Add0~3\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~5\ = CARRY((\mips_cpu|dp|forwardaemux|y[1]~4_combout\ & ((\mips_cpu|dp|alu|b2[1]~1_combout\) # (!\mips_cpu|dp|alu|Add0~3\))) # (!\mips_cpu|dp|forwardaemux|y[1]~4_combout\ & (\mips_cpu|dp|alu|b2[1]~1_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~3\)))
 
 -- pragma translate_off
@@ -40556,7 +40556,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[1]~4_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[1]~4_combout\,
 	datab => \mips_cpu|dp|alu|b2[1]~1_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~3\,
@@ -40566,8 +40566,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N12
 \mips_cpu|dp|alu|Mux30~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux30~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[1]~6_combout\ & ((\mips_cpu|dp|forwardamux|y[1]~4_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|srcbmux|y[1]~6_combout\ & 
--- (\mips_cpu|dp|forwardamux|y[1]~4_combout\ & \mips_cpu|c|EX_reg|q\(0)))))
+-- \mips_cpu|dp|alu|Mux30~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[1]~6_combout\ & ((\mips_cpu|dp|forwardaemux|y[1]~4_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|srcbmux|y[1]~6_combout\ & 
+-- (\mips_cpu|dp|forwardaemux|y[1]~4_combout\ & \mips_cpu|c|EX_reg|q\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40577,7 +40577,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|dp|srcbmux|y[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[1]~4_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[1]~4_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(0),
 	combout => \mips_cpu|dp|alu|Mux30~0_combout\);
 
@@ -41592,9 +41592,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(27));
 
 -- Location: LCCOMB_X17_Y14_N28
-\mips_cpu|dp|forwardamux|y[27]~33\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[27]~33\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[27]~33_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[27]~15_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(27)))))
+-- \mips_cpu|dp|forwardaemux|y[27]~33_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[27]~15_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41606,12 +41606,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(27),
 	datac => \mips_cpu|dp|EX_r6|q[27]~15_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[27]~33_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[27]~33_combout\);
 
 -- Location: LCCOMB_X17_Y14_N30
-\mips_cpu|dp|forwardamux|y[27]~34\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[27]~34\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[27]~34_combout\ = (\mips_cpu|dp|forwardamux|y[27]~33_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(27)))
+-- \mips_cpu|dp|forwardaemux|y[27]~34_combout\ = (\mips_cpu|dp|forwardaemux|y[27]~33_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(27)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41621,8 +41621,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datab => \mips_cpu|dp|MEM_r6|q\(27),
-	datad => \mips_cpu|dp|forwardamux|y[27]~33_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[27]~34_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[27]~33_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[27]~34_combout\);
 
 -- Location: LCCOMB_X17_Y15_N16
 \mips_cpu|dp|EX_r5|q~16\ : cycloneiii_lcell_comb
@@ -41696,8 +41696,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y14_N8
 \mips_cpu|dp|alu|Mux4~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux4~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[27]~34_combout\) # (\mips_cpu|dp|srcbmux|y[27]~39_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[27]~34_combout\ & \mips_cpu|dp|srcbmux|y[27]~39_combout\))))
+-- \mips_cpu|dp|alu|Mux4~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[27]~34_combout\) # (\mips_cpu|dp|srcbmux|y[27]~39_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[27]~34_combout\ & \mips_cpu|dp|srcbmux|y[27]~39_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41707,7 +41707,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[27]~34_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[27]~34_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[27]~39_combout\,
 	combout => \mips_cpu|dp|alu|Mux4~0_combout\);
 
@@ -42684,9 +42684,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(26));
 
 -- Location: LCCOMB_X17_Y14_N0
-\mips_cpu|dp|forwardamux|y[26]~35\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[26]~35\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[26]~35_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[26]~16_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(26))))))
+-- \mips_cpu|dp|forwardaemux|y[26]~35_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[26]~16_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(26))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42698,12 +42698,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[26]~16_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(26),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[26]~35_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[26]~35_combout\);
 
 -- Location: LCCOMB_X17_Y14_N10
-\mips_cpu|dp|forwardamux|y[26]~36\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[26]~36\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[26]~36_combout\ = (\mips_cpu|dp|forwardamux|y[26]~35_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(26)))
+-- \mips_cpu|dp|forwardaemux|y[26]~36_combout\ = (\mips_cpu|dp|forwardaemux|y[26]~35_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(26)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42713,8 +42713,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datab => \mips_cpu|dp|MEM_r6|q\(26),
-	datac => \mips_cpu|dp|forwardamux|y[26]~35_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[26]~36_combout\);
+	datac => \mips_cpu|dp|forwardaemux|y[26]~35_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[26]~36_combout\);
 
 -- Location: LCCOMB_X24_Y19_N28
 \mips_cpu|dp|EX_r6|q[25]~feeder\ : cycloneiii_lcell_comb
@@ -43592,9 +43592,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(25));
 
 -- Location: LCCOMB_X17_Y14_N20
-\mips_cpu|dp|forwardamux|y[25]~37\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[25]~37\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[25]~37_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[25]~17_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(25))))))
+-- \mips_cpu|dp|forwardaemux|y[25]~37_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[25]~17_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(25))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43606,12 +43606,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[25]~17_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(25),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[25]~37_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[25]~37_combout\);
 
 -- Location: LCCOMB_X17_Y14_N22
-\mips_cpu|dp|forwardamux|y[25]~38\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[25]~38\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[25]~38_combout\ = (\mips_cpu|dp|forwardamux|y[25]~37_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(25)))
+-- \mips_cpu|dp|forwardaemux|y[25]~38_combout\ = (\mips_cpu|dp|forwardaemux|y[25]~37_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(25)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43621,8 +43621,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(25),
-	datad => \mips_cpu|dp|forwardamux|y[25]~37_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[25]~38_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[25]~37_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[25]~38_combout\);
 
 -- Location: FF_X24_Y18_N11
 \mips_cpu|dp|WB_r3|q[24]\ : dffeas
@@ -45242,9 +45242,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N2
 \mips_cpu|dp|alu|Add0~50\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~50_combout\ = (\mips_cpu|dp|forwardamux|y[24]~40_combout\ & ((\mips_cpu|dp|alu|b2[24]~19_combout\ & (\mips_cpu|dp|alu|Add0~49\ & VCC)) # (!\mips_cpu|dp|alu|b2[24]~19_combout\ & (!\mips_cpu|dp|alu|Add0~49\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[24]~40_combout\ & ((\mips_cpu|dp|alu|b2[24]~19_combout\ & (!\mips_cpu|dp|alu|Add0~49\)) # (!\mips_cpu|dp|alu|b2[24]~19_combout\ & ((\mips_cpu|dp|alu|Add0~49\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~51\ = CARRY((\mips_cpu|dp|forwardamux|y[24]~40_combout\ & (!\mips_cpu|dp|alu|b2[24]~19_combout\ & !\mips_cpu|dp|alu|Add0~49\)) # (!\mips_cpu|dp|forwardamux|y[24]~40_combout\ & ((!\mips_cpu|dp|alu|Add0~49\) # 
+-- \mips_cpu|dp|alu|Add0~50_combout\ = (\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & ((\mips_cpu|dp|alu|b2[24]~19_combout\ & (\mips_cpu|dp|alu|Add0~49\ & VCC)) # (!\mips_cpu|dp|alu|b2[24]~19_combout\ & (!\mips_cpu|dp|alu|Add0~49\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & ((\mips_cpu|dp|alu|b2[24]~19_combout\ & (!\mips_cpu|dp|alu|Add0~49\)) # (!\mips_cpu|dp|alu|b2[24]~19_combout\ & ((\mips_cpu|dp|alu|Add0~49\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~51\ = CARRY((\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & (!\mips_cpu|dp|alu|b2[24]~19_combout\ & !\mips_cpu|dp|alu|Add0~49\)) # (!\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & ((!\mips_cpu|dp|alu|Add0~49\) # 
 -- (!\mips_cpu|dp|alu|b2[24]~19_combout\))))
 
 -- pragma translate_off
@@ -45253,7 +45253,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[24]~40_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[24]~40_combout\,
 	datab => \mips_cpu|dp|alu|b2[24]~19_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~49\,
@@ -45263,7 +45263,7 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y18_N24
 \mips_cpu|dp|alu|Mux7~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux7~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[24]~40_combout\ & ((\mips_cpu|dp|srcbmux|y[24]~45_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardamux|y[24]~40_combout\ & 
+-- \mips_cpu|dp|alu|Mux7~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & ((\mips_cpu|dp|srcbmux|y[24]~45_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardaemux|y[24]~40_combout\ & 
 -- (\mips_cpu|dp|srcbmux|y[24]~45_combout\ & \mips_cpu|c|EX_reg|q\(0)))))
 
 -- pragma translate_off
@@ -45272,7 +45272,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[24]~40_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[24]~40_combout\,
 	datab => \mips_cpu|dp|srcbmux|y[24]~45_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
 	datad => \mips_cpu|c|EX_reg|q\(1),
@@ -45311,9 +45311,9 @@ PORT MAP (
 	q => \mips_cpu|dp|MEM_r6|q\(24));
 
 -- Location: LCCOMB_X16_Y17_N14
-\mips_cpu|dp|forwardamux|y[24]~39\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[24]~39\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[24]~39_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[24]~18_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(24))))))
+-- \mips_cpu|dp|forwardaemux|y[24]~39_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[24]~18_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(24))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45325,12 +45325,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[24]~18_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(24),
-	combout => \mips_cpu|dp|forwardamux|y[24]~39_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[24]~39_combout\);
 
 -- Location: LCCOMB_X17_Y18_N2
-\mips_cpu|dp|forwardamux|y[24]~40\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[24]~40\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[24]~40_combout\ = (\mips_cpu|dp|forwardamux|y[24]~39_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(24)))
+-- \mips_cpu|dp|forwardaemux|y[24]~40_combout\ = (\mips_cpu|dp|forwardaemux|y[24]~39_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(24)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45340,14 +45340,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(24),
-	datad => \mips_cpu|dp|forwardamux|y[24]~39_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[24]~40_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[24]~39_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[24]~40_combout\);
 
 -- Location: LCCOMB_X16_Y14_N4
 \mips_cpu|dp|alu|Add0~52\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~52_combout\ = ((\mips_cpu|dp|alu|b2[25]~18_combout\ $ (\mips_cpu|dp|forwardamux|y[25]~38_combout\ $ (!\mips_cpu|dp|alu|Add0~51\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~53\ = CARRY((\mips_cpu|dp|alu|b2[25]~18_combout\ & ((\mips_cpu|dp|forwardamux|y[25]~38_combout\) # (!\mips_cpu|dp|alu|Add0~51\))) # (!\mips_cpu|dp|alu|b2[25]~18_combout\ & (\mips_cpu|dp|forwardamux|y[25]~38_combout\ & 
+-- \mips_cpu|dp|alu|Add0~52_combout\ = ((\mips_cpu|dp|alu|b2[25]~18_combout\ $ (\mips_cpu|dp|forwardaemux|y[25]~38_combout\ $ (!\mips_cpu|dp|alu|Add0~51\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~53\ = CARRY((\mips_cpu|dp|alu|b2[25]~18_combout\ & ((\mips_cpu|dp|forwardaemux|y[25]~38_combout\) # (!\mips_cpu|dp|alu|Add0~51\))) # (!\mips_cpu|dp|alu|b2[25]~18_combout\ & (\mips_cpu|dp|forwardaemux|y[25]~38_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~51\)))
 
 -- pragma translate_off
@@ -45357,7 +45357,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[25]~18_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[25]~38_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[25]~38_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~51\,
 	combout => \mips_cpu|dp|alu|Add0~52_combout\,
@@ -45366,8 +45366,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y14_N12
 \mips_cpu|dp|alu|Mux6~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux6~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[25]~38_combout\) # (\mips_cpu|dp|srcbmux|y[25]~43_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[25]~38_combout\ & \mips_cpu|dp|srcbmux|y[25]~43_combout\))))
+-- \mips_cpu|dp|alu|Mux6~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[25]~38_combout\) # (\mips_cpu|dp|srcbmux|y[25]~43_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[25]~38_combout\ & \mips_cpu|dp|srcbmux|y[25]~43_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45377,7 +45377,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[25]~38_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[25]~38_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[25]~43_combout\,
 	combout => \mips_cpu|dp|alu|Mux6~0_combout\);
 
@@ -46154,10 +46154,10 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N6
 \mips_cpu|dp|alu|Add0~54\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~54_combout\ = (\mips_cpu|dp|alu|b2[26]~17_combout\ & ((\mips_cpu|dp|forwardamux|y[26]~36_combout\ & (\mips_cpu|dp|alu|Add0~53\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[26]~36_combout\ & (!\mips_cpu|dp|alu|Add0~53\)))) # 
--- (!\mips_cpu|dp|alu|b2[26]~17_combout\ & ((\mips_cpu|dp|forwardamux|y[26]~36_combout\ & (!\mips_cpu|dp|alu|Add0~53\)) # (!\mips_cpu|dp|forwardamux|y[26]~36_combout\ & ((\mips_cpu|dp|alu|Add0~53\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~55\ = CARRY((\mips_cpu|dp|alu|b2[26]~17_combout\ & (!\mips_cpu|dp|forwardamux|y[26]~36_combout\ & !\mips_cpu|dp|alu|Add0~53\)) # (!\mips_cpu|dp|alu|b2[26]~17_combout\ & ((!\mips_cpu|dp|alu|Add0~53\) # 
--- (!\mips_cpu|dp|forwardamux|y[26]~36_combout\))))
+-- \mips_cpu|dp|alu|Add0~54_combout\ = (\mips_cpu|dp|alu|b2[26]~17_combout\ & ((\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & (\mips_cpu|dp|alu|Add0~53\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & (!\mips_cpu|dp|alu|Add0~53\)))) # 
+-- (!\mips_cpu|dp|alu|b2[26]~17_combout\ & ((\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & (!\mips_cpu|dp|alu|Add0~53\)) # (!\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & ((\mips_cpu|dp|alu|Add0~53\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~55\ = CARRY((\mips_cpu|dp|alu|b2[26]~17_combout\ & (!\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & !\mips_cpu|dp|alu|Add0~53\)) # (!\mips_cpu|dp|alu|b2[26]~17_combout\ & ((!\mips_cpu|dp|alu|Add0~53\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[26]~36_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46166,7 +46166,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[26]~17_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[26]~36_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[26]~36_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~53\,
 	combout => \mips_cpu|dp|alu|Add0~54_combout\,
@@ -46175,8 +46175,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N8
 \mips_cpu|dp|alu|Add0~56\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~56_combout\ = ((\mips_cpu|dp|forwardamux|y[27]~34_combout\ $ (\mips_cpu|dp|alu|b2[27]~16_combout\ $ (!\mips_cpu|dp|alu|Add0~55\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~57\ = CARRY((\mips_cpu|dp|forwardamux|y[27]~34_combout\ & ((\mips_cpu|dp|alu|b2[27]~16_combout\) # (!\mips_cpu|dp|alu|Add0~55\))) # (!\mips_cpu|dp|forwardamux|y[27]~34_combout\ & (\mips_cpu|dp|alu|b2[27]~16_combout\ & 
+-- \mips_cpu|dp|alu|Add0~56_combout\ = ((\mips_cpu|dp|forwardaemux|y[27]~34_combout\ $ (\mips_cpu|dp|alu|b2[27]~16_combout\ $ (!\mips_cpu|dp|alu|Add0~55\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~57\ = CARRY((\mips_cpu|dp|forwardaemux|y[27]~34_combout\ & ((\mips_cpu|dp|alu|b2[27]~16_combout\) # (!\mips_cpu|dp|alu|Add0~55\))) # (!\mips_cpu|dp|forwardaemux|y[27]~34_combout\ & (\mips_cpu|dp|alu|b2[27]~16_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~55\)))
 
 -- pragma translate_off
@@ -46185,7 +46185,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[27]~34_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[27]~34_combout\,
 	datab => \mips_cpu|dp|alu|b2[27]~16_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~55\,
@@ -47049,9 +47049,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(27));
 
 -- Location: LCCOMB_X17_Y17_N12
-\mips_cpu|dp|forwardlwmux|y[27]~16\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[27]~16\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[27]~16_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(27))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(27)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[27]~16_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(27))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(27)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(27)))))
 
 -- pragma translate_off
@@ -47064,7 +47064,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(27),
-	combout => \mips_cpu|dp|forwardlwmux|y[27]~16_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[27]~16_combout\);
 
 -- Location: FF_X17_Y17_N13
 \mips_cpu|dp|MEM_r7|q[27]\ : dffeas
@@ -47075,7 +47075,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[27]~16_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[27]~16_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -47574,9 +47574,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(26));
 
 -- Location: LCCOMB_X23_Y18_N22
-\mips_cpu|dp|forwardlwmux|y[26]~17\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[26]~17\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[26]~17_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(26)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(26))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[26]~17_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(26)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(26))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(26)))))
 
 -- pragma translate_off
@@ -47589,7 +47589,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|EX_r4|q\(26),
 	datad => \mips_cpu|dp|WB_r2|q\(26),
-	combout => \mips_cpu|dp|forwardlwmux|y[26]~17_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[26]~17_combout\);
 
 -- Location: FF_X23_Y18_N23
 \mips_cpu|dp|MEM_r7|q[26]\ : dffeas
@@ -47600,7 +47600,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[26]~17_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[26]~17_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -47625,9 +47625,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(25));
 
 -- Location: LCCOMB_X20_Y14_N4
-\mips_cpu|dp|forwardlwmux|y[25]~18\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[25]~18\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[25]~18_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(25))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(25)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[25]~18_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(25))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(25)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(25)))))
 
 -- pragma translate_off
@@ -47640,7 +47640,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(25),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(25),
-	combout => \mips_cpu|dp|forwardlwmux|y[25]~18_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[25]~18_combout\);
 
 -- Location: FF_X20_Y14_N5
 \mips_cpu|dp|MEM_r7|q[25]\ : dffeas
@@ -47651,7 +47651,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[25]~18_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[25]~18_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -48554,9 +48554,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(11));
 
 -- Location: LCCOMB_X16_Y17_N6
-\mips_cpu|dp|forwardamux|y[11]~9\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[11]~9\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[11]~9_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[11]~0_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(11)))))
+-- \mips_cpu|dp|forwardaemux|y[11]~9_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[11]~0_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(11)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48568,12 +48568,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[11]~0_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[11]~9_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[11]~9_combout\);
 
 -- Location: LCCOMB_X16_Y17_N8
-\mips_cpu|dp|forwardamux|y[11]~10\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[11]~10\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[11]~10_combout\ = (\mips_cpu|dp|forwardamux|y[11]~9_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(11)))
+-- \mips_cpu|dp|forwardaemux|y[11]~10_combout\ = (\mips_cpu|dp|forwardaemux|y[11]~9_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(11)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48583,8 +48583,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datab => \mips_cpu|dp|MEM_r6|q\(11),
-	datad => \mips_cpu|dp|forwardamux|y[11]~9_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[11]~10_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[11]~9_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[11]~10_combout\);
 
 -- Location: LCCOMB_X20_Y17_N20
 \mips_cpu|dp|EX_r5|q~5\ : cycloneiii_lcell_comb
@@ -49724,9 +49724,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(8));
 
 -- Location: LCCOMB_X20_Y13_N10
-\mips_cpu|dp|forwardamux|y[8]~15\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[8]~15\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[8]~15_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[8]~3_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(8))))))
+-- \mips_cpu|dp|forwardaemux|y[8]~15_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[8]~3_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(8))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49738,12 +49738,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[8]~3_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(8),
-	combout => \mips_cpu|dp|forwardamux|y[8]~15_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[8]~15_combout\);
 
 -- Location: LCCOMB_X20_Y13_N28
-\mips_cpu|dp|forwardamux|y[8]~16\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[8]~16\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[8]~16_combout\ = (\mips_cpu|dp|forwardamux|y[8]~15_combout\) # ((\mips_cpu|dp|MEM_r6|q\(8) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[8]~16_combout\ = (\mips_cpu|dp|forwardaemux|y[8]~15_combout\) # ((\mips_cpu|dp|MEM_r6|q\(8) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49753,8 +49753,8 @@ GENERIC MAP (
 PORT MAP (
 	datab => \mips_cpu|dp|MEM_r6|q\(8),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[8]~15_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[8]~16_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[8]~15_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[8]~16_combout\);
 
 -- Location: LCCOMB_X17_Y16_N22
 \mips_cpu|dp|EX_r5|q~8\ : cycloneiii_lcell_comb
@@ -50220,9 +50220,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(6));
 
 -- Location: LCCOMB_X17_Y16_N20
-\mips_cpu|dp|forwardamux|y[6]~19\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[6]~19\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[6]~19_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[6]~5_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(6)))))
+-- \mips_cpu|dp|forwardaemux|y[6]~19_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[6]~5_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50234,12 +50234,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[6]~5_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[6]~19_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[6]~19_combout\);
 
 -- Location: LCCOMB_X17_Y16_N14
-\mips_cpu|dp|forwardamux|y[6]~20\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[6]~20\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[6]~20_combout\ = (\mips_cpu|dp|forwardamux|y[6]~19_combout\) # ((\mips_cpu|dp|MEM_r6|q\(6) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[6]~20_combout\ = (\mips_cpu|dp|forwardaemux|y[6]~19_combout\) # ((\mips_cpu|dp|MEM_r6|q\(6) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50249,8 +50249,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|MEM_r6|q\(6),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[6]~19_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[6]~20_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[6]~19_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[6]~20_combout\);
 
 -- Location: LCCOMB_X19_Y19_N10
 \mips_cpu|dp|EX_r5|q~10\ : cycloneiii_lcell_comb
@@ -51306,9 +51306,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(4));
 
 -- Location: LCCOMB_X20_Y19_N14
-\mips_cpu|dp|forwardamux|y[4]~23\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[4]~23\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[4]~23_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[4]~7_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(4))))))
+-- \mips_cpu|dp|forwardaemux|y[4]~23_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[4]~7_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(4))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51320,12 +51320,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[4]~7_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(4),
-	combout => \mips_cpu|dp|forwardamux|y[4]~23_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[4]~23_combout\);
 
 -- Location: LCCOMB_X20_Y19_N16
-\mips_cpu|dp|forwardamux|y[4]~24\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[4]~24\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[4]~24_combout\ = (\mips_cpu|dp|forwardamux|y[4]~23_combout\) # ((\mips_cpu|dp|MEM_r6|q\(4) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[4]~24_combout\ = (\mips_cpu|dp|forwardaemux|y[4]~23_combout\) # ((\mips_cpu|dp|MEM_r6|q\(4) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51333,10 +51333,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \mips_cpu|dp|forwardamux|y[4]~23_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[4]~23_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(4),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[4]~24_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[4]~24_combout\);
 
 -- Location: LCCOMB_X22_Y18_N26
 \mips_cpu|dp|EX_r6|q[3]~feeder\ : cycloneiii_lcell_comb
@@ -51722,9 +51722,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(3));
 
 -- Location: LCCOMB_X15_Y16_N22
-\mips_cpu|dp|forwardamux|y[3]~7\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[3]~7\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[3]~7_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[3]~8_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(3))))))
+-- \mips_cpu|dp|forwardaemux|y[3]~7_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[3]~8_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(3))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51736,12 +51736,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[3]~8_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(3),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[3]~7_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[3]~7_combout\);
 
 -- Location: LCCOMB_X15_Y16_N8
-\mips_cpu|dp|forwardamux|y[3]~8\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[3]~8\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[3]~8_combout\ = (\mips_cpu|dp|forwardamux|y[3]~7_combout\) # ((\mips_cpu|dp|MEM_r6|q\(3) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[3]~8_combout\ = (\mips_cpu|dp|forwardaemux|y[3]~7_combout\) # ((\mips_cpu|dp|MEM_r6|q\(3) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51750,9 +51750,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|MEM_r6|q\(3),
-	datac => \mips_cpu|dp|forwardamux|y[3]~7_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[3]~7_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[3]~8_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[3]~8_combout\);
 
 -- Location: LCCOMB_X15_Y16_N24
 \mips_cpu|dp|EX_r5|q~3\ : cycloneiii_lcell_comb
@@ -51921,9 +51921,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N22
 \mips_cpu|dp|alu|Add0~6\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~6_combout\ = (\mips_cpu|dp|forwardamux|y[2]~1_combout\ & ((\mips_cpu|dp|alu|b2[2]~0_combout\ & (\mips_cpu|dp|alu|Add0~5\ & VCC)) # (!\mips_cpu|dp|alu|b2[2]~0_combout\ & (!\mips_cpu|dp|alu|Add0~5\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[2]~1_combout\ & ((\mips_cpu|dp|alu|b2[2]~0_combout\ & (!\mips_cpu|dp|alu|Add0~5\)) # (!\mips_cpu|dp|alu|b2[2]~0_combout\ & ((\mips_cpu|dp|alu|Add0~5\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~7\ = CARRY((\mips_cpu|dp|forwardamux|y[2]~1_combout\ & (!\mips_cpu|dp|alu|b2[2]~0_combout\ & !\mips_cpu|dp|alu|Add0~5\)) # (!\mips_cpu|dp|forwardamux|y[2]~1_combout\ & ((!\mips_cpu|dp|alu|Add0~5\) # 
+-- \mips_cpu|dp|alu|Add0~6_combout\ = (\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & ((\mips_cpu|dp|alu|b2[2]~0_combout\ & (\mips_cpu|dp|alu|Add0~5\ & VCC)) # (!\mips_cpu|dp|alu|b2[2]~0_combout\ & (!\mips_cpu|dp|alu|Add0~5\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & ((\mips_cpu|dp|alu|b2[2]~0_combout\ & (!\mips_cpu|dp|alu|Add0~5\)) # (!\mips_cpu|dp|alu|b2[2]~0_combout\ & ((\mips_cpu|dp|alu|Add0~5\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~7\ = CARRY((\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & (!\mips_cpu|dp|alu|b2[2]~0_combout\ & !\mips_cpu|dp|alu|Add0~5\)) # (!\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & ((!\mips_cpu|dp|alu|Add0~5\) # 
 -- (!\mips_cpu|dp|alu|b2[2]~0_combout\))))
 
 -- pragma translate_off
@@ -51932,7 +51932,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[2]~1_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[2]~1_combout\,
 	datab => \mips_cpu|dp|alu|b2[2]~0_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~5\,
@@ -51942,8 +51942,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N24
 \mips_cpu|dp|alu|Add0~8\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~8_combout\ = ((\mips_cpu|dp|forwardamux|y[3]~8_combout\ $ (\mips_cpu|dp|alu|b2[3]~3_combout\ $ (!\mips_cpu|dp|alu|Add0~7\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~9\ = CARRY((\mips_cpu|dp|forwardamux|y[3]~8_combout\ & ((\mips_cpu|dp|alu|b2[3]~3_combout\) # (!\mips_cpu|dp|alu|Add0~7\))) # (!\mips_cpu|dp|forwardamux|y[3]~8_combout\ & (\mips_cpu|dp|alu|b2[3]~3_combout\ & 
+-- \mips_cpu|dp|alu|Add0~8_combout\ = ((\mips_cpu|dp|forwardaemux|y[3]~8_combout\ $ (\mips_cpu|dp|alu|b2[3]~3_combout\ $ (!\mips_cpu|dp|alu|Add0~7\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~9\ = CARRY((\mips_cpu|dp|forwardaemux|y[3]~8_combout\ & ((\mips_cpu|dp|alu|b2[3]~3_combout\) # (!\mips_cpu|dp|alu|Add0~7\))) # (!\mips_cpu|dp|forwardaemux|y[3]~8_combout\ & (\mips_cpu|dp|alu|b2[3]~3_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~7\)))
 
 -- pragma translate_off
@@ -51952,7 +51952,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[3]~8_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[3]~8_combout\,
 	datab => \mips_cpu|dp|alu|b2[3]~3_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~7\,
@@ -51962,10 +51962,10 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N26
 \mips_cpu|dp|alu|Add0~10\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~10_combout\ = (\mips_cpu|dp|alu|b2[4]~11_combout\ & ((\mips_cpu|dp|forwardamux|y[4]~24_combout\ & (\mips_cpu|dp|alu|Add0~9\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[4]~24_combout\ & (!\mips_cpu|dp|alu|Add0~9\)))) # 
--- (!\mips_cpu|dp|alu|b2[4]~11_combout\ & ((\mips_cpu|dp|forwardamux|y[4]~24_combout\ & (!\mips_cpu|dp|alu|Add0~9\)) # (!\mips_cpu|dp|forwardamux|y[4]~24_combout\ & ((\mips_cpu|dp|alu|Add0~9\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~11\ = CARRY((\mips_cpu|dp|alu|b2[4]~11_combout\ & (!\mips_cpu|dp|forwardamux|y[4]~24_combout\ & !\mips_cpu|dp|alu|Add0~9\)) # (!\mips_cpu|dp|alu|b2[4]~11_combout\ & ((!\mips_cpu|dp|alu|Add0~9\) # 
--- (!\mips_cpu|dp|forwardamux|y[4]~24_combout\))))
+-- \mips_cpu|dp|alu|Add0~10_combout\ = (\mips_cpu|dp|alu|b2[4]~11_combout\ & ((\mips_cpu|dp|forwardaemux|y[4]~24_combout\ & (\mips_cpu|dp|alu|Add0~9\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[4]~24_combout\ & (!\mips_cpu|dp|alu|Add0~9\)))) # 
+-- (!\mips_cpu|dp|alu|b2[4]~11_combout\ & ((\mips_cpu|dp|forwardaemux|y[4]~24_combout\ & (!\mips_cpu|dp|alu|Add0~9\)) # (!\mips_cpu|dp|forwardaemux|y[4]~24_combout\ & ((\mips_cpu|dp|alu|Add0~9\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~11\ = CARRY((\mips_cpu|dp|alu|b2[4]~11_combout\ & (!\mips_cpu|dp|forwardaemux|y[4]~24_combout\ & !\mips_cpu|dp|alu|Add0~9\)) # (!\mips_cpu|dp|alu|b2[4]~11_combout\ & ((!\mips_cpu|dp|alu|Add0~9\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[4]~24_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51974,7 +51974,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[4]~11_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[4]~24_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[4]~24_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~9\,
 	combout => \mips_cpu|dp|alu|Add0~10_combout\,
@@ -51983,8 +51983,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N28
 \mips_cpu|dp|alu|Add0~12\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~12_combout\ = ((\mips_cpu|dp|forwardamux|y[5]~22_combout\ $ (\mips_cpu|dp|alu|b2[5]~10_combout\ $ (!\mips_cpu|dp|alu|Add0~11\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~13\ = CARRY((\mips_cpu|dp|forwardamux|y[5]~22_combout\ & ((\mips_cpu|dp|alu|b2[5]~10_combout\) # (!\mips_cpu|dp|alu|Add0~11\))) # (!\mips_cpu|dp|forwardamux|y[5]~22_combout\ & (\mips_cpu|dp|alu|b2[5]~10_combout\ & 
+-- \mips_cpu|dp|alu|Add0~12_combout\ = ((\mips_cpu|dp|forwardaemux|y[5]~22_combout\ $ (\mips_cpu|dp|alu|b2[5]~10_combout\ $ (!\mips_cpu|dp|alu|Add0~11\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~13\ = CARRY((\mips_cpu|dp|forwardaemux|y[5]~22_combout\ & ((\mips_cpu|dp|alu|b2[5]~10_combout\) # (!\mips_cpu|dp|alu|Add0~11\))) # (!\mips_cpu|dp|forwardaemux|y[5]~22_combout\ & (\mips_cpu|dp|alu|b2[5]~10_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~11\)))
 
 -- pragma translate_off
@@ -51993,7 +51993,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[5]~22_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[5]~22_combout\,
 	datab => \mips_cpu|dp|alu|b2[5]~10_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~11\,
@@ -52003,10 +52003,10 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N30
 \mips_cpu|dp|alu|Add0~14\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~14_combout\ = (\mips_cpu|dp|alu|b2[6]~9_combout\ & ((\mips_cpu|dp|forwardamux|y[6]~20_combout\ & (\mips_cpu|dp|alu|Add0~13\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[6]~20_combout\ & (!\mips_cpu|dp|alu|Add0~13\)))) # 
--- (!\mips_cpu|dp|alu|b2[6]~9_combout\ & ((\mips_cpu|dp|forwardamux|y[6]~20_combout\ & (!\mips_cpu|dp|alu|Add0~13\)) # (!\mips_cpu|dp|forwardamux|y[6]~20_combout\ & ((\mips_cpu|dp|alu|Add0~13\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~15\ = CARRY((\mips_cpu|dp|alu|b2[6]~9_combout\ & (!\mips_cpu|dp|forwardamux|y[6]~20_combout\ & !\mips_cpu|dp|alu|Add0~13\)) # (!\mips_cpu|dp|alu|b2[6]~9_combout\ & ((!\mips_cpu|dp|alu|Add0~13\) # 
--- (!\mips_cpu|dp|forwardamux|y[6]~20_combout\))))
+-- \mips_cpu|dp|alu|Add0~14_combout\ = (\mips_cpu|dp|alu|b2[6]~9_combout\ & ((\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & (\mips_cpu|dp|alu|Add0~13\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & (!\mips_cpu|dp|alu|Add0~13\)))) # 
+-- (!\mips_cpu|dp|alu|b2[6]~9_combout\ & ((\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & (!\mips_cpu|dp|alu|Add0~13\)) # (!\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & ((\mips_cpu|dp|alu|Add0~13\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~15\ = CARRY((\mips_cpu|dp|alu|b2[6]~9_combout\ & (!\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & !\mips_cpu|dp|alu|Add0~13\)) # (!\mips_cpu|dp|alu|b2[6]~9_combout\ & ((!\mips_cpu|dp|alu|Add0~13\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[6]~20_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52015,7 +52015,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[6]~9_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[6]~20_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[6]~20_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~13\,
 	combout => \mips_cpu|dp|alu|Add0~14_combout\,
@@ -52024,8 +52024,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N0
 \mips_cpu|dp|alu|Add0~16\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~16_combout\ = ((\mips_cpu|dp|alu|b2[7]~8_combout\ $ (\mips_cpu|dp|forwardamux|y[7]~18_combout\ $ (!\mips_cpu|dp|alu|Add0~15\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~17\ = CARRY((\mips_cpu|dp|alu|b2[7]~8_combout\ & ((\mips_cpu|dp|forwardamux|y[7]~18_combout\) # (!\mips_cpu|dp|alu|Add0~15\))) # (!\mips_cpu|dp|alu|b2[7]~8_combout\ & (\mips_cpu|dp|forwardamux|y[7]~18_combout\ & 
+-- \mips_cpu|dp|alu|Add0~16_combout\ = ((\mips_cpu|dp|alu|b2[7]~8_combout\ $ (\mips_cpu|dp|forwardaemux|y[7]~18_combout\ $ (!\mips_cpu|dp|alu|Add0~15\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~17\ = CARRY((\mips_cpu|dp|alu|b2[7]~8_combout\ & ((\mips_cpu|dp|forwardaemux|y[7]~18_combout\) # (!\mips_cpu|dp|alu|Add0~15\))) # (!\mips_cpu|dp|alu|b2[7]~8_combout\ & (\mips_cpu|dp|forwardaemux|y[7]~18_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~15\)))
 
 -- pragma translate_off
@@ -52035,7 +52035,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[7]~8_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[7]~18_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[7]~18_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~15\,
 	combout => \mips_cpu|dp|alu|Add0~16_combout\,
@@ -52044,10 +52044,10 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N2
 \mips_cpu|dp|alu|Add0~18\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~18_combout\ = (\mips_cpu|dp|alu|b2[8]~7_combout\ & ((\mips_cpu|dp|forwardamux|y[8]~16_combout\ & (\mips_cpu|dp|alu|Add0~17\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[8]~16_combout\ & (!\mips_cpu|dp|alu|Add0~17\)))) # 
--- (!\mips_cpu|dp|alu|b2[8]~7_combout\ & ((\mips_cpu|dp|forwardamux|y[8]~16_combout\ & (!\mips_cpu|dp|alu|Add0~17\)) # (!\mips_cpu|dp|forwardamux|y[8]~16_combout\ & ((\mips_cpu|dp|alu|Add0~17\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~19\ = CARRY((\mips_cpu|dp|alu|b2[8]~7_combout\ & (!\mips_cpu|dp|forwardamux|y[8]~16_combout\ & !\mips_cpu|dp|alu|Add0~17\)) # (!\mips_cpu|dp|alu|b2[8]~7_combout\ & ((!\mips_cpu|dp|alu|Add0~17\) # 
--- (!\mips_cpu|dp|forwardamux|y[8]~16_combout\))))
+-- \mips_cpu|dp|alu|Add0~18_combout\ = (\mips_cpu|dp|alu|b2[8]~7_combout\ & ((\mips_cpu|dp|forwardaemux|y[8]~16_combout\ & (\mips_cpu|dp|alu|Add0~17\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[8]~16_combout\ & (!\mips_cpu|dp|alu|Add0~17\)))) # 
+-- (!\mips_cpu|dp|alu|b2[8]~7_combout\ & ((\mips_cpu|dp|forwardaemux|y[8]~16_combout\ & (!\mips_cpu|dp|alu|Add0~17\)) # (!\mips_cpu|dp|forwardaemux|y[8]~16_combout\ & ((\mips_cpu|dp|alu|Add0~17\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~19\ = CARRY((\mips_cpu|dp|alu|b2[8]~7_combout\ & (!\mips_cpu|dp|forwardaemux|y[8]~16_combout\ & !\mips_cpu|dp|alu|Add0~17\)) # (!\mips_cpu|dp|alu|b2[8]~7_combout\ & ((!\mips_cpu|dp|alu|Add0~17\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[8]~16_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52056,7 +52056,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[8]~7_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[8]~16_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[8]~16_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~17\,
 	combout => \mips_cpu|dp|alu|Add0~18_combout\,
@@ -52065,8 +52065,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N4
 \mips_cpu|dp|alu|Add0~20\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~20_combout\ = ((\mips_cpu|dp|forwardamux|y[9]~14_combout\ $ (\mips_cpu|dp|alu|b2[9]~6_combout\ $ (!\mips_cpu|dp|alu|Add0~19\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~21\ = CARRY((\mips_cpu|dp|forwardamux|y[9]~14_combout\ & ((\mips_cpu|dp|alu|b2[9]~6_combout\) # (!\mips_cpu|dp|alu|Add0~19\))) # (!\mips_cpu|dp|forwardamux|y[9]~14_combout\ & (\mips_cpu|dp|alu|b2[9]~6_combout\ & 
+-- \mips_cpu|dp|alu|Add0~20_combout\ = ((\mips_cpu|dp|forwardaemux|y[9]~14_combout\ $ (\mips_cpu|dp|alu|b2[9]~6_combout\ $ (!\mips_cpu|dp|alu|Add0~19\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~21\ = CARRY((\mips_cpu|dp|forwardaemux|y[9]~14_combout\ & ((\mips_cpu|dp|alu|b2[9]~6_combout\) # (!\mips_cpu|dp|alu|Add0~19\))) # (!\mips_cpu|dp|forwardaemux|y[9]~14_combout\ & (\mips_cpu|dp|alu|b2[9]~6_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~19\)))
 
 -- pragma translate_off
@@ -52075,7 +52075,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[9]~14_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[9]~14_combout\,
 	datab => \mips_cpu|dp|alu|b2[9]~6_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~19\,
@@ -52085,9 +52085,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N6
 \mips_cpu|dp|alu|Add0~22\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~22_combout\ = (\mips_cpu|dp|forwardamux|y[10]~12_combout\ & ((\mips_cpu|dp|alu|b2[10]~5_combout\ & (\mips_cpu|dp|alu|Add0~21\ & VCC)) # (!\mips_cpu|dp|alu|b2[10]~5_combout\ & (!\mips_cpu|dp|alu|Add0~21\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[10]~12_combout\ & ((\mips_cpu|dp|alu|b2[10]~5_combout\ & (!\mips_cpu|dp|alu|Add0~21\)) # (!\mips_cpu|dp|alu|b2[10]~5_combout\ & ((\mips_cpu|dp|alu|Add0~21\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~23\ = CARRY((\mips_cpu|dp|forwardamux|y[10]~12_combout\ & (!\mips_cpu|dp|alu|b2[10]~5_combout\ & !\mips_cpu|dp|alu|Add0~21\)) # (!\mips_cpu|dp|forwardamux|y[10]~12_combout\ & ((!\mips_cpu|dp|alu|Add0~21\) # 
+-- \mips_cpu|dp|alu|Add0~22_combout\ = (\mips_cpu|dp|forwardaemux|y[10]~12_combout\ & ((\mips_cpu|dp|alu|b2[10]~5_combout\ & (\mips_cpu|dp|alu|Add0~21\ & VCC)) # (!\mips_cpu|dp|alu|b2[10]~5_combout\ & (!\mips_cpu|dp|alu|Add0~21\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[10]~12_combout\ & ((\mips_cpu|dp|alu|b2[10]~5_combout\ & (!\mips_cpu|dp|alu|Add0~21\)) # (!\mips_cpu|dp|alu|b2[10]~5_combout\ & ((\mips_cpu|dp|alu|Add0~21\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~23\ = CARRY((\mips_cpu|dp|forwardaemux|y[10]~12_combout\ & (!\mips_cpu|dp|alu|b2[10]~5_combout\ & !\mips_cpu|dp|alu|Add0~21\)) # (!\mips_cpu|dp|forwardaemux|y[10]~12_combout\ & ((!\mips_cpu|dp|alu|Add0~21\) # 
 -- (!\mips_cpu|dp|alu|b2[10]~5_combout\))))
 
 -- pragma translate_off
@@ -52096,7 +52096,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[10]~12_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[10]~12_combout\,
 	datab => \mips_cpu|dp|alu|b2[10]~5_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~21\,
@@ -52106,8 +52106,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y15_N8
 \mips_cpu|dp|alu|Add0~24\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~24_combout\ = ((\mips_cpu|dp|alu|b2[11]~4_combout\ $ (\mips_cpu|dp|forwardamux|y[11]~10_combout\ $ (!\mips_cpu|dp|alu|Add0~23\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~25\ = CARRY((\mips_cpu|dp|alu|b2[11]~4_combout\ & ((\mips_cpu|dp|forwardamux|y[11]~10_combout\) # (!\mips_cpu|dp|alu|Add0~23\))) # (!\mips_cpu|dp|alu|b2[11]~4_combout\ & (\mips_cpu|dp|forwardamux|y[11]~10_combout\ & 
+-- \mips_cpu|dp|alu|Add0~24_combout\ = ((\mips_cpu|dp|alu|b2[11]~4_combout\ $ (\mips_cpu|dp|forwardaemux|y[11]~10_combout\ $ (!\mips_cpu|dp|alu|Add0~23\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~25\ = CARRY((\mips_cpu|dp|alu|b2[11]~4_combout\ & ((\mips_cpu|dp|forwardaemux|y[11]~10_combout\) # (!\mips_cpu|dp|alu|Add0~23\))) # (!\mips_cpu|dp|alu|b2[11]~4_combout\ & (\mips_cpu|dp|forwardaemux|y[11]~10_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~23\)))
 
 -- pragma translate_off
@@ -52117,7 +52117,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[11]~4_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[11]~10_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[11]~10_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~23\,
 	combout => \mips_cpu|dp|alu|Add0~24_combout\,
@@ -52126,8 +52126,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y13_N14
 \mips_cpu|dp|alu|Mux19~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux19~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[12]~69_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[12]~64_combout\))) # (!\mips_cpu|dp|srcbmux|y[12]~69_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[12]~64_combout\))))
+-- \mips_cpu|dp|alu|Mux19~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[12]~69_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[12]~64_combout\))) # (!\mips_cpu|dp|srcbmux|y[12]~69_combout\ & 
+-- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|forwardaemux|y[12]~64_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52137,7 +52137,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|srcbmux|y[12]~69_combout\,
 	datab => \mips_cpu|c|EX_reg|q\(0),
-	datac => \mips_cpu|dp|forwardamux|y[12]~64_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[12]~64_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(1),
 	combout => \mips_cpu|dp|alu|Mux19~0_combout\);
 
@@ -52675,7 +52675,7 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y17_N18
 \mips_cpu|dp|alu|Mux20~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux20~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[11]~10_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[11]~15_combout\))) # (!\mips_cpu|dp|forwardamux|y[11]~10_combout\ & 
+-- \mips_cpu|dp|alu|Mux20~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[11]~10_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[11]~15_combout\))) # (!\mips_cpu|dp|forwardaemux|y[11]~10_combout\ & 
 -- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|srcbmux|y[11]~15_combout\))))
 
 -- pragma translate_off
@@ -52685,7 +52685,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
-	datab => \mips_cpu|dp|forwardamux|y[11]~10_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[11]~10_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
 	datad => \mips_cpu|dp|srcbmux|y[11]~15_combout\,
 	combout => \mips_cpu|dp|alu|Mux20~0_combout\);
@@ -52741,9 +52741,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(20));
 
 -- Location: LCCOMB_X17_Y18_N4
-\mips_cpu|dp|forwardlwmux|y[20]~23\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[20]~23\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[20]~23_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(20))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(20)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[20]~23_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(20))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(20)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(20)))))
 
 -- pragma translate_off
@@ -52756,7 +52756,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(20),
-	combout => \mips_cpu|dp|forwardlwmux|y[20]~23_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[20]~23_combout\);
 
 -- Location: FF_X17_Y18_N5
 \mips_cpu|dp|MEM_r7|q[20]\ : dffeas
@@ -52767,7 +52767,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[20]~23_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[20]~23_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -53236,9 +53236,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(10));
 
 -- Location: LCCOMB_X20_Y17_N12
-\mips_cpu|dp|forwardamux|y[10]~11\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[10]~11\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[10]~11_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[10]~1_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(10))))))
+-- \mips_cpu|dp|forwardaemux|y[10]~11_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[10]~1_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(10))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -53250,12 +53250,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|EX_r6|q[10]~1_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(10),
-	combout => \mips_cpu|dp|forwardamux|y[10]~11_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[10]~11_combout\);
 
 -- Location: LCCOMB_X20_Y17_N14
-\mips_cpu|dp|forwardamux|y[10]~12\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[10]~12\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[10]~12_combout\ = (\mips_cpu|dp|forwardamux|y[10]~11_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(10)))
+-- \mips_cpu|dp|forwardaemux|y[10]~12_combout\ = (\mips_cpu|dp|forwardaemux|y[10]~11_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -53265,14 +53265,14 @@ GENERIC MAP (
 PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(10),
-	datad => \mips_cpu|dp|forwardamux|y[10]~11_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[10]~12_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[10]~11_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[10]~12_combout\);
 
 -- Location: LCCOMB_X20_Y17_N24
 \mips_cpu|dp|alu|Mux21~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux21~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[10]~12_combout\) # (\mips_cpu|dp|srcbmux|y[10]~17_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[10]~12_combout\ & \mips_cpu|dp|srcbmux|y[10]~17_combout\))))
+-- \mips_cpu|dp|alu|Mux21~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[10]~12_combout\) # (\mips_cpu|dp|srcbmux|y[10]~17_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[10]~12_combout\ & \mips_cpu|dp|srcbmux|y[10]~17_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -53282,7 +53282,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[10]~12_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[10]~12_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[10]~17_combout\,
 	combout => \mips_cpu|dp|alu|Mux21~0_combout\);
 
@@ -54131,9 +54131,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(9));
 
 -- Location: LCCOMB_X20_Y14_N20
-\mips_cpu|dp|forwardlwmux|y[9]~9\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[9]~9\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[9]~9_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(9))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(9)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[9]~9_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(9))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(9)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(9)))))
 
 -- pragma translate_off
@@ -54146,7 +54146,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(9),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(9),
-	combout => \mips_cpu|dp|forwardlwmux|y[9]~9_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[9]~9_combout\);
 
 -- Location: FF_X20_Y14_N21
 \mips_cpu|dp|MEM_r7|q[9]\ : dffeas
@@ -54157,7 +54157,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[9]~9_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[9]~9_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -55165,9 +55165,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(9));
 
 -- Location: LCCOMB_X20_Y14_N24
-\mips_cpu|dp|forwardamux|y[9]~13\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[9]~13\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[9]~13_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[9]~2_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(9))))))
+-- \mips_cpu|dp|forwardaemux|y[9]~13_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[9]~2_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(9))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -55179,12 +55179,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(9),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[9]~13_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[9]~13_combout\);
 
 -- Location: LCCOMB_X20_Y14_N2
-\mips_cpu|dp|forwardamux|y[9]~14\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[9]~14\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[9]~14_combout\ = (\mips_cpu|dp|forwardamux|y[9]~13_combout\) # ((\mips_cpu|dp|MEM_r6|q\(9) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[9]~14_combout\ = (\mips_cpu|dp|forwardaemux|y[9]~13_combout\) # ((\mips_cpu|dp|MEM_r6|q\(9) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -55194,14 +55194,14 @@ GENERIC MAP (
 PORT MAP (
 	datab => \mips_cpu|dp|MEM_r6|q\(9),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[9]~13_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[9]~14_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[9]~13_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[9]~14_combout\);
 
 -- Location: LCCOMB_X20_Y14_N10
 \mips_cpu|dp|alu|Mux22~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux22~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[9]~19_combout\) # (\mips_cpu|dp|forwardamux|y[9]~14_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[9]~19_combout\ & 
--- \mips_cpu|dp|forwardamux|y[9]~14_combout\))))
+-- \mips_cpu|dp|alu|Mux22~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[9]~19_combout\) # (\mips_cpu|dp|forwardaemux|y[9]~14_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[9]~19_combout\ & 
+-- \mips_cpu|dp|forwardaemux|y[9]~14_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -55212,7 +55212,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|dp|srcbmux|y[9]~19_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[9]~14_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[9]~14_combout\,
 	combout => \mips_cpu|dp|alu|Mux22~0_combout\);
 
 -- Location: LCCOMB_X20_Y14_N18
@@ -56248,9 +56248,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(7));
 
 -- Location: LCCOMB_X20_Y19_N4
-\mips_cpu|dp|forwardamux|y[7]~17\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[7]~17\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[7]~17_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[7]~4_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(7))))))
+-- \mips_cpu|dp|forwardaemux|y[7]~17_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[7]~4_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(7))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -56262,12 +56262,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|EX_r6|q\(7),
-	combout => \mips_cpu|dp|forwardamux|y[7]~17_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[7]~17_combout\);
 
 -- Location: LCCOMB_X17_Y16_N30
-\mips_cpu|dp|forwardamux|y[7]~18\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[7]~18\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[7]~18_combout\ = (\mips_cpu|dp|forwardamux|y[7]~17_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(7)))
+-- \mips_cpu|dp|forwardaemux|y[7]~18_combout\ = (\mips_cpu|dp|forwardaemux|y[7]~17_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -56276,15 +56276,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datac => \mips_cpu|dp|forwardamux|y[7]~17_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[7]~17_combout\,
 	datad => \mips_cpu|dp|MEM_r6|q\(7),
-	combout => \mips_cpu|dp|forwardamux|y[7]~18_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[7]~18_combout\);
 
 -- Location: LCCOMB_X17_Y16_N8
 \mips_cpu|dp|alu|Mux24~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux24~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[7]~18_combout\) # (\mips_cpu|dp|srcbmux|y[7]~23_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[7]~18_combout\ & \mips_cpu|dp|srcbmux|y[7]~23_combout\))))
+-- \mips_cpu|dp|alu|Mux24~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[7]~18_combout\) # (\mips_cpu|dp|srcbmux|y[7]~23_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[7]~18_combout\ & \mips_cpu|dp|srcbmux|y[7]~23_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -56294,7 +56294,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[7]~18_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[7]~18_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[7]~23_combout\,
 	combout => \mips_cpu|dp|alu|Mux24~0_combout\);
 
@@ -56498,8 +56498,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y16_N26
 \mips_cpu|dp|alu|Mux25~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux25~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[6]~20_combout\) # (\mips_cpu|dp|srcbmux|y[6]~25_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[6]~20_combout\ & \mips_cpu|dp|srcbmux|y[6]~25_combout\))))
+-- \mips_cpu|dp|alu|Mux25~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[6]~20_combout\) # (\mips_cpu|dp|srcbmux|y[6]~25_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[6]~20_combout\ & \mips_cpu|dp|srcbmux|y[6]~25_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -56509,7 +56509,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[6]~20_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[6]~20_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[6]~25_combout\,
 	combout => \mips_cpu|dp|alu|Mux25~0_combout\);
 
@@ -57550,9 +57550,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(5));
 
 -- Location: LCCOMB_X19_Y19_N24
-\mips_cpu|dp|forwardlwmux|y[5]~5\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[5]~5\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[5]~5_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(5))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(5)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[5]~5_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(5))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(5)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(5)))))
 
 -- pragma translate_off
@@ -57565,7 +57565,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(5),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(5),
-	combout => \mips_cpu|dp|forwardlwmux|y[5]~5_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[5]~5_combout\);
 
 -- Location: FF_X19_Y19_N25
 \mips_cpu|dp|MEM_r7|q[5]\ : dffeas
@@ -57576,7 +57576,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[5]~5_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[5]~5_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -58615,9 +58615,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(5));
 
 -- Location: LCCOMB_X15_Y16_N18
-\mips_cpu|dp|forwardamux|y[5]~21\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[5]~21\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[5]~21_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[5]~6_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(5))))))
+-- \mips_cpu|dp|forwardaemux|y[5]~21_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[5]~6_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(5))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -58629,12 +58629,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(5),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[5]~21_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[5]~21_combout\);
 
 -- Location: LCCOMB_X15_Y16_N12
-\mips_cpu|dp|forwardamux|y[5]~22\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[5]~22\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[5]~22_combout\ = (\mips_cpu|dp|forwardamux|y[5]~21_combout\) # ((\mips_cpu|dp|MEM_r6|q\(5) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[5]~22_combout\ = (\mips_cpu|dp|forwardaemux|y[5]~21_combout\) # ((\mips_cpu|dp|MEM_r6|q\(5) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -58643,15 +58643,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|MEM_r6|q\(5),
-	datab => \mips_cpu|dp|forwardamux|y[5]~21_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[5]~21_combout\,
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[5]~22_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[5]~22_combout\);
 
 -- Location: LCCOMB_X17_Y16_N4
 \mips_cpu|dp|alu|Mux26~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux26~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[5]~22_combout\) # (\mips_cpu|dp|srcbmux|y[5]~27_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[5]~22_combout\ & \mips_cpu|dp|srcbmux|y[5]~27_combout\))))
+-- \mips_cpu|dp|alu|Mux26~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[5]~22_combout\) # (\mips_cpu|dp|srcbmux|y[5]~27_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[5]~22_combout\ & \mips_cpu|dp|srcbmux|y[5]~27_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -58660,7 +58660,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
-	datab => \mips_cpu|dp|forwardamux|y[5]~22_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[5]~22_combout\,
 	datac => \mips_cpu|dp|srcbmux|y[5]~27_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(1),
 	combout => \mips_cpu|dp|alu|Mux26~0_combout\);
@@ -59254,9 +59254,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(8));
 
 -- Location: LCCOMB_X20_Y13_N12
-\mips_cpu|dp|forwardlwmux|y[8]~8\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[8]~8\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[8]~8_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(8)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(8))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[8]~8_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(8)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(8))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(8)))
 
 -- pragma translate_off
@@ -59269,7 +59269,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|WB_r2|q\(8),
-	combout => \mips_cpu|dp|forwardlwmux|y[8]~8_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[8]~8_combout\);
 
 -- Location: FF_X20_Y13_N13
 \mips_cpu|dp|MEM_r7|q[8]\ : dffeas
@@ -59280,7 +59280,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[8]~8_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[8]~8_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -60276,9 +60276,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(31));
 
 -- Location: LCCOMB_X23_Y17_N28
-\mips_cpu|dp|forwardlwmux|y[31]~12\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[31]~12\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[31]~12_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(31))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(31)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[31]~12_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(31))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(31)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(31)))))
 
 -- pragma translate_off
@@ -60291,7 +60291,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(31),
 	datad => \mips_cpu|dp|EX_r4|q\(31),
-	combout => \mips_cpu|dp|forwardlwmux|y[31]~12_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[31]~12_combout\);
 
 -- Location: FF_X23_Y17_N29
 \mips_cpu|dp|MEM_r7|q[31]\ : dffeas
@@ -60302,7 +60302,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[31]~12_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[31]~12_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -60528,9 +60528,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(30));
 
 -- Location: LCCOMB_X14_Y14_N24
-\mips_cpu|dp|forwardlwmux|y[30]~13\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[30]~13\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[30]~13_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(30)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(30))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[30]~13_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|WB_r2|q\(30)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(30))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(30)))
 
 -- pragma translate_off
@@ -60543,7 +60543,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(30),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[30]~13_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[30]~13_combout\);
 
 -- Location: FF_X14_Y14_N25
 \mips_cpu|dp|MEM_r7|q[30]\ : dffeas
@@ -60554,7 +60554,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[30]~13_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[30]~13_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -61539,9 +61539,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(29));
 
 -- Location: LCCOMB_X20_Y18_N2
-\mips_cpu|dp|forwardamux|y[29]~29\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[29]~29\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[29]~29_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[29]~13_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(29))))))
+-- \mips_cpu|dp|forwardaemux|y[29]~29_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[29]~13_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(29))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -61553,12 +61553,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q[29]~13_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(29),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[29]~29_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[29]~29_combout\);
 
 -- Location: LCCOMB_X20_Y18_N12
-\mips_cpu|dp|forwardamux|y[29]~30\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[29]~30\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[29]~30_combout\ = (\mips_cpu|dp|forwardamux|y[29]~29_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(29)))
+-- \mips_cpu|dp|forwardaemux|y[29]~30_combout\ = (\mips_cpu|dp|forwardaemux|y[29]~29_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(29)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -61568,8 +61568,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datab => \mips_cpu|dp|MEM_r6|q\(29),
-	datad => \mips_cpu|dp|forwardamux|y[29]~29_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[29]~30_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[29]~29_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[29]~30_combout\);
 
 -- Location: FF_X28_Y15_N1
 \mips_cpu|dp|rf|R8[28]\ : dffeas
@@ -62521,8 +62521,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N22
 \mips_cpu|dp|alu|Mux3~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux3~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[28]~37_combout\) # (\mips_cpu|dp|forwardamux|y[28]~32_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[28]~37_combout\ 
--- & \mips_cpu|dp|forwardamux|y[28]~32_combout\))))
+-- \mips_cpu|dp|alu|Mux3~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[28]~37_combout\) # (\mips_cpu|dp|forwardaemux|y[28]~32_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[28]~37_combout\ 
+-- & \mips_cpu|dp|forwardaemux|y[28]~32_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -62533,7 +62533,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|c|EX_reg|q\(0),
 	datac => \mips_cpu|dp|srcbmux|y[28]~37_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[28]~32_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[28]~32_combout\,
 	combout => \mips_cpu|dp|alu|Mux3~0_combout\);
 
 -- Location: LCCOMB_X16_Y14_N24
@@ -62554,9 +62554,9 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N10
 \mips_cpu|dp|alu|Add0~58\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~58_combout\ = (\mips_cpu|dp|forwardamux|y[28]~32_combout\ & ((\mips_cpu|dp|alu|b2[28]~15_combout\ & (\mips_cpu|dp|alu|Add0~57\ & VCC)) # (!\mips_cpu|dp|alu|b2[28]~15_combout\ & (!\mips_cpu|dp|alu|Add0~57\)))) # 
--- (!\mips_cpu|dp|forwardamux|y[28]~32_combout\ & ((\mips_cpu|dp|alu|b2[28]~15_combout\ & (!\mips_cpu|dp|alu|Add0~57\)) # (!\mips_cpu|dp|alu|b2[28]~15_combout\ & ((\mips_cpu|dp|alu|Add0~57\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~59\ = CARRY((\mips_cpu|dp|forwardamux|y[28]~32_combout\ & (!\mips_cpu|dp|alu|b2[28]~15_combout\ & !\mips_cpu|dp|alu|Add0~57\)) # (!\mips_cpu|dp|forwardamux|y[28]~32_combout\ & ((!\mips_cpu|dp|alu|Add0~57\) # 
+-- \mips_cpu|dp|alu|Add0~58_combout\ = (\mips_cpu|dp|forwardaemux|y[28]~32_combout\ & ((\mips_cpu|dp|alu|b2[28]~15_combout\ & (\mips_cpu|dp|alu|Add0~57\ & VCC)) # (!\mips_cpu|dp|alu|b2[28]~15_combout\ & (!\mips_cpu|dp|alu|Add0~57\)))) # 
+-- (!\mips_cpu|dp|forwardaemux|y[28]~32_combout\ & ((\mips_cpu|dp|alu|b2[28]~15_combout\ & (!\mips_cpu|dp|alu|Add0~57\)) # (!\mips_cpu|dp|alu|b2[28]~15_combout\ & ((\mips_cpu|dp|alu|Add0~57\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~59\ = CARRY((\mips_cpu|dp|forwardaemux|y[28]~32_combout\ & (!\mips_cpu|dp|alu|b2[28]~15_combout\ & !\mips_cpu|dp|alu|Add0~57\)) # (!\mips_cpu|dp|forwardaemux|y[28]~32_combout\ & ((!\mips_cpu|dp|alu|Add0~57\) # 
 -- (!\mips_cpu|dp|alu|b2[28]~15_combout\))))
 
 -- pragma translate_off
@@ -62565,7 +62565,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[28]~32_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[28]~32_combout\,
 	datab => \mips_cpu|dp|alu|b2[28]~15_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~57\,
@@ -63325,9 +63325,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|EX_r6|q[28]~14_combout\);
 
 -- Location: LCCOMB_X17_Y13_N22
-\mips_cpu|dp|forwardamux|y[28]~31\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[28]~31\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[28]~31_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[28]~14_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(28))))))
+-- \mips_cpu|dp|forwardaemux|y[28]~31_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q[28]~14_combout\)) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q\(28))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -63339,12 +63339,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(28),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[28]~31_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[28]~31_combout\);
 
 -- Location: LCCOMB_X17_Y13_N24
-\mips_cpu|dp|forwardamux|y[28]~32\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[28]~32\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[28]~32_combout\ = (\mips_cpu|dp|forwardamux|y[28]~31_combout\) # ((\mips_cpu|dp|MEM_r6|q\(28) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[28]~32_combout\ = (\mips_cpu|dp|forwardaemux|y[28]~31_combout\) # ((\mips_cpu|dp|MEM_r6|q\(28) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -63352,16 +63352,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[28]~31_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[28]~31_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(28),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[28]~32_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[28]~32_combout\);
 
 -- Location: LCCOMB_X16_Y14_N12
 \mips_cpu|dp|alu|Add0~60\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~60_combout\ = ((\mips_cpu|dp|alu|b2[29]~14_combout\ $ (\mips_cpu|dp|forwardamux|y[29]~30_combout\ $ (!\mips_cpu|dp|alu|Add0~59\)))) # (GND)
--- \mips_cpu|dp|alu|Add0~61\ = CARRY((\mips_cpu|dp|alu|b2[29]~14_combout\ & ((\mips_cpu|dp|forwardamux|y[29]~30_combout\) # (!\mips_cpu|dp|alu|Add0~59\))) # (!\mips_cpu|dp|alu|b2[29]~14_combout\ & (\mips_cpu|dp|forwardamux|y[29]~30_combout\ & 
+-- \mips_cpu|dp|alu|Add0~60_combout\ = ((\mips_cpu|dp|alu|b2[29]~14_combout\ $ (\mips_cpu|dp|forwardaemux|y[29]~30_combout\ $ (!\mips_cpu|dp|alu|Add0~59\)))) # (GND)
+-- \mips_cpu|dp|alu|Add0~61\ = CARRY((\mips_cpu|dp|alu|b2[29]~14_combout\ & ((\mips_cpu|dp|forwardaemux|y[29]~30_combout\) # (!\mips_cpu|dp|alu|Add0~59\))) # (!\mips_cpu|dp|alu|b2[29]~14_combout\ & (\mips_cpu|dp|forwardaemux|y[29]~30_combout\ & 
 -- !\mips_cpu|dp|alu|Add0~59\)))
 
 -- pragma translate_off
@@ -63371,7 +63371,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[29]~14_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[29]~30_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[29]~30_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~59\,
 	combout => \mips_cpu|dp|alu|Add0~60_combout\,
@@ -63380,8 +63380,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N28
 \mips_cpu|dp|alu|Mux2~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux2~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[29]~35_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[29]~30_combout\))) # (!\mips_cpu|dp|srcbmux|y[29]~35_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[29]~30_combout\))))
+-- \mips_cpu|dp|alu|Mux2~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[29]~35_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[29]~30_combout\))) # (!\mips_cpu|dp|srcbmux|y[29]~35_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
+-- & \mips_cpu|dp|forwardaemux|y[29]~30_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -63391,7 +63391,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|srcbmux|y[29]~35_combout\,
 	datab => \mips_cpu|c|EX_reg|q\(0),
-	datac => \mips_cpu|dp|forwardamux|y[29]~30_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[29]~30_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(1),
 	combout => \mips_cpu|dp|alu|Mux2~0_combout\);
 
@@ -64055,9 +64055,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(29));
 
 -- Location: LCCOMB_X16_Y19_N26
-\mips_cpu|dp|forwardlwmux|y[29]~14\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[29]~14\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[29]~14_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(29))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(29)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[29]~14_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(29))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(29)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(29)))))
 
 -- pragma translate_off
@@ -64070,7 +64070,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|WB_r2|q\(29),
 	datad => \mips_cpu|dp|EX_r4|q\(29),
-	combout => \mips_cpu|dp|forwardlwmux|y[29]~14_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[29]~14_combout\);
 
 -- Location: FF_X16_Y19_N27
 \mips_cpu|dp|MEM_r7|q[29]\ : dffeas
@@ -64081,7 +64081,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[29]~14_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[29]~14_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -65913,9 +65913,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r6|q\(31));
 
 -- Location: LCCOMB_X19_Y14_N22
-\mips_cpu|dp|forwardamux|y[31]~25\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[31]~25\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[31]~25_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[31]~11_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(31)))))
+-- \mips_cpu|dp|forwardaemux|y[31]~25_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[31]~11_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(31)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65927,12 +65927,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datad => \mips_cpu|dp|EX_r6|q[31]~11_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[31]~25_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[31]~25_combout\);
 
 -- Location: LCCOMB_X19_Y14_N16
-\mips_cpu|dp|forwardamux|y[31]~26\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[31]~26\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[31]~26_combout\ = (\mips_cpu|dp|forwardamux|y[31]~25_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(31)))
+-- \mips_cpu|dp|forwardaemux|y[31]~26_combout\ = (\mips_cpu|dp|forwardaemux|y[31]~25_combout\) # ((\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & \mips_cpu|dp|MEM_r6|q\(31)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65940,10 +65940,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[31]~25_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[31]~25_combout\,
 	datab => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(31),
-	combout => \mips_cpu|dp|forwardamux|y[31]~26_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[31]~26_combout\);
 
 -- Location: LCCOMB_X14_Y14_N8
 \mips_cpu|dp|EX_r5|q~12\ : cycloneiii_lcell_comb
@@ -66044,9 +66044,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|alu|b2[30]~13_combout\);
 
 -- Location: LCCOMB_X17_Y14_N16
-\mips_cpu|dp|forwardamux|y[30]~27\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[30]~27\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[30]~27_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[30]~12_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(30)))))
+-- \mips_cpu|dp|forwardaemux|y[30]~27_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[30]~12_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(30)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66058,12 +66058,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r6|q\(30),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
 	datad => \mips_cpu|dp|EX_r6|q[30]~12_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[30]~27_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[30]~27_combout\);
 
 -- Location: LCCOMB_X17_Y14_N2
-\mips_cpu|dp|forwardamux|y[30]~28\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[30]~28\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[30]~28_combout\ = (\mips_cpu|dp|forwardamux|y[30]~27_combout\) # ((\mips_cpu|dp|MEM_r6|q\(30) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[30]~28_combout\ = (\mips_cpu|dp|forwardaemux|y[30]~27_combout\) # ((\mips_cpu|dp|MEM_r6|q\(30) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66071,18 +66071,18 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \mips_cpu|dp|forwardamux|y[30]~27_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[30]~27_combout\,
 	datac => \mips_cpu|dp|MEM_r6|q\(30),
 	datad => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[30]~28_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[30]~28_combout\);
 
 -- Location: LCCOMB_X16_Y14_N14
 \mips_cpu|dp|alu|Add0~62\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~62_combout\ = (\mips_cpu|dp|alu|b2[30]~13_combout\ & ((\mips_cpu|dp|forwardamux|y[30]~28_combout\ & (\mips_cpu|dp|alu|Add0~61\ & VCC)) # (!\mips_cpu|dp|forwardamux|y[30]~28_combout\ & (!\mips_cpu|dp|alu|Add0~61\)))) # 
--- (!\mips_cpu|dp|alu|b2[30]~13_combout\ & ((\mips_cpu|dp|forwardamux|y[30]~28_combout\ & (!\mips_cpu|dp|alu|Add0~61\)) # (!\mips_cpu|dp|forwardamux|y[30]~28_combout\ & ((\mips_cpu|dp|alu|Add0~61\) # (GND)))))
--- \mips_cpu|dp|alu|Add0~63\ = CARRY((\mips_cpu|dp|alu|b2[30]~13_combout\ & (!\mips_cpu|dp|forwardamux|y[30]~28_combout\ & !\mips_cpu|dp|alu|Add0~61\)) # (!\mips_cpu|dp|alu|b2[30]~13_combout\ & ((!\mips_cpu|dp|alu|Add0~61\) # 
--- (!\mips_cpu|dp|forwardamux|y[30]~28_combout\))))
+-- \mips_cpu|dp|alu|Add0~62_combout\ = (\mips_cpu|dp|alu|b2[30]~13_combout\ & ((\mips_cpu|dp|forwardaemux|y[30]~28_combout\ & (\mips_cpu|dp|alu|Add0~61\ & VCC)) # (!\mips_cpu|dp|forwardaemux|y[30]~28_combout\ & (!\mips_cpu|dp|alu|Add0~61\)))) # 
+-- (!\mips_cpu|dp|alu|b2[30]~13_combout\ & ((\mips_cpu|dp|forwardaemux|y[30]~28_combout\ & (!\mips_cpu|dp|alu|Add0~61\)) # (!\mips_cpu|dp|forwardaemux|y[30]~28_combout\ & ((\mips_cpu|dp|alu|Add0~61\) # (GND)))))
+-- \mips_cpu|dp|alu|Add0~63\ = CARRY((\mips_cpu|dp|alu|b2[30]~13_combout\ & (!\mips_cpu|dp|forwardaemux|y[30]~28_combout\ & !\mips_cpu|dp|alu|Add0~61\)) # (!\mips_cpu|dp|alu|b2[30]~13_combout\ & ((!\mips_cpu|dp|alu|Add0~61\) # 
+-- (!\mips_cpu|dp|forwardaemux|y[30]~28_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66091,7 +66091,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|dp|alu|b2[30]~13_combout\,
-	datab => \mips_cpu|dp|forwardamux|y[30]~28_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[30]~28_combout\,
 	datad => VCC,
 	cin => \mips_cpu|dp|alu|Add0~61\,
 	combout => \mips_cpu|dp|alu|Add0~62_combout\,
@@ -66100,7 +66100,7 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N16
 \mips_cpu|dp|alu|Add0~64\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Add0~64_combout\ = \mips_cpu|dp|forwardamux|y[31]~26_combout\ $ (\mips_cpu|dp|alu|Add0~63\ $ (!\mips_cpu|dp|alu|b2[31]~12_combout\))
+-- \mips_cpu|dp|alu|Add0~64_combout\ = \mips_cpu|dp|forwardaemux|y[31]~26_combout\ $ (\mips_cpu|dp|alu|Add0~63\ $ (!\mips_cpu|dp|alu|b2[31]~12_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66108,7 +66108,7 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \mips_cpu|dp|forwardamux|y[31]~26_combout\,
+	dataa => \mips_cpu|dp|forwardaemux|y[31]~26_combout\,
 	datad => \mips_cpu|dp|alu|b2[31]~12_combout\,
 	cin => \mips_cpu|dp|alu|Add0~63\,
 	combout => \mips_cpu|dp|alu|Add0~64_combout\);
@@ -66116,7 +66116,7 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y14_N28
 \mips_cpu|dp|alu|Mux0~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux0~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[31]~26_combout\ & ((\mips_cpu|dp|srcbmux|y[31]~31_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardamux|y[31]~26_combout\ & 
+-- \mips_cpu|dp|alu|Mux0~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[31]~26_combout\ & ((\mips_cpu|dp|srcbmux|y[31]~31_combout\) # (\mips_cpu|c|EX_reg|q\(0)))) # (!\mips_cpu|dp|forwardaemux|y[31]~26_combout\ & 
 -- (\mips_cpu|dp|srcbmux|y[31]~31_combout\ & \mips_cpu|c|EX_reg|q\(0)))))
 
 -- pragma translate_off
@@ -66126,7 +66126,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
-	datab => \mips_cpu|dp|forwardamux|y[31]~26_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[31]~26_combout\,
 	datac => \mips_cpu|dp|srcbmux|y[31]~31_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(0),
 	combout => \mips_cpu|dp|alu|Mux0~0_combout\);
@@ -67265,9 +67265,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(4));
 
 -- Location: LCCOMB_X21_Y20_N0
-\mips_cpu|dp|forwardlwmux|y[4]~4\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[4]~4\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[4]~4_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(4))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(4)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[4]~4_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(4))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(4)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(4)))))
 
 -- pragma translate_off
@@ -67280,7 +67280,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(4),
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(4),
-	combout => \mips_cpu|dp|forwardlwmux|y[4]~4_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[4]~4_combout\);
 
 -- Location: FF_X21_Y20_N1
 \mips_cpu|dp|MEM_r7|q[4]\ : dffeas
@@ -67291,7 +67291,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[4]~4_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[4]~4_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -67399,8 +67399,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N6
 \mips_cpu|dp|alu|Mux27~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux27~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[4]~29_combout\) # (\mips_cpu|dp|forwardamux|y[4]~24_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[4]~29_combout\ & 
--- \mips_cpu|dp|forwardamux|y[4]~24_combout\))))
+-- \mips_cpu|dp|alu|Mux27~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|srcbmux|y[4]~29_combout\) # (\mips_cpu|dp|forwardaemux|y[4]~24_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & (\mips_cpu|dp|srcbmux|y[4]~29_combout\ & 
+-- \mips_cpu|dp|forwardaemux|y[4]~24_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67411,7 +67411,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|c|EX_reg|q\(0),
 	datac => \mips_cpu|dp|srcbmux|y[4]~29_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[4]~24_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[4]~24_combout\,
 	combout => \mips_cpu|dp|alu|Mux27~0_combout\);
 
 -- Location: LCCOMB_X16_Y16_N2
@@ -67564,9 +67564,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\);
 
 -- Location: LCCOMB_X16_Y17_N28
-\mips_cpu|dp|forwardamux|y[2]~0\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[2]~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[2]~0_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[2]~9_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(2)))))
+-- \mips_cpu|dp|forwardaemux|y[2]~0_combout\ = (!\mips_cpu|dp|f|EX_forwarda[1]~6_combout\ & ((\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & ((\mips_cpu|dp|EX_r6|q[2]~9_combout\))) # (!\mips_cpu|dp|f|EX_forwarda[0]~5_combout\ & (\mips_cpu|dp|EX_r6|q\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67578,12 +67578,12 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwarda[0]~5_combout\,
 	datac => \mips_cpu|dp|EX_r6|q\(2),
 	datad => \mips_cpu|dp|EX_r6|q[2]~9_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[2]~0_combout\);
+	combout => \mips_cpu|dp|forwardaemux|y[2]~0_combout\);
 
 -- Location: LCCOMB_X16_Y17_N30
-\mips_cpu|dp|forwardamux|y[2]~1\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardaemux|y[2]~1\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardamux|y[2]~1_combout\ = (\mips_cpu|dp|forwardamux|y[2]~0_combout\) # ((\mips_cpu|dp|MEM_r6|q\(2) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
+-- \mips_cpu|dp|forwardaemux|y[2]~1_combout\ = (\mips_cpu|dp|forwardaemux|y[2]~0_combout\) # ((\mips_cpu|dp|MEM_r6|q\(2) & \mips_cpu|dp|f|EX_forwarda[1]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67593,14 +67593,14 @@ GENERIC MAP (
 PORT MAP (
 	datab => \mips_cpu|dp|MEM_r6|q\(2),
 	datac => \mips_cpu|dp|f|EX_forwarda[1]~6_combout\,
-	datad => \mips_cpu|dp|forwardamux|y[2]~0_combout\,
-	combout => \mips_cpu|dp|forwardamux|y[2]~1_combout\);
+	datad => \mips_cpu|dp|forwardaemux|y[2]~0_combout\,
+	combout => \mips_cpu|dp|forwardaemux|y[2]~1_combout\);
 
 -- Location: LCCOMB_X16_Y17_N0
 \mips_cpu|dp|alu|Mux29~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux29~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardamux|y[2]~1_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[2]~3_combout\))) # (!\mips_cpu|dp|forwardamux|y[2]~1_combout\ & (\mips_cpu|c|EX_reg|q\(0) & 
--- \mips_cpu|dp|srcbmux|y[2]~3_combout\))))
+-- \mips_cpu|dp|alu|Mux29~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|srcbmux|y[2]~3_combout\))) # (!\mips_cpu|dp|forwardaemux|y[2]~1_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
+-- & \mips_cpu|dp|srcbmux|y[2]~3_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67609,7 +67609,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
-	datab => \mips_cpu|dp|forwardamux|y[2]~1_combout\,
+	datab => \mips_cpu|dp|forwardaemux|y[2]~1_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
 	datad => \mips_cpu|dp|srcbmux|y[2]~3_combout\,
 	combout => \mips_cpu|dp|alu|Mux29~0_combout\);
@@ -68541,9 +68541,9 @@ PORT MAP (
 	q => \mips_cpu|dp|EX_r4|q\(12));
 
 -- Location: LCCOMB_X17_Y13_N18
-\mips_cpu|dp|forwardlwmux|y[12]~31\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[12]~31\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[12]~31_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(12))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(12)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[12]~31_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(12))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(12)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(12)))))
 
 -- pragma translate_off
@@ -68556,7 +68556,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(12),
 	datac => \mips_cpu|dp|EX_r4|q\(12),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[12]~31_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[12]~31_combout\);
 
 -- Location: FF_X17_Y13_N19
 \mips_cpu|dp|MEM_r7|q[12]\ : dffeas
@@ -68567,7 +68567,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[12]~31_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[12]~31_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -69210,8 +69210,8 @@ PORT MAP (
 -- Location: LCCOMB_X20_Y13_N6
 \mips_cpu|dp|alu|Mux23~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux23~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[8]~21_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[8]~16_combout\))) # (!\mips_cpu|dp|srcbmux|y[8]~21_combout\ & (\mips_cpu|c|EX_reg|q\(0) & 
--- \mips_cpu|dp|forwardamux|y[8]~16_combout\))))
+-- \mips_cpu|dp|alu|Mux23~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[8]~21_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[8]~16_combout\))) # (!\mips_cpu|dp|srcbmux|y[8]~21_combout\ & (\mips_cpu|c|EX_reg|q\(0) & 
+-- \mips_cpu|dp|forwardaemux|y[8]~16_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -69222,7 +69222,7 @@ PORT MAP (
 	dataa => \mips_cpu|dp|srcbmux|y[8]~21_combout\,
 	datab => \mips_cpu|c|EX_reg|q\(0),
 	datac => \mips_cpu|c|EX_reg|q\(1),
-	datad => \mips_cpu|dp|forwardamux|y[8]~16_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[8]~16_combout\,
 	combout => \mips_cpu|dp|alu|Mux23~0_combout\);
 
 -- Location: LCCOMB_X20_Y13_N2
@@ -70268,9 +70268,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(16));
 
 -- Location: LCCOMB_X14_Y14_N10
-\mips_cpu|dp|forwardlwmux|y[16]~27\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[16]~27\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[16]~27_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(16))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(16)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[16]~27_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(16))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(16)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(16)))))
 
 -- pragma translate_off
@@ -70283,7 +70283,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|EX_r4|q\(16),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[16]~27_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[16]~27_combout\);
 
 -- Location: FF_X14_Y14_N11
 \mips_cpu|dp|MEM_r7|q[16]\ : dffeas
@@ -70294,7 +70294,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[16]~27_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[16]~27_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -70488,8 +70488,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y13_N28
 \mips_cpu|dp|alu|Mux18~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux18~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[13]~67_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[13]~62_combout\))) # (!\mips_cpu|dp|srcbmux|y[13]~67_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[13]~62_combout\))))
+-- \mips_cpu|dp|alu|Mux18~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[13]~67_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[13]~62_combout\))) # (!\mips_cpu|dp|srcbmux|y[13]~67_combout\ & 
+-- (\mips_cpu|c|EX_reg|q\(0) & \mips_cpu|dp|forwardaemux|y[13]~62_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -70500,7 +70500,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|dp|srcbmux|y[13]~67_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
-	datad => \mips_cpu|dp|forwardamux|y[13]~62_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[13]~62_combout\,
 	combout => \mips_cpu|dp|alu|Mux18~0_combout\);
 
 -- Location: LCCOMB_X16_Y13_N8
@@ -70617,9 +70617,9 @@ PORT MAP (
 	q => \mips_cpu|dp|WB_r2|q\(24));
 
 -- Location: LCCOMB_X17_Y18_N18
-\mips_cpu|dp|forwardlwmux|y[24]~19\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[24]~19\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[24]~19_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(24))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(24)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[24]~19_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|WB_r2|q\(24))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|EX_r4|q\(24)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (((\mips_cpu|dp|EX_r4|q\(24)))))
 
 -- pragma translate_off
@@ -70632,7 +70632,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
 	datac => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
 	datad => \mips_cpu|dp|EX_r4|q\(24),
-	combout => \mips_cpu|dp|forwardlwmux|y[24]~19_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[24]~19_combout\);
 
 -- Location: FF_X17_Y18_N19
 \mips_cpu|dp|MEM_r7|q[24]\ : dffeas
@@ -70643,7 +70643,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[24]~19_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[24]~19_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -70833,9 +70833,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\);
 
 -- Location: LCCOMB_X17_Y13_N16
-\mips_cpu|dp|forwardlwmux|y[28]~15\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[28]~15\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[28]~15_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(28)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(28))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[28]~15_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|WB_r2|q\(28)))) # (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (\mips_cpu|dp|EX_r4|q\(28))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|EX_r4|q\(28)))
 
 -- pragma translate_off
@@ -70848,7 +70848,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|EX_r4|q\(28),
 	datac => \mips_cpu|dp|WB_r2|q\(28),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[28]~15_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[28]~15_combout\);
 
 -- Location: FF_X17_Y13_N17
 \mips_cpu|dp|MEM_r7|q[28]\ : dffeas
@@ -70859,7 +70859,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[28]~15_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[28]~15_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -70967,8 +70967,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y16_N14
 \mips_cpu|dp|alu|Mux28~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux28~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[3]~13_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[3]~8_combout\))) # (!\mips_cpu|dp|srcbmux|y[3]~13_combout\ & (\mips_cpu|c|EX_reg|q\(0) & 
--- \mips_cpu|dp|forwardamux|y[3]~8_combout\))))
+-- \mips_cpu|dp|alu|Mux28~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[3]~13_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[3]~8_combout\))) # (!\mips_cpu|dp|srcbmux|y[3]~13_combout\ & (\mips_cpu|c|EX_reg|q\(0) & 
+-- \mips_cpu|dp|forwardaemux|y[3]~8_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -70979,7 +70979,7 @@ PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(1),
 	datab => \mips_cpu|dp|srcbmux|y[3]~13_combout\,
 	datac => \mips_cpu|c|EX_reg|q\(0),
-	datad => \mips_cpu|dp|forwardamux|y[3]~8_combout\,
+	datad => \mips_cpu|dp|forwardaemux|y[3]~8_combout\,
 	combout => \mips_cpu|dp|alu|Mux28~0_combout\);
 
 -- Location: LCCOMB_X16_Y16_N8
@@ -73234,8 +73234,8 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y14_N26
 \mips_cpu|dp|alu|Mux1~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux1~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[30]~33_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardamux|y[30]~28_combout\))) # (!\mips_cpu|dp|srcbmux|y[30]~33_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
--- & \mips_cpu|dp|forwardamux|y[30]~28_combout\))))
+-- \mips_cpu|dp|alu|Mux1~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|dp|srcbmux|y[30]~33_combout\ & ((\mips_cpu|c|EX_reg|q\(0)) # (\mips_cpu|dp|forwardaemux|y[30]~28_combout\))) # (!\mips_cpu|dp|srcbmux|y[30]~33_combout\ & (\mips_cpu|c|EX_reg|q\(0) 
+-- & \mips_cpu|dp|forwardaemux|y[30]~28_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -73245,7 +73245,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|dp|srcbmux|y[30]~33_combout\,
 	datab => \mips_cpu|c|EX_reg|q\(0),
-	datac => \mips_cpu|dp|forwardamux|y[30]~28_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[30]~28_combout\,
 	datad => \mips_cpu|c|EX_reg|q\(1),
 	combout => \mips_cpu|dp|alu|Mux1~0_combout\);
 
@@ -74672,8 +74672,8 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y14_N26
 \mips_cpu|dp|alu|Mux5~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|alu|Mux5~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardamux|y[26]~36_combout\) # (\mips_cpu|dp|srcbmux|y[26]~41_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
--- (\mips_cpu|dp|forwardamux|y[26]~36_combout\ & \mips_cpu|dp|srcbmux|y[26]~41_combout\))))
+-- \mips_cpu|dp|alu|Mux5~0_combout\ = (!\mips_cpu|c|EX_reg|q\(1) & ((\mips_cpu|c|EX_reg|q\(0) & ((\mips_cpu|dp|forwardaemux|y[26]~36_combout\) # (\mips_cpu|dp|srcbmux|y[26]~41_combout\))) # (!\mips_cpu|c|EX_reg|q\(0) & 
+-- (\mips_cpu|dp|forwardaemux|y[26]~36_combout\ & \mips_cpu|dp|srcbmux|y[26]~41_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -74683,7 +74683,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \mips_cpu|c|EX_reg|q\(0),
 	datab => \mips_cpu|c|EX_reg|q\(1),
-	datac => \mips_cpu|dp|forwardamux|y[26]~36_combout\,
+	datac => \mips_cpu|dp|forwardaemux|y[26]~36_combout\,
 	datad => \mips_cpu|dp|srcbmux|y[26]~41_combout\,
 	combout => \mips_cpu|dp|alu|Mux5~0_combout\);
 
@@ -75076,9 +75076,9 @@ PORT MAP (
 	combout => \mips_cpu|dp|f|EX_forwardb[0]~1_combout\);
 
 -- Location: LCCOMB_X19_Y14_N18
-\mips_cpu|dp|forwardlwmux|y[0]~0\ : cycloneiii_lcell_comb
+\mips_cpu|dp|forwardlwemux|y[0]~0\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \mips_cpu|dp|forwardlwmux|y[0]~0_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(0))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(0)))))) # 
+-- \mips_cpu|dp|forwardlwemux|y[0]~0_combout\ = (\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & ((\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & (\mips_cpu|dp|WB_r2|q\(0))) # (!\mips_cpu|dp|f|EX_forwardb[0]~4_combout\ & ((\mips_cpu|dp|EX_r4|q\(0)))))) # 
 -- (!\mips_cpu|dp|f|EX_forwardb[0]~1_combout\ & (((\mips_cpu|dp|EX_r4|q\(0)))))
 
 -- pragma translate_off
@@ -75091,7 +75091,7 @@ PORT MAP (
 	datab => \mips_cpu|dp|WB_r2|q\(0),
 	datac => \mips_cpu|dp|EX_r4|q\(0),
 	datad => \mips_cpu|dp|f|EX_forwardb[0]~4_combout\,
-	combout => \mips_cpu|dp|forwardlwmux|y[0]~0_combout\);
+	combout => \mips_cpu|dp|forwardlwemux|y[0]~0_combout\);
 
 -- Location: FF_X19_Y14_N19
 \mips_cpu|dp|MEM_r7|q[0]\ : dffeas
@@ -75102,7 +75102,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \pll0|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \mips_cpu|dp|forwardlwmux|y[0]~0_combout\,
+	d => \mips_cpu|dp|forwardlwemux|y[0]~0_combout\,
 	clrn => \reset_ff~clkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
