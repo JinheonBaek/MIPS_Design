@@ -185,6 +185,8 @@ module datapath(input         clk, reset,
   wire [31:0] EX_srcb;
   wire [31:0] ID_subwritedata, ID_writedata, EX_writedata;
   
+  wire [31:0] EX_realwritedata;
+  
   // Hazard Detection
   Forwarding f(
    .ID_rs	(ID_instr[25:21]),
@@ -315,6 +317,7 @@ module datapath(input         clk, reset,
     .s   (EX_jal),
     .y   (EX_writereg));
   
+  
   // ALU logic (In Execution Stage)
   mux3 #(32) forwardamux(EX_srca, WB_result, MEM_aluout, EX_forwarda, EX_alua);
   mux3 #(32) forwardbmux(EX_writedata, WB_result, MEM_aluout, EX_forwardb, EX_srcb);
@@ -331,6 +334,9 @@ module datapath(input         clk, reset,
     .alucont (EX_alucontrol),
     .result  (EX_aluout),
     .zero    (EX_zero));
+	 
+  // Wrtie Back read data -> Execution write data
+  mux2 #(32) forwardlwmux(EX_writedata, WB_readdata, EX_forwardb[0], EX_realwritedata);
   
   // Memory Access stage - Flip-flop between Execution and Memory Access
   flopr #(32) MEM_r1 (clk, reset, EX_instr, MEM_instr);
@@ -339,7 +345,7 @@ module datapath(input         clk, reset,
   flopr #(5)  MEM_r4 (clk, reset, EX_writereg, MEM_writereg);
   flopr #(1)  MEM_r5 (clk, reset, EX_zero, MEM_zero);
   flopr #(32) MEM_r6 (clk, reset, EX_aluout, MEM_aluout);
-  flopr #(32) MEM_r7 (clk, reset, EX_writedata, MEM_writedata);
+  flopr #(32) MEM_r7 (clk, reset, EX_realwritedata, MEM_writedata);
   flopr #(32) MEM_r8 (clk, reset, EX_srca, MEM_srca);
   
   // Memory Access stage - Logic
@@ -376,20 +382,20 @@ module Forwarding(input  [4:0]     ID_rs, ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
 				  
   always @(*)
   begin
-		ID_forwarda <= 1'b0;
-		ID_forwardb <= 1'b0;
-		EX_forwarda <= 2'b00;
-		EX_forwardb <= 2'b00;
+		ID_forwarda = 1'b0;
+		ID_forwardb = 1'b0;
+		EX_forwarda = 2'b00;
+		EX_forwardb = 2'b00;
 		if (ID_rs != 0)
-			if (ID_rs == WB_rd & WB_regwrite) ID_forwarda <= 1'b1;
+			if (ID_rs == WB_rd & WB_regwrite) ID_forwarda = 1'b1;
 		if (ID_rt != 0)
-			if (ID_rt == WB_rd & WB_regwrite) ID_forwardb <= 1'b1;
+			if (ID_rt == WB_rd & WB_regwrite) ID_forwardb = 1'b1;
 		if (EX_rs != 0)
-			if (EX_rs == MEM_rd & MEM_regwrite) EX_forwarda <= 2'b10;
-			else if (EX_rs == WB_rd & WB_regwrite) EX_forwarda <= 2'b01;
+			if (EX_rs == MEM_rd & MEM_regwrite) EX_forwarda = 2'b10;
+			else if (EX_rs == WB_rd & WB_regwrite) EX_forwarda = 2'b01;
 		if (EX_rt != 0)
-			if (EX_rt == MEM_rd & MEM_regwrite) EX_forwardb <= 2'b10;
-			else if (EX_rt == WB_rd & WB_regwrite) EX_forwardb <= 2'b01;
+			if (EX_rt == MEM_rd & MEM_regwrite) EX_forwardb = 2'b10;
+			else if (EX_rt == WB_rd & WB_regwrite) EX_forwardb = 2'b01;
   end
 
 endmodule
