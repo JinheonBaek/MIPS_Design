@@ -330,7 +330,7 @@ module datapath(input         clk, reset,
   assign ID_op = ID_instr[31:26];
   assign ID_funct = ID_instr[5:0];
   
-  // ID_flush for branch & jump instructions\
+  // ID_flush for branch & jump instructions
   assign ID_flush = ID_pcsrc | ID_jump;
   
   // ##### Jinheon Baek: End #####
