@@ -17,7 +17,7 @@ module mips(input         clk, reset,
             output [31:0] memwritedata,
             input  [31:0] memreaddata);
 
-  wire        ID_signext, ID_shiftl16, WB_memtoreg, MEM_regwrite, EX_memread;
+  wire        ID_signext, ID_shiftl16, WB_memtoreg, EX_regwrite, MEM_regwrite, EX_memread;
   wire        ID_pcsrc, ID_equal;
   wire        EX_alusrc, EX_regdst, WB_regwrite, ID_jump, EX_jal, WB_jal, ID_jr;
   wire [2:0]  EX_alucontrol;
@@ -35,16 +35,17 @@ module mips(input         clk, reset,
       .clk           (clk),
 		.reset         (reset),
       .ID_op         (ID_op), 
-		.ID_funct      (ID_funct), 
-		.ID_equal      (ID_equal),
+		.ID_funct      (ID_funct),
 		.ID_signext    (ID_signext),
 		.ID_shiftl16   (ID_shiftl16),
 		.WB_memtoreg   (WB_memtoreg),
 		.EX_memread    (EX_memread),
 		.MEM_memwrite  (memwrite),
 		.ID_pcsrc      (ID_pcsrc),
+		.ID_equal		(ID_equal),
 		.EX_alusrc     (EX_alusrc),
 		.EX_regdst     (EX_regdst),
+		.EX_regwrite   (EX_regwrite),
 		.MEM_regwrite  (MEM_regwrite),
 		.WB_regwrite   (WB_regwrite),
 		.ID_jump       (ID_jump),
@@ -62,9 +63,11 @@ module mips(input         clk, reset,
     .ID_shiftl16   (ID_shiftl16),
     .WB_memtoreg   (WB_memtoreg),
     .ID_pcsrc      (ID_pcsrc),
+	 .ID_equal		 (ID_equal),
     .EX_alusrc     (EX_alusrc),
     .EX_regdst     (EX_regdst),
 	 .EX_memread    (EX_memread),
+	 .EX_regwrite   (EX_regwrite),
     .WB_regwrite   (WB_regwrite),
 	 .MEM_regwrite  (MEM_regwrite),
     .ID_jump       (ID_jump),
@@ -75,7 +78,6 @@ module mips(input         clk, reset,
     .EX_alucontrol (EX_alucontrol),
 	 .ID_op         (ID_op),
 	 .ID_funct      (ID_funct),
-    .ID_equal      (ID_equal),
     .IF_pc         (pc),
     .IF_instr      (instr),
     .MEM_aluout    (memaddr), 
@@ -87,22 +89,22 @@ endmodule
 // Decoding stage
 module controller(input        clk, reset,
 					   input  [5:0] ID_op, ID_funct,
-						input        ID_equal, EX_flush,
+						input        EX_flush,
+						input	       ID_equal,
 						output       ID_signext,
                   output       ID_shiftl16,
                   output       WB_memtoreg, MEM_memwrite, EX_memread,
-                  output       ID_pcsrc, EX_alusrc,
-                  output       EX_regdst, MEM_regwrite, WB_regwrite,
+                  output       ID_pcsrc, 
+						output       EX_alusrc,
+                  output       EX_regdst, EX_regwrite, MEM_regwrite, WB_regwrite,
                   output       ID_jump, EX_jal, WB_jal, ID_jr,
                   output [2:0] EX_alucontrol);
 
-  wire [1:0] ID_aluop;
+  wire [1:0] ID_aluop, ID_branch;
   wire		 ID_memtoreg, ID_memread, ID_memwrite, ID_alusrc, ID_regdst, ID_regwrite, ID_jal;
   wire       EX_jr, MEM_jal, MEM_jr;
-  wire [1:0] ID_branch, EX_branch, MEM_branch;
   wire       EX_memtoreg, MEM_memtoreg;
   wire       EX_memwrite;
-  wire		 EX_regwrite;
   wire [2:0] ID_alucontrol;
 
   maindec md(
@@ -132,14 +134,14 @@ module controller(input        clk, reset,
   // Add Flip-flops that run on the controller (If datapath needs control signals, it send out that signals to datapath)
   
   // Flip-flop between Instruction Decoding and Execution
-  floprc #(13) EX_reg(clk, reset, EX_flush,
-                     {ID_memtoreg, ID_memwrite, ID_memread, ID_branch, ID_alusrc, ID_regdst, ID_regwrite, ID_jr, ID_jal, ID_alucontrol},
-                     {EX_memtoreg, EX_memwrite, EX_memread, EX_branch, EX_alusrc, EX_regdst, EX_regwrite, EX_jr, EX_jal, EX_alucontrol});
+  floprc #(11) EX_reg(clk, reset, EX_flush,
+                     {ID_memtoreg, ID_memwrite, ID_memread, ID_alusrc, ID_regdst, ID_regwrite, ID_jr, ID_jal, ID_alucontrol},
+                     {EX_memtoreg, EX_memwrite, EX_memread, EX_alusrc, EX_regdst, EX_regwrite, EX_jr, EX_jal, EX_alucontrol});
 						  
   // Flip-flop between Execution and Memory Access
-  flopr  #(7) MEM_reg(clk, reset,
-                     {EX_memtoreg, EX_memwrite, EX_branch, EX_regwrite, EX_jr, EX_jal},
-                     {MEM_memtoreg, MEM_memwrite, MEM_branch, MEM_regwrite, MEM_jr, MEM_jal});
+  flopr  #(5) MEM_reg(clk, reset,
+                     {EX_memtoreg, EX_memwrite, EX_regwrite, EX_jr, EX_jal},
+                     {MEM_memtoreg, MEM_memwrite, MEM_regwrite, MEM_jr, MEM_jal});
 						  
   // Flip-flop between Memory Access and Write Back
   flopr  #(3) WB_reg(clk, reset,
@@ -147,7 +149,7 @@ module controller(input        clk, reset,
                      {WB_memtoreg, WB_regwrite, WB_jal});
 							
   // ##### Jinheon Baek: End #####
-
+  
   assign ID_pcsrc = ID_branch[1] ? (ID_branch[0] ? (ID_branch[0] & ID_equal) : (~ID_branch[0] & ~ID_equal)) : (0);
 
 endmodule
@@ -158,23 +160,24 @@ endmodule
 module datapath(input         clk, reset,
                 input         ID_signext,
                 input         ID_shiftl16,
-                input         WB_memtoreg, ID_pcsrc,
+                input         WB_memtoreg,
+					 input         ID_pcsrc,
                 input         EX_alusrc, EX_regdst, EX_memread,
-                input         MEM_regwrite, WB_regwrite, ID_jump, EX_jal, WB_jal, ID_jr,
+                input         EX_regwrite, MEM_regwrite, WB_regwrite, ID_jump, EX_jal, WB_jal, ID_jr,
                 input  [2:0]  EX_alucontrol,
 					 output [5:0]  ID_op, ID_funct,
-                output        ID_equal,
 					 output			EX_flush,
                 output [31:0] IF_pc,
+					 output		   ID_equal,
                 input  [31:0] IF_instr,
                 output [31:0] MEM_aluout, MEM_writedata,
                 input  [31:0] MEM_readdata);
 
-  wire  		  ID_forwarda, ID_forwardb;
+  wire [1:0]  ID_forwarda, ID_forwardb;
   wire [1:0]  EX_forwarda, EX_forwardb;
   wire		  IF_stall, ID_stall;
   wire [31:0] ID_instr, EX_instr, MEM_instr;
-  wire [31:0] ID_signimm, ID_shiftedimm, ID_signimmsh, EX_signimm, EX_shiftedimm;
+  wire [31:0] ID_signimm, ID_shiftedimm, ID_signimmsh, EX_shiftedimm;
   wire [4:0]  EX_writesubreg;
   wire [4:0]  EX_writereg, MEM_writereg, WB_writereg;
   wire [31:0] WB_result;
@@ -191,7 +194,6 @@ module datapath(input         clk, reset,
   wire [31:0] ID_subwritedata, ID_writedata, EX_writedata;
   wire [31:0] EX_subwritedata;
   wire		  ID_flush;
-  wire		  MEM_zero;
  
   // ##### Jinheon Baek: Start #####
   
@@ -203,8 +205,10 @@ module datapath(input         clk, reset,
    .ID_rt   (ID_instr[20:16]),
    .EX_rs	(EX_instr[25:21]),
 	.EX_rt	(EX_instr[20:16]),
+	.EX_rd   (EX_writereg),
 	.MEM_rd	(MEM_writereg),
 	.WB_rd	(WB_writereg),
+	.EX_regwrite  (EX_regwrite),
 	.MEM_regwrite (MEM_regwrite),
 	.WB_regwrite  (WB_regwrite),
 	.ID_forwarda  (ID_forwarda),
@@ -301,15 +305,17 @@ module datapath(input         clk, reset,
   // ##### Jinheon Baek: Start #####
   
   // forwardadmux : forward a in decoding
-  mux2 #(32) forwardadmux( 
+  mux3 #(32) forwardadmux( 
     .d0  (ID_subsrca),
     .d1  (WB_result),
+	 .d2  (EX_aluout),
     .s   (ID_forwarda),
     .y   (ID_srca));
   // forwardbmux : forward b in decoding
-  mux2 #(32) forwardbdmux( 
+  mux3 #(32) forwardbdmux( 
     .d0  (ID_subwritedata),
     .d1  (WB_result),
+	 .d2  (EX_aluout),
     .s   (ID_forwardb),
     .y   (ID_writedata));
   
@@ -324,6 +330,7 @@ module datapath(input         clk, reset,
   assign ID_op = ID_instr[31:26];
   assign ID_funct = ID_instr[5:0];
   
+  // ID_flush for branch & jump instructions\
   assign ID_flush = ID_pcsrc | ID_jump;
   
   // ##### Jinheon Baek: End #####
@@ -334,10 +341,9 @@ module datapath(input         clk, reset,
   // Execution stage - Flip-flop between Instruction Decoding and Execution (floprc for flush = clear)
   floprc #(32) EX_r1 (clk, reset, EX_flush, ID_instr, EX_instr);
   floprc #(32) EX_r2 (clk, reset, EX_flush, ID_pcplus4, EX_pcplus4);
-  floprc #(32) EX_r3 (clk, reset, EX_flush, ID_signimm, EX_signimm);
-  floprc #(32) EX_r4 (clk, reset, EX_flush, ID_writedata, EX_subwritedata);
-  floprc #(32) EX_r5 (clk, reset, EX_flush, ID_shiftedimm, EX_shiftedimm);
-  floprc #(32) EX_r6 (clk, reset, EX_flush, ID_srca, EX_srca);
+  floprc #(32) EX_r3 (clk, reset, EX_flush, ID_writedata, EX_subwritedata);
+  floprc #(32) EX_r4 (clk, reset, EX_flush, ID_shiftedimm, EX_shiftedimm);
+  floprc #(32) EX_r5 (clk, reset, EX_flush, ID_srca, EX_srca);
   
   // ##### Jinheon Baek: End #####
   
@@ -386,10 +392,9 @@ module datapath(input         clk, reset,
   flopr #(32) MEM_r1 (clk, reset, EX_instr, MEM_instr);
   flopr #(32) MEM_r2 (clk, reset, EX_pcplus4, MEM_pcplus4);
   flopr #(5)  MEM_r3 (clk, reset, EX_writereg, MEM_writereg);
-  flopr #(1)  MEM_r4 (clk, reset, EX_zero, MEM_zero);
-  flopr #(32) MEM_r5 (clk, reset, EX_aluout, MEM_aluout);
-  flopr #(32) MEM_r6 (clk, reset, EX_writedata, MEM_writedata);
-  flopr #(32) MEM_r7 (clk, reset, EX_srca, MEM_srca);
+  flopr #(32) MEM_r4 (clk, reset, EX_aluout, MEM_aluout);
+  flopr #(32) MEM_r5 (clk, reset, EX_writedata, MEM_writedata);
+  flopr #(32) MEM_r6 (clk, reset, EX_srca, MEM_srca);
   
   // Write Back stage - Flip-flop between Memory Access and Write Back  
   flopr #(5)  WB_r1 (clk, reset, MEM_writereg, WB_writereg);
@@ -417,21 +422,23 @@ endmodule
 // ##### Jinheon Baek: Start #####
 
 // Forwarding Detection
-module Forwarding(input  [4:0]     ID_rs, ID_rt, EX_rs, EX_rt, MEM_rd, WB_rd,
-				      input 	 	     MEM_regwrite, WB_regwrite,
-						output reg		  ID_forwarda, ID_forwardb,
+module Forwarding(input  [4:0]     ID_rs, ID_rt, EX_rs, EX_rt, EX_rd, MEM_rd, WB_rd,
+				      input 	 	     EX_regwrite, MEM_regwrite, WB_regwrite,
+						output reg [1:0] ID_forwarda, ID_forwardb,
 				      output reg [1:0] EX_forwarda, EX_forwardb);
 				  
   always @(*)
   begin
-		ID_forwarda = 1'b0;
-		ID_forwardb = 1'b0;
+		ID_forwarda = 2'b00;
+		ID_forwardb = 2'b00;
 		EX_forwarda = 2'b00;
 		EX_forwardb = 2'b00;
 		if (ID_rs != 0)
-			if (ID_rs == WB_rd & WB_regwrite) ID_forwarda = 1'b1;
+			if (ID_rs == WB_rd & WB_regwrite) ID_forwarda = 2'b01;
+			else if (ID_rs == EX_rd & EX_regwrite) ID_forwarda = 2'b10;
 		if (ID_rt != 0)
-			if (ID_rt == WB_rd & WB_regwrite) ID_forwardb = 1'b1;
+			if (ID_rt == WB_rd & WB_regwrite) ID_forwardb = 2'b01;
+			else if (ID_rt == EX_rd & EX_regwrite) ID_forwardb = 2'b10;
 		if (EX_rs != 0)
 			if (EX_rs == MEM_rd & MEM_regwrite) EX_forwarda = 2'b10;
 			else if (EX_rs == WB_rd & WB_regwrite) EX_forwarda = 2'b01;
