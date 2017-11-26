@@ -254,6 +254,12 @@ module aludec(input      [5:0] funct,
     
 endmodule
 
+module eq(input 		 [31:0] a, b,
+			 output		 		  eq);
+
+  assign #`mydelay eq = (a == b);
+
+endmodule
 
 module alu(input      [31:0] a, b, 
            input      [2:0]  alucont, 

@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/23/2017 03:15:07"
+-- DATE "11/26/2017 15:39:35"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -3089,11 +3089,11 @@ SIGNAL \uGPIO|HEX2_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX1_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|HEX0_R\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \uGPIO|BUTTON_StatusR\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \ALT_INV_reset_ff~q\ : std_logic;
 SIGNAL \mips_cpu|dp|f|ALT_INV_ID_forwarda~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|f|ALT_INV_ID_forwardb~3_combout\ : std_logic;
 SIGNAL \mips_cpu|dp|h|ALT_INV_EX_flush~6_combout\ : std_logic;
 SIGNAL \Decoder|ALT_INV_Equal1~6_combout\ : std_logic;
-SIGNAL \ALT_INV_reset_ff~q\ : std_logic;
 
 BEGIN
 
@@ -3284,11 +3284,11 @@ ww_devpor <= devpor;
 \pll0|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \pll0|altpll_component|auto_generated|wire_pll1_clk\(1));
 
 \pll0|altpll_component|auto_generated|wire_pll1_clk[2]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \pll0|altpll_component|auto_generated|wire_pll1_clk\(2));
+\ALT_INV_reset_ff~q\ <= NOT \reset_ff~q\;
 \mips_cpu|dp|f|ALT_INV_ID_forwarda~3_combout\ <= NOT \mips_cpu|dp|f|ID_forwarda~3_combout\;
 \mips_cpu|dp|f|ALT_INV_ID_forwardb~3_combout\ <= NOT \mips_cpu|dp|f|ID_forwardb~3_combout\;
 \mips_cpu|dp|h|ALT_INV_EX_flush~6_combout\ <= NOT \mips_cpu|dp|h|EX_flush~6_combout\;
 \Decoder|ALT_INV_Equal1~6_combout\ <= NOT \Decoder|Equal1~6_combout\;
-\ALT_INV_reset_ff~q\ <= NOT \reset_ff~q\;
 
 -- Location: IOOBUF_X32_Y29_N23
 \HEX3_D[0]~output\ : cycloneiii_io_obuf

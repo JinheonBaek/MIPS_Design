@@ -1,5 +1,5 @@
 Fitter report for MIPS_System
-Thu Nov 23 03:14:52 2017
+Sun Nov 26 15:39:21 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 23 03:14:52 2017      ;
+; Fitter Status                      ; Successful - Sun Nov 26 15:39:21 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -158,12 +158,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.25        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.0%      ;
+;     Processor 2            ;  20.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -3727,7 +3727,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
@@ -3740,12 +3740,12 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 2.02 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.80 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone III Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin BUTTON[0] uses I/O standard 3.3-V LVTTL at H2
@@ -3764,10 +3764,10 @@ Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-
     Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at G5
 Info (144001): Generated suppressed messages file C:/MIPS_Design/MIPS_System_Syn/MIPS_System.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 206 warnings
-    Info: Peak virtual memory: 1077 megabytes
-    Info: Processing ended: Thu Nov 23 03:14:54 2017
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 1078 megabytes
+    Info: Processing ended: Sun Nov 26 15:39:22 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+
