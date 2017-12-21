@@ -13,44 +13,44 @@ SW[6] => SW[6].IN1
 SW[7] => SW[7].IN1
 SW[8] => SW[8].IN1
 SW[9] => SW[9].IN1
-HEX3_D[0] << GPIO:uGPIO.HEX3
-HEX3_D[1] << GPIO:uGPIO.HEX3
-HEX3_D[2] << GPIO:uGPIO.HEX3
-HEX3_D[3] << GPIO:uGPIO.HEX3
-HEX3_D[4] << GPIO:uGPIO.HEX3
-HEX3_D[5] << GPIO:uGPIO.HEX3
-HEX3_D[6] << GPIO:uGPIO.HEX3
-HEX2_D[0] << GPIO:uGPIO.HEX2
-HEX2_D[1] << GPIO:uGPIO.HEX2
-HEX2_D[2] << GPIO:uGPIO.HEX2
-HEX2_D[3] << GPIO:uGPIO.HEX2
-HEX2_D[4] << GPIO:uGPIO.HEX2
-HEX2_D[5] << GPIO:uGPIO.HEX2
-HEX2_D[6] << GPIO:uGPIO.HEX2
-HEX1_D[0] << GPIO:uGPIO.HEX1
-HEX1_D[1] << GPIO:uGPIO.HEX1
-HEX1_D[2] << GPIO:uGPIO.HEX1
-HEX1_D[3] << GPIO:uGPIO.HEX1
-HEX1_D[4] << GPIO:uGPIO.HEX1
-HEX1_D[5] << GPIO:uGPIO.HEX1
-HEX1_D[6] << GPIO:uGPIO.HEX1
-HEX0_D[0] << GPIO:uGPIO.HEX0
-HEX0_D[1] << GPIO:uGPIO.HEX0
-HEX0_D[2] << GPIO:uGPIO.HEX0
-HEX0_D[3] << GPIO:uGPIO.HEX0
-HEX0_D[4] << GPIO:uGPIO.HEX0
-HEX0_D[5] << GPIO:uGPIO.HEX0
-HEX0_D[6] << GPIO:uGPIO.HEX0
-LEDG[0] << GPIO:uGPIO.LEDG
-LEDG[1] << GPIO:uGPIO.LEDG
-LEDG[2] << GPIO:uGPIO.LEDG
-LEDG[3] << GPIO:uGPIO.LEDG
-LEDG[4] << GPIO:uGPIO.LEDG
-LEDG[5] << GPIO:uGPIO.LEDG
-LEDG[6] << GPIO:uGPIO.LEDG
-LEDG[7] << GPIO:uGPIO.LEDG
-LEDG[8] << GPIO:uGPIO.LEDG
-LEDG[9] << GPIO:uGPIO.LEDG
+HEX3_D[0] <= GPIO:uGPIO.HEX3
+HEX3_D[1] <= GPIO:uGPIO.HEX3
+HEX3_D[2] <= GPIO:uGPIO.HEX3
+HEX3_D[3] <= GPIO:uGPIO.HEX3
+HEX3_D[4] <= GPIO:uGPIO.HEX3
+HEX3_D[5] <= GPIO:uGPIO.HEX3
+HEX3_D[6] <= GPIO:uGPIO.HEX3
+HEX2_D[0] <= GPIO:uGPIO.HEX2
+HEX2_D[1] <= GPIO:uGPIO.HEX2
+HEX2_D[2] <= GPIO:uGPIO.HEX2
+HEX2_D[3] <= GPIO:uGPIO.HEX2
+HEX2_D[4] <= GPIO:uGPIO.HEX2
+HEX2_D[5] <= GPIO:uGPIO.HEX2
+HEX2_D[6] <= GPIO:uGPIO.HEX2
+HEX1_D[0] <= GPIO:uGPIO.HEX1
+HEX1_D[1] <= GPIO:uGPIO.HEX1
+HEX1_D[2] <= GPIO:uGPIO.HEX1
+HEX1_D[3] <= GPIO:uGPIO.HEX1
+HEX1_D[4] <= GPIO:uGPIO.HEX1
+HEX1_D[5] <= GPIO:uGPIO.HEX1
+HEX1_D[6] <= GPIO:uGPIO.HEX1
+HEX0_D[0] <= GPIO:uGPIO.HEX0
+HEX0_D[1] <= GPIO:uGPIO.HEX0
+HEX0_D[2] <= GPIO:uGPIO.HEX0
+HEX0_D[3] <= GPIO:uGPIO.HEX0
+HEX0_D[4] <= GPIO:uGPIO.HEX0
+HEX0_D[5] <= GPIO:uGPIO.HEX0
+HEX0_D[6] <= GPIO:uGPIO.HEX0
+LEDG[0] <= GPIO:uGPIO.LEDG
+LEDG[1] <= GPIO:uGPIO.LEDG
+LEDG[2] <= GPIO:uGPIO.LEDG
+LEDG[3] <= GPIO:uGPIO.LEDG
+LEDG[4] <= GPIO:uGPIO.LEDG
+LEDG[5] <= GPIO:uGPIO.LEDG
+LEDG[6] <= GPIO:uGPIO.LEDG
+LEDG[7] <= GPIO:uGPIO.LEDG
+LEDG[8] <= GPIO:uGPIO.LEDG
+LEDG[9] <= GPIO:uGPIO.LEDG
 
 
 |MIPS_System|ALTPLL_clkgen:pll0
@@ -299,8 +299,8 @@ memwritedata[31] <= datapath:dp.MEM_MuxALU_2
 
 
 |MIPS_System|mips:mips_cpu|datapath:dp
-clk => clk.IN46
-reset => reset.IN45
+clk => clk.IN37
+reset => reset.IN36
 readdata[0] => readdata[0].IN1
 readdata[1] => readdata[1].IN1
 readdata[2] => readdata[2].IN1
@@ -397,7 +397,7 @@ IF_pc[28] <= IF_pc[28].DB_MAX_OUTPUT_PORT_TYPE
 IF_pc[29] <= IF_pc[29].DB_MAX_OUTPUT_PORT_TYPE
 IF_pc[30] <= IF_pc[30].DB_MAX_OUTPUT_PORT_TYPE
 IF_pc[31] <= IF_pc[31].DB_MAX_OUTPUT_PORT_TYPE
-MEM_memwrite <= flopr:Controlflopr_MEM_memwrite.q
+MEM_memwrite <= flopr:ControlFlopr_MEM.port3
 MEM_addr[0] <= flopr:Third_EXMEM_AddressResult.q
 MEM_addr[1] <= flopr:Third_EXMEM_AddressResult.q
 MEM_addr[2] <= flopr:Third_EXMEM_AddressResult.q
@@ -1829,22 +1829,22 @@ Rt_ID[1] => Equal2.IN3
 Rt_ID[2] => Equal2.IN2
 Rt_ID[3] => Equal2.IN1
 Rt_ID[4] => Equal2.IN0
-WriteReg_WB[0] => Equal1.IN9
-WriteReg_WB[0] => Equal2.IN9
-WriteReg_WB[0] => Equal0.IN31
-WriteReg_WB[1] => Equal1.IN8
-WriteReg_WB[1] => Equal2.IN8
-WriteReg_WB[1] => Equal0.IN30
-WriteReg_WB[2] => Equal1.IN7
-WriteReg_WB[2] => Equal2.IN7
-WriteReg_WB[2] => Equal0.IN29
-WriteReg_WB[3] => Equal1.IN6
-WriteReg_WB[3] => Equal2.IN6
-WriteReg_WB[3] => Equal0.IN28
-WriteReg_WB[4] => Equal1.IN5
-WriteReg_WB[4] => Equal2.IN5
-WriteReg_WB[4] => Equal0.IN27
-RegWrite_WB => always0.IN1
+WB_writereg[0] => Equal1.IN9
+WB_writereg[0] => Equal2.IN9
+WB_writereg[0] => Equal0.IN31
+WB_writereg[1] => Equal1.IN8
+WB_writereg[1] => Equal2.IN8
+WB_writereg[1] => Equal0.IN30
+WB_writereg[2] => Equal1.IN7
+WB_writereg[2] => Equal2.IN7
+WB_writereg[2] => Equal0.IN29
+WB_writereg[3] => Equal1.IN6
+WB_writereg[3] => Equal2.IN6
+WB_writereg[3] => Equal0.IN28
+WB_writereg[4] => Equal1.IN5
+WB_writereg[4] => Equal2.IN5
+WB_writereg[4] => Equal0.IN27
+WB_regwrite => always0.IN1
 s1 <= always0.DB_MAX_OUTPUT_PORT_TYPE
 s2 <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -2137,7 +2137,7 @@ Rt_EX[3] => Equal0.IN28
 Rt_EX[4] => Equal1.IN5
 Rt_EX[4] => Equal2.IN5
 Rt_EX[4] => Equal0.IN27
-MemRead_EX => always0.IN1
+EX_memread => always0.IN1
 pcsrc => always0.IN0
 jump => always0.IN1
 jal => always0.IN1
@@ -7285,9 +7285,9 @@ Rd_WB[3] => Equal3.IN28
 Rd_WB[4] => Equal2.IN5
 Rd_WB[4] => Equal5.IN5
 Rd_WB[4] => Equal3.IN27
-RegWrite_MEM => always0.IN1
-RegWrite_WB => always0.IN1
-RegWrite_WB => always0.IN1
+MEM_regwrite => always0.IN1
+WB_regwrite => always0.IN1
+WB_regwrite => always0.IN1
 ForwardA[0] <= ForwardA.DB_MAX_OUTPUT_PORT_TYPE
 ForwardA[1] <= always0.DB_MAX_OUTPUT_PORT_TYPE
 ForwardB[0] <= ForwardB.DB_MAX_OUTPUT_PORT_TYPE
@@ -8672,53 +8672,35 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch
+|MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
 reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+reset => q[5]~reg0.ACLR
+reset => q[6]~reg0.ACLR
 d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branchNE
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memtoreg
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jr
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jal
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_System|mips:mips_cpu|datapath:dp|Pcsrc_Assign:pcsrc_calculation
@@ -9145,32 +9127,23 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg
+|MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
 reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
 d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_jr_WB
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB
-clk => q[0]~reg0.CLK
-reset => q[0]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_System|mips:mips_cpu|datapath:dp|mux2:resmux

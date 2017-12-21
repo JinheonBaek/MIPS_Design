@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_System
-Thu Dec 21 23:44:59 2017
+Fri Dec 22 00:24:43 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -77,58 +77,48 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  69. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_Zero
  70. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_ALUResult
  71. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_MuxResult
- 72. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch
- 73. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branchNE
- 74. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite
- 75. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memtoreg
- 76. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite
- 77. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jr
- 78. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jal
- 79. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_pc4
- 80. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData
- 81. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ALUResult
- 82. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_RegRd
- 83. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg
- 84. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite
- 85. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_jr_WB
- 86. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB
- 87. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:resmux
- 88. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:resjalmux
- 89. Parameter Settings for User Entity Instance: ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component
- 90. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:button1
- 91. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:button2
- 92. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw0
- 93. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw1
- 94. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw2
- 95. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw3
- 96. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw4
- 97. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw5
- 98. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw6
- 99. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw7
-100. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw8
-101. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw9
-102. altpll Parameter Settings by Entity Instance
-103. altsyncram Parameter Settings by Entity Instance
-104. Port Connectivity Checks: "GPIO:uGPIO"
-105. Port Connectivity Checks: "TimerCounter:Timer"
-106. Port Connectivity Checks: "Addr_Decoder:Decoder"
-107. Port Connectivity Checks: "ram2port_inst_data:Inst_Data_Mem"
-108. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_jr_WB"
-109. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branchNE"
-110. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch"
-111. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_Zero"
-112. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:srcbjrmux"
-113. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrjalmux"
-114. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrmux"
-115. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopenr:Controlflopr_jump"
-116. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopenr:IDEX_INSTR"
-117. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:ControlUnit_Hazard"
-118. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:pcmux"
-119. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|adder:pcadd1"
-120. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:IF_FlushMUX"
-121. Port Connectivity Checks: "mips:mips_cpu"
-122. Elapsed Time Per Partition
-123. Analysis & Synthesis Messages
+ 72. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM
+ 73. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_pc4
+ 74. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData
+ 75. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ALUResult
+ 76. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_RegRd
+ 77. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB
+ 78. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:resmux
+ 79. Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|mux2:resjalmux
+ 80. Parameter Settings for User Entity Instance: ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component
+ 81. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:button1
+ 82. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:button2
+ 83. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw0
+ 84. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw1
+ 85. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw2
+ 86. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw3
+ 87. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw4
+ 88. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw5
+ 89. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw6
+ 90. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw7
+ 91. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw8
+ 92. Parameter Settings for User Entity Instance: GPIO:uGPIO|pulse_gen:sw9
+ 93. altpll Parameter Settings by Entity Instance
+ 94. altsyncram Parameter Settings by Entity Instance
+ 95. Port Connectivity Checks: "GPIO:uGPIO"
+ 96. Port Connectivity Checks: "TimerCounter:Timer"
+ 97. Port Connectivity Checks: "Addr_Decoder:Decoder"
+ 98. Port Connectivity Checks: "ram2port_inst_data:Inst_Data_Mem"
+ 99. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB"
+100. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM"
+101. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_Zero"
+102. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:srcbjrmux"
+103. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrjalmux"
+104. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:wrmux"
+105. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopenr:Controlflopr_jump"
+106. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopenr:IDEX_INSTR"
+107. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|HazardDetection:ControlUnit_Hazard"
+108. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:pcmux"
+109. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|adder:pcadd1"
+110. Port Connectivity Checks: "mips:mips_cpu|datapath:dp|mux2:IF_FlushMUX"
+111. Port Connectivity Checks: "mips:mips_cpu"
+112. Elapsed Time Per Partition
+113. Analysis & Synthesis Messages
 
 
 
@@ -154,7 +144,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 21 23:44:58 2017      ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 22 00:24:42 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -393,13 +383,8 @@ applicable agreement for further details.
 ;          |flopenr:Second_IDEX_Signinm|           ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_Signinm                                           ; work         ;
 ;          |flopenr:Second_IDEX_pc4|               ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_pc4                                               ; work         ;
 ;          |flopenr:Second_IDEX_shiftedimm|        ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_shiftedimm                                        ; work         ;
-;          |flopr:Controlflopr_MEM_jal|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jal                                            ; work         ;
-;          |flopr:Controlflopr_MEM_memtoreg|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memtoreg                                       ; work         ;
-;          |flopr:Controlflopr_MEM_memwrite|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite                                       ; work         ;
-;          |flopr:Controlflopr_MEM_regwrite|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite                                       ; work         ;
-;          |flopr:Controlflopr_WB_memtoreg|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg                                        ; work         ;
-;          |flopr:Controlflopr_WB_regwrite|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite                                        ; work         ;
-;          |flopr:Controlflopr_jal_WB|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB                                             ; work         ;
+;          |flopr:ControlFlopr_MEM|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM                                                ; work         ;
+;          |flopr:ControlFlopr_WB|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB                                                 ; work         ;
 ;          |flopr:First_IFID|                      ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:First_IFID                                                      ; work         ;
 ;          |flopr:Fourth_MEMWB_ALUResult|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ALUResult                                          ; work         ;
 ;          |flopr:Fourth_MEMWB_ReadData|           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData                                           ; work         ;
@@ -1795,73 +1780,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branchNE ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memtoreg ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jr ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jal ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 7     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1905,43 +1830,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg ;
-+----------------+-------+------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                         ;
-+----------------+-------+------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                               ;
-+----------------+-------+------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite ;
-+----------------+-------+------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                         ;
-+----------------+-------+------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                               ;
-+----------------+-------+------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_jr_WB ;
-+----------------+-------+------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                   ;
-+----------------+-------+------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                         ;
-+----------------+-------+------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2403,30 +2298,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_jr_WB"                                 ;
+; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB"                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branchNE"                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch"                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM"                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[6..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2540,7 +2426,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -2550,7 +2436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Dec 21 23:44:47 2017
+    Info: Processing started: Fri Dec 22 00:24:27 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_System -c MIPS_System
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /mips_design/mips_system/altera_mem_dual_port/ram2port_inst_data.v
@@ -2682,8 +2568,9 @@ Info (12128): Elaborating entity "ForwardingUnit" for hierarchy "mips:mips_cpu|d
 Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips_cpu|datapath:dp|mux2:wrmux"
 Info (12128): Elaborating entity "alu" for hierarchy "mips:mips_cpu|datapath:dp|alu:alu"
 Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_MuxResult"
-Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_branch"
+Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM"
 Info (12128): Elaborating entity "Pcsrc_Assign" for hierarchy "mips:mips_cpu|datapath:dp|Pcsrc_Assign:pcsrc_calculation"
+Info (12128): Elaborating entity "flopr" for hierarchy "mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB"
 Info (12128): Elaborating entity "ram2port_inst_data" for hierarchy "ram2port_inst_data:Inst_Data_Mem"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component"
@@ -2719,6 +2606,7 @@ Info (12133): Instantiated megafunction "ram2port_inst_data:Inst_Data_Mem|altsyn
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5ul2.tdf
     Info (12023): Found entity 1: altsyncram_5ul2
 Info (12128): Elaborating entity "altsyncram_5ul2" for hierarchy "ram2port_inst_data:Inst_Data_Mem|altsyncram:altsyncram_component|altsyncram_5ul2:auto_generated"
+Critical Warning (127005): Memory depth (2048) in the design file differs from memory depth (512) in the Memory Initialization File "C:/MIPS_Design/MIPS_System_Syn/insts_data.mif" -- setting initial value for remaining addresses to 0
 Info (12128): Elaborating entity "Addr_Decoder" for hierarchy "Addr_Decoder:Decoder"
 Info (12128): Elaborating entity "TimerCounter" for hierarchy "TimerCounter:Timer"
 Info (12128): Elaborating entity "GPIO" for hierarchy "GPIO:uGPIO"
@@ -2793,10 +2681,10 @@ Info (21057): Implemented 3844 device resources after synthesis - the final reso
     Info (21061): Implemented 3759 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 62 warnings
     Info: Peak virtual memory: 556 megabytes
-    Info: Processing ended: Thu Dec 21 23:44:59 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Fri Dec 22 00:24:43 2017
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:14
 
 

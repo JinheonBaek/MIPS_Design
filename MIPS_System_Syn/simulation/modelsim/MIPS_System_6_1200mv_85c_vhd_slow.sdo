@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "MIPS_System")
-  (DATE "12/21/2017 23:45:34")
+  (DATE "12/22/2017 00:25:29")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -1047,7 +1047,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_memtoreg\|q\[0\]\~feeder\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[3\]\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (902:902:902) (962:962:962))
@@ -1057,7 +1057,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_memtoreg\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[3\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1485:1485:1485) (1500:1500:1500))
@@ -1073,7 +1073,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_WB_memtoreg\|q\[0\]\~feeder\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_WB\|q\[3\]\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (219:219:219) (288:288:288))
@@ -1083,7 +1083,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_WB_memtoreg\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_WB\|q\[3\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1485:1485:1485) (1500:1500:1500))
@@ -4702,7 +4702,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_regwrite\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[2\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1496:1496:1496) (1512:1512:1512))
@@ -4718,7 +4718,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_WB_regwrite\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_WB\|q\[2\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1496:1496:1496) (1512:1512:1512))
@@ -64624,7 +64624,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_jal\|q\[0\]\~feeder\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[0\]\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (1220:1220:1220) (1316:1316:1316))
@@ -64634,7 +64634,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_jal\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[0\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1496:1496:1496) (1512:1512:1512))
@@ -64650,7 +64650,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_jal_WB\|q\[0\]\~feeder\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_WB\|q\[0\]\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (219:219:219) (288:288:288))
@@ -64660,7 +64660,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_jal_WB\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_WB\|q\[0\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1496:1496:1496) (1512:1512:1512))
@@ -65484,7 +65484,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE \\mips_cpu\|dp\|Controlflopr_MEM_memwrite\|q\[0\]\\)
+    (INSTANCE \\mips_cpu\|dp\|ControlFlopr_MEM\|q\[4\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1484:1484:1484) (1499:1499:1499))

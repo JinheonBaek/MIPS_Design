@@ -76,7 +76,7 @@ module datapath(input         clk, reset,
    wire [31:0] WB_pcplus4, WB_readdata, WB_aluout;
    wire [4:0]  MEMWB_RegRd;
    wire        WB_regwrite, WB_memtoreg;
-   wire        jr_WB, jal_WB;
+   wire        WB_jr, WB_jal;
 
    // Global Signals that communicate with Control Unit & Logic in datapath
    wire         signext, shiftl16, memtoreg, memwrite, memread, branch, branchNE, alusrc, regdst, regwrite, jump, jal;
@@ -192,8 +192,8 @@ module datapath(input         clk, reset,
   ForwardingWBID ForwardingWBID_Control(
     .Rs_ID   (ID_Instr[25:21]),
     .Rt_ID   (ID_Instr[20:16]),
-    .WriteReg_WB    (MEMWB_RegRd),
-    .RegWrite_WB    (WB_regwrite),
+    .WB_writereg    (MEMWB_RegRd),
+    .WB_regwrite    (WB_regwrite),
     .s1   (WBID_forwarding_control_1),
     .s2   (WBID_forwarding_control_2));
 
@@ -218,7 +218,7 @@ module datapath(input         clk, reset,
    .Rs_ID (ID_Instr[25:21]),
    .Rt_ID (ID_Instr[20:16]),
    .Rt_EX (IDEX_RegRt2),
-   .MemRead_EX (EX_memread),
+   .EX_memread (EX_memread),
    .pcsrc (EX_pcsrc),
    .jump (EX_jump),
    .jal (EX_jal),
@@ -370,7 +370,7 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_EX_branchNE(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (branchNE),
     .q  (EX_branchNE));
    
@@ -378,7 +378,7 @@ module datapath(input         clk, reset,
    flopenr # (1) Controlflopr_EX_memread(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (memread),
     .q  (EX_memread)
    );
@@ -387,7 +387,7 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_EX_memwrite(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (memwrite),
     .q  (EX_memwrite));
    
@@ -395,7 +395,7 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_EX_memtoreg(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (memtoreg),
     .q  (EX_memtoreg));
 
@@ -403,7 +403,7 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_EX_regwrite(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (regwrite),
     .q  (EX_regwrite));   
    
@@ -411,7 +411,7 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_EX_jal(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (jal),
     .q  (EX_jal));   
    
@@ -419,10 +419,10 @@ module datapath(input         clk, reset,
   flopenr # (1) Controlflopr_jump(
     .clk   (clk),
     .reset (reset),
-    .en (stall_control|| EX_flush),
+    .en (stall_control || EX_flush),
     .d  (jump),
     .q  (EX_jump));   
-   
+
   // *** Execution Stage Logic *** //
 
   // Mux for Forwarding Unit to ALU
@@ -447,8 +447,8 @@ module datapath(input         clk, reset,
     .Rt_EX   (IDEX_RegRt),
     .Rd_MEM   (EXMEM_RegRd),
     .Rd_WB   (MEMWB_RegRd),
-    .RegWrite_MEM   (MEM_regwrite),
-    .RegWrite_WB   (WB_regwrite),
+    .MEM_regwrite   (MEM_regwrite),
+    .WB_regwrite    (WB_regwrite),
     .ForwardA   (forwarding_control_1),
     .ForwardB   (forwarding_control_2));
    
@@ -511,7 +511,6 @@ module datapath(input         clk, reset,
    .d  (MuxALU_2),
    .q  (MEM_MuxALU_2));  
    
-
   // Flopr (EX/MEM zero signal) 
   flopr #(32) Third_EXMEM_Zero (
    .clk   (clk),
@@ -532,55 +531,11 @@ module datapath(input         clk, reset,
    .reset (reset),
    .d  (writeregaddr),   
    .q  (EXMEM_RegRd)); 
-   
-  // EX/MEM Control Unit, branch / MEM
-  flopr #(1) Controlflopr_MEM_branch(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_branch),
-    .q  (MEM_branch));      
 
-  // EX/MEM Control Unit, branch(BNE) / MEM
-  flopr #(1) Controlflopr_MEM_branchNE(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_branchNE),
-    .q  (MEM_branchNE));
-   
-  // EX/MEM Control Unit, memwrite / MEM
-  flopr #(1) Controlflopr_MEM_memwrite(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_memwrite),
-    .q  (MEM_memwrite));
-   
-  // EX/MEM Control Unit memtoreg / WB
-  flopr #(1) Controlflopr_MEM_memtoreg(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_memtoreg),
-    .q  (MEM_memtoreg));
-
-  // EX/MEM Control Unit regwrite / WB
-  flopr #(1) Controlflopr_MEM_regwrite(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_regwrite),
-    .q  (MEM_regwrite));   
-
-  // EX/MEM Control Unit jr / WB
-  flopr #(1) Controlflopr_MEM_jr(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_jr),
-    .q  (MEM_jr));
-  
-  // EX/MEM Control Unit jal / WB
-  flopr #(1) Controlflopr_MEM_jal(
-    .clk   (clk),
-    .reset (reset),
-    .d  (EX_jal),
-    .q  (MEM_jal));   
+  // Control Unit Flopr (Execution Stage to MEM Access Stage)
+  flopr #(7) ControlFlopr_MEM(clk, reset, 
+                            {EX_branch, EX_branchNE, EX_memwrite, EX_memtoreg, EX_regwrite, EX_jr, EX_jal},
+                            {MEM_branch, MEM_branchNE, MEM_memwrite, MEM_memtoreg, MEM_regwrite, MEM_jr, MEM_jal});
 
   // *** MEM Access Stage Logic *** //
   
@@ -613,43 +568,20 @@ module datapath(input         clk, reset,
    .reset (reset),
    .d  (MEM_aluout),
    .q  (WB_aluout)); 
-   
+
   // Flopr (MEM/WB MUX of Rt or Rd result) 
   flopr #(5) Fourth_MEMWB_RegRd (
    .clk   (clk),
    .reset (reset),
    .d  (EXMEM_RegRd),
    .q  (MEMWB_RegRd)); 
-   
-  // MEM/WB Control Unit memtoreg / WB
-  flopr #(1) Controlflopr_WB_memtoreg(
-    .clk   (clk),
-    .reset (reset),
-    .d  (MEM_memtoreg),
-    .q  (WB_memtoreg)
-   );
+  
+  // Control Unit Flopr (MEM Access Stage to Write Back Stage)
+  flopr #(4) ControlFlopr_WB (clk, reset,
+                              {MEM_memtoreg, MEM_regwrite, MEM_jr, MEM_jal},
+                              {WB_memtoreg, WB_regwrite, WB_jr, WB_jal});
 
-  // MEM/WB Control Unit regwrite / WB
-  flopr #(1) Controlflopr_WB_regwrite(
-    .clk   (clk),
-    .reset (reset),
-    .d  (MEM_regwrite),
-    .q  (WB_regwrite));
 
-  // MEM/WB Control Unit jr / WB
-  flopr #(1) Controlflopr_jr_WB(
-    .clk   (clk),
-    .reset (reset),
-    .d  (MEM_jr),
-    .q  (jr_WB));
-
-  // MEM/WB Control Unit jal / WB
-  flopr #(1) Controlflopr_jal_WB(
-    .clk   (clk),
-    .reset (reset),
-    .d  (MEM_jal),
-    .q  (jal_WB));   
- 
   // *** WriteBack Stage Logic *** //
   
   mux2 #(32) resmux(
@@ -661,7 +593,7 @@ module datapath(input         clk, reset,
   mux2 #(32) resjalmux(
     .d0 (result),
     .d1 (WB_pcplus4),
-    .s  (jal_WB),
+    .s  (WB_jal),
     .y  (writeregdata));
  
 endmodule

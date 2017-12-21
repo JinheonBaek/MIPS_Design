@@ -1,5 +1,5 @@
 Fitter report for MIPS_System
-Thu Dec 21 23:45:16 2017
+Fri Dec 22 00:25:04 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Dec 21 23:45:16 2017      ;
+; Fitter Status                      ; Successful - Fri Dec 22 00:25:04 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPS_System                                ;
 ; Top-level Entity Name              ; MIPS_System                                ;
@@ -158,12 +158,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.20        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  20.0%      ;
+;     Processor 2            ;  16.7%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -1502,13 +1502,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |flopenr:Second_IDEX_Signinm|           ; 30 (30)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 30 (30)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_Signinm                                           ; work         ;
 ;          |flopenr:Second_IDEX_pc4|               ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_pc4                                               ; work         ;
 ;          |flopenr:Second_IDEX_shiftedimm|        ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_shiftedimm                                        ; work         ;
-;          |flopr:Controlflopr_MEM_jal|            ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_jal                                            ; work         ;
-;          |flopr:Controlflopr_MEM_memtoreg|       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memtoreg                                       ; work         ;
-;          |flopr:Controlflopr_MEM_memwrite|       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite                                       ; work         ;
-;          |flopr:Controlflopr_MEM_regwrite|       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite                                       ; work         ;
-;          |flopr:Controlflopr_WB_memtoreg|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg                                        ; work         ;
-;          |flopr:Controlflopr_WB_regwrite|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite                                        ; work         ;
-;          |flopr:Controlflopr_jal_WB|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB                                             ; work         ;
+;          |flopr:ControlFlopr_MEM|                ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM                                                ; work         ;
+;          |flopr:ControlFlopr_WB|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 1 (1)            ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB                                                 ; work         ;
 ;          |flopr:First_IFID|                      ; 34 (34)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:First_IFID                                                      ; work         ;
 ;          |flopr:Fourth_MEMWB_ALUResult|          ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ALUResult                                          ; work         ;
 ;          |flopr:Fourth_MEMWB_ReadData|           ; 41 (41)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 32 (32)          ; |MIPS_System|mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData                                           ; work         ;
@@ -1819,7 +1814,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|HazardDetection:ControlUnit_Hazard|s1~7                               ; LCCOMB_X29_Y18_N12 ; 72      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; mips:mips_cpu|datapath:dp|alu:alu|b2[11]~9                                                      ; LCCOMB_X28_Y24_N28 ; 60      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
 ; mips:mips_cpu|datapath:dp|flopenr:Second_IDEX_ReadData2|q[5]~57                                 ; LCCOMB_X20_Y23_N6  ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite|q[0]                                  ; FF_X29_Y25_N27     ; 20      ; Write enable              ; no     ; --                   ; --               ; --                        ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM|q[4]                                           ; FF_X29_Y25_N27     ; 20      ; Write enable              ; no     ; --                   ; --               ; --                        ;
 ; mips:mips_cpu|datapath:dp|flopr:First_IFID|q[12]~2                                              ; LCCOMB_X31_Y21_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData|q[19]~48                                  ; LCCOMB_X28_Y26_N24 ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
 ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[1]~10                                                   ; LCCOMB_X31_Y21_N4  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
@@ -1985,8 +1980,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|mux3:MuxALU1|y[11]~4                        ; 32      ;
 ; mips:mips_cpu|datapath:dp|ForwardingUnit:Control_Forwarding|always0~5 ; 32      ;
 ; mips:mips_cpu|datapath:dp|mux3:MuxALU2|Equal0~0                       ; 32      ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_jal_WB|q[0]              ; 32      ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_memtoreg|q[0]         ; 32      ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB|q[0]                  ; 32      ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB|q[3]                  ; 32      ;
 ; mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_RegRd|q[1]               ; 31      ;
 ; GPIO:uGPIO|Equal0~2                                                   ; 30      ;
 ; mips:mips_cpu|datapath:dp|alu:alu|b2[11]~7                            ; 24      ;
@@ -1994,7 +1989,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_RegRd|q[4]               ; 23      ;
 ; mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_RegRd|q[3]               ; 23      ;
 ; mips:mips_cpu|datapath:dp|flopr:Fourth_MEMWB_ReadData|q[19]~48        ; 22      ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_memwrite|q[0]        ; 20      ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM|q[4]                 ; 20      ;
 ; mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_ALUResult|q[2]            ; 19      ;
 ; mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_ALUResult|q[4]            ; 18      ;
 ; mips:mips_cpu|datapath:dp|alu:alu|b2[11]~11                           ; 17      ;
@@ -2034,7 +2029,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Addr_Decoder:Decoder|Equal1~5                                         ; 11      ;
 ; mips:mips_cpu|datapath:dp|flopr:First_IFID|q[30]                      ; 10      ;
 ; mips:mips_cpu|datapath:dp|flopr:First_IFID|q[31]                      ; 10      ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_WB_regwrite|q[0]         ; 10      ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_WB|q[2]                  ; 10      ;
 ; GPIO:uGPIO|LEDG_R[9]~1                                                ; 10      ;
 ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[12]                           ; 9       ;
 ; mips:mips_cpu|datapath:dp|flopr:pcreg|q[11]                           ; 9       ;
@@ -2176,7 +2171,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_cpu|datapath:dp|flopenr:IDEX_INSTR|q[23]                    ; 3       ;
 ; mips:mips_cpu|datapath:dp|flopenr:IDEX_INSTR|q[21]                    ; 3       ;
 ; mips:mips_cpu|datapath:dp|flopenr:IDEX_INSTR|q[22]                    ; 3       ;
-; mips:mips_cpu|datapath:dp|flopr:Controlflopr_MEM_regwrite|q[0]        ; 3       ;
+; mips:mips_cpu|datapath:dp|flopr:ControlFlopr_MEM|q[2]                 ; 3       ;
 ; GPIO:uGPIO|always3~0                                                  ; 3       ;
 ; mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_WriteData|q[5]            ; 3       ;
 ; mips:mips_cpu|datapath:dp|flopr:Third_EXMEM_WriteData|q[4]            ; 3       ;
@@ -3742,7 +3737,7 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 7% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 30% of the available device resources in the region that extends from location X21_Y20 to location X30_Y29
@@ -3750,7 +3745,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.77 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3774,10 +3769,10 @@ Warning (169177): 14 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-
     Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at G5
 Info (144001): Generated suppressed messages file C:/MIPS_Design/MIPS_System_Syn/MIPS_System.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 206 warnings
-    Info: Peak virtual memory: 1081 megabytes
-    Info: Processing ended: Thu Dec 21 23:45:17 2017
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 1088 megabytes
+    Info: Processing ended: Fri Dec 22 00:25:05 2017
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +----------------------------+

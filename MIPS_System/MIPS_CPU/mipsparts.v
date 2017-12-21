@@ -325,7 +325,7 @@ endmodule
 module HazardDetection (input [4:0] Rs_ID,   //RS
                         input [4:0] Rt_ID,   //RT
                         input [4:0] Rt_EX,   //IF/ID.Register.RT
-                        input MemRead_EX,    //ID/EX.MemRead
+                        input EX_memread,    //ID/EX.MemRead
                         input pcsrc,
                         input jump,
                         input jal,
@@ -335,11 +335,11 @@ module HazardDetection (input [4:0] Rs_ID,   //RS
                         output reg  s3,
                         output reg  s4);
 
-always @(Rs_ID or Rt_ID or Rt_EX or MemRead_EX or pcsrc or jump or jal or jr or s1 or s2 or s3 or s4)
+always @(Rs_ID or Rt_ID or Rt_EX or EX_memread or pcsrc or jump or jal or jr or s1 or s2 or s3 or s4)
   
   begin
 
-    if (MemRead_EX==1 && Rt_EX!=0 &&(Rt_EX==Rs_ID || Rt_EX== Rt_ID))
+    if (EX_memread==1 && Rt_EX!=0 &&(Rt_EX==Rs_ID || Rt_EX== Rt_ID))
       begin
       s1<=1'b1;
       s2<=1'b1;
@@ -371,25 +371,25 @@ module ForwardingUnit (input [4:0] Rs_EX,  //Regiser Rs EX
                        input [4:0] Rt_EX,  //Regiser Rt EX
                        input [4:0] Rd_MEM, //Regiser Rd MEM
                        input [4:0] Rd_WB,  //Regiser Rd WB
-                       input RegWrite_MEM, RegWrite_WB,
+                       input MEM_regwrite, WB_regwrite,
                        output reg [1:0] ForwardA,
                        output reg [1:0] ForwardB);
 
-always @(Rs_EX or Rt_EX or Rd_MEM or Rd_WB or RegWrite_MEM or RegWrite_WB)
+always @(Rs_EX or Rt_EX or Rd_MEM or Rd_WB or MEM_regwrite or WB_regwrite)
 
   begin
     begin
-      if(RegWrite_MEM==1 && Rd_MEM!=0 && Rd_MEM==Rs_EX)
+      if(MEM_regwrite==1 && Rd_MEM!=0 && Rd_MEM==Rs_EX)
           ForwardA=2'b10;
-      else if(RegWrite_WB==1 && Rd_WB==Rs_EX && Rd_WB!=0 && Rd_MEM!=Rs_EX )   
+      else if(WB_regwrite==1 && Rd_WB==Rs_EX && Rd_WB!=0 && Rd_MEM!=Rs_EX )   
           ForwardA=2'b01;
       else ForwardA=2'b00;
     end
 
     begin
-      if(RegWrite_MEM==1 && Rd_MEM!=0 && Rd_MEM==Rt_EX)
+      if(MEM_regwrite==1 && Rd_MEM!=0 && Rd_MEM==Rt_EX)
           ForwardB=2'b10;
-      else if(RegWrite_WB==1 && Rd_WB==Rt_EX && Rd_WB!=0 && Rd_MEM!=Rt_EX)
+      else if(WB_regwrite==1 && Rd_WB==Rt_EX && Rd_WB!=0 && Rd_MEM!=Rt_EX)
           ForwardB=2'b01;
       else ForwardB=2'b00;
     end
@@ -400,19 +400,19 @@ endmodule
 // Forwarding Detection2 Unit Control (Write Back to Instruction Decoding Stage)
 module ForwardingWBID (input [4:0] Rs_ID,        //RS
                        input [4:0] Rt_ID,        //RT
-                       input [4:0] WriteReg_WB,  // Register Rd_WB
-                       input RegWrite_WB,        //WB RegWrite                       
+                       input [4:0] WB_writereg,  // Register Rd_WB
+                       input WB_regwrite,        //WB RegWrite                       
                        output reg  s1,
                        output reg  s2);
 
-always @(Rs_ID or Rt_ID or WriteReg_WB or RegWrite_WB)
+always @(Rs_ID or Rt_ID or WB_writereg or WB_regwrite)
    begin
-   if (RegWrite_WB==1 && WriteReg_WB!=0 &&(WriteReg_WB==Rs_ID))
+   if (WB_regwrite==1 && WB_writereg!=0 &&(WB_writereg==Rs_ID))
    s1<= #`mydelay 1'b1;
    else
    s1<= #`mydelay 1'b0;
 
-   if(RegWrite_WB==1 && WriteReg_WB!=0 &&(WriteReg_WB==Rt_ID))
+   if(WB_regwrite==1 && WB_writereg!=0 &&(WB_writereg==Rt_ID))
    s2<= #`mydelay 1'b1;
    else
    s2<= #`mydelay 1'b0;
